@@ -33,6 +33,11 @@ public:
         app_link_.send(c1link::FrameType::Request, next_seq_++, id, payload, len);
     }
 
+    // Raw bytes on the wire, for exercising the parser below the Link layer.
+    void write_raw(const std::uint8_t* data, std::size_t len) {
+        transport_.app_side().write(data, len);
+    }
+
     const std::vector<c1link::Frame>& responses() const { return responses_; }
     const c1link::TelemetryData& last_telemetry() const { return last_telemetry_; }
     std::size_t telemetry_count() const { return telemetry_count_; }

@@ -31,16 +31,14 @@ void SafetyMcu::enter_fault(FaultCode code) {
 void SafetyMcu::tick_1ms() {
     ++tick_count_;
 
+    // Drain whatever arrived, then always run the control path: a slow or
+    // hostile sender must never hold the interlocks hostage.
     Frame frame;
-    if (link_.poll(&frame)) {
+    while (link_.poll(&frame)) {
         handler_.handle(frame, inputs_);
         if (frame.msg_id == MsgId::MotorStop || frame.msg_id == MsgId::HeaterOff) {
             fault_ = FaultCode::None;
         }
-    } else if (link_.receiving()) {
-        // Finish reading the command frame first; the rest of the tick
-        // resumes once the frame is complete.
-        return;
     }
 
     sample_inputs();

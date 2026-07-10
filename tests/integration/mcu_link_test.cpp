@@ -95,6 +95,37 @@ TEST(McuLink, TelemetryStreamsAtOneHundredHertz) {
     EXPECT_TRUE((fix.last_telemetry().flags & kFlagLidClosed) != 0);
 }
 
+TEST(McuLink, InterlocksKeepRunningWhileAFrameTrickles) {
+    McuFixture fix;
+    std::uint8_t req[3];
+    put_u16(req, 5000);
+    req[2] = c1link::kRampFast;
+    fix.send_request(MsgId::MotorSetTarget, req, sizeof(req));
+    fix.run_ms(3000);
+    ASSERT_GT(fix.last_telemetry().rpm, 4000u);
+
+    // A valid header announcing a 200-byte payload, then one byte per
+    // millisecond. The lid opens mid-frame; the cap and telemetry must not
+    // wait for the frame to finish.
+    const std::uint8_t slow_header[] = {kSync0, kSync1, kVersion, 0x01, 0x09, 0x01, 200, 0x00};
+    fix.write_raw(slow_header, sizeof(slow_header));
+    fix.board().open_lid();
+    for (int i = 0; i < 30; ++i) {
+        const std::uint8_t filler = 0x55;
+        fix.write_raw(&filler, 1);
+        fix.run_ms(1);
+    }
+    EXPECT_LE(fix.last_telemetry().rpm, 4800u); // already decelerating
+
+    for (int i = 0; i < 170; ++i) {
+        const std::uint8_t filler = 0x55;
+        fix.write_raw(&filler, 1);
+        fix.run_ms(1);
+    }
+    fix.run_ms(2000);
+    EXPECT_LE(fix.last_telemetry().rpm, 600u);
+}
+
 TEST(McuLink, BurstNeedsALockedLid) {
     McuFixture fix;
     std::uint8_t req[3];
