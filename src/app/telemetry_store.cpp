@@ -2,17 +2,28 @@
 
 namespace culina::app {
 
-void TelemetryStore::append(const Sample& sample) { samples_.push_back(sample); }
+void TelemetryStore::append(const Sample& sample) {
+    const std::lock_guard<std::mutex> lock(mutex_);
+    samples_.push_back(sample);
+}
 
 TelemetryStore::Sample TelemetryStore::latest() const {
+    const std::lock_guard<std::mutex> lock(mutex_);
     return samples_.empty() ? Sample{} : samples_.back();
 }
 
-bool TelemetryStore::has_data() const { return !samples_.empty(); }
+bool TelemetryStore::has_data() const {
+    const std::lock_guard<std::mutex> lock(mutex_);
+    return !samples_.empty();
+}
 
-std::size_t TelemetryStore::size() const { return samples_.size(); }
+std::size_t TelemetryStore::size() const {
+    const std::lock_guard<std::mutex> lock(mutex_);
+    return samples_.size();
+}
 
 float TelemetryStore::average_temp_c(Millis window_ms) const {
+    const std::lock_guard<std::mutex> lock(mutex_);
     if (samples_.empty()) {
         return 0.0f;
     }
@@ -30,6 +41,7 @@ float TelemetryStore::average_temp_c(Millis window_ms) const {
 }
 
 float TelemetryStore::max_temp_c(Millis window_ms) const {
+    const std::lock_guard<std::mutex> lock(mutex_);
     if (samples_.empty()) {
         return 0.0f;
     }

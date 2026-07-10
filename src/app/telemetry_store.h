@@ -5,6 +5,7 @@
 
 #include <cstddef>
 #include <cstdint>
+#include <mutex>
 #include <vector>
 
 namespace culina::app {
@@ -34,6 +35,9 @@ public:
     float max_temp_c(Millis window_ms) const;
 
 private:
+    // The link pump and the UI/controller read concurrently in two-process
+    // mode; every accessor takes the lock.
+    mutable std::mutex mutex_;
     std::vector<Sample> samples_;
 };
 
