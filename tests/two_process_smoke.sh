@@ -71,8 +71,10 @@ wait_for_count '^-> invalid-argument$' 2 || fail_with_logs
 
 echo "set-temp 65" >&3
 wait_for_count '^-> Ok$' 1 || fail_with_logs
+wait_for_count '^-> complete$' 1 || fail_with_logs
 echo "set-speed 2" >&3
 wait_for_count '^-> Ok$' 2 || fail_with_logs
+wait_for_count '^-> complete$' 2 || fail_with_logs
 
 echo "stop" >&3
 wait_for_count '^-> stop complete$' 1 || fail_with_logs

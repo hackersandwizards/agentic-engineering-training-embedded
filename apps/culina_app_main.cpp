@@ -125,6 +125,8 @@ int main(int argc, char** argv) {
                 std::fprintf(stderr, "safe stop timed out\n");
                 return 1;
             }
+        } else if (has_response && response.type == culina::c1link::FrameType::Response) {
+            std::printf("-> complete\n");
         } else if (has_response && response.type == culina::c1link::FrameType::Nack) {
             std::printf("-> protocol-error\n");
             client.clear_command_status();

@@ -63,6 +63,7 @@ exec 3>"$input"
 wait_for_line '^culina-app: connected' || fail_with_logs
 echo "set-temp 65" >&3
 wait_for_line '^-> Ok$' || fail_with_logs
+wait_for_line '^-> complete$' || fail_with_logs
 kill "$mcu_pid"
 wait "$mcu_pid" 2>/dev/null || true
 mcu_pid=

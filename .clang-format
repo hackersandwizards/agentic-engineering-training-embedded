@@ -6,3 +6,4 @@ PointerAlignment: Left
 AllowShortFunctionsOnASingleLine: Inline
 AlwaysBreakTemplateDeclarations: Yes
 IncludeBlocks: Preserve
+SpaceBeforeCpp11BracedList: false
