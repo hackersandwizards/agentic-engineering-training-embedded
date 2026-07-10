@@ -24,6 +24,24 @@ public:
     Grams current_grams();
 
 private:
+    using Handler = void (CommandHandler::*)(const c1link::Frame&, const Interlocks::Inputs&);
+    struct Entry {
+        c1link::MsgId msg_id;
+        Handler handler;
+    };
+    static const Entry kHandlers[];
+
+    void handle_ping(const c1link::Frame& request, const Interlocks::Inputs& state);
+    void handle_get_version(const c1link::Frame& request, const Interlocks::Inputs& state);
+    void handle_motor_set_target(const c1link::Frame& request, const Interlocks::Inputs& state);
+    void handle_motor_stop(const c1link::Frame& request, const Interlocks::Inputs& state);
+    void handle_heater_set_target(const c1link::Frame& request, const Interlocks::Inputs& state);
+    void handle_heater_off(const c1link::Frame& request, const Interlocks::Inputs& state);
+    void handle_scale_tare(const c1link::Frame& request, const Interlocks::Inputs& state);
+    void handle_scale_read(const c1link::Frame& request, const Interlocks::Inputs& state);
+    void handle_lid_lock(const c1link::Frame& request, const Interlocks::Inputs& state);
+    void handle_lid_unlock(const c1link::Frame& request, const Interlocks::Inputs& state);
+
     void respond(const c1link::Frame& request, const std::uint8_t* payload,
                  std::uint16_t payload_len);
     void nack(const c1link::Frame& request);
