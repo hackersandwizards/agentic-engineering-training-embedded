@@ -1,0 +1,10 @@
+tare
+wait 1s
+add water 500
+wait 3s
+expect weight >= 490
+expect weight <= 510
+tare
+wait 1s
+expect weight >= -5
+expect weight <= 5

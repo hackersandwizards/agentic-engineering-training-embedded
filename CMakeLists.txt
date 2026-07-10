@@ -17,6 +17,7 @@ include(Sanitizers)
 
 add_subdirectory(src)
 add_subdirectory(apps)
+add_subdirectory(tools)
 
 include(CTest)
 if(BUILD_TESTING)

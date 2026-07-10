@@ -1,0 +1,3 @@
+add_executable(c1link_dump c1link_dump.cpp)
+target_link_libraries(c1link_dump PRIVATE culina_protocol culina_common)
+culina_set_warnings(c1link_dump)

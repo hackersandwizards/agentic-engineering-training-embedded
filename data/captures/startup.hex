@@ -1,0 +1,6 @@
+# C1-Link capture: startup handshake, motor command, one telemetry frame
+a5 5a 10 01 01 01 00 00 41 ff a5 5a 10 02 01 01
+00 00 93 11 a5 5a 10 01 02 10 03 00 88 13 02 73
+7c a5 5a 10 02 02 10 02 00 88 13 78 be a5 5a 10
+03 07 80 0d 00 39 30 00 00 8c 02 74 13 dc 05 00
+00 07 23 a3
