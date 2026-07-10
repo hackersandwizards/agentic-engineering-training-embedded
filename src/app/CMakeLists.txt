@@ -7,6 +7,9 @@ add_library(
     cooking/dough_mode.cpp
     cooking/steam_mode.cpp
     cooking/sous_vide_mode.cpp
-    cooking/turbo_pulse.cpp)
+    cooking/turbo_pulse.cpp
+    cooking/guided_recipe.cpp
+    recipe/recipe_parser.cpp
+    recipe/recipe_library.cpp)
 target_link_libraries(culina_app_lib PUBLIC culina_protocol culina_hal culina_common)
 culina_set_warnings(culina_app_lib)

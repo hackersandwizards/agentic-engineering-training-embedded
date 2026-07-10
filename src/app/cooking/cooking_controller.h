@@ -1,6 +1,7 @@
 #pragma once
 
 #include "app/cooking/program.h"
+#include "app/recipe/recipe.h"
 #include "hal/i_clock.h"
 #include "hal/i_watchdog.h"
 
@@ -25,7 +26,15 @@ public:
 
     Status start_manual(DeciCelsius temp, std::uint8_t dial, std::uint32_t duration_s);
     Status start_program(std::unique_ptr<Program> program);
+    Status start_recipe(const Recipe* recipe);
     void stop();
+
+    bool awaiting_user() const { return program_ && program_->awaiting_user(); }
+    void user_next() {
+        if (program_) {
+            program_->user_next();
+        }
+    }
 
     SessionState state() const { return state_; }
     const char* program_name() const { return program_ ? program_->name() : "-"; }

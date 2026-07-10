@@ -10,13 +10,14 @@ add_executable(
     unit/sim_board_test.cpp
     unit/frame_parser_test.cpp
     unit/link_test.cpp
-    unit/telemetry_store_test.cpp)
+    unit/telemetry_store_test.cpp
+    unit/recipe_parser_test.cpp)
 target_link_libraries(unit_tests PRIVATE culina_sim culina_protocol culina_app_lib GTest::gtest_main)
 culina_set_warnings(unit_tests)
 gtest_discover_tests(unit_tests PROPERTIES LABELS unit)
 
 add_executable(integration_tests integration/mcu_link_test.cpp integration/mcu_client_test.cpp
-               integration/cooking_test.cpp)
+               integration/cooking_test.cpp integration/guided_recipe_test.cpp)
 target_include_directories(integration_tests PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 target_link_libraries(integration_tests PRIVATE culina_sim culina_mcu_lib culina_app_lib GTest::gtest_main)
 culina_set_warnings(integration_tests)

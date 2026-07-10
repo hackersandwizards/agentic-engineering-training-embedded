@@ -1,5 +1,6 @@
 #include "app/cooking/cooking_controller.h"
 
+#include "app/cooking/guided_recipe.h"
 #include "app/cooking/manual_mode.h"
 
 namespace culina::app {
@@ -31,6 +32,13 @@ const char* CookingController::program_status() const {
 Status CookingController::start_manual(DeciCelsius temp, std::uint8_t dial,
                                        std::uint32_t duration_s) {
     return start_program(std::make_unique<ManualMode>(temp, dial, duration_s));
+}
+
+Status CookingController::start_recipe(const Recipe* recipe) {
+    if (recipe == nullptr || recipe->step_count == 0) {
+        return Status::InvalidArgument;
+    }
+    return start_program(std::make_unique<GuidedRecipe>(recipe));
 }
 
 Status CookingController::start_program(std::unique_ptr<Program> program) {

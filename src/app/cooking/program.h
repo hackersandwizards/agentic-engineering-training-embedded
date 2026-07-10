@@ -25,6 +25,10 @@ public:
 
     // One line of user-facing state for the display.
     virtual const char* status(const ProgramContext& ctx) const = 0;
+
+    // Guided programs pause for user interaction; everything else never does.
+    virtual bool awaiting_user() const { return false; }
+    virtual void user_next() {}
 };
 
 constexpr Rpm dial_to_rpm(std::uint8_t dial) {
