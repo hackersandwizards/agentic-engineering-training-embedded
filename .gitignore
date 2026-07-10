@@ -1,0 +1,12 @@
+# Build output
+build/
+.cache/
+
+# Training exercises (distributed separately)
+exercises/
+trainer/
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store

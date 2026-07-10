@@ -1,0 +1,57 @@
+{
+  "version": 5,
+  "cmakeMinimumRequired": { "major": 3, "minor": 24, "patch": 0 },
+  "configurePresets": [
+    {
+      "name": "dev",
+      "displayName": "Debug + ASan/UBSan",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/dev",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CULINA_SANITIZE": "address,undefined"
+      }
+    },
+    {
+      "name": "tsan",
+      "displayName": "Debug + ThreadSanitizer",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/tsan",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CULINA_SANITIZE": "thread"
+      }
+    },
+    {
+      "name": "release",
+      "displayName": "Optimized, no sanitizers",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/release",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    }
+  ],
+  "buildPresets": [
+    { "name": "dev", "configurePreset": "dev" },
+    { "name": "tsan", "configurePreset": "tsan" },
+    { "name": "release", "configurePreset": "release" }
+  ],
+  "testPresets": [
+    {
+      "name": "dev",
+      "configurePreset": "dev",
+      "output": { "outputOnFailure": true }
+    },
+    {
+      "name": "tsan",
+      "configurePreset": "tsan",
+      "output": { "outputOnFailure": true }
+    },
+    {
+      "name": "release",
+      "configurePreset": "release",
+      "output": { "outputOnFailure": true }
+    }
+  ]
+}
