@@ -106,7 +106,7 @@ Status parse_recipe_file(const char* path, Recipe* out) {
             continue;
         }
         if (std::strncmp(p, "name:", 5) == 0) {
-            std::strcpy(out->name, skip_spaces(p + 5));
+            std::strncpy(out->name, skip_spaces(p + 5), sizeof(out->name) - 1);
         } else if (std::strncmp(p, "step:", 5) == 0) {
             if (out->step_count >= sizeof(out->steps) / sizeof(out->steps[0])) {
                 status = Status::Overflow;

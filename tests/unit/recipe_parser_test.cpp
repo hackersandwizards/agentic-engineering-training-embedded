@@ -3,6 +3,7 @@
 #include <gtest/gtest.h>
 
 #include <cstdio>
+#include <cstring>
 #include <string>
 
 namespace {
@@ -62,6 +63,15 @@ TEST(RecipeParser, IgnoresUnknownKeysAndComments) {
     Recipe recipe;
     ASSERT_EQ(parse_recipe_file(path.c_str(), &recipe), Status::Ok);
     EXPECT_EQ(recipe.steps[0].target_temp, 800);
+}
+
+TEST(RecipeParser, LongNamesAreTruncatedSafely) {
+    const std::string long_name(60, 'X');
+    const std::string path =
+        write_recipe(("name: " + long_name + "\nstep: note | text=hello\n").c_str());
+    Recipe recipe;
+    ASSERT_EQ(parse_recipe_file(path.c_str(), &recipe), Status::Ok);
+    EXPECT_EQ(std::strlen(recipe.name), sizeof(recipe.name) - 1);
 }
 
 TEST(RecipeParser, MissingFileFails) {
