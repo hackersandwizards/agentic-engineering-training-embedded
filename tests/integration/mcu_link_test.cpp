@@ -35,7 +35,7 @@ TEST(McuLink, ClampsSpeedWithUnlockedLid) {
     McuFixture fix;
     std::uint8_t req[3];
     put_u16(req, 9000);
-    req[2] = mcu::MotorController::kRampFast;
+    req[2] = c1link::kRampFast;
     fix.send_request(MsgId::MotorSetTarget, req, sizeof(req));
     fix.run_ms(5);
     ASSERT_EQ(fix.responses().size(), 1u);
@@ -47,7 +47,7 @@ TEST(McuLink, LidOpeningWhileRunningCutsSpeed) {
     McuFixture fix;
     std::uint8_t req[3];
     put_u16(req, 5000);
-    req[2] = mcu::MotorController::kRampFast;
+    req[2] = c1link::kRampFast;
     fix.send_request(MsgId::MotorSetTarget, req, sizeof(req));
     fix.run_ms(3000);
     EXPECT_GT(fix.last_telemetry().rpm, 4000u);
@@ -99,7 +99,7 @@ TEST(McuLink, BurstNeedsALockedLid) {
     McuFixture fix;
     std::uint8_t req[3];
     put_u16(req, 10700);
-    req[2] = mcu::MotorController::kRampBurst;
+    req[2] = c1link::kRampBurst;
     fix.send_request(MsgId::MotorSetTarget, req, sizeof(req));
     fix.run_ms(5);
     ASSERT_EQ(fix.responses().size(), 1u);

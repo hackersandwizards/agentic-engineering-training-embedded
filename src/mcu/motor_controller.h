@@ -20,11 +20,6 @@ public:
 
     Rpm target_rpm() const { return target_rpm_; }
 
-    static constexpr std::uint8_t kRampGentle = 0;
-    static constexpr std::uint8_t kRampNormal = 1;
-    static constexpr std::uint8_t kRampFast = 2;
-    static constexpr std::uint8_t kRampBurst = 3;
-
 private:
     hal::IMotor* motor_;
     float commanded_rpm_ = 0.0f;

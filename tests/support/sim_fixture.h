@@ -1,5 +1,8 @@
 #pragma once
 
+#include "app/cooking/cooking_controller.h"
+#include "app/mcu_client.h"
+#include "app/telemetry_store.h"
 #include "mcu/safety_mcu.h"
 #include "protocol/link.h"
 #include "sim/in_memory_transport.h"
@@ -75,6 +78,49 @@ private:
     c1link::TelemetryData last_telemetry_;
     std::size_t telemetry_count_ = 0;
     c1link::FaultCode last_fault_ = c1link::FaultCode::None;
+};
+
+// The full device: board, safety MCU, and the application firmware stack.
+class SystemFixture {
+public:
+    SystemFixture() : mcu_(hardware(), &transport_.mcu_side(), &board_.clock()) {}
+
+    sim::SimBoard& board() { return board_; }
+    app::TelemetryStore& store() { return store_; }
+    app::McuClient& client() { return client_; }
+    app::CookingController& controller() { return controller_; }
+
+    void run_ms(std::uint32_t ms) {
+        for (std::uint32_t i = 0; i < ms; ++i) {
+            board_.step_ms(1);
+            mcu_.tick_1ms();
+            client_.poll();
+            if (++app_divider_ >= 10) {
+                app_divider_ = 0;
+                controller_.tick_10ms();
+            }
+        }
+    }
+
+private:
+    mcu::SafetyMcu::Hardware hardware() {
+        mcu::SafetyMcu::Hardware hw;
+        hw.motor = &board_.motor();
+        hw.heater = &board_.heater();
+        hw.temp_sensor = &board_.temp_sensor();
+        hw.scale = &board_.scale();
+        hw.lid = &board_.lid();
+        return hw;
+    }
+
+    sim::SimBoard board_;
+    sim::InMemoryTransport transport_;
+    mcu::SafetyMcu mcu_;
+    app::TelemetryStore store_;
+    app::McuClient client_{&transport_.app_side(), &board_.clock(), &store_};
+    app::CookingController controller_{&client_, &store_, &board_.clock(),
+                                       &board_.app_watchdog()};
+    std::uint32_t app_divider_ = 0;
 };
 
 } // namespace culina::testing

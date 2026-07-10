@@ -1,15 +1,17 @@
 #include "mcu/motor_controller.h"
 
+#include "protocol/c1link.h"
+
 namespace culina::mcu {
 
 namespace {
 float ramp_rate_for(std::uint8_t profile) {
     switch (profile) {
-    case MotorController::kRampGentle:
+    case c1link::kRampGentle:
         return 500.0f;
-    case MotorController::kRampNormal:
+    case c1link::kRampNormal:
         return 1500.0f;
-    case MotorController::kRampFast:
+    case c1link::kRampFast:
         return 4000.0f;
     default:
         return 1500.0f;

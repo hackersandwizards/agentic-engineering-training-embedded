@@ -43,7 +43,7 @@ void CommandHandler::handle(const Frame& request, const Interlocks::Inputs& stat
         }
         const Rpm requested = get_u16(request.payload);
         const std::uint8_t ramp = request.payload[2];
-        if (ramp == MotorController::kRampBurst) {
+        if (ramp == kRampBurst) {
             // Burst runs are only allowed with the lid locked.
             if (!state.lid_locked) {
                 nack(request);

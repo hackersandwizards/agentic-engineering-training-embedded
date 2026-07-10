@@ -65,7 +65,7 @@ TEST(McuClient, TelemetryLandsInTheStore) {
 
 TEST(McuClient, MotorSpinsUpAfterGrantedRequest) {
     ClientFixture fix;
-    ASSERT_EQ(fix.client.set_motor(5000, mcu::MotorController::kRampFast), Status::Ok);
+    ASSERT_EQ(fix.client.set_motor(5000, c1link::kRampFast), Status::Ok);
     fix.run_ms(5);
     Frame response;
     ASSERT_TRUE(fix.client.take_response(&response));
@@ -79,7 +79,8 @@ TEST(McuClient, MotorSpinsUpAfterGrantedRequest) {
 TEST(McuClient, FaultFrameIsSurfaced) {
     ClientFixture fix;
     fix.board.set_ambient_c(175.0f);
-    fix.run_ms(120000);
+    ASSERT_EQ(fix.client.set_heater(1600), Status::Ok);
+    fix.run_ms(180000);
     EXPECT_EQ(fix.client.last_fault(), FaultCode::Overtemp);
 }
 

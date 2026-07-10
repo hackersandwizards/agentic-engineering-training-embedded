@@ -46,6 +46,12 @@ enum class MsgId : std::uint8_t {
     Fault = 0x81,     // payload: fault code u8
 };
 
+// Ramp profiles for MotorSetTarget.
+constexpr std::uint8_t kRampGentle = 0;
+constexpr std::uint8_t kRampNormal = 1;
+constexpr std::uint8_t kRampFast = 2;
+constexpr std::uint8_t kRampBurst = 3;
+
 // Telemetry flags bitmask.
 constexpr std::uint8_t kFlagLidClosed = 0x01;
 constexpr std::uint8_t kFlagLidLocked = 0x02;
