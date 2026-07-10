@@ -1,10 +1,29 @@
 #include "app/mcu_client.h"
 
+#include "common/logging.h"
+
+#include <cstring>
+
 namespace culina::app {
 
 using namespace c1link;
 
 void McuClient::poll() {
+    if (waiting_ &&
+        static_cast<std::int32_t>(clock_->now_ms() - sent_at_ms_ - kResponseTimeoutMs) > 0) {
+        if (!retried_) {
+            // One retry under a fresh sequence number.
+            retried_ = true;
+            sent_at_ms_ = clock_->now_ms();
+            link_.send(FrameType::Request, next_seq_++, pending_msg_id_, pending_payload_,
+                       pending_payload_len_);
+        } else {
+            CULINA_LOG_WARN("request 0x%02x timed out after retry",
+                            static_cast<unsigned>(pending_msg_id_));
+            waiting_ = false;
+        }
+    }
+
     Frame frame;
     while (link_.poll(&frame)) {
         if (frame.type == FrameType::Telemetry && frame.msg_id == MsgId::Telemetry &&
@@ -33,6 +52,9 @@ Status McuClient::request(MsgId id, const std::uint8_t* payload, std::uint16_t l
     if (waiting_) {
         return Status::NotReady;
     }
+    if (len > kMaxPayload) {
+        return Status::InvalidArgument;
+    }
     const Status sent = link_.send(FrameType::Request, next_seq_++, id, payload, len);
     if (sent != Status::Ok) {
         return sent;
@@ -40,6 +62,12 @@ Status McuClient::request(MsgId id, const std::uint8_t* payload, std::uint16_t l
     waiting_ = true;
     pending_msg_id_ = id;
     response_ready_ = false;
+    sent_at_ms_ = clock_->now_ms();
+    retried_ = false;
+    if (len > 0) {
+        std::memcpy(pending_payload_, payload, len);
+    }
+    pending_payload_len_ = len;
     return Status::Ok;
 }
 

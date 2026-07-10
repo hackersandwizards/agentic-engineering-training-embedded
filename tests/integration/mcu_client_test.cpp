@@ -2,6 +2,7 @@
 #include "mcu/safety_mcu.h"
 #include "sim/in_memory_transport.h"
 #include "sim/sim_board.h"
+#include "support/flaky_transport.h"
 
 #include <gtest/gtest.h>
 
@@ -74,6 +75,38 @@ TEST(McuClient, MotorSpinsUpAfterGrantedRequest) {
 
     fix.run_ms(2500);
     EXPECT_NEAR(static_cast<float>(fix.store.latest().rpm), 5000.0f, 400.0f);
+}
+
+TEST(McuClient, RetriesALostRequest) {
+    sim::SimBoard board;
+    sim::InMemoryTransport transport;
+    culina::testing::FlakyTransport flaky(&transport.app_side());
+
+    mcu::SafetyMcu::Hardware hw;
+    hw.motor = &board.motor();
+    hw.heater = &board.heater();
+    hw.temp_sensor = &board.temp_sensor();
+    hw.scale = &board.scale();
+    hw.lid = &board.lid();
+    mcu::SafetyMcu safety_mcu(hw, &transport.mcu_side(), &board.clock());
+
+    app::TelemetryStore store;
+    app::McuClient client(&flaky, &board.clock(), &store);
+
+    flaky.drop_next_write();
+    ASSERT_EQ(client.set_heater(from_celsius(80.0f)), Status::Ok);
+
+    Frame response;
+    bool got_response = false;
+    for (int i = 0; i < 200 && !got_response; ++i) {
+        board.step_ms(1);
+        safety_mcu.tick_1ms();
+        client.poll();
+        got_response = client.take_response(&response);
+    }
+    ASSERT_TRUE(got_response);
+    EXPECT_EQ(response.msg_id, MsgId::HeaterSetTarget);
+    EXPECT_FALSE(client.awaiting_response());
 }
 
 TEST(McuClient, TelemetryWeightMatchesTheBowl) {

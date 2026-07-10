@@ -33,6 +33,8 @@ public:
     c1link::FaultCode last_fault() const { return last_fault_; }
     void clear_fault() { last_fault_ = c1link::FaultCode::None; }
 
+    static constexpr Millis kResponseTimeoutMs = 50;
+
 private:
     c1link::Link link_;
     const hal::IClock* clock_;
@@ -43,6 +45,10 @@ private:
     bool response_ready_ = false;
     c1link::Frame response_;
     c1link::FaultCode last_fault_ = c1link::FaultCode::None;
+    Millis sent_at_ms_ = 0;
+    bool retried_ = false;
+    std::uint8_t pending_payload_[c1link::kMaxPayload] = {};
+    std::uint16_t pending_payload_len_ = 0;
 };
 
 } // namespace culina::app
