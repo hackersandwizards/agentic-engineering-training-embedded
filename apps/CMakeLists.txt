@@ -1,3 +1,11 @@
 add_executable(culina_sim culina_sim_main.cpp)
 target_link_libraries(culina_sim PRIVATE culina_cli)
 culina_set_warnings(culina_sim)
+
+add_executable(culina_mcu culina_mcu_main.cpp)
+target_link_libraries(culina_mcu PRIVATE culina_mcu_lib culina_simulation)
+culina_set_warnings(culina_mcu)
+
+add_executable(culina_app culina_app_main.cpp)
+target_link_libraries(culina_app PRIVATE culina_app_lib culina_simulation)
+culina_set_warnings(culina_app)
