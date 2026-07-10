@@ -13,8 +13,7 @@ void McuClient::poll() {
             sample.t_ms = clock_->now_ms();
             sample.deci_celsius = get_i16(frame.payload + 4);
             sample.rpm = get_u16(frame.payload + 6);
-            sample.grams = static_cast<Grams>((frame.payload[8] << 24) | (frame.payload[9] << 16) |
-                                              (frame.payload[10] << 8) | frame.payload[11]);
+            sample.grams = get_i32(frame.payload + 8);
             sample.flags = frame.payload[12];
             store_->append(sample);
         } else if (frame.type == FrameType::Telemetry && frame.msg_id == MsgId::Fault &&

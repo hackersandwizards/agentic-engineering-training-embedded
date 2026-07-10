@@ -76,6 +76,13 @@ TEST(McuClient, MotorSpinsUpAfterGrantedRequest) {
     EXPECT_NEAR(static_cast<float>(fix.store.latest().rpm), 5000.0f, 400.0f);
 }
 
+TEST(McuClient, TelemetryWeightMatchesTheBowl) {
+    ClientFixture fix;
+    fix.board.add_mass(512.0f);
+    fix.run_ms(500);
+    EXPECT_NEAR(static_cast<float>(fix.store.latest().grams), 512.0f, 6.0f);
+}
+
 TEST(McuClient, FaultFrameIsSurfaced) {
     ClientFixture fix;
     fix.board.set_ambient_c(175.0f);
