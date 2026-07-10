@@ -5,7 +5,7 @@ namespace culina::sim {
 namespace {
 constexpr float kDriftGramsPerMinute = 0.05f;
 constexpr float kMaxRpm = 10700.0f;
-constexpr float kVibrationAmplitudeG = 25.0f;
+constexpr float kVibrationAmplitudeG = 90.0f;
 } // namespace
 
 ScaleModel::ScaleModel(std::uint32_t seed) : rng_(seed) {}
