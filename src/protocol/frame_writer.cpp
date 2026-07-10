@@ -22,7 +22,8 @@ std::size_t write_frame(std::uint8_t* out, std::size_t out_cap, FrameType type, 
     if (payload_len > 0) {
         std::memcpy(&out[kHeaderSize], payload, payload_len);
     }
-    const std::uint16_t crc = crc16_ccitt(payload, payload_len);
+    // CRC covers version through payload, per docs/c1link-protocol.md.
+    const std::uint16_t crc = crc16_ccitt(&out[2], kHeaderSize - 2 + payload_len);
     put_u16(&out[kHeaderSize + payload_len], crc);
     return total;
 }

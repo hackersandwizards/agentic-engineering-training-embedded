@@ -32,6 +32,7 @@ private:
     std::uint16_t expected_len_ = 0;
     std::uint16_t received_ = 0;
     std::uint8_t crc_lo_ = 0;
+    std::uint16_t running_crc_ = 0xFFFF;
 };
 
 } // namespace culina::c1link

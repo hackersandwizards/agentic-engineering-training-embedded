@@ -8,9 +8,15 @@ void FrameParser::reset() {
     state_ = State::Sync0;
     expected_len_ = 0;
     received_ = 0;
+    running_crc_ = 0xFFFF;
 }
 
 bool FrameParser::feed(std::uint8_t byte, Frame* out) {
+    // The CRC covers everything between the sync bytes and the CRC field.
+    if (state_ != State::Sync0 && state_ != State::Sync1 && state_ != State::CrcLo &&
+        state_ != State::CrcHi) {
+        running_crc_ = crc16_ccitt(&byte, 1, running_crc_);
+    }
     switch (state_) {
     case State::Sync0:
         if (byte == kSync0) {
@@ -73,8 +79,7 @@ bool FrameParser::feed(std::uint8_t byte, Frame* out) {
             reset();
             return false;
         }
-        const std::uint16_t computed = crc16_ccitt(frame_.payload, expected_len_);
-        if (computed != wire_crc) {
+        if (running_crc_ != wire_crc) {
             reset();
             return false;
         }

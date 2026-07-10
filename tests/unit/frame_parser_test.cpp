@@ -93,6 +93,22 @@ TEST(FrameParser, RejectsCorruptedPayload) {
     EXPECT_EQ(frame.msg_id, MsgId::Ping);
 }
 
+TEST(FrameParser, RejectsCorruptedHeader) {
+    const std::uint8_t payload[] = {0x64, 0x00};
+    std::uint8_t wire[kMaxFrameSize];
+    const std::size_t n =
+        make_frame(wire, sizeof(wire), MsgId::HeaterSetTarget, 5, payload, sizeof(payload));
+    wire[5] = static_cast<std::uint8_t>(MsgId::MotorStop); // flip the message id
+
+    FrameParser parser;
+    Frame frame;
+    bool complete = false;
+    for (std::size_t i = 0; i < n; ++i) {
+        complete = parser.feed(wire[i], &frame);
+    }
+    EXPECT_FALSE(complete);
+}
+
 TEST(FrameWriter, RefusesOversizedPayload) {
     std::uint8_t payload[kMaxPayload + 1] = {};
     std::uint8_t wire[kMaxFrameSize + 8];
