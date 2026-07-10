@@ -1,0 +1,3 @@
+add_library(culina_app_lib STATIC telemetry_store.cpp mcu_client.cpp)
+target_link_libraries(culina_app_lib PUBLIC culina_protocol culina_hal culina_common)
+culina_set_warnings(culina_app_lib)

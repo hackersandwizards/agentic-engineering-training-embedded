@@ -1,0 +1,48 @@
+#pragma once
+
+#include "app/telemetry_store.h"
+#include "hal/i_clock.h"
+#include "hal/i_uart.h"
+#include "protocol/link.h"
+
+namespace culina::app {
+
+// Application-side view of the safety MCU: sends commands over C1-Link,
+// routes telemetry into the store, and tracks the response to the most
+// recent request.
+class McuClient {
+public:
+    McuClient(hal::IUart* uart, const hal::IClock* clock, TelemetryStore* store)
+        : link_(uart, clock), clock_(clock), store_(store) {}
+
+    // Pump the link; call this every millisecond.
+    void poll();
+
+    Status request(c1link::MsgId id, const std::uint8_t* payload, std::uint16_t len);
+    bool awaiting_response() const { return waiting_; }
+    bool take_response(c1link::Frame* out);
+
+    // Convenience commands.
+    Status set_motor(Rpm rpm, std::uint8_t ramp_profile);
+    Status motor_stop();
+    Status set_heater(DeciCelsius target);
+    Status heater_off();
+    Status tare();
+    Status lock_lid(bool locked);
+
+    c1link::FaultCode last_fault() const { return last_fault_; }
+    void clear_fault() { last_fault_ = c1link::FaultCode::None; }
+
+private:
+    c1link::Link link_;
+    const hal::IClock* clock_;
+    TelemetryStore* store_;
+    std::uint8_t next_seq_ = 0;
+    bool waiting_ = false;
+    c1link::MsgId pending_msg_id_ = c1link::MsgId::Ping;
+    bool response_ready_ = false;
+    c1link::Frame response_;
+    c1link::FaultCode last_fault_ = c1link::FaultCode::None;
+};
+
+} // namespace culina::app
