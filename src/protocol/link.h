@@ -19,6 +19,9 @@ public:
     // Pumps the UART. Returns true when a complete valid frame was received.
     bool poll(Frame* out);
 
+    // True while a frame is partially assembled.
+    bool receiving() const { return parser_.in_progress(); }
+
     static constexpr Millis kFrameTimeoutMs = 50;
 
 private:
