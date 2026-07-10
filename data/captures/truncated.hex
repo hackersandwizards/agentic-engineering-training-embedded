@@ -1,0 +1,2 @@
+# Header claims a 250-byte payload but the capture stops immediately.
+a5 5a 10 01 01 01 fa 00

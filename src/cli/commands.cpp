@@ -6,8 +6,10 @@
 #include "app/cooking/turbo_pulse.h"
 #include "common/crc16.h"
 
+#include <cmath>
 #include <cstdarg>
 #include <cstdio>
+#include <limits>
 #include <memory>
 #include <sstream>
 #include <vector>
@@ -28,28 +30,57 @@ std::vector<std::string> tokenize(const std::string& line) {
     return tokens;
 }
 
-// Durations: "500ms", "30s", "5m", or a bare millisecond count.
-bool parse_duration_ms(const std::string& text, std::uint32_t* out) {
+bool parse_float(const std::string& text, float min, float max, float* out) {
     try {
-        std::size_t suffix = 0;
-        const long value = std::stol(text, &suffix);
-        if (value < 0) {
+        std::size_t consumed = 0;
+        const float value = std::stof(text, &consumed);
+        if (consumed != text.size() || !std::isfinite(value) || value < min || value > max) {
             return false;
         }
-        const std::string unit = text.substr(suffix);
-        if (unit == "ms" || unit.empty()) {
-            *out = static_cast<std::uint32_t>(value);
-        } else if (unit == "s") {
-            *out = static_cast<std::uint32_t>(value) * 1000u;
-        } else if (unit == "m") {
-            *out = static_cast<std::uint32_t>(value) * 60000u;
-        } else {
-            return false;
-        }
+        *out = value;
         return true;
     } catch (const std::exception&) {
         return false;
     }
+}
+
+bool parse_unsigned(const std::string& text, std::uint64_t max, std::uint64_t* out) {
+    try {
+        if (text.empty() || text.front() == '-') {
+            return false;
+        }
+        std::size_t consumed = 0;
+        const auto value = std::stoull(text, &consumed);
+        if (consumed != text.size() || value > max) {
+            return false;
+        }
+        *out = value;
+        return true;
+    } catch (const std::exception&) {
+        return false;
+    }
+}
+
+// Accepts ms, s, m, or a bare millisecond count.
+bool parse_duration_ms(const std::string& text, std::uint32_t* out) {
+    const std::size_t unit_pos = text.find_first_not_of("0123456789");
+    const std::string number = text.substr(0, unit_pos);
+    const std::string unit = unit_pos == std::string::npos ? "" : text.substr(unit_pos);
+    std::uint64_t multiplier = 1;
+    if (unit == "s") {
+        multiplier = 1000;
+    } else if (unit == "m") {
+        multiplier = 60000;
+    } else if (!unit.empty() && unit != "ms") {
+        return false;
+    }
+    std::uint64_t value = 0;
+    const auto max = static_cast<std::uint64_t>(std::numeric_limits<std::uint32_t>::max());
+    if (!parse_unsigned(number, max / multiplier, &value)) {
+        return false;
+    }
+    *out = static_cast<std::uint32_t>(value * multiplier);
+    return true;
 }
 
 void say(const CommandEnv& env, const char* fmt, ...) __attribute__((format(printf, 2, 3)));
@@ -72,7 +103,11 @@ bool handle_add(CommandEnv& env, const std::vector<std::string>& args) {
     if (args.size() != 3) {
         return false;
     }
-    const float grams = std::stof(args[2]);
+    float grams = 0.0f;
+    const float remaining = 2200.0f - env.sys->board().true_mass_g();
+    if (!parse_float(args[2], 0.1f, remaining, &grams)) {
+        return false;
+    }
     env.sys->board().add_mass(grams);
     if (args[1] == "water") {
         env.sys->board().set_viscosity(1.0f);
@@ -122,7 +157,10 @@ bool handle_expect(CommandEnv& env, const std::vector<std::string>& args) {
 
     bool pass = false;
     if (numeric) {
-        const float want = std::stof(expected);
+        float want = 0.0f;
+        if (!parse_float(expected, -1000000.0f, 1000000.0f, &want)) {
+            return false;
+        }
         if (op == ">=") {
             pass = actual >= want;
         } else if (op == "<=") {
@@ -165,15 +203,21 @@ bool handle_expect(CommandEnv& env, const std::vector<std::string>& args) {
 
 bool handle_ota(CommandEnv& env, const std::vector<std::string>& args) {
     static std::vector<std::uint8_t> image;
-    std::size_t kib = 512;
+    const app::SessionState state = env.sys->controller().state();
+    if ((state != app::SessionState::Idle && state != app::SessionState::Done) ||
+        env.sys->ota().busy() || args.size() > 3) {
+        return false;
+    }
+    std::uint64_t kib = 512;
     bool corrupt = false;
-    if (args.size() >= 2) {
-        kib = static_cast<std::size_t>(std::stoul(args[1]));
+    if (args.size() >= 2 && !parse_unsigned(args[1], 65536, &kib)) {
+        return false;
     }
-    if (args.size() >= 3 && args[2] == "corrupt") {
-        corrupt = true;
+    if (kib == 0 || (args.size() == 3 && args[2] != "corrupt")) {
+        return false;
     }
-    image.resize(kib * 1024);
+    corrupt = args.size() == 3;
+    image.resize(static_cast<std::size_t>(kib * 1024));
     for (std::size_t i = 0; i < image.size(); ++i) {
         image[i] = static_cast<std::uint8_t>(i * 13 + 5);
     }
@@ -185,7 +229,7 @@ bool handle_ota(CommandEnv& env, const std::vector<std::string>& args) {
         say(env, "ota: busy");
         return true;
     }
-    say(env, "ota: verifying %zu KiB image", kib);
+    say(env, "ota: verifying %llu KiB image", static_cast<unsigned long long>(kib));
     return true;
 }
 
@@ -200,8 +244,9 @@ std::string status_line(system::SystemSim& sys) {
     const Millis t = sys.now_ms();
     char buf[160];
     std::snprintf(buf, sizeof(buf), "[%s:%s %s] %.1fC spd%.0f %ldg lid:%s t=%02u:%02u:%02u",
-                  app::session_state_name(sys.controller().state()), sys.controller().program_name(),
-                  sys.controller().program_status(), static_cast<double>(to_celsius(sample.deci_celsius)),
+                  app::session_state_name(sys.controller().state()),
+                  sys.controller().program_name(), sys.controller().program_status(),
+                  static_cast<double>(to_celsius(sample.deci_celsius)),
                   static_cast<double>(sample.rpm) / 1070.0, static_cast<long>(sample.grams), lid,
                   t / 3600000u, (t / 60000u) % 60u, (t / 1000u) % 60u);
     return buf;
@@ -224,35 +269,68 @@ bool execute_command(CommandEnv& env, const std::string& line) {
         } else if (cmd == "add") {
             return handle_add(env, args);
         } else if (cmd == "set-temp" && args.size() == 2) {
-            const float celsius = std::stof(args[1]);
+            float celsius = 0.0f;
+            if (!parse_float(args[1], 0.0f, 160.0f, &celsius) ||
+                (celsius > 0.0f && celsius < 37.0f)) {
+                return false;
+            }
             const Status s = celsius <= 0.0f ? sys.client().heater_off()
                                              : sys.client().set_heater(from_celsius(celsius));
             say(env, "set-temp: %s", status_name(s));
         } else if (cmd == "set-speed" && args.size() == 2) {
-            const auto dial = static_cast<std::uint8_t>(std::stoul(args[1]));
+            std::uint64_t dial_value = 0;
+            if (!parse_unsigned(args[1], 10, &dial_value)) {
+                return false;
+            }
+            const auto dial = static_cast<std::uint8_t>(dial_value);
             const Status s = sys.client().set_motor(app::dial_to_rpm(dial), c1link::kRampNormal);
             say(env, "set-speed: %s", status_name(s));
         } else if (cmd == "manual" && args.size() == 4) {
+            float celsius = 0.0f;
+            std::uint64_t dial = 0;
+            std::uint64_t minutes = 0;
+            if (!parse_float(args[1], 0.0f, 160.0f, &celsius) ||
+                (celsius > 0.0f && celsius < 37.0f) || !parse_unsigned(args[2], 10, &dial) ||
+                !parse_unsigned(args[3], 1440, &minutes) || minutes == 0) {
+                return false;
+            }
             const Status s = sys.controller().start_manual(
-                from_celsius(std::stof(args[1])), static_cast<std::uint8_t>(std::stoul(args[2])),
-                static_cast<std::uint32_t>(std::stoul(args[3])) * 60u);
+                from_celsius(celsius), static_cast<std::uint8_t>(dial),
+                static_cast<std::uint32_t>(minutes * 60));
             say(env, "manual: %s", status_name(s));
         } else if (cmd == "dough" && args.size() == 2) {
-            const Status s = sys.controller().start_program(std::make_unique<app::DoughMode>(
-                static_cast<std::uint32_t>(std::stoul(args[1])) * 60u));
+            std::uint64_t minutes = 0;
+            if (!parse_unsigned(args[1], 1440, &minutes) || minutes == 0) {
+                return false;
+            }
+            const Status s = sys.controller().start_program(
+                std::make_unique<app::DoughMode>(static_cast<std::uint32_t>(minutes * 60)));
             say(env, "dough: %s", status_name(s));
         } else if (cmd == "steam" && args.size() == 2) {
-            const Status s = sys.controller().start_program(std::make_unique<app::SteamMode>(
-                static_cast<std::uint32_t>(std::stoul(args[1])) * 60u));
+            std::uint64_t minutes = 0;
+            if (!parse_unsigned(args[1], 1440, &minutes) || minutes == 0) {
+                return false;
+            }
+            const Status s = sys.controller().start_program(
+                std::make_unique<app::SteamMode>(static_cast<std::uint32_t>(minutes * 60)));
             say(env, "steam: %s", status_name(s));
         } else if (cmd == "sous-vide" && args.size() == 3) {
+            float celsius = 0.0f;
+            std::uint64_t minutes = 0;
+            if (!parse_float(args[1], 37.0f, 90.0f, &celsius) ||
+                !parse_unsigned(args[2], 1440, &minutes) || minutes == 0) {
+                return false;
+            }
             const Status s = sys.controller().start_program(std::make_unique<app::SousVideMode>(
-                from_celsius(std::stof(args[1])),
-                static_cast<std::uint32_t>(std::stoul(args[2])) * 60u));
+                from_celsius(celsius), static_cast<std::uint32_t>(minutes * 60)));
             say(env, "sous-vide: %s", status_name(s));
         } else if (cmd == "turbo" && args.size() == 2) {
-            const Status s = sys.controller().start_program(std::make_unique<app::TurboPulse>(
-                static_cast<std::uint32_t>(std::stoul(args[1]))));
+            std::uint64_t pulse_ms = 0;
+            if (!parse_unsigned(args[1], 2000, &pulse_ms) || pulse_ms == 0) {
+                return false;
+            }
+            const Status s = sys.controller().start_program(
+                std::make_unique<app::TurboPulse>(static_cast<std::uint32_t>(pulse_ms)));
             say(env, "turbo: %s", status_name(s));
         } else if (cmd == "load" && args.size() >= 2) {
             std::string name = args[1];

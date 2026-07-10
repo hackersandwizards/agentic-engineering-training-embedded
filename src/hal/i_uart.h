@@ -5,9 +5,7 @@
 
 namespace culina::hal {
 
-// Byte-stream link between the two processors. Non-blocking on both sides:
-// write() returns how many bytes were accepted, read() returns false when no
-// byte is pending.
+// Both operations are non-blocking; write may accept a partial buffer.
 class IUart {
 public:
     virtual ~IUart() = default;

@@ -5,9 +5,7 @@
 
 namespace culina::mcu {
 
-// Ramped speed control on top of the raw motor driver. Profiles trade
-// smoothness against responsiveness; burst() is the immediate path used for
-// short pulse operations.
+// Ramps normal targets while burst commands take effect immediately.
 class MotorController {
 public:
     explicit MotorController(hal::IMotor* motor) : motor_(motor) {}
@@ -19,6 +17,7 @@ public:
     void tick_1ms();
 
     Rpm target_rpm() const { return target_rpm_; }
+    bool active() const { return target_rpm_ > 0 || commanded_rpm_ > 0.0f; }
 
 private:
     hal::IMotor* motor_;

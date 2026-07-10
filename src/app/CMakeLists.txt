@@ -12,5 +12,5 @@ add_library(
     recipe/recipe_parser.cpp
     recipe/recipe_library.cpp
     ota/ota_updater.cpp)
-target_link_libraries(culina_app_lib PUBLIC culina_protocol culina_hal culina_common)
+target_link_libraries(culina_app_lib PUBLIC culina_protocol)
 culina_set_warnings(culina_app_lib)

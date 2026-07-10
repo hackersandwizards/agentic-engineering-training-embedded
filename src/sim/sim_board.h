@@ -38,6 +38,8 @@ public:
     void open_lid() { lid_model_.user_open(); }
     void close_lid() { lid_model_.user_close(); }
     void set_ambient_c(float celsius) { thermal_model_.set_ambient_c(celsius); }
+    void set_temperature_c(float celsius) { thermal_model_.set_temperature_c(celsius); }
+    void set_temp_sensor_failed(bool failed) { temp_hal_.set_failed(failed); }
 
     // Advance the world; granularity is 1 ms.
     void step_ms(std::uint32_t ms);
@@ -83,18 +85,22 @@ private:
 
     class TempSensorHal : public hal::ITempSensor {
     public:
-        TempSensorHal(const ThermalModel* model, std::uint32_t seed)
-            : model_(model), rng_(seed) {}
+        TempSensorHal(const ThermalModel* model, std::uint32_t seed) : model_(model), rng_(seed) {}
 
         Result<DeciCelsius> read_deci_celsius() override {
+            if (failed_) {
+                return Result<DeciCelsius>::err(Status::HardwareFault);
+            }
             const float reading = model_->temperature_c() + noise_(rng_);
             return Result<DeciCelsius>::ok(from_celsius(reading));
         }
+        void set_failed(bool failed) { failed_ = failed; }
 
     private:
         const ThermalModel* model_;
         std::mt19937 rng_;
         std::normal_distribution<float> noise_{0.0f, 0.15f};
+        bool failed_ = false;
     };
 
     class ScaleHal : public hal::IScale {

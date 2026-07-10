@@ -7,6 +7,7 @@
 #include "protocol/link.h"
 #include "sim/in_memory_transport.h"
 #include "sim/sim_board.h"
+#include "support/flaky_transport.h"
 
 #include <vector>
 
@@ -26,6 +27,15 @@ public:
             board_.step_ms(1);
             mcu_.tick_1ms();
             pump_app();
+        }
+    }
+
+    void run_ms_with_heartbeat(std::uint32_t ms) {
+        while (ms > 0) {
+            send_request(c1link::MsgId::Ping, nullptr, 0);
+            const std::uint32_t chunk = ms > 1000 ? 1000 : ms;
+            run_ms(chunk);
+            ms -= chunk;
         }
     }
 
@@ -94,6 +104,7 @@ public:
     app::TelemetryStore& store() { return store_; }
     app::McuClient& client() { return client_; }
     app::CookingController& controller() { return controller_; }
+    void drop_next_app_write() { app_transport_.drop_next_write(); }
 
     void run_ms(std::uint32_t ms) {
         for (std::uint32_t i = 0; i < ms; ++i) {
@@ -120,11 +131,11 @@ private:
 
     sim::SimBoard board_;
     sim::InMemoryTransport transport_;
+    FlakyTransport app_transport_{&transport_.app_side()};
     mcu::SafetyMcu mcu_;
     app::TelemetryStore store_;
-    app::McuClient client_{&transport_.app_side(), &board_.clock(), &store_};
-    app::CookingController controller_{&client_, &store_, &board_.clock(),
-                                       &board_.app_watchdog()};
+    app::McuClient client_{&app_transport_, &board_.clock(), &store_};
+    app::CookingController controller_{&client_, &store_, &board_.clock(), &board_.app_watchdog()};
     std::uint32_t app_divider_ = 0;
 };
 

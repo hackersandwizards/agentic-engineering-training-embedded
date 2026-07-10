@@ -43,10 +43,8 @@ void MotorModel::step(float dt_seconds, float contents_grams) {
         return;
     }
 
-    current_ma_ =
-        static_cast<std::uint16_t>(duty_ > 0.0f ? kIdleCurrentMa + kCurrentPerRpmMa * rpm_ +
-                                                      load * 0.1f
-                                                : 0.0f);
+    current_ma_ = static_cast<std::uint16_t>(
+        duty_ > 0.0f ? kIdleCurrentMa + kCurrentPerRpmMa * rpm_ + load * 0.1f : 0.0f);
 }
 
 } // namespace culina::sim

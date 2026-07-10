@@ -38,6 +38,7 @@ private:
     std::uint8_t command_index_ = 0;
     Millis step_started_ms_ = 0;
     bool advance_requested_ = false;
+    bool scale_tared_ = false;
 };
 
 } // namespace culina::app

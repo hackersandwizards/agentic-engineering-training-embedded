@@ -1,6 +1,5 @@
 #include "app/cooking/manual_mode.h"
 
-
 namespace culina::app {
 
 void ManualMode::on_tick(ProgramContext& ctx) {
@@ -9,8 +8,7 @@ void ManualMode::on_tick(ProgramContext& ctx) {
         return;
     }
     if (!motor_set_) {
-        motor_set_ = ctx.mcu->set_motor(dial_to_rpm(dial_), c1link::kRampNormal) ==
-                     Status::Ok;
+        motor_set_ = ctx.mcu->set_motor(dial_to_rpm(dial_), c1link::kRampNormal) == Status::Ok;
     }
 }
 

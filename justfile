@@ -1,5 +1,3 @@
-# Convenience wrapper; every recipe is a one-liner over cmake/ctest.
-
 default: build
 
 configure preset="dev":
@@ -16,10 +14,16 @@ run *args="":
     ./build/dev/apps/culina_sim {{ args }}
 
 fmt:
-    git ls-files '*.h' '*.cpp' | xargs clang-format -i
+    git ls-files -z '*.h' '*.cpp' | xargs -0 clang-format -i
+
+format-check:
+    git ls-files -z '*.h' '*.cpp' | xargs -0 clang-format --dry-run --Werror
 
 tidy:
     ./scripts/run-clang-tidy.sh
 
 perf:
     ./scripts/perf-check.sh
+
+gate:
+    ./scripts/gate.sh

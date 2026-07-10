@@ -42,60 +42,112 @@ Status CookingController::start_recipe(const Recipe* recipe) {
 }
 
 Status CookingController::start_program(std::unique_ptr<Program> program) {
-    if (state_ == SessionState::Running || state_ == SessionState::Stopping) {
+    if (!program) {
+        return Status::InvalidArgument;
+    }
+    if (state_ == SessionState::Running || state_ == SessionState::Stopping ||
+        (state_ == SessionState::Faulted && !shutdown_motor_done_)) {
         return Status::NotReady;
     }
-    begin(std::move(program));
+    begin_shutdown(false);
+    pending_program_ = std::move(program);
+    start_after_shutdown_ = true;
     return Status::Ok;
 }
 
 void CookingController::begin(std::unique_ptr<Program> program) {
     program_ = std::move(program);
     started_ms_ = clock_->now_ms();
+    shutdown_heater_sent_ = false;
     shutdown_heater_done_ = false;
+    shutdown_motor_sent_ = false;
     shutdown_motor_done_ = false;
+    fault_shutdown_ = false;
+    start_after_shutdown_ = false;
+    pending_program_.reset();
     mcu_->clear_fault();
+    mcu_->clear_command_status();
     state_ = SessionState::Running;
 }
 
 void CookingController::stop() {
-    if (state_ == SessionState::Running) {
-        state_ = SessionState::Stopping;
+    if (state_ == SessionState::Stopping && start_after_shutdown_) {
+        start_after_shutdown_ = false;
+        pending_program_.reset();
+    } else if (state_ != SessionState::Stopping && state_ != SessionState::Faulted) {
+        begin_shutdown(false);
     }
 }
 
-void CookingController::run_stopping_sequence() {
+void CookingController::begin_shutdown(bool faulted) {
+    shutdown_heater_sent_ = false;
+    shutdown_heater_done_ = false;
+    shutdown_motor_sent_ = false;
+    shutdown_motor_done_ = false;
+    fault_shutdown_ = faulted;
+    start_after_shutdown_ = false;
+    pending_program_.reset();
+    mcu_->clear_command_status();
+    state_ = faulted ? SessionState::Faulted : SessionState::Stopping;
+}
+
+void CookingController::run_stopping_sequence(const c1link::Frame* response) {
+    if (response != nullptr && response->type == c1link::FrameType::Response) {
+        if (shutdown_heater_sent_ && !shutdown_heater_done_ &&
+            response->msg_id == c1link::MsgId::HeaterOff) {
+            shutdown_heater_done_ = true;
+        } else if (shutdown_motor_sent_ && !shutdown_motor_done_ &&
+                   response->msg_id == c1link::MsgId::MotorStop) {
+            shutdown_motor_done_ = true;
+        }
+    }
+
+    if (mcu_->last_command_status() != Status::Ok) {
+        mcu_->clear_command_status();
+        if (!shutdown_heater_done_) {
+            shutdown_heater_sent_ = false;
+        } else if (!shutdown_motor_done_) {
+            shutdown_motor_sent_ = false;
+        }
+    }
+
     if (!shutdown_heater_done_) {
-        shutdown_heater_done_ = mcu_->heater_off() == Status::Ok;
+        if (!shutdown_heater_sent_ && !mcu_->awaiting_response()) {
+            shutdown_heater_sent_ = mcu_->heater_off() == Status::Ok;
+        }
         return;
     }
     if (!shutdown_motor_done_) {
-        shutdown_motor_done_ = mcu_->motor_stop() == Status::Ok;
+        if (!shutdown_motor_sent_ && !mcu_->awaiting_response()) {
+            shutdown_motor_sent_ = mcu_->motor_stop() == Status::Ok;
+        }
         return;
     }
-    state_ = SessionState::Done;
+    if (start_after_shutdown_ && pending_program_ && !fault_shutdown_) {
+        auto next = std::move(pending_program_);
+        begin(std::move(next));
+        return;
+    }
+    state_ = fault_shutdown_ ? SessionState::Faulted : SessionState::Done;
 }
 
 void CookingController::tick_10ms() {
-    // Feed first: SR-006 makes no exception for long-running work like an
-    // OTA verification.
+    // SR-006 requires feeding before potentially long OTA work.
     watchdog_->feed();
 
-    if (ota_ != nullptr && ota_->busy()) {
-        ota_->step();
-        return; // nothing else runs while an update verifies
-    }
-
     c1link::Frame response;
-    mcu_->take_response(&response);
+    const bool has_response = mcu_->take_response(&response);
 
     display_avg_temp_c_ = telemetry_->average_temp_c(2000);
     hot_bowl_ = telemetry_->max_temp_c(2000) > 60.0f;
 
-    if (mcu_->last_fault() != c1link::FaultCode::None &&
-        (state_ == SessionState::Running || state_ == SessionState::Stopping)) {
-        state_ = SessionState::Faulted;
-        return;
+    if (state_ != SessionState::Faulted && (mcu_->last_fault() != c1link::FaultCode::None ||
+                                            mcu_->last_command_status() != Status::Ok)) {
+        begin_shutdown(true);
+    }
+
+    if (ota_ != nullptr && ota_->busy()) {
+        ota_->step();
     }
 
     if (state_ == SessionState::Running && program_) {
@@ -103,10 +155,10 @@ void CookingController::tick_10ms() {
         program_->on_tick(ctx);
         if (program_->finished(ctx)) {
             program_->on_stop(ctx);
-            state_ = SessionState::Stopping;
+            begin_shutdown(false);
         }
-    } else if (state_ == SessionState::Stopping) {
-        run_stopping_sequence();
+    } else if (state_ == SessionState::Stopping || state_ == SessionState::Faulted) {
+        run_stopping_sequence(has_response ? &response : nullptr);
     }
 }
 

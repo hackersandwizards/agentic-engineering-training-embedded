@@ -19,13 +19,16 @@ Rpm Interlocks::clamp_speed_request(Rpm requested, const Inputs& in) const {
 }
 
 Rpm Interlocks::continuous_cap(const Inputs& in) const {
-    if (!in.lid_closed) {
-        return limits::kLidOpenMaxRpm;
+    Rpm cap = limits::kMaxRpm;
+    if (in.temp_c > limits::kSpillGuardTempC) {
+        cap = limits::kSpillGuardMaxRpm;
     }
-    if (!in.lid_locked) {
-        return limits::kUnlockedMaxRpm;
+    if (!in.lid_closed && cap > limits::kLidOpenMaxRpm) {
+        cap = limits::kLidOpenMaxRpm;
+    } else if (!in.lid_locked && cap > limits::kUnlockedMaxRpm) {
+        cap = limits::kUnlockedMaxRpm;
     }
-    return limits::kMaxRpm;
+    return cap;
 }
 
 c1link::FaultCode Interlocks::evaluate(const Inputs& in) const {

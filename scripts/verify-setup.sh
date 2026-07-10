@@ -1,20 +1,22 @@
 #!/bin/sh
-# Checks that this machine can build and run the firmware: configure, build,
-# unit tests, one scenario. Prints SETUP OK at the end.
 set -eu
 
 cd "$(dirname "$0")/.."
 
-echo "== configure (dev preset)"
-cmake --preset dev >/dev/null
+for tool in git cmake ninja c++ clang-format clang-tidy shellcheck; do
+    if ! command -v "$tool" >/dev/null 2>&1; then
+        echo "Missing required tool: $tool" >&2
+        exit 1
+    fi
+done
 
-echo "== build"
+echo "Configuring the sanitizer build"
+cmake --preset dev -DCULINA_WARNINGS_AS_ERRORS=ON >/dev/null
+
+echo "Building all targets"
 cmake --build --preset dev >/dev/null
 
-echo "== unit tests"
-ctest --preset dev -L unit --output-on-failure >/dev/null
-
-echo "== scenario smoke test"
-./build/dev/apps/culina_sim --script data/scenarios/checks/turbo_cold.scn >/dev/null
+echo "Running the setup smoke tests"
+ctest --preset dev -L 'unit|scenario|tool' --output-on-failure >/dev/null
 
 echo "SETUP OK"

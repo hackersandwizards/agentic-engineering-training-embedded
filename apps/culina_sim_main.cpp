@@ -17,8 +17,7 @@ int main(int argc, char** argv) {
         } else if (std::strcmp(argv[i], "--seed") == 0 && i + 1 < argc) {
             seed = static_cast<std::uint32_t>(std::strtoul(argv[++i], nullptr, 10));
         } else {
-            std::fprintf(stderr,
-                         "usage: %s [--script file.scn] [--recipes dir] [--seed n]\n",
+            std::fprintf(stderr, "usage: %s [--script file.scn] [--recipes dir] [--seed n]\n",
                          argv[0]);
             return 2;
         }

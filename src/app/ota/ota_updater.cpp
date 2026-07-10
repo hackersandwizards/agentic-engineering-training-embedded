@@ -5,8 +5,7 @@
 
 namespace culina::app {
 
-Status OtaUpdater::begin(const std::uint8_t* image, std::size_t len,
-                         std::uint16_t expected_crc) {
+Status OtaUpdater::begin(const std::uint8_t* image, std::size_t len, std::uint16_t expected_crc) {
     if (image == nullptr || len == 0) {
         return Status::InvalidArgument;
     }
@@ -36,8 +35,7 @@ void OtaUpdater::step() {
 
     if (verified_ >= image_len_) {
         state_ = running_crc_ == expected_crc_ ? State::Ready : State::Failed;
-        CULINA_LOG_INFO("ota: verification %s",
-                        state_ == State::Ready ? "succeeded" : "FAILED");
+        CULINA_LOG_INFO("ota: verification %s", state_ == State::Ready ? "succeeded" : "FAILED");
     }
 }
 

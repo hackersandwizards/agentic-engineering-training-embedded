@@ -9,18 +9,31 @@ namespace culina::app {
 using namespace c1link;
 
 void McuClient::poll() {
-    if (waiting_ &&
-        static_cast<std::int32_t>(clock_->now_ms() - sent_at_ms_ - kResponseTimeoutMs) > 0) {
+    if (waiting_ && clock_->now_ms() - request_started_ms_ >= kRequestDeadlineMs) {
+        CULINA_LOG_WARN("request 0x%02x exceeded its total deadline",
+                        static_cast<unsigned>(pending_msg_id_));
+        link_.cancel_pending_tx();
+        waiting_ = false;
+        last_command_status_ = Status::Timeout;
+    } else if (waiting_ &&
+               static_cast<std::int32_t>(clock_->now_ms() - sent_at_ms_ - kResponseTimeoutMs) > 0) {
         if (!retried_) {
-            // One retry under a fresh sequence number.
-            retried_ = true;
-            sent_at_ms_ = clock_->now_ms();
-            link_.send(FrameType::Request, next_seq_++, pending_msg_id_, pending_payload_,
-                       pending_payload_len_);
+            const std::uint8_t retry_seq = next_seq_;
+            const Status retry_status = link_.send(FrameType::Request, retry_seq, pending_msg_id_,
+                                                   pending_payload_, pending_payload_len_);
+            if (retry_status == Status::Ok) {
+                ++next_seq_;
+                pending_seq_ = retry_seq;
+                retried_ = true;
+                sent_at_ms_ = clock_->now_ms();
+                last_tx_ms_ = sent_at_ms_;
+            }
         } else {
             CULINA_LOG_WARN("request 0x%02x timed out after retry",
                             static_cast<unsigned>(pending_msg_id_));
+            link_.cancel_pending_tx();
             waiting_ = false;
+            last_command_status_ = Status::Timeout;
         }
     }
 
@@ -39,23 +52,33 @@ void McuClient::poll() {
                    frame.payload_len == 1) {
             last_fault_ = static_cast<FaultCode>(frame.payload[0]);
         } else if (frame.type == FrameType::Response || frame.type == FrameType::Nack) {
-            if (waiting_ && frame.msg_id == pending_msg_id_) {
+            if (waiting_ && frame.msg_id == pending_msg_id_ && frame.seq == pending_seq_) {
                 response_ = frame;
                 response_ready_ = true;
                 waiting_ = false;
+                last_command_status_ =
+                    frame.type == FrameType::Response ? Status::Ok : Status::ProtocolError;
             }
+        }
+    }
+
+    if (!waiting_ && clock_->now_ms() - last_tx_ms_ >= kHeartbeatIntervalMs) {
+        const std::uint8_t heartbeat_seq = next_seq_++;
+        if (link_.send(FrameType::Request, heartbeat_seq, MsgId::Ping, nullptr, 0) == Status::Ok) {
+            last_tx_ms_ = clock_->now_ms();
         }
     }
 }
 
 Status McuClient::request(MsgId id, const std::uint8_t* payload, std::uint16_t len) {
-    if (waiting_) {
+    if (waiting_ || response_ready_) {
         return Status::NotReady;
     }
-    if (len > kMaxPayload) {
+    if (len > kMaxPayload || (len > 0 && payload == nullptr)) {
         return Status::InvalidArgument;
     }
-    const Status sent = link_.send(FrameType::Request, next_seq_++, id, payload, len);
+    pending_seq_ = next_seq_++;
+    const Status sent = link_.send(FrameType::Request, pending_seq_, id, payload, len);
     if (sent != Status::Ok) {
         return sent;
     }
@@ -63,7 +86,10 @@ Status McuClient::request(MsgId id, const std::uint8_t* payload, std::uint16_t l
     pending_msg_id_ = id;
     response_ready_ = false;
     sent_at_ms_ = clock_->now_ms();
+    request_started_ms_ = sent_at_ms_;
+    last_tx_ms_ = sent_at_ms_;
     retried_ = false;
+    last_command_status_ = Status::Ok;
     if (len > 0) {
         std::memcpy(pending_payload_, payload, len);
     }
@@ -72,7 +98,7 @@ Status McuClient::request(MsgId id, const std::uint8_t* payload, std::uint16_t l
 }
 
 bool McuClient::take_response(Frame* out) {
-    if (!response_ready_) {
+    if (!response_ready_ || out == nullptr) {
         return false;
     }
     *out = response_;
@@ -87,7 +113,9 @@ Status McuClient::set_motor(Rpm rpm, std::uint8_t ramp_profile) {
     return request(MsgId::MotorSetTarget, payload, sizeof(payload));
 }
 
-Status McuClient::motor_stop() { return request(MsgId::MotorStop, nullptr, 0); }
+Status McuClient::motor_stop() {
+    return request(MsgId::MotorStop, nullptr, 0);
+}
 
 Status McuClient::set_heater(DeciCelsius target) {
     std::uint8_t payload[2];
@@ -95,9 +123,13 @@ Status McuClient::set_heater(DeciCelsius target) {
     return request(MsgId::HeaterSetTarget, payload, sizeof(payload));
 }
 
-Status McuClient::heater_off() { return request(MsgId::HeaterOff, nullptr, 0); }
+Status McuClient::heater_off() {
+    return request(MsgId::HeaterOff, nullptr, 0);
+}
 
-Status McuClient::tare() { return request(MsgId::ScaleTare, nullptr, 0); }
+Status McuClient::tare() {
+    return request(MsgId::ScaleTare, nullptr, 0);
+}
 
 Status McuClient::lock_lid(bool locked) {
     return request(locked ? MsgId::LidLock : MsgId::LidUnlock, nullptr, 0);

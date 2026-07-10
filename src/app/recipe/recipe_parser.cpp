@@ -1,5 +1,7 @@
 #include "app/recipe/recipe_parser.h"
 
+#include <cerrno>
+#include <cmath>
 #include <cstdio>
 #include <cstdlib>
 #include <cstring>
@@ -17,8 +19,8 @@ const char* skip_spaces(const char* p) {
 
 void trim_end(char* s) {
     std::size_t len = std::strlen(s);
-    while (len > 0 && (s[len - 1] == ' ' || s[len - 1] == '\t' || s[len - 1] == '\n' ||
-                       s[len - 1] == '\r')) {
+    while (len > 0 &&
+           (s[len - 1] == ' ' || s[len - 1] == '\t' || s[len - 1] == '\n' || s[len - 1] == '\r')) {
         s[--len] = '\0';
     }
 }
@@ -38,23 +40,65 @@ bool parse_kind(const char* token, StepKind* kind) {
     return true;
 }
 
-void apply_field(RecipeStep* step, const char* key, const char* value) {
+struct Fields {
+    bool temp = false;
+    bool speed = false;
+    bool time = false;
+    bool weight = false;
+};
+
+bool parse_long(const char* text, long min, long max, long* out) {
+    errno = 0;
+    char* end = nullptr;
+    const long value = std::strtol(text, &end, 10);
+    if (errno != 0 || end == text || *skip_spaces(end) != '\0' || value < min || value > max) {
+        return false;
+    }
+    *out = value;
+    return true;
+}
+
+bool parse_temperature(const char* text, DeciCelsius* out) {
+    errno = 0;
+    char* end = nullptr;
+    const float value = std::strtof(text, &end);
+    if (errno != 0 || end == text || *skip_spaces(end) != '\0' || !std::isfinite(value) ||
+        value < 37.0f || value > 160.0f) {
+        return false;
+    }
+    *out = from_celsius(value);
+    return true;
+}
+
+bool apply_field(RecipeStep* step, Fields* fields, const char* key, const char* value) {
     if (std::strcmp(key, "text") == 0) {
         std::strncpy(step->text, value, sizeof(step->text) - 1);
     } else if (std::strcmp(key, "temp") == 0) {
-        step->target_temp = from_celsius(std::strtof(value, nullptr));
+        fields->temp = parse_temperature(value, &step->target_temp);
+        return fields->temp;
     } else if (std::strcmp(key, "speed") == 0) {
-        step->dial_speed = static_cast<std::uint8_t>(std::strtol(value, nullptr, 10));
+        long parsed = 0;
+        fields->speed = parse_long(value, 0, 10, &parsed);
+        step->dial_speed = static_cast<std::uint8_t>(parsed);
+        return fields->speed;
     } else if (std::strcmp(key, "time") == 0) {
-        step->duration_s = static_cast<std::uint32_t>(std::strtol(value, nullptr, 10));
+        long parsed = 0;
+        fields->time = parse_long(value, 1, 86400, &parsed);
+        step->duration_s = static_cast<std::uint32_t>(parsed);
+        return fields->time;
     } else if (std::strcmp(key, "weight") == 0) {
-        step->target_weight = static_cast<Grams>(std::strtol(value, nullptr, 10));
+        long parsed = 0;
+        fields->weight = parse_long(value, 1, 2200, &parsed);
+        step->target_weight = static_cast<Grams>(parsed);
+        return fields->weight;
     }
+    return true;
 }
 
 Status parse_step(char* body, RecipeStep* step) {
     char* cursor = body;
     bool first = true;
+    Fields fields;
     while (cursor != nullptr) {
         char* token = cursor;
         char* bar = std::strchr(cursor, '|');
@@ -83,14 +127,24 @@ Status parse_step(char* body, RecipeStep* step) {
         }
         *eq = '\0';
         trim_end(token);
-        apply_field(step, token, skip_spaces(eq + 1));
+        if (!apply_field(step, &fields, token, skip_spaces(eq + 1))) {
+            return Status::InvalidArgument;
+        }
     }
-    return Status::Ok;
+    const bool valid =
+        step->kind == StepKind::Note ||
+        (step->kind == StepKind::Mix && fields.speed && step->dial_speed > 0 && fields.time) ||
+        (step->kind == StepKind::Heat && fields.temp && fields.time) ||
+        (step->kind == StepKind::Weigh && fields.weight);
+    return valid ? Status::Ok : Status::InvalidArgument;
 }
 
 } // namespace
 
 Status parse_recipe_file(const char* path, Recipe* out) {
+    if (path == nullptr || out == nullptr) {
+        return Status::InvalidArgument;
+    }
     std::FILE* file = std::fopen(path, "r");
     if (file == nullptr) {
         return Status::InvalidArgument;
@@ -100,6 +154,10 @@ Status parse_recipe_file(const char* path, Recipe* out) {
     char line[256];
     Status status = Status::Ok;
     while (std::fgets(line, sizeof(line), file) != nullptr) {
+        if (std::strchr(line, '\n') == nullptr && std::feof(file) == 0) {
+            status = Status::Overflow;
+            break;
+        }
         trim_end(line);
         const char* p = skip_spaces(line);
         if (*p == '\0' || *p == '#') {
@@ -121,6 +179,9 @@ Status parse_recipe_file(const char* path, Recipe* out) {
             }
             ++out->step_count;
         }
+    }
+    if (status == Status::Ok && std::ferror(file) != 0) {
+        status = Status::HardwareFault;
     }
     std::fclose(file);
 

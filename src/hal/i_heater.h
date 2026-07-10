@@ -2,8 +2,7 @@
 
 namespace culina::hal {
 
-// Resistive heating element under the bowl. Power is commanded in watts and
-// clamped by the driver to the element's physical maximum.
+// Power is in watts and clamped by the hardware driver.
 class IHeater {
 public:
     virtual ~IHeater() = default;

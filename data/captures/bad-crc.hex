@@ -1,0 +1,2 @@
+# Valid PING framing with a corrupted CRC.
+a5 5a 10 01 01 01 00 00 40 ff

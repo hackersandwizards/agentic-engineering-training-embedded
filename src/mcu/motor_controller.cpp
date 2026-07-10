@@ -13,7 +13,7 @@ float ramp_rate_for(std::uint8_t profile) {
     case c1link::kRampNormal:
         return 1500.0f;
     case c1link::kRampFast:
-        return 4000.0f;
+        return 2500.0f;
     default:
         return 1500.0f;
     }
@@ -60,7 +60,7 @@ void MotorController::tick_1ms() {
             commanded_rpm_ = target;
         }
     } else if (commanded_rpm_ > target) {
-        commanded_rpm_ -= max_step * 4.0f; // decelerate faster than we accelerate
+        commanded_rpm_ -= max_step * 4.0f; // Faster deceleration shortens stop time.
         if (commanded_rpm_ < target) {
             commanded_rpm_ = target;
         }

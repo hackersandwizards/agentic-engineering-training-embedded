@@ -20,8 +20,7 @@ void SousVideMode::on_tick(ProgramContext& ctx) {
         return;
     }
     if (!motor_set_) {
-        motor_set_ = ctx.mcu->set_motor(dial_to_rpm(2), c1link::kRampGentle) ==
-                     Status::Ok;
+        motor_set_ = ctx.mcu->set_motor(dial_to_rpm(2), c1link::kRampGentle) == Status::Ok;
         return;
     }
     const float bath = ctx.telemetry->average_temp_c(2000);

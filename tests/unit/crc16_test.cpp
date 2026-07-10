@@ -10,7 +10,9 @@ TEST(Crc16, MatchesCcittFalseCheckValue) {
     EXPECT_EQ(culina::crc16_ccitt(data, sizeof(data)), 0x29B1u);
 }
 
-TEST(Crc16, EmptyInputYieldsSeed) { EXPECT_EQ(culina::crc16_ccitt(nullptr, 0), 0xFFFFu); }
+TEST(Crc16, EmptyInputYieldsSeed) {
+    EXPECT_EQ(culina::crc16_ccitt(nullptr, 0), 0xFFFFu);
+}
 
 TEST(Crc16, SeedChainsAcrossCalls) {
     const std::uint8_t data[] = {'1', '2', '3', '4', '5', '6', '7', '8', '9'};

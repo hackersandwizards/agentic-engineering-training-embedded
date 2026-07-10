@@ -7,8 +7,7 @@ bool GuidedRecipe::run_setup(const RecipeStep& step, ProgramContext& ctx) {
     case StepKind::Note:
         return true;
     case StepKind::Mix:
-        return ctx.mcu->set_motor(dial_to_rpm(step.dial_speed), c1link::kRampNormal) ==
-               Status::Ok;
+        return ctx.mcu->set_motor(dial_to_rpm(step.dial_speed), c1link::kRampNormal) == Status::Ok;
     case StepKind::Heat:
         if (command_index_ == 0) {
             if (ctx.mcu->set_heater(step.target_temp) == Status::Ok) {
@@ -16,10 +15,13 @@ bool GuidedRecipe::run_setup(const RecipeStep& step, ProgramContext& ctx) {
             }
             return false;
         }
-        return ctx.mcu->set_motor(dial_to_rpm(step.dial_speed), c1link::kRampGentle) ==
-               Status::Ok;
+        return ctx.mcu->set_motor(dial_to_rpm(step.dial_speed), c1link::kRampGentle) == Status::Ok;
     case StepKind::Weigh:
-        return ctx.mcu->tare() == Status::Ok;
+        if (scale_tared_) {
+            return true;
+        }
+        scale_tared_ = ctx.mcu->tare() == Status::Ok;
+        return scale_tared_;
     }
     return true;
 }

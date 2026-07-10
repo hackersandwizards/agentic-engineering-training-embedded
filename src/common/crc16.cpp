@@ -9,9 +9,11 @@ std::uint16_t crc16_ccitt(const std::uint8_t* data, std::size_t len, std::uint16
                                          (static_cast<unsigned>(data[i]) << 8u));
         for (int bit = 0; bit < 8; ++bit) {
             if ((crc & 0x8000u) != 0) {
-                crc = static_cast<std::uint16_t>((crc << 1) ^ 0x1021u);
+                const auto shifted =
+                    static_cast<std::uint16_t>(static_cast<std::uint32_t>(crc) << 1u);
+                crc = static_cast<std::uint16_t>(shifted ^ std::uint16_t{0x1021});
             } else {
-                crc = static_cast<std::uint16_t>(crc << 1);
+                crc = static_cast<std::uint16_t>(static_cast<std::uint32_t>(crc) << 1u);
             }
         }
     }

@@ -13,6 +13,8 @@ public:
     bool in_progress() const { return state_ != State::Sync0; }
 
 private:
+    void resync(std::uint8_t byte);
+
     enum class State : std::uint8_t {
         Sync0,
         Sync1,

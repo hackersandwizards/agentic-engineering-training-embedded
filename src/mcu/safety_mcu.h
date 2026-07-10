@@ -16,8 +16,7 @@
 
 namespace culina::mcu {
 
-// The safety/motor MCU firmware. Runs a 1 ms control tick: service the link,
-// evaluate interlocks, drive heater and motor, publish telemetry.
+// Runs link, interlocks, actuators, and telemetry on a 1 ms control tick.
 class SafetyMcu {
 public:
     struct Hardware {
@@ -35,10 +34,12 @@ public:
     c1link::FaultCode fault() const { return fault_; }
 
 private:
-    void sample_inputs();
+    bool sample_inputs();
     void enter_fault(c1link::FaultCode code);
+    bool can_clear_fault() const;
 
     Hardware hw_;
+    const hal::IClock* clock_;
     c1link::Link link_;
     MotorController motor_ctrl_;
     HeaterPid pid_;
@@ -49,6 +50,8 @@ private:
     Interlocks::Inputs inputs_;
     c1link::FaultCode fault_ = c1link::FaultCode::None;
     std::uint32_t tick_count_ = 0;
+    Millis last_valid_frame_ms_ = 0;
+    bool temp_sensor_ok_ = true;
 };
 
 } // namespace culina::mcu

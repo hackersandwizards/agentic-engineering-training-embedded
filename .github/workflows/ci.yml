@@ -1,0 +1,73 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-test:
+    name: ${{ matrix.os }} sanitizer build
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-24.04, macos-14]
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+      - name: Install Ninja on Linux
+        if: runner.os == 'Linux'
+        run: sudo apt-get update && sudo apt-get install -y ninja-build
+      - name: Install Ninja on macOS
+        if: runner.os == 'macOS'
+        run: brew install ninja
+      - name: Configure
+        run: cmake --preset dev -DCULINA_WARNINGS_AS_ERRORS=ON
+      - name: Build
+        run: cmake --build --preset dev
+      - name: Test
+        run: ctest --preset dev --output-on-failure
+
+  quality:
+    name: Formatting, static analysis and timing
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+      - name: Install tools
+        run: sudo apt-get update && sudo apt-get install -y clang-18 clang-format-18 clang-tidy-18 ninja-build shellcheck
+      - name: Select LLVM 18
+        run: echo /usr/lib/llvm-18/bin >> "$GITHUB_PATH"
+      - name: Check shell scripts
+        run: shellcheck scripts/*.sh tests/*.sh
+      - name: Check formatting
+        run: git ls-files -z '*.h' '*.cpp' | xargs -0 clang-format --dry-run --Werror
+      - name: Configure analysis build
+        env:
+          CC: clang-18
+          CXX: clang++-18
+        run: cmake --preset dev -DCULINA_WARNINGS_AS_ERRORS=ON
+      - name: Run static analysis
+        run: ./scripts/run-clang-tidy.sh
+      - name: Check timing budget
+        run: ./scripts/perf-check.sh
+      - name: Verify one-commit snapshot
+        run: |
+          parent=$(mktemp -d)
+          trap 'rm -rf "$parent"' EXIT
+          ./scripts/create-training-snapshot.sh "$parent/snapshot"
+          test "$(git -C "$parent/snapshot" rev-list --count HEAD)" -eq 1
+          test -z "$(git -C "$parent/snapshot" remote)"
+          test -z "$(git -C "$parent/snapshot" status --porcelain)"
+          test -f "$parent/snapshot/exercises/README.md"
+          test ! -e "$parent/snapshot/trainer"
+          if ./scripts/create-training-snapshot.sh "$GITHUB_WORKSPACE/inside"; then
+            exit 1
+          fi
+          ln -s "$GITHUB_WORKSPACE" "$parent/source-link"
+          if ./scripts/create-training-snapshot.sh "$parent/source-link/inside"; then
+            exit 1
+          fi
+          "$parent/snapshot/scripts/verify-setup.sh"

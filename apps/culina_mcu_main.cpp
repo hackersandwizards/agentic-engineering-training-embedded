@@ -1,6 +1,7 @@
 // Safety MCU as its own process: owns the simulated board hardware and runs
 // the 1 ms control tick in real time. Pair with culina_app over the socket.
 
+#include "common/parse_number.h"
 #include "mcu/safety_mcu.h"
 #include "sim/sim_board.h"
 #include "sim/socket_transport.h"
@@ -18,7 +19,10 @@ int main(int argc, char** argv) {
         if (std::strcmp(argv[i], "--socket") == 0 && i + 1 < argc) {
             socket_path = argv[++i];
         } else if (std::strcmp(argv[i], "--water") == 0 && i + 1 < argc) {
-            water_g = std::strtof(argv[++i], nullptr);
+            if (!culina::parse_float(argv[++i], 0.0f, 2200.0f, &water_g)) {
+                std::fprintf(stderr, "invalid water mass\n");
+                return 2;
+            }
         } else {
             std::fprintf(stderr, "usage: %s [--socket path] [--water grams]\n", argv[0]);
             return 2;
@@ -30,6 +34,9 @@ int main(int argc, char** argv) {
         board.add_mass(water_g);
     }
     auto uart = culina::sim::SocketTransport::listen_on(socket_path);
+    if (!uart.valid()) {
+        return 1;
+    }
 
     culina::mcu::SafetyMcu::Hardware hw;
     hw.motor = &board.motor();

@@ -4,8 +4,7 @@
 
 namespace culina::hal {
 
-// Hardware watchdog. Firmware must call feed() at least once per timeout
-// period or the supervisor resets the processor.
+// feed() must run before timeout_ms() or hardware resets the processor.
 class IWatchdog {
 public:
     virtual ~IWatchdog() = default;

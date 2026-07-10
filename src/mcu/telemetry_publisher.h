@@ -5,11 +5,9 @@
 
 namespace culina::mcu {
 
-// Streams device state to the application processor at a fixed rate.
 class TelemetryPublisher {
 public:
-    TelemetryPublisher(c1link::Link* link, const hal::IClock* clock)
-        : link_(link), clock_(clock) {}
+    TelemetryPublisher(c1link::Link* link, const hal::IClock* clock) : link_(link), clock_(clock) {}
 
     void maybe_publish(const c1link::TelemetryData& data);
     void publish_fault(c1link::FaultCode code);
@@ -21,6 +19,7 @@ private:
     const hal::IClock* clock_;
     Millis last_publish_ms_ = 0;
     std::uint8_t seq_ = 0;
+    c1link::FaultCode pending_fault_ = c1link::FaultCode::None;
 };
 
 } // namespace culina::mcu

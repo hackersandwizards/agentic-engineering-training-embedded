@@ -54,8 +54,9 @@ int main() {
             .count();
 
     std::sort(query_us.begin(), query_us.end());
-    const auto at = [&](double q) { return query_us[static_cast<std::size_t>(
-                                        q * static_cast<double>(query_us.size() - 1))]; };
+    const auto at = [&](double q) {
+        return query_us[static_cast<std::size_t>(q * static_cast<double>(query_us.size() - 1))];
+    };
     const std::size_t misses = static_cast<std::size_t>(
         query_us.end() - std::lower_bound(query_us.begin(), query_us.end(), kQueryBudgetUs));
 
@@ -66,5 +67,5 @@ int main() {
                 query_us.back());
     std::printf("budget (%.0f us) misses:      %zu\n", kQueryBudgetUs, misses);
     std::printf("wall time:                  %.1f s\n", wall_s);
-    return 0;
+    return at(0.95) <= kQueryBudgetUs ? 0 : 1;
 }

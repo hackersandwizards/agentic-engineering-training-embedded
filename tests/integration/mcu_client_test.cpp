@@ -37,6 +37,12 @@ struct ClientFixture {
     app::McuClient client{&transport.app_side(), &board.clock(), &store};
 };
 
+class StalledUart : public hal::IUart {
+public:
+    std::size_t write(const std::uint8_t*, std::size_t) override { return 0; }
+    bool read(std::uint8_t*) override { return false; }
+};
+
 TEST(McuClient, HeaterCommandGetsAResponse) {
     ClientFixture fix;
     ASSERT_EQ(fix.client.set_heater(from_celsius(65.0f)), Status::Ok);
@@ -122,6 +128,75 @@ TEST(McuClient, FaultFrameIsSurfaced) {
     ASSERT_EQ(fix.client.set_heater(1600), Status::Ok);
     fix.run_ms(180000);
     EXPECT_EQ(fix.client.last_fault(), FaultCode::Overtemp);
+}
+
+TEST(McuClient, MatchesResponsesByMessageAndSequence) {
+    sim::SimBoard board;
+    sim::InMemoryTransport transport;
+    culina::testing::FlakyTransport flaky_mcu(&transport.mcu_side());
+
+    mcu::SafetyMcu::Hardware hw;
+    hw.motor = &board.motor();
+    hw.heater = &board.heater();
+    hw.temp_sensor = &board.temp_sensor();
+    hw.scale = &board.scale();
+    hw.lid = &board.lid();
+    mcu::SafetyMcu safety_mcu(hw, &flaky_mcu, &board.clock());
+
+    app::TelemetryStore store;
+    app::McuClient client(&transport.app_side(), &board.clock(), &store);
+    flaky_mcu.hold_next_write();
+    ASSERT_EQ(client.set_heater(800), Status::Ok);
+
+    for (int i = 0; i < 51; ++i) {
+        board.step_ms(1);
+        safety_mcu.tick_1ms();
+        client.poll();
+    }
+    flaky_mcu.release_held();
+    for (int i = 0; i < 5; ++i) {
+        board.step_ms(1);
+        safety_mcu.tick_1ms();
+        client.poll();
+    }
+
+    Frame response;
+    ASSERT_TRUE(client.take_response(&response));
+    EXPECT_EQ(response.seq, 1);
+}
+
+TEST(McuClient, SurfacesNackAndTimeoutAsCommandErrors) {
+    ClientFixture fix;
+    ASSERT_EQ(fix.client.set_heater(2000), Status::Ok);
+    fix.run_ms(5);
+    EXPECT_EQ(fix.client.last_command_status(), Status::ProtocolError);
+
+    sim::SimBoard board;
+    sim::InMemoryTransport transport;
+    app::TelemetryStore store;
+    app::McuClient disconnected(&transport.app_side(), &board.clock(), &store);
+    ASSERT_EQ(disconnected.set_heater(800), Status::Ok);
+    for (int i = 0; i < 110; ++i) {
+        board.step_ms(1);
+        disconnected.poll();
+    }
+    EXPECT_EQ(disconnected.last_command_status(), Status::Timeout);
+}
+
+TEST(McuClient, TotalDeadlineExpiresWhenTransmissionNeverDrains) {
+    sim::SimClock clock;
+    StalledUart uart;
+    app::TelemetryStore store;
+    app::McuClient client(&uart, &clock, &store);
+
+    ASSERT_EQ(client.set_heater(800), Status::Ok);
+    for (int i = 0; i < 200; ++i) {
+        clock.advance_us(1000);
+        client.poll();
+    }
+
+    EXPECT_FALSE(client.awaiting_response());
+    EXPECT_EQ(client.last_command_status(), Status::Timeout);
 }
 
 } // namespace

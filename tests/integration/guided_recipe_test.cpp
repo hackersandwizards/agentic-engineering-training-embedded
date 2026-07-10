@@ -53,4 +53,29 @@ TEST(GuidedRecipe, EmptyRecipeIsRefused) {
     EXPECT_EQ(fix.controller().start_recipe(&empty), Status::InvalidArgument);
 }
 
+TEST(GuidedRecipe, UsesCumulativeWeightAcrossSteps) {
+    SystemFixture fix;
+    Recipe recipe;
+    std::strcpy(recipe.name, "Two ingredients");
+    recipe.steps[0].kind = StepKind::Weigh;
+    recipe.steps[0].target_weight = 300;
+    recipe.steps[1].kind = StepKind::Weigh;
+    recipe.steps[1].target_weight = 800;
+    recipe.step_count = 2;
+
+    ASSERT_EQ(fix.controller().start_recipe(&recipe), Status::Ok);
+    fix.run_ms(100);
+    fix.board().add_mass(310.0f);
+    fix.run_ms(200);
+    ASSERT_EQ(fix.controller().state(), SessionState::Running);
+
+    fix.board().add_mass(400.0f);
+    fix.run_ms(200);
+    EXPECT_EQ(fix.controller().state(), SessionState::Running);
+
+    fix.board().add_mass(100.0f);
+    fix.run_ms(500);
+    EXPECT_EQ(fix.controller().state(), SessionState::Done);
+}
+
 } // namespace

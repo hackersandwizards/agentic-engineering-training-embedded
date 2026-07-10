@@ -41,8 +41,13 @@ Grams CommandHandler::current_grams() {
                               kCountsPerGram);
 }
 
-void CommandHandler::handle(const Frame& request, const Interlocks::Inputs& state) {
+void CommandHandler::handle(const Frame& request, const Interlocks::Inputs& state, bool faulted) {
     if (request.type != FrameType::Request) {
+        return;
+    }
+    if (faulted && request.msg_id != MsgId::MotorStop && request.msg_id != MsgId::HeaterOff &&
+        request.msg_id != MsgId::Ping && request.msg_id != MsgId::GetVersion) {
+        nack(request);
         return;
     }
     for (const Entry& entry : kHandlers) {
@@ -55,10 +60,18 @@ void CommandHandler::handle(const Frame& request, const Interlocks::Inputs& stat
 }
 
 void CommandHandler::handle_ping(const Frame& request, const Interlocks::Inputs&) {
+    if (request.payload_len != 0) {
+        nack(request);
+        return;
+    }
     respond(request, nullptr, 0);
 }
 
 void CommandHandler::handle_get_version(const Frame& request, const Interlocks::Inputs&) {
+    if (request.payload_len != 0) {
+        nack(request);
+        return;
+    }
     const std::uint8_t version[] = {0, 9, 0};
     respond(request, version, sizeof(version));
 }
@@ -70,18 +83,24 @@ void CommandHandler::handle_motor_set_target(const Frame& request,
         return;
     }
     const Rpm requested = get_u16(request.payload);
+    const Rpm bounded = requested > limits::kMaxRpm ? limits::kMaxRpm : requested;
     const std::uint8_t ramp = request.payload[2];
+    if (ramp > kRampBurst) {
+        nack(request);
+        return;
+    }
     if (ramp == kRampBurst) {
-        // Burst runs are only allowed with the lid locked.
-        if (!state.lid_locked) {
+        if (!state.lid_locked || state.temp_c > limits::kSpillGuardTempC) {
             nack(request);
             return;
         }
-        motor_->burst(requested);
-        respond(request, nullptr, 0);
+        motor_->burst(bounded);
+        std::uint8_t granted[2];
+        put_u16(granted, bounded);
+        respond(request, granted, sizeof(granted));
         return;
     }
-    const Rpm allowed = interlocks_->clamp_speed_request(requested, state);
+    const Rpm allowed = interlocks_->clamp_speed_request(bounded, state);
     motor_->set_target(allowed, ramp);
     std::uint8_t granted[2];
     put_u16(granted, allowed);
@@ -89,6 +108,10 @@ void CommandHandler::handle_motor_set_target(const Frame& request,
 }
 
 void CommandHandler::handle_motor_stop(const Frame& request, const Interlocks::Inputs&) {
+    if (request.payload_len != 0) {
+        nack(request);
+        return;
+    }
     motor_->stop();
     respond(request, nullptr, 0);
 }
@@ -108,11 +131,19 @@ void CommandHandler::handle_heater_set_target(const Frame& request, const Interl
 }
 
 void CommandHandler::handle_heater_off(const Frame& request, const Interlocks::Inputs&) {
+    if (request.payload_len != 0) {
+        nack(request);
+        return;
+    }
     pid_->disable();
     respond(request, nullptr, 0);
 }
 
-void CommandHandler::handle_scale_tare(const Frame& request, const Interlocks::Inputs&) {
+void CommandHandler::handle_scale_tare(const Frame& request, const Interlocks::Inputs& state) {
+    if (request.payload_len != 0 || state.rpm > limits::kTareMaxRpm) {
+        nack(request);
+        return;
+    }
     const auto raw = scale_->read_raw();
     if (!raw.is_ok()) {
         nack(request);
@@ -123,18 +154,30 @@ void CommandHandler::handle_scale_tare(const Frame& request, const Interlocks::I
 }
 
 void CommandHandler::handle_scale_read(const Frame& request, const Interlocks::Inputs&) {
+    if (request.payload_len != 0) {
+        nack(request);
+        return;
+    }
     std::uint8_t grams[4];
     put_i32(grams, current_grams());
     respond(request, grams, sizeof(grams));
 }
 
 void CommandHandler::handle_lid_lock(const Frame& request, const Interlocks::Inputs&) {
+    if (request.payload_len != 0) {
+        nack(request);
+        return;
+    }
     lid_->set_lock(true);
     std::uint8_t locked = lid_->is_locked() ? 1 : 0;
     respond(request, &locked, 1);
 }
 
-void CommandHandler::handle_lid_unlock(const Frame& request, const Interlocks::Inputs&) {
+void CommandHandler::handle_lid_unlock(const Frame& request, const Interlocks::Inputs& state) {
+    if (request.payload_len != 0 || state.rpm >= limits::kUnlockMaxRpm) {
+        nack(request);
+        return;
+    }
     lid_->set_lock(false);
     respond(request, nullptr, 0);
 }

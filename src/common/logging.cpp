@@ -39,9 +39,13 @@ const char* status_name(Status status) {
     return "Unknown";
 }
 
-void set_log_sink(LogSink sink) { g_sink = sink != nullptr ? sink : default_sink; }
+void set_log_sink(LogSink sink) {
+    g_sink = sink != nullptr ? sink : default_sink;
+}
 
-void set_log_level(LogLevel level) { g_level = level; }
+void set_log_level(LogLevel level) {
+    g_level = level;
+}
 
 void log_message(LogLevel level, const char* fmt, ...) {
     if (level < g_level) {

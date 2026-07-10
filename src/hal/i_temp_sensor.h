@@ -5,7 +5,7 @@
 
 namespace culina::hal {
 
-// NTC temperature probe at the bowl base. See docs/datasheets/heater-ntc.md.
+// Reads the bowl-base NTC described in docs/datasheets/heater-ntc.md.
 class ITempSensor {
 public:
     virtual ~ITempSensor() = default;

@@ -5,7 +5,7 @@
 
 namespace culina::c1link {
 
-// C1-Link wire format. See docs/c1link-protocol.md for the full specification.
+// C1-Link uses this wire format; see docs/c1link-protocol.md.
 //
 //   0   2  sync 0xA5 0x5A
 //   2   1  version (high nibble) | flags (low nibble)
@@ -46,13 +46,13 @@ enum class MsgId : std::uint8_t {
     Fault = 0x81,     // payload: fault code u8
 };
 
-// Ramp profiles for MotorSetTarget.
+// MotorSetTarget supports these ramp profiles.
 constexpr std::uint8_t kRampGentle = 0;
 constexpr std::uint8_t kRampNormal = 1;
 constexpr std::uint8_t kRampFast = 2;
 constexpr std::uint8_t kRampBurst = 3;
 
-// Telemetry flags bitmask.
+// Telemetry encodes these flags as a bitmask.
 constexpr std::uint8_t kFlagLidClosed = 0x01;
 constexpr std::uint8_t kFlagLidLocked = 0x02;
 constexpr std::uint8_t kFlagHeaterOn = 0x04;
@@ -63,6 +63,7 @@ enum class FaultCode : std::uint8_t {
     Overtemp = 1,
     MotorStall = 2,
     SensorFailure = 3,
+    LinkLost = 4,
 };
 
 struct Frame {
@@ -83,7 +84,6 @@ struct TelemetryData {
     std::uint8_t flags = 0;
 };
 
-// Little-endian field helpers.
 inline void put_u16(std::uint8_t* p, std::uint16_t v) {
     p[0] = static_cast<std::uint8_t>(v & 0xFFu);
     p[1] = static_cast<std::uint8_t>(v >> 8);

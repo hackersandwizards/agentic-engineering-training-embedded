@@ -9,6 +9,7 @@ public:
     void step(float dt_seconds, float heater_watts, float contents_grams);
 
     float temperature_c() const { return temperature_c_; }
+    void set_temperature_c(float celsius) { temperature_c_ = celsius; }
     void set_ambient_c(float celsius);
     float ambient_c() const { return ambient_c_; }
 

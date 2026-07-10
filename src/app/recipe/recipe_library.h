@@ -13,7 +13,9 @@ public:
     Status load_directory(const char* dir_path);
 
     std::size_t count() const { return count_; }
-    const Recipe* at(std::size_t index) const { return index < count_ ? &recipes_[index] : nullptr; }
+    const Recipe* at(std::size_t index) const {
+        return index < count_ ? &recipes_[index] : nullptr;
+    }
     const Recipe* find(const char* name) const;
 
     static constexpr std::size_t kMaxRecipes = 64;

@@ -2,8 +2,7 @@
 build/
 .cache/
 
-# Training exercises (distributed separately)
-exercises/
+# Private trainer material
 trainer/
 
 # IDE / OS

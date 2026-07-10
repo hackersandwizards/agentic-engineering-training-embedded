@@ -79,4 +79,47 @@ TEST(RecipeParser, MissingFileFails) {
     EXPECT_EQ(parse_recipe_file("/nonexistent/nope.rcp", &recipe), Status::InvalidArgument);
 }
 
+TEST(RecipeParser, RejectsInvalidPointersAndOversizedLines) {
+    Recipe recipe;
+    EXPECT_EQ(parse_recipe_file(nullptr, &recipe), Status::InvalidArgument);
+    EXPECT_EQ(parse_recipe_file("unused", nullptr), Status::InvalidArgument);
+
+    const std::string content =
+        "name: " + std::string(300, 'x') + "\nstep: note | text=unreachable\n";
+    const std::string path = write_recipe(content.c_str());
+    EXPECT_EQ(parse_recipe_file(path.c_str(), &recipe), Status::Overflow);
+}
+
+TEST(RecipeParser, RejectsInvalidNumericFields) {
+    const char* invalid_recipes[] = {
+        "name: Bad\nstep: mix | speed=-1 | time=10\n",
+        "name: Bad\nstep: mix | speed=11 | time=10\n",
+        "name: Bad\nstep: mix | speed=2 | time=-1\n",
+        "name: Bad\nstep: heat | temp=nan | time=10 | speed=1\n",
+        "name: Bad\nstep: heat | temp=200 | time=10 | speed=1\n",
+        "name: Bad\nstep: weigh | weight=0\n",
+        "name: Bad\nstep: weigh | weight=2201\n",
+    };
+
+    for (const char* content : invalid_recipes) {
+        const std::string path = write_recipe(content);
+        Recipe recipe;
+        EXPECT_EQ(parse_recipe_file(path.c_str(), &recipe), Status::InvalidArgument) << content;
+    }
+}
+
+TEST(RecipeParser, RejectsMissingRequiredFields) {
+    const char* incomplete_recipes[] = {
+        "name: Bad\nstep: mix | speed=2\n",
+        "name: Bad\nstep: heat | time=10 | speed=1\n",
+        "name: Bad\nstep: weigh | text=Nothing to weigh\n",
+    };
+
+    for (const char* content : incomplete_recipes) {
+        const std::string path = write_recipe(content);
+        Recipe recipe;
+        EXPECT_EQ(parse_recipe_file(path.c_str(), &recipe), Status::InvalidArgument) << content;
+    }
+}
+
 } // namespace

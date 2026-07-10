@@ -1,6 +1,5 @@
 #include "app/cooking/turbo_pulse.h"
 
-
 namespace culina::app {
 
 void TurboPulse::on_tick(ProgramContext& ctx) {
@@ -25,6 +24,9 @@ void TurboPulse::on_tick(ProgramContext& ctx) {
         }
         break;
     case Phase::Unlocking:
+        if (!ctx.telemetry->has_data() || ctx.telemetry->latest().rpm >= 100) {
+            break;
+        }
         if (ctx.mcu->lock_lid(false) == Status::Ok) {
             phase_ = Phase::Finished;
         }

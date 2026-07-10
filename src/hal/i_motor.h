@@ -6,8 +6,7 @@
 
 namespace culina::hal {
 
-// Motor driver. Duty is the normalized drive command in [0.0, 1.0];
-// direction reversal is used by the kneading programs.
+// Duty is normalized to [0.0, 1.0].
 class IMotor {
 public:
     virtual ~IMotor() = default;

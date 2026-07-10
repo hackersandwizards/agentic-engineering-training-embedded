@@ -49,7 +49,8 @@ public:
 
 private:
     void begin(std::unique_ptr<Program> program);
-    void run_stopping_sequence();
+    void begin_shutdown(bool faulted);
+    void run_stopping_sequence(const c1link::Frame* response);
 
     McuClient* mcu_;
     TelemetryStore* telemetry_;
@@ -62,8 +63,13 @@ private:
     Millis started_ms_ = 0;
     float display_avg_temp_c_ = 0.0f;
     bool hot_bowl_ = false;
+    bool shutdown_heater_sent_ = false;
     bool shutdown_heater_done_ = false;
+    bool shutdown_motor_sent_ = false;
     bool shutdown_motor_done_ = false;
+    bool fault_shutdown_ = false;
+    bool start_after_shutdown_ = false;
+    std::unique_ptr<Program> pending_program_;
 };
 
 } // namespace culina::app

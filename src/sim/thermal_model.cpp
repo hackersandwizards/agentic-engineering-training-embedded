@@ -17,6 +17,8 @@ void ThermalModel::step(float dt_seconds, float heater_watts, float contents_gra
     }
 }
 
-void ThermalModel::set_ambient_c(float celsius) { ambient_c_ = celsius; }
+void ThermalModel::set_ambient_c(float celsius) {
+    ambient_c_ = celsius;
+}
 
 } // namespace culina::sim

@@ -9,18 +9,16 @@
 
 namespace culina::mcu {
 
-// Dispatches C1-Link requests from the application processor and sends the
-// matching responses.
 class CommandHandler {
 public:
     CommandHandler(c1link::Link* link, MotorController* motor, HeaterPid* pid,
                    Interlocks* interlocks, hal::IScale* scale, hal::ILid* lid)
-        : link_(link), motor_(motor), pid_(pid), interlocks_(interlocks), scale_(scale),
-          lid_(lid) {}
+        : link_(link), motor_(motor), pid_(pid), interlocks_(interlocks), scale_(scale), lid_(lid) {
+    }
 
-    void handle(const c1link::Frame& request, const Interlocks::Inputs& state);
+    void handle(const c1link::Frame& request, const Interlocks::Inputs& state, bool faulted);
 
-    // Grams after tare, derived from the raw load-cell counts.
+    // Returns tare-adjusted grams.
     Grams current_grams();
 
 private:

@@ -37,8 +37,7 @@ private:
     mcu::SafetyMcu mcu_;
     app::TelemetryStore store_;
     app::McuClient client_{&transport_.app_side(), &board_.clock(), &store_};
-    app::CookingController controller_{&client_, &store_, &board_.clock(),
-                                       &board_.app_watchdog()};
+    app::CookingController controller_{&client_, &store_, &board_.clock(), &board_.app_watchdog()};
     app::RecipeLibrary recipes_;
     app::OtaUpdater ota_;
     std::uint32_t app_divider_ = 0;

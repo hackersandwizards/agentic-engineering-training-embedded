@@ -9,7 +9,7 @@ void run_repl(system::SystemSim& sys) {
     std::printf("Culina C-100 simulator. Type 'help' for commands, 'quit' to exit.\n");
     std::printf("Time advances with 'wait <duration>', e.g. 'wait 5m'.\n\n");
 
-    // Give the device a moment to boot and stream first telemetry.
+    // Seed telemetry before the first status line.
     sys.step_ms(50);
 
     CommandEnv env;

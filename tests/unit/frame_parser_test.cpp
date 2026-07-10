@@ -69,6 +69,56 @@ TEST(FrameParser, IgnoresLeadingNoise) {
     EXPECT_TRUE(complete);
 }
 
+TEST(FrameParser, AcceptsOverlappingSyncBytes) {
+    std::uint8_t wire[kMaxFrameSize];
+    const std::size_t n = make_frame(wire, sizeof(wire), MsgId::Ping, 2, nullptr, 0);
+
+    FrameParser parser;
+    Frame frame;
+    EXPECT_FALSE(parser.feed(kSync0, &frame));
+    for (std::size_t i = 0; i < n; ++i) {
+        parser.feed(wire[i], &frame);
+    }
+    EXPECT_EQ(frame.msg_id, MsgId::Ping);
+    EXPECT_FALSE(parser.in_progress());
+}
+
+TEST(FrameParser, RecoversWhenACompleteSyncPairPrecedesAFrame) {
+    std::uint8_t wire[kMaxFrameSize];
+    const std::size_t n = make_frame(wire, sizeof(wire), MsgId::Ping, 2, nullptr, 0);
+
+    FrameParser parser;
+    Frame frame;
+    EXPECT_FALSE(parser.feed(kSync0, &frame));
+    EXPECT_FALSE(parser.feed(kSync1, &frame));
+    bool complete = false;
+    for (std::size_t i = 0; i < n; ++i) {
+        complete = parser.feed(wire[i], &frame);
+    }
+
+    EXPECT_TRUE(complete);
+    EXPECT_EQ(frame.msg_id, MsgId::Ping);
+}
+
+TEST(FrameParser, RejectsOversizedPayloadFromTheHeader) {
+    const std::uint8_t header[] = {kSync0, kSync1, kVersion, 0x01, 0x03, 0x01, 0xFF, 0xFF};
+
+    FrameParser parser;
+    Frame frame;
+    for (std::uint8_t byte : header) {
+        EXPECT_FALSE(parser.feed(byte, &frame));
+    }
+    EXPECT_FALSE(parser.in_progress());
+
+    std::uint8_t wire[kMaxFrameSize];
+    const std::size_t n = make_frame(wire, sizeof(wire), MsgId::Ping, 4, nullptr, 0);
+    bool complete = false;
+    for (std::size_t i = 0; i < n; ++i) {
+        complete = parser.feed(wire[i], &frame);
+    }
+    EXPECT_TRUE(complete);
+}
+
 TEST(FrameParser, RejectsCorruptedPayload) {
     const std::uint8_t payload[] = {0x64, 0x00};
     std::uint8_t wire[kMaxFrameSize];

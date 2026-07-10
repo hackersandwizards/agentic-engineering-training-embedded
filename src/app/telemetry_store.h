@@ -5,8 +5,8 @@
 
 #include <cstddef>
 #include <cstdint>
+#include <deque>
 #include <mutex>
-#include <vector>
 
 namespace culina::app {
 
@@ -14,6 +14,8 @@ namespace culina::app {
 // display, cooking logic, and post-run diagnostics.
 class TelemetryStore {
 public:
+    static constexpr std::size_t kMaxSamples = 360000;
+
     struct Sample {
         Millis t_ms = 0;
         DeciCelsius deci_celsius = 0;
@@ -35,10 +37,9 @@ public:
     float max_temp_c(Millis window_ms) const;
 
 private:
-    // The link pump and the UI/controller read concurrently in two-process
-    // mode; every accessor takes the lock.
+    // Shared by the link pump and UI/controller threads.
     mutable std::mutex mutex_;
-    std::vector<Sample> samples_;
+    std::deque<Sample> samples_;
 };
 
 } // namespace culina::app

@@ -6,8 +6,7 @@
 
 namespace culina::hal {
 
-// Load cell under the bowl. Returns raw ADC counts; conversion to grams and
-// tare handling live above the HAL.
+// Returns raw ADC counts; conversion and tare belong above the HAL.
 class IScale {
 public:
     virtual ~IScale() = default;

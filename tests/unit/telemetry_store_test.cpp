@@ -2,6 +2,7 @@
 
 #include <gtest/gtest.h>
 
+#include <limits>
 #include <thread>
 
 namespace {
@@ -67,6 +68,25 @@ TEST(TelemetryStore, SurvivesConcurrentProducerAndReader) {
     producer.join();
     EXPECT_GT(last_avg, 0.0f);
     EXPECT_EQ(store.size(), 10100u);
+}
+
+TEST(TelemetryStore, RetainsABoundedHistory) {
+    TelemetryStore store;
+    for (std::size_t i = 0; i < TelemetryStore::kMaxSamples + 10; ++i) {
+        store.append(sample_at(static_cast<culina::Millis>(i), 20.0f));
+    }
+    EXPECT_EQ(store.size(), TelemetryStore::kMaxSamples);
+    EXPECT_EQ(store.latest().t_ms, TelemetryStore::kMaxSamples + 9);
+}
+
+TEST(TelemetryStore, WindowsSurviveTheMillisWraparound) {
+    TelemetryStore store;
+    store.append(sample_at(std::numeric_limits<culina::Millis>::max() - 100, 90.0f));
+    store.append(sample_at(std::numeric_limits<culina::Millis>::max() - 50, 70.0f));
+    store.append(sample_at(25, 20.0f));
+
+    EXPECT_NEAR(store.average_temp_c(80), 45.0f, 0.01f);
+    EXPECT_NEAR(store.max_temp_c(80), 70.0f, 0.01f);
 }
 
 } // namespace

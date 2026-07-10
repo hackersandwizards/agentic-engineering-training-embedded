@@ -1,6 +1,5 @@
 #include "app/cooking/dough_mode.h"
 
-
 namespace culina::app {
 
 void DoughMode::on_tick(ProgramContext& ctx) {

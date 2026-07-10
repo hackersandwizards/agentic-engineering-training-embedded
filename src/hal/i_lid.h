@@ -2,7 +2,6 @@
 
 namespace culina::hal {
 
-// Lid position switch and electromagnetic lock.
 class ILid {
 public:
     virtual ~ILid() = default;

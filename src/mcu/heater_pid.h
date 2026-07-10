@@ -4,7 +4,6 @@
 
 namespace culina::mcu {
 
-// PI controller for the heating element.
 class HeaterPid {
 public:
     void set_target(DeciCelsius target);

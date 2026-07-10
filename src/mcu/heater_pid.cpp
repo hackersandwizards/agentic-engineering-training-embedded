@@ -8,8 +8,7 @@ namespace {
 constexpr float kKp = 130.0f;
 constexpr float kKi = 2.0f;
 constexpr float kMaxWatts = 1200.0f;
-// Integrate only close to the setpoint so the term stays out of the way
-// during the big pull-up phase.
+// Limit integration to avoid windup during initial heating.
 constexpr float kIntegralBandC = 5.0f;
 } // namespace
 

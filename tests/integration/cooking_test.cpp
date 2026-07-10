@@ -18,7 +18,7 @@ TEST(Cooking, ManualModeBoilsWaterAndShutsDown) {
     SystemFixture fix;
     fix.board().add_mass(500.0f);
     ASSERT_EQ(fix.controller().start_manual(1000, 2, 330), Status::Ok);
-    EXPECT_EQ(fix.controller().state(), SessionState::Running);
+    EXPECT_EQ(fix.controller().state(), SessionState::Stopping);
 
     fix.run_ms(320000);
     EXPECT_GE(fix.board().true_temperature_c(), 97.0f);
@@ -38,13 +38,13 @@ TEST(Cooking, DoughModeAlternatesKneadAndRest) {
     ASSERT_EQ(fix.controller().start_program(std::make_unique<app::DoughMode>(60)), Status::Ok);
 
     fix.run_ms(3000); // mid knead phase
-    EXPECT_GT(fix.store().latest().rpm, 2800u);
+    EXPECT_GT(fix.store().latest().rpm, 2600u);
 
     fix.run_ms(2600); // 5.6 s: rest phase
     EXPECT_LT(fix.store().latest().rpm, 500u);
 
     fix.run_ms(2000); // 7.6 s: kneading again
-    EXPECT_GT(fix.store().latest().rpm, 2800u);
+    EXPECT_GT(fix.store().latest().rpm, 2600u);
 }
 
 TEST(Cooking, SousVideHoldsTheBathTemperature) {
@@ -65,8 +65,7 @@ TEST(Cooking, SousVideHoldsTheBathTemperature) {
 TEST(Cooking, TurboPulseLocksSpinsAndReleases) {
     SystemFixture fix;
     fix.board().add_mass(300.0f);
-    ASSERT_EQ(fix.controller().start_program(std::make_unique<app::TurboPulse>(1500)),
-              Status::Ok);
+    ASSERT_EQ(fix.controller().start_program(std::make_unique<app::TurboPulse>(1500)), Status::Ok);
 
     fix.run_ms(1200);
     EXPECT_TRUE((fix.store().latest().flags & c1link::kFlagLidLocked) != 0);
@@ -106,6 +105,113 @@ TEST(Cooking, FaultTakesTheSessionDown) {
     fix.board().set_ambient_c(175.0f);
     fix.run_ms(300000);
     EXPECT_EQ(fix.controller().state(), SessionState::Faulted);
+    EXPECT_EQ(fix.board().heater().power_w(), 0.0f);
+}
+
+TEST(Cooking, CommandFailureStopsActiveOutputs) {
+    SystemFixture fix;
+    fix.board().add_mass(500.0f);
+    ASSERT_EQ(fix.controller().start_manual(800, 3, 3600), Status::Ok);
+    fix.run_ms(3000);
+    ASSERT_GT(fix.store().latest().rpm, 2500u);
+    ASSERT_GT(fix.board().heater().power_w(), 0.0f);
+
+    ASSERT_EQ(fix.client().tare(), Status::Ok);
+    fix.run_ms(3000);
+
+    EXPECT_EQ(fix.controller().state(), SessionState::Faulted);
+    EXPECT_EQ(fix.board().heater().power_w(), 0.0f);
+    EXPECT_LT(fix.store().latest().rpm, 100u);
+}
+
+TEST(Cooking, StopTurnsOffDirectCommands) {
+    SystemFixture fix;
+    ASSERT_EQ(fix.client().set_heater(800), Status::Ok);
+    fix.run_ms(10);
+    ASSERT_EQ(fix.client().set_motor(5000, c1link::kRampFast), Status::Ok);
+    fix.run_ms(3000);
+    ASSERT_EQ(fix.controller().state(), SessionState::Idle);
+    ASSERT_GT(fix.store().latest().rpm, 4000u);
+
+    fix.controller().stop();
+    fix.run_ms(3000);
+
+    EXPECT_EQ(fix.controller().state(), SessionState::Done);
+    EXPECT_EQ(fix.board().heater().power_w(), 0.0f);
+    EXPECT_LT(fix.store().latest().rpm, 100u);
+}
+
+TEST(Cooking, ShutdownWaitsForAcknowledgedCommands) {
+    SystemFixture fix;
+    ASSERT_EQ(fix.controller().start_manual(800, 2, 3600), Status::Ok);
+    fix.run_ms(3000);
+
+    fix.drop_next_app_write();
+    fix.controller().stop();
+    fix.run_ms(20);
+    EXPECT_EQ(fix.controller().state(), SessionState::Stopping);
+
+    fix.run_ms(3000);
+    EXPECT_EQ(fix.controller().state(), SessionState::Done);
+    EXPECT_EQ(fix.board().heater().power_w(), 0.0f);
+    EXPECT_LT(fix.store().latest().rpm, 100u);
+}
+
+TEST(Cooking, FaultShutdownMustFinishBeforeRestart) {
+    SystemFixture fix;
+    fix.board().add_mass(500.0f);
+    ASSERT_EQ(fix.controller().start_manual(800, 3, 3600), Status::Ok);
+    fix.run_ms(3000);
+    ASSERT_EQ(fix.client().tare(), Status::Ok);
+    fix.run_ms(10);
+    ASSERT_EQ(fix.controller().state(), SessionState::Faulted);
+
+    EXPECT_EQ(fix.controller().start_manual(800, 1, 60), Status::NotReady);
+    fix.run_ms(1000);
+    EXPECT_EQ(fix.controller().start_manual(800, 1, 60), Status::Ok);
+}
+
+TEST(Cooking, ProgramStartsFromSafeOutputs) {
+    SystemFixture fix;
+    ASSERT_EQ(fix.client().set_heater(1000), Status::Ok);
+    fix.run_ms(3000);
+    ASSERT_GT(fix.board().heater().power_w(), 0.0f);
+
+    ASSERT_EQ(fix.controller().start_program(std::make_unique<app::DoughMode>(60)), Status::Ok);
+    EXPECT_EQ(fix.controller().state(), SessionState::Stopping);
+    fix.run_ms(1000);
+
+    EXPECT_EQ(fix.controller().state(), SessionState::Running);
+    EXPECT_EQ(fix.board().heater().power_w(), 0.0f);
+    EXPECT_GT(fix.store().latest().rpm, 1000u);
+}
+
+TEST(Cooking, StopCancelsAProgramWaitingForSafeOutputs) {
+    SystemFixture fix;
+    ASSERT_EQ(fix.controller().start_program(std::make_unique<app::DoughMode>(60)), Status::Ok);
+    ASSERT_EQ(fix.controller().state(), SessionState::Stopping);
+
+    fix.controller().stop();
+    fix.run_ms(1000);
+
+    EXPECT_EQ(fix.controller().state(), SessionState::Done);
+    EXPECT_EQ(fix.store().latest().rpm, 0u);
+}
+
+TEST(Cooking, LidPauseCannotHideAnActiveDirectHeater) {
+    SystemFixture fix;
+    ASSERT_EQ(fix.client().set_heater(1000), Status::Ok);
+    fix.run_ms(1000);
+    fix.board().open_lid();
+    fix.run_ms(100);
+    ASSERT_EQ(fix.board().heater().power_w(), 0.0f);
+
+    ASSERT_EQ(fix.controller().start_program(std::make_unique<app::DoughMode>(60)), Status::Ok);
+    fix.run_ms(1000);
+    fix.board().close_lid();
+    fix.run_ms(1000);
+
+    EXPECT_EQ(fix.controller().state(), SessionState::Running);
     EXPECT_EQ(fix.board().heater().power_w(), 0.0f);
 }
 

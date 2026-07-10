@@ -5,8 +5,7 @@
 
 namespace culina {
 
-// Fixed-capacity single-producer/single-consumer byte queue used on both
-// processors for UART buffering. No dynamic allocation.
+// Uses fixed capacity and no dynamic allocation.
 template <std::size_t Capacity>
 class RingBuffer {
     static_assert(Capacity >= 2, "RingBuffer needs at least two slots");

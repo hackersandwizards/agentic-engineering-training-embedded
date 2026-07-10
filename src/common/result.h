@@ -4,8 +4,7 @@
 
 namespace culina {
 
-// Firmware code builds with -fno-exceptions; fallible functions return Status
-// or Result<T> instead of throwing.
+// Firmware builds disable exceptions.
 enum class Status : std::uint8_t {
     Ok = 0,
     Timeout,

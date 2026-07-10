@@ -61,8 +61,9 @@ const char* type_name(std::uint8_t type) {
         return "TLM";
     case 0x04:
         return "NAK";
+    default:
+        return "???";
     }
-    return "???";
 }
 
 } // namespace
@@ -80,6 +81,7 @@ int main(int argc, char** argv) {
 
     std::size_t i = 0;
     int frames = 0;
+    bool malformed = false;
     while (i + kHeaderSize <= bytes.size()) {
         if (bytes[i] != kSync0 || bytes[i + 1] != kSync1) {
             ++i;
@@ -89,20 +91,33 @@ int main(int argc, char** argv) {
         const std::uint8_t seq = bytes[i + 4];
         const std::uint8_t msg = bytes[i + 5];
         const std::uint16_t len = get_u16(&bytes[i + 6]);
+        const std::size_t frame_size = kHeaderSize + static_cast<std::size_t>(len) + kCrcSize;
+        if (len > kMaxPayload || frame_size > bytes.size() - i) {
+            std::fprintf(stderr, "malformed frame at offset %zu\n", i);
+            malformed = true;
+            ++i;
+            continue;
+        }
 
-        std::printf("%04zu  %s seq=%3u msg=0x%02x len=%u  payload=", i, type_name(type), seq,
-                    msg, len);
+        std::printf("%04zu  %s seq=%3u msg=0x%02x len=%u  payload=", i, type_name(type), seq, msg,
+                    len);
         for (std::uint16_t j = 0; j < len; ++j) {
             std::printf("%02x", bytes[i + kHeaderSize + j]);
         }
         const std::uint16_t wire_crc = get_u16(&bytes[i + kHeaderSize + len]);
-        const std::uint16_t computed =
-            crc16_ccitt(&bytes[i + 2], kHeaderSize - 2 + len);
+        const std::uint16_t computed = crc16_ccitt(&bytes[i + 2], kHeaderSize - 2 + len);
         std::printf("  crc=%04x %s\n", wire_crc, wire_crc == computed ? "ok" : "BAD");
+        if (wire_crc != computed) {
+            malformed = true;
+        }
 
-        i += kHeaderSize + len + kCrcSize;
+        i += frame_size;
         ++frames;
     }
+    if (i < bytes.size()) {
+        std::fprintf(stderr, "truncated data at offset %zu\n", i);
+        malformed = true;
+    }
     std::printf("%d frame(s)\n", frames);
-    return 0;
+    return frames > 0 && !malformed ? 0 : 1;
 }

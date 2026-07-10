@@ -4,8 +4,7 @@
 
 namespace culina::hal {
 
-// Monotonic time source. All firmware code takes time from here — never from
-// the host OS — so behaviour is identical on target and in simulation.
+// Firmware uses this monotonic source so target and simulation share time semantics.
 class IClock {
 public:
     virtual ~IClock() = default;

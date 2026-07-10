@@ -21,6 +21,7 @@ public:
     SocketTransport& operator=(SocketTransport&&) = delete;
 
     bool connected();
+    bool valid() const { return listen_fd_ >= 0 || conn_fd_ >= 0; }
 
     std::size_t write(const std::uint8_t* data, std::size_t len) override;
     bool read(std::uint8_t* out) override;

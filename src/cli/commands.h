@@ -12,7 +12,7 @@ struct CommandEnv {
     system::SystemSim* sys = nullptr;
     int expect_failures = 0;
     bool quit_requested = false;
-    bool echo = true; // print command results to stdout
+    bool echo = true;
 };
 
 // Executes one command line. Returns false for unknown commands or bad
