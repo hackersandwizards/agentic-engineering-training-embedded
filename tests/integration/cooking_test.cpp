@@ -47,13 +47,16 @@ TEST(Cooking, DoughModeAlternatesKneadAndRest) {
 TEST(Cooking, SousVideHoldsTheBathTemperature) {
     SystemFixture fix;
     fix.board().add_mass(1500.0f);
-    ASSERT_EQ(fix.controller().start_program(std::make_unique<app::SousVideMode>(650, 3600)),
-              Status::Ok);
+    auto mode = std::make_unique<app::SousVideMode>(650, 3600);
+    const app::SousVideMode* sous_vide = mode.get();
+    ASSERT_EQ(fix.controller().start_program(std::move(mode)), Status::Ok);
 
     fix.run_ms(900000); // 15 simulated minutes to stabilize
     EXPECT_NEAR(fix.controller().display_avg_temp_c(), 65.0f, 1.5f);
     EXPECT_EQ(fix.controller().state(), SessionState::Running);
     EXPECT_TRUE(fix.controller().hot_bowl());
+    EXPECT_TRUE(sous_vide->at_temperature());
+    EXPECT_STREQ(fix.controller().program_status(), "at temperature");
 }
 
 TEST(Cooking, TurboPulseLocksSpinsAndReleases) {

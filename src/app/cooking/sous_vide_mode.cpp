@@ -1,5 +1,6 @@
 #include "app/cooking/sous_vide_mode.h"
 
+#include <cmath>
 
 namespace culina::app {
 
@@ -24,7 +25,7 @@ void SousVideMode::on_tick(ProgramContext& ctx) {
         return;
     }
     const float bath = ctx.telemetry->average_temp_c(2000);
-    if (bath == to_celsius(target_deci_)) {
+    if (std::fabs(bath - to_celsius(target_deci_)) <= 0.5f) {
         at_temperature_ = true;
     }
 }
