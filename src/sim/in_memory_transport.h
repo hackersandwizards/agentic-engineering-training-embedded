@@ -9,9 +9,6 @@ namespace culina::sim {
 // tests and by the single-process simulator.
 class InMemoryTransport {
 public:
-    InMemoryTransport()
-        : app_end_(&app_to_mcu_, &mcu_to_app_), mcu_end_(&mcu_to_app_, &app_to_mcu_) {}
-
     hal::IUart& app_side() { return app_end_; }
     hal::IUart& mcu_side() { return mcu_end_; }
 
@@ -39,8 +36,8 @@ private:
 
     Queue app_to_mcu_;
     Queue mcu_to_app_;
-    Endpoint app_end_;
-    Endpoint mcu_end_;
+    Endpoint app_end_{&app_to_mcu_, &mcu_to_app_};
+    Endpoint mcu_end_{&mcu_to_app_, &app_to_mcu_};
 };
 
 } // namespace culina::sim

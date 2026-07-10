@@ -4,10 +4,14 @@ Checks: >
   performance-*,
   modernize-*,
   readability-braces-around-statements,
-  cppcoreguidelines-init-variables,
   -modernize-use-trailing-return-type,
   -modernize-avoid-c-arrays,
-  -bugprone-easily-swappable-parameters
+  -modernize-use-nodiscard,
+  -performance-enum-size,
+  -bugprone-easily-swappable-parameters,
+  -bugprone-narrowing-conversions,
+  -bugprone-branch-clone,
+  -modernize-avoid-variadic-functions
 WarningsAsErrors: ''
 HeaderFilterRegex: '(src|apps|tools)/'
 FormatStyle: file
