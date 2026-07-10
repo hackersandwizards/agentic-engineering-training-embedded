@@ -26,6 +26,10 @@ target_link_libraries(integration_tests PRIVATE culina_simulation culina_mcu_lib
 culina_set_warnings(integration_tests)
 gtest_discover_tests(integration_tests DISCOVERY_MODE PRE_TEST PROPERTIES LABELS integration)
 
+add_executable(perf_check perf/perf_check.cpp)
+target_link_libraries(perf_check PRIVATE culina_system)
+culina_set_warnings(perf_check)
+
 add_executable(scenario_tests integration/scenario_check_test.cpp)
 target_compile_definitions(scenario_tests PRIVATE CULINA_DATA_DIR="${CMAKE_SOURCE_DIR}/data")
 target_link_libraries(scenario_tests PRIVATE culina_cli GTest::gtest_main)
