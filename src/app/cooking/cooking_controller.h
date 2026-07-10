@@ -1,6 +1,7 @@
 #pragma once
 
 #include "app/cooking/program.h"
+#include "app/ota/ota_updater.h"
 #include "app/recipe/recipe.h"
 #include "hal/i_clock.h"
 #include "hal/i_watchdog.h"
@@ -23,6 +24,8 @@ public:
         : mcu_(mcu), telemetry_(telemetry), clock_(clock), watchdog_(watchdog) {}
 
     void tick_10ms();
+
+    void attach_ota(OtaUpdater* ota) { ota_ = ota; }
 
     Status start_manual(DeciCelsius temp, std::uint8_t dial, std::uint32_t duration_s);
     Status start_program(std::unique_ptr<Program> program);
@@ -53,6 +56,7 @@ private:
     const hal::IClock* clock_;
     hal::IWatchdog* watchdog_;
 
+    OtaUpdater* ota_ = nullptr;
     SessionState state_ = SessionState::Idle;
     std::unique_ptr<Program> program_;
     Millis started_ms_ = 0;

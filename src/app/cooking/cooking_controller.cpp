@@ -77,6 +77,11 @@ void CookingController::run_stopping_sequence() {
 }
 
 void CookingController::tick_10ms() {
+    if (ota_ != nullptr && ota_->busy()) {
+        ota_->step();
+        return; // nothing else runs while an update verifies
+    }
+
     watchdog_->feed();
 
     c1link::Frame response;
