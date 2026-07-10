@@ -126,6 +126,27 @@ TEST(McuLink, InterlocksKeepRunningWhileAFrameTrickles) {
     EXPECT_LE(fix.last_telemetry().rpm, 600u);
 }
 
+TEST(McuLink, LidPauseDoesNotCauseAnOvershootAfterwards) {
+    McuFixture fix;
+    fix.board().add_mass(1000.0f);
+    std::uint8_t target[2];
+    put_i16(target, 650); // 65.0 C
+    fix.send_request(MsgId::HeaterSetTarget, target, sizeof(target));
+    fix.run_ms(500000); // settle at the setpoint
+
+    fix.board().open_lid();
+    fix.run_ms(180000); // three minutes with the heater interlocked off
+    fix.board().close_lid();
+
+    float max_c = 0.0f;
+    for (int i = 0; i < 400; ++i) {
+        fix.run_ms(1000);
+        const float c = to_celsius(fix.last_telemetry().deci_celsius);
+        max_c = c > max_c ? c : max_c;
+    }
+    EXPECT_LE(max_c, 67.0f); // a 65.0 hold may transiently touch the mid-66s
+}
+
 TEST(McuLink, BurstNeedsALockedLid) {
     McuFixture fix;
     std::uint8_t req[3];

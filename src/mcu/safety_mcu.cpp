@@ -53,11 +53,11 @@ void SafetyMcu::tick_1ms() {
     motor_ctrl_.enforce_cap(interlocks_.continuous_cap(inputs_));
 
     float watts = 0.0f;
-    if (fault_ == FaultCode::None && pid_.enabled()) {
+    if (fault_ == FaultCode::None && pid_.enabled() && inputs_.lid_closed) {
+        // While the lid pauses heating, hold the controller instead of
+        // feeding it with an output nobody applies: that winds up the
+        // integral and reheats hard once the lid closes.
         watts = pid_.update(inputs_.temp_c, 0.001f);
-        if (!inputs_.lid_closed) {
-            watts = 0.0f; // no heating with the lid open
-        }
     }
     hw_.heater->set_power_w(watts);
 

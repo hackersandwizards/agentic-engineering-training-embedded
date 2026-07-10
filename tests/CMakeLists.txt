@@ -12,8 +12,10 @@ add_executable(
     unit/link_test.cpp
     unit/telemetry_store_test.cpp
     unit/recipe_parser_test.cpp
-    unit/ota_updater_test.cpp)
-target_link_libraries(unit_tests PRIVATE culina_simulation culina_protocol culina_app_lib GTest::gtest_main)
+    unit/ota_updater_test.cpp
+    unit/heater_pid_test.cpp)
+target_link_libraries(unit_tests PRIVATE culina_simulation culina_protocol culina_app_lib
+                                         culina_mcu_lib GTest::gtest_main)
 culina_set_warnings(unit_tests)
 gtest_discover_tests(unit_tests PROPERTIES LABELS unit)
 
