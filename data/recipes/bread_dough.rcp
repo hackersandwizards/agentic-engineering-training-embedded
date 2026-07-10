@@ -1,0 +1,5 @@
+name: Bread Dough
+step: weigh | weight=300 | text=Add 300 g water
+step: weigh | weight=800 | text=Add 500 g flour and the yeast
+step: mix | speed=3 | time=300 | text=Knead to a smooth dough
+step: note | text=Cover and let rise for 1 hour

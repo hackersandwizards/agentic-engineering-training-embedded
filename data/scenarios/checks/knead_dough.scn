@@ -1,0 +1,9 @@
+add water 250
+add flour 400
+dough 2
+wait 32s
+expect rpm >= 2800
+expect state == running
+wait 3m
+expect state == done
+expect rpm <= 100

@@ -16,6 +16,7 @@ include(CompilerWarnings)
 include(Sanitizers)
 
 add_subdirectory(src)
+add_subdirectory(apps)
 
 include(CTest)
 if(BUILD_TESTING)

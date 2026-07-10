@@ -1,0 +1,5 @@
+name: Pancake Batter
+step: weigh | weight=250 | text=Add 250 g flour
+step: weigh | weight=650 | text=Add milk, eggs, and a pinch of salt
+step: mix | speed=5 | time=45 | text=Mix until smooth
+step: note | text=Rest 15 minutes

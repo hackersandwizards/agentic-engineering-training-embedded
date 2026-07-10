@@ -1,0 +1,4 @@
+name: Hummus
+step: weigh | weight=400 | text=Add cooked chickpeas
+step: weigh | weight=520 | text=Add tahini, lemon, and garlic
+step: mix | speed=9 | time=60 | text=Blend until silky

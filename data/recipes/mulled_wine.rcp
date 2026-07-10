@@ -1,0 +1,5 @@
+name: Mulled Wine
+step: weigh | weight=750 | text=Pour in a bottle of red wine
+step: weigh | weight=850 | text=Add orange slices and spices
+step: heat | temp=70.0 | time=1200 | speed=1 | text=Warm without boiling
+step: note | text=Strain and serve warm

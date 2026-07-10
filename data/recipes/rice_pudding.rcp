@@ -1,0 +1,5 @@
+name: Rice Pudding
+step: weigh | weight=250 | text=Add 250 g rice
+step: weigh | weight=1250 | text=Add 1 l milk and sugar
+step: heat | temp=92.0 | time=1800 | speed=1 | text=Cook, stirring slowly
+step: note | text=Rest 5 minutes with the lid on

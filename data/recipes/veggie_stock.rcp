@@ -1,0 +1,5 @@
+name: Veggie Stock Paste
+step: weigh | weight=600 | text=Add mixed vegetables
+step: mix | speed=8 | time=30 | text=Chop finely
+step: weigh | weight=750 | text=Add salt and herbs
+step: heat | temp=100.0 | time=1500 | speed=2 | text=Reduce to a paste

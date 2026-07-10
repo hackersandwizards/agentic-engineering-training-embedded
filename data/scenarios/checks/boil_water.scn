@@ -1,0 +1,8 @@
+add water 500
+set-temp 100
+wait 7m
+expect temp >= 99
+expect temp <= 106
+set-temp 0
+wait 30s
+expect state == idle

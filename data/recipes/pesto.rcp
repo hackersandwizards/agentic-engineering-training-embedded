@@ -1,0 +1,5 @@
+name: Pesto
+step: weigh | weight=100 | text=Add basil and pine nuts
+step: mix | speed=7 | time=20 | text=Chop coarsely
+step: weigh | weight=250 | text=Add oil and parmesan
+step: mix | speed=5 | time=40 | text=Blend to a paste

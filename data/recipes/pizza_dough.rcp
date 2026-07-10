@@ -1,0 +1,5 @@
+name: Pizza Dough
+step: weigh | weight=250 | text=Add 250 g lukewarm water
+step: weigh | weight=650 | text=Add 400 g flour, yeast, and salt
+step: mix | speed=4 | time=240 | text=Knead until elastic
+step: note | text=Rest 30 minutes under a warm cloth

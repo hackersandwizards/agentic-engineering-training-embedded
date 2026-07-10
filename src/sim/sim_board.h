@@ -23,6 +23,7 @@ public:
     explicit SimBoard(std::uint32_t seed = 42);
 
     SimClock& clock() { return clock_; }
+    const SimClock& clock() const { return clock_; }
     hal::IMotor& motor() { return motor_hal_; }
     hal::IHeater& heater() { return heater_hal_; }
     hal::ITempSensor& temp_sensor() { return temp_hal_; }

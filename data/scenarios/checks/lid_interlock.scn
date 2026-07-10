@@ -1,0 +1,8 @@
+set-speed 8
+wait 6s
+expect rpm >= 6000
+lid open
+wait 6s
+expect rpm <= 550
+expect lid == open
+lid close

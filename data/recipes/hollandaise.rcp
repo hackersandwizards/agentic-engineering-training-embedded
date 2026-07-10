@@ -1,0 +1,4 @@
+name: Hollandaise
+step: weigh | weight=150 | text=Add 3 egg yolks and white wine
+step: heat | temp=75.0 | time=420 | speed=3 | text=Emulsify carefully
+step: note | text=Drizzle in melted butter

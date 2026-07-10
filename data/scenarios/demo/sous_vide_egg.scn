@@ -1,0 +1,5 @@
+# The classic 63.5 degree egg, shortened for demo purposes.
+add water 1500
+sous-vide 63.5 45
+wait 20m
+status

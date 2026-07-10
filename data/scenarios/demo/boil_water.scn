@@ -1,0 +1,6 @@
+# Bring half a litre of water to the boil and hold it there.
+add water 500
+set-temp 100
+wait 7m
+status
+set-temp 0

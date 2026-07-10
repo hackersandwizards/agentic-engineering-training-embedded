@@ -1,0 +1,6 @@
+name: Risotto
+step: weigh | weight=320 | text=Add rice and onions
+step: mix | speed=2 | time=60 | text=Toast the rice
+step: weigh | weight=1120 | text=Add stock and wine
+step: heat | temp=96.0 | time=1080 | speed=1 | text=Cook, stirring
+step: note | text=Stir in butter and parmesan

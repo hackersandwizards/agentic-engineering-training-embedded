@@ -1,0 +1,9 @@
+add water 1000
+sous-vide 65 60
+wait 10m
+expect avg-temp >= 63.5
+expect avg-temp <= 66.5
+expect state == running
+stop
+wait 2s
+expect state == done

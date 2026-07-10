@@ -1,0 +1,6 @@
+# Typical bread dough knead with interval rests.
+add water 300
+add flour 500
+dough 4
+wait 4m30s
+status

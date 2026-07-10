@@ -1,0 +1,4 @@
+name: Mayonnaise
+step: weigh | weight=80 | text=Add egg yolk and mustard
+step: mix | speed=4 | time=120 | text=Emulsify while adding oil
+step: note | text=Season with lemon juice

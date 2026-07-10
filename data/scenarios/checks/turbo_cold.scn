@@ -1,0 +1,9 @@
+add water 300
+turbo 1500
+wait 1s
+expect rpm >= 8000
+expect lid == locked
+wait 6s
+expect rpm <= 5
+expect state == done
+expect lid == closed

@@ -1,0 +1,6 @@
+name: Tomato Soup
+step: weigh | weight=400 | text=Add 400 g tomatoes
+step: weigh | weight=700 | text=Add 300 g stock
+step: mix | speed=8 | time=30 | text=Puree everything
+step: heat | temp=98.0 | time=900 | speed=2 | text=Cook through
+step: note | text=Season with basil

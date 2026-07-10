@@ -1,0 +1,3 @@
+add_library(culina_system STATIC system_sim.cpp)
+target_link_libraries(culina_system PUBLIC culina_app_lib culina_mcu_lib culina_simulation)
+culina_set_warnings(culina_system)

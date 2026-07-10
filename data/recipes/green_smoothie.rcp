@@ -1,0 +1,4 @@
+name: Green Smoothie
+step: weigh | weight=150 | text=Add spinach and kale
+step: weigh | weight=550 | text=Add apple, banana, and water
+step: mix | speed=10 | time=45 | text=Blend on high

@@ -1,0 +1,5 @@
+name: Custard
+step: weigh | weight=500 | text=Add 500 g milk
+step: weigh | weight=620 | text=Add yolks, sugar, and starch
+step: heat | temp=90.0 | time=480 | speed=3 | text=Thicken slowly
+step: note | text=Chill before serving

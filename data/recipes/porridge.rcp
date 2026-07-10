@@ -1,0 +1,5 @@
+name: Porridge
+step: weigh | weight=250 | text=Add 250 g oats
+step: weigh | weight=850 | text=Pour in 600 g milk
+step: heat | temp=95.0 | time=600 | speed=1 | text=Simmer gently
+step: note | text=Sweeten and serve
