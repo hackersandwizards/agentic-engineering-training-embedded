@@ -28,6 +28,17 @@ TEST(Link, SendsFramesTheOtherSideCanParse) {
     EXPECT_FALSE(mcu.poll(&frame));
 }
 
+TEST(Link, RefusesOversizedPayloads) {
+    sim::InMemoryTransport transport;
+    sim::SimClock clock;
+    Link link(&transport.app_side(), &clock);
+    std::uint8_t payload[kMaxPayload + 1] = {};
+    EXPECT_EQ(link.send(FrameType::Request, 0, MsgId::Ping, payload, sizeof(payload)),
+              Status::InvalidArgument);
+    std::uint8_t byte = 0;
+    EXPECT_FALSE(transport.mcu_side().read(&byte));
+}
+
 TEST(Link, DropsAStalledPartialFrame) {
     sim::InMemoryTransport transport;
     sim::SimClock clock;
