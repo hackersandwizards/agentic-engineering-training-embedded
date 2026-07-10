@@ -47,7 +47,7 @@ SocketTransport SocketTransport::listen_on(const char* path) {
         CULINA_LOG_ERROR("cannot create socket: %s", std::strerror(errno));
         return {-1, -1};
     }
-    struct stat existing{};
+    struct stat existing = {};
     if (::lstat(path, &existing) == 0) {
         if (!S_ISSOCK(existing.st_mode) || existing.st_uid != ::geteuid() || ::unlink(path) != 0) {
             CULINA_LOG_ERROR("refusing to replace socket path %s", path);
