@@ -1,9 +1,12 @@
 #include "app/cooking/dough_mode.h"
 #include "app/cooking/sous_vide_mode.h"
 #include "app/cooking/turbo_pulse.h"
+#include "common/crc16.h"
 #include "support/sim_fixture.h"
 
 #include <gtest/gtest.h>
+
+#include <vector>
 
 namespace {
 
@@ -73,6 +76,27 @@ TEST(Cooking, TurboPulseLocksSpinsAndReleases) {
     EXPECT_EQ(fix.controller().state(), SessionState::Done);
     EXPECT_EQ(fix.store().latest().rpm, 0u);
     EXPECT_TRUE((fix.store().latest().flags & c1link::kFlagLidLocked) == 0);
+}
+
+TEST(Cooking, OtaVerificationKeepsTheWatchdogFed) {
+    SystemFixture fix;
+    fix.run_ms(100); // normal operation arms the watchdog
+
+    static std::vector<std::uint8_t> image(512 * 1024);
+    for (std::size_t i = 0; i < image.size(); ++i) {
+        image[i] = static_cast<std::uint8_t>(i * 7 + 3);
+    }
+    const std::uint16_t crc = culina::crc16_ccitt(image.data(), image.size());
+
+    app::OtaUpdater ota;
+    fix.controller().attach_ota(&ota);
+    ASSERT_EQ(ota.begin(image.data(), image.size(), crc), Status::Ok);
+
+    // 128 chunks at one per 10 ms tick: well past the 500 ms watchdog
+    // timeout if verification stops the feeding.
+    fix.run_ms(3000);
+    EXPECT_EQ(ota.state(), app::OtaUpdater::State::Ready);
+    EXPECT_FALSE(fix.board().watchdog_tripped());
 }
 
 TEST(Cooking, FaultTakesTheSessionDown) {

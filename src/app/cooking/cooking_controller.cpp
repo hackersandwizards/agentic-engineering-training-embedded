@@ -77,12 +77,14 @@ void CookingController::run_stopping_sequence() {
 }
 
 void CookingController::tick_10ms() {
+    // Feed first: SR-006 makes no exception for long-running work like an
+    // OTA verification.
+    watchdog_->feed();
+
     if (ota_ != nullptr && ota_->busy()) {
         ota_->step();
         return; // nothing else runs while an update verifies
     }
-
-    watchdog_->feed();
 
     c1link::Frame response;
     mcu_->take_response(&response);
