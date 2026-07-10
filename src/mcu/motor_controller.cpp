@@ -1,5 +1,6 @@
 #include "mcu/motor_controller.h"
 
+#include "mcu/safety_limits.h"
 #include "protocol/c1link.h"
 
 namespace culina::mcu {
@@ -20,16 +21,16 @@ float ramp_rate_for(std::uint8_t profile) {
 } // namespace
 
 void MotorController::set_target(Rpm rpm, std::uint8_t ramp_profile) {
-    if (rpm > 10700) {
-        rpm = 10700;
+    if (rpm > limits::kMaxRpm) {
+        rpm = limits::kMaxRpm;
     }
     target_rpm_ = rpm;
     ramp_rpm_per_s_ = ramp_rate_for(ramp_profile);
 }
 
 void MotorController::burst(Rpm rpm) {
-    if (rpm > 10700) {
-        rpm = 10700;
+    if (rpm > limits::kMaxRpm) {
+        rpm = limits::kMaxRpm;
     }
     target_rpm_ = rpm;
     commanded_rpm_ = static_cast<float>(rpm);
@@ -64,7 +65,7 @@ void MotorController::tick_1ms() {
             commanded_rpm_ = target;
         }
     }
-    motor_->set_duty(commanded_rpm_ / 10700.0f);
+    motor_->set_duty(commanded_rpm_ / static_cast<float>(limits::kMaxRpm));
 }
 
 } // namespace culina::mcu

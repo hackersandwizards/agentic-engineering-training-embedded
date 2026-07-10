@@ -1,5 +1,7 @@
 #include "mcu/command_handler.h"
 
+#include "mcu/safety_limits.h"
+
 namespace culina::mcu {
 
 using namespace c1link;
@@ -97,7 +99,7 @@ void CommandHandler::handle_heater_set_target(const Frame& request, const Interl
         return;
     }
     const DeciCelsius target = get_i16(request.payload);
-    if (target < 370 || target > 1600) { // user range 37.0-160.0 C
+    if (target < limits::kHeaterMinTargetDeci || target > limits::kHeaterMaxTargetDeci) {
         nack(request);
         return;
     }

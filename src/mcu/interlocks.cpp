@@ -1,33 +1,35 @@
 #include "mcu/interlocks.h"
 
+#include "mcu/safety_limits.h"
+
 namespace culina::mcu {
 
 Rpm Interlocks::clamp_speed_request(Rpm requested, const Inputs& in) const {
     Rpm allowed = requested;
-    if (!in.lid_closed && allowed > 500) {
-        allowed = 500;
+    if (!in.lid_closed && allowed > limits::kLidOpenMaxRpm) {
+        allowed = limits::kLidOpenMaxRpm;
     }
-    if (in.lid_closed && !in.lid_locked && allowed > 6400) {
-        allowed = 6400;
+    if (in.lid_closed && !in.lid_locked && allowed > limits::kUnlockedMaxRpm) {
+        allowed = limits::kUnlockedMaxRpm;
     }
-    if (in.temp_c > 60.0f && allowed > 6400) {
-        allowed = 6400;
+    if (in.temp_c > limits::kSpillGuardTempC && allowed > limits::kSpillGuardMaxRpm) {
+        allowed = limits::kSpillGuardMaxRpm;
     }
     return allowed;
 }
 
 Rpm Interlocks::continuous_cap(const Inputs& in) const {
     if (!in.lid_closed) {
-        return 500;
+        return limits::kLidOpenMaxRpm;
     }
     if (!in.lid_locked) {
-        return 6400;
+        return limits::kUnlockedMaxRpm;
     }
-    return 10700;
+    return limits::kMaxRpm;
 }
 
 c1link::FaultCode Interlocks::evaluate(const Inputs& in) const {
-    if (in.temp_c >= 165.0f) {
+    if (in.temp_c >= limits::kOvertempCutoffC) {
         return c1link::FaultCode::Overtemp;
     }
     if (in.motor_stalled) {

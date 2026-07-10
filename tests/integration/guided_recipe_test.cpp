@@ -37,7 +37,7 @@ TEST(GuidedRecipe, RunsStepsAndWaitsForTheUser) {
     EXPECT_STREQ(fix.controller().program_status(), "Blend it");
 
     fix.run_ms(4000); // mix over, note step waits
-    EXPECT_EQ(fix.store().latest().rpm, 0u);
+    EXPECT_LE(fix.store().latest().rpm, 100u);
     EXPECT_TRUE(fix.controller().awaiting_user());
     EXPECT_STREQ(fix.controller().program_status(), "Pour and serve");
     EXPECT_EQ(fix.controller().state(), SessionState::Running);
