@@ -1,3 +1,4 @@
+#include "protocol/frame_writer.h"
 #include "protocol/link.h"
 #include "sim/in_memory_transport.h"
 #include "sim/sim_clock.h"
@@ -58,6 +59,35 @@ TEST(Link, DropsAStalledPartialFrame) {
     ASSERT_EQ(app.send(FrameType::Request, 1, MsgId::Ping, nullptr, 0), Status::Ok);
     ASSERT_TRUE(mcu.poll(&frame));
     EXPECT_EQ(frame.msg_id, MsgId::Ping);
+}
+
+TEST(Link, InFlightFrameSurvivesMillisecondWraparound) {
+    sim::InMemoryTransport transport;
+    sim::SimClock clock;
+    // Park the clock just before the 32-bit millisecond counter wraps, so the
+    // frame deadline lands on the far side of the wrap.
+    clock.advance_us((0xFFFFFFFFull - 20) * 1000);
+    Link app(&transport.app_side(), &clock);
+    Link mcu(&transport.mcu_side(), &clock);
+
+    std::uint8_t wire[kMaxFrameSize];
+    const std::size_t n = write_frame(wire, sizeof(wire), FrameType::Request, 3, MsgId::Ping,
+                                      nullptr, 0);
+    ASSERT_GT(n, 4u);
+
+    // First half arrives, then a pause well inside the 50 ms frame timeout
+    // that crosses the wrap, then the rest. The frame must still assemble.
+    transport.app_side().write(wire, 4);
+    Frame frame;
+    EXPECT_FALSE(mcu.poll(&frame));
+
+    clock.advance_us(ms_to_us(25));
+    EXPECT_FALSE(mcu.poll(&frame));
+
+    transport.app_side().write(wire + 4, n - 4);
+    ASSERT_TRUE(mcu.poll(&frame));
+    EXPECT_EQ(frame.msg_id, MsgId::Ping);
+    (void)app;
 }
 
 } // namespace

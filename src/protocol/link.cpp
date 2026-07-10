@@ -26,7 +26,9 @@ bool Link::poll(Frame* out) {
             frame_deadline_ms_ = clock_->now_ms() + kFrameTimeoutMs;
         }
     }
-    if (parser_.in_progress() && clock_->now_ms() > frame_deadline_ms_) {
+    // Signed difference survives the 32-bit millisecond wraparound.
+    if (parser_.in_progress() &&
+        static_cast<std::int32_t>(clock_->now_ms() - frame_deadline_ms_) > 0) {
         parser_.reset();
     }
     return false;
