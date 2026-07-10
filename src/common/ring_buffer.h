@@ -13,7 +13,7 @@ class RingBuffer {
 
 public:
     bool push(std::uint8_t byte) {
-        if (count_ == Capacity - 1) {
+        if (count_ == Capacity) {
             return false;
         }
         buf_[head_] = byte;

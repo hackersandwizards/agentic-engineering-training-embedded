@@ -28,6 +28,32 @@ TEST(RingBuffer, PushPopPreservesOrder) {
     EXPECT_TRUE(ring.empty());
 }
 
+TEST(RingBuffer, UsesTheFullCapacity) {
+    RingBuffer<8> ring;
+    for (std::uint8_t i = 0; i < 8; ++i) {
+        EXPECT_TRUE(ring.push(i)) << "slot " << static_cast<int>(i) << " refused";
+    }
+    EXPECT_FALSE(ring.push(99));
+    EXPECT_EQ(ring.size(), 8u);
+    for (std::uint8_t i = 0; i < 8; ++i) {
+        std::uint8_t byte = 0;
+        ASSERT_TRUE(ring.pop(&byte));
+        EXPECT_EQ(byte, i);
+    }
+}
+
+TEST(RingBuffer, FullCapacityAfterWraparound) {
+    RingBuffer<4> ring;
+    std::uint8_t byte = 0;
+    // Shift head/tail off zero first, then fill completely.
+    ASSERT_TRUE(ring.push(1));
+    ASSERT_TRUE(ring.pop(&byte));
+    for (std::uint8_t i = 0; i < 4; ++i) {
+        EXPECT_TRUE(ring.push(i));
+    }
+    EXPECT_EQ(ring.size(), 4u);
+}
+
 TEST(RingBuffer, WrapsAround) {
     RingBuffer<4> ring;
     std::uint8_t byte = 0;
