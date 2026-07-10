@@ -31,11 +31,9 @@ float TelemetryStore::average_temp_c(Millis window_ms) const {
     const Millis cutoff = window_ms >= newest ? 0 : newest - window_ms;
     float sum = 0.0f;
     std::size_t count = 0;
-    for (const Sample& s : samples_) {
-        if (s.t_ms >= cutoff) {
-            sum += to_celsius(s.deci_celsius);
-            ++count;
-        }
+    for (auto it = samples_.rbegin(); it != samples_.rend() && it->t_ms >= cutoff; ++it) {
+        sum += to_celsius(it->deci_celsius);
+        ++count;
     }
     return count > 0 ? sum / static_cast<float>(count) : 0.0f;
 }
@@ -48,12 +46,10 @@ float TelemetryStore::max_temp_c(Millis window_ms) const {
     const Millis newest = samples_.back().t_ms;
     const Millis cutoff = window_ms >= newest ? 0 : newest - window_ms;
     float max_c = -1000.0f;
-    for (const Sample& s : samples_) {
-        if (s.t_ms >= cutoff) {
-            const float c = to_celsius(s.deci_celsius);
-            if (c > max_c) {
-                max_c = c;
-            }
+    for (auto it = samples_.rbegin(); it != samples_.rend() && it->t_ms >= cutoff; ++it) {
+        const float c = to_celsius(it->deci_celsius);
+        if (c > max_c) {
+            max_c = c;
         }
     }
     return max_c;
