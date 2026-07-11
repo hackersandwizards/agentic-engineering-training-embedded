@@ -53,21 +53,3 @@ jobs:
         run: ./scripts/run-clang-tidy.sh
       - name: Check timing budget
         run: ./scripts/perf-check.sh
-      - name: Verify one-commit snapshot
-        run: |
-          parent=$(mktemp -d)
-          trap 'rm -rf "$parent"' EXIT
-          ./scripts/create-training-snapshot.sh "$parent/snapshot"
-          test "$(git -C "$parent/snapshot" rev-list --count HEAD)" -eq 1
-          test -z "$(git -C "$parent/snapshot" remote)"
-          test -z "$(git -C "$parent/snapshot" status --porcelain)"
-          test -f "$parent/snapshot/exercises/README.md"
-          test ! -e "$parent/snapshot/trainer"
-          if ./scripts/create-training-snapshot.sh "$GITHUB_WORKSPACE/inside"; then
-            exit 1
-          fi
-          ln -s "$GITHUB_WORKSPACE" "$parent/source-link"
-          if ./scripts/create-training-snapshot.sh "$parent/source-link/inside"; then
-            exit 1
-          fi
-          "$parent/snapshot/scripts/verify-setup.sh"

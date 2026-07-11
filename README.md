@@ -103,7 +103,7 @@ cmake/           compiler warnings, sanitizers and dependencies
 data/recipes/    guided recipe inputs
 data/scenarios/  demonstrations and executable acceptance checks
 docs/            protocol, safety requirements and component data
-exercises/       generic one-day participant exercises
+exercises/       generic two-day participant exercises
 src/app/         application firmware
 src/cli/         command parser and scenario runner
 src/common/      shared fixed-size and protocol utilities
