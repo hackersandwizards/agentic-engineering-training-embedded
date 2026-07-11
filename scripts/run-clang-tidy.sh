@@ -12,14 +12,20 @@ if [ ! -f build/dev/compile_commands.json ]; then
     cmake --preset dev -DCULINA_WARNINGS_AS_ERRORS=ON
 fi
 
+sdk=
 if [ "$(uname -s)" = "Darwin" ]; then
     sdk=$(xcrun --show-sdk-path)
-    git ls-files 'src/*.cpp' 'apps/*.cpp' 'tools/*.cpp' |
-        while IFS= read -r file; do
+fi
+
+git ls-files 'src/*.cpp' 'apps/*.cpp' 'tools/*.cpp' |
+    while IFS= read -r file; do
+        if ! grep -Fq "\"file\": \"$(pwd)/$file\"" build/dev/compile_commands.json; then
+            continue
+        fi
+        if [ -n "$sdk" ]; then
             clang-tidy -p build/dev --quiet --warnings-as-errors='*' \
                 --extra-arg=-isysroot --extra-arg="$sdk" "$file"
-        done
-else
-    git ls-files 'src/*.cpp' 'apps/*.cpp' 'tools/*.cpp' |
-        xargs -n 1 clang-tidy -p build/dev --quiet --warnings-as-errors='*'
-fi
+        else
+            clang-tidy -p build/dev --quiet --warnings-as-errors='*' "$file"
+        fi
+    done

@@ -67,3 +67,21 @@ set_tests_properties(TwoProcess.RejectsInvalidWater PROPERTIES LABELS integratio
 
 add_test(NAME TwoProcess.RejectsInvalidSocketPath COMMAND culina_mcu --socket /dev/null/c1link)
 set_tests_properties(TwoProcess.RejectsInvalidSocketPath PROPERTIES LABELS integration WILL_FAIL TRUE)
+
+if(CULINA_BUILD_UI)
+    find_package(Qt6 6.5 REQUIRED COMPONENTS Test)
+    add_executable(ui_tests ui/device_view_model_test.cpp
+                            ${CMAKE_SOURCE_DIR}/apps/ui/device_view_model.cpp)
+    target_include_directories(ui_tests PRIVATE ${CMAKE_SOURCE_DIR}/apps/ui)
+    target_compile_definitions(ui_tests PRIVATE CULINA_DATA_DIR="${CMAKE_SOURCE_DIR}/data")
+    target_link_libraries(ui_tests PRIVATE culina_app_lib culina_simulation Qt6::Test Qt6::Network)
+    set_target_properties(ui_tests PROPERTIES AUTOMOC ON)
+    culina_set_warnings(ui_tests)
+    add_test(NAME Ui.ViewModel COMMAND ui_tests)
+    set_tests_properties(Ui.ViewModel PROPERTIES LABELS unit)
+
+    add_test(NAME Ui.LoadsAndConnects
+             COMMAND sh ${CMAKE_CURRENT_SOURCE_DIR}/ui_smoke.sh $<TARGET_FILE:culina_mcu>
+                     $<TARGET_FILE:culina_ui> ${CMAKE_SOURCE_DIR}/data/recipes)
+    set_tests_properties(Ui.LoadsAndConnects PROPERTIES LABELS integration TIMEOUT 10)
+endif()

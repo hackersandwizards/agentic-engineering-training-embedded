@@ -2,6 +2,12 @@ cmake_minimum_required(VERSION 3.24)
 
 project(culina VERSION 0.9.0 LANGUAGES CXX)
 
+option(CULINA_BUILD_UI "Build the Qt touchscreen simulator" OFF)
+
+if(CULINA_BUILD_UI)
+    find_package(Qt6 6.5 REQUIRED COMPONENTS Quick QuickControls2 Qml Network)
+endif()
+
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
