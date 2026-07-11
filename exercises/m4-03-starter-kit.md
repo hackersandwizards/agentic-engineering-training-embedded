@@ -1,6 +1,6 @@
 # Starter kit and team transfer
 
-Duration: 25 minutes
+Duration: 35 minutes, including report preparation
 
 ## Outcome
 

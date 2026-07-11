@@ -16,10 +16,10 @@ the problem it solves.
 | --- | --- | --- | --- |
 | 09:00 | Welcome, LLM vs agent, agent loop and tools | trainer-led | Shared mental model and evidence boundary |
 | 09:35 | First contact and context audit | `m1-01` | Green baseline and measured fresh-session context |
-| 10:15 | Break | | |
-| 10:25 | Repository guidance and scoped rules | `m1-02`, `m2-01` | Minimal instructions with one scoped rule |
-| 11:20 | Priming and compaction | `m1-04` | First custom skill and a clean handoff to fresh context |
-| 12:00 | First small change and test foundation | `m1-06` | GoogleTest, sanitizer preset and one trusted suite |
+| 10:10 | Break | | |
+| 10:20 | Repository guidance and scoped rules | `m1-02`, `m2-01` | Minimal instructions with one scoped rule |
+| 11:10 | Priming and compaction | `m1-04` | First custom skill and a clean handoff to fresh context |
+| 11:40 | First agent-built change and test foundation | `m1-06` | Observable feature, GoogleTest, sanitizer preset and one trusted suite |
 | 12:30 | Lunch | | |
 
 ## Module 2: advanced agent patterns
@@ -27,12 +27,13 @@ the problem it solves.
 | Time | Activity | Exercise or format | Result |
 | --- | --- | --- | --- |
 | 13:15 | IDE integration and model selection | `m2-06` | Working IDE feedback loop and model decision record |
-| 13:50 | Verification skill | `m2-02` | Second custom skill |
-| 14:25 | Focused custom agents | `m2-03` | Two read-only reviewers with isolated concerns |
-| 15:00 | Break | | |
-| 15:10 | MCP connection and context-cost audit | `m2-05` | One useful external integration |
-| 15:45 | Hooks, plugins and marketplace | `m2-07` | Observable hook and shareable plugin |
-| 16:30 | Patterns, pitfalls and day-one retro | trainer-led | Artifact inventory and open questions |
+| 13:40 | Verification skill | `m2-02` | Second custom skill |
+| 14:10 | Focused custom agents | `m2-03` | Two read-only reviewers with isolated concerns |
+| 14:40 | Break | | |
+| 14:50 | MCP connection and context-cost audit | `m2-05` | One useful external integration |
+| 15:15 | Hooks, plugins and marketplace | `m2-07` | Observable hook and shareable plugin |
+| 15:55 | Agent patterns and failure modes | trainer-led | Boundaries for context, permissions and deterministic code |
+| 16:20 | Day-one retro | trainer-led | Artifact inventory and open questions |
 
 ## Module 3: practice transfer with RPI
 
@@ -40,9 +41,9 @@ the problem it solves.
 | --- | --- | --- | --- |
 | 09:00 | Formalize Research-Plan-Implement | trainer-led | Explicit three-context sequence |
 | 09:20 | Feature research | `m1-05` | Evidence-linked research report |
-| 10:15 | Break | | |
-| 10:25 | Plan and peer review | `m1-05` | Decision-complete approved plan |
-| 11:15 | Group implementation | `m3-01` | Bounded vertical feature |
+| 10:05 | Break | | |
+| 10:15 | Plan and peer review | `m1-05` | Decision-complete approved plan |
+| 11:05 | Group implementation | `m3-01` | Bounded vertical feature |
 | 12:30 | Lunch | | |
 | 13:15 | Finish, focused review and verification | `m3-01`, `m2-03`, `m2-02` | Reviewed diff and focused evidence |
 
@@ -64,6 +65,7 @@ the problem it solves.
 | --- | --- |
 | LLM, agent loop and core tools | Welcome and `m1-01` |
 | Context architecture, window, priming and compaction | `m1-01`, `m1-02`, `m1-04` |
+| First feature built with an agent | `m1-06` |
 | Model selection and IDE integration | `m2-06` |
 | Rules, two skills and custom agents | `m2-01`, `m1-04`, `m2-02`, `m2-03` |
 | MCP, hooks, plugins and marketplace | `m2-05`, `m2-07`, `m4-01` |

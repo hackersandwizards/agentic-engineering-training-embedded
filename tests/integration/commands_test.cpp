@@ -25,4 +25,17 @@ TEST(Commands, RefusesOtaDuringAnActiveCookingSession) {
     EXPECT_FALSE(sim.ota().busy());
 }
 
+TEST(Commands, ChecksTheActiveProgramByName) {
+    culina::system::SystemSim sim;
+    culina::cli::CommandEnv env{&sim, 0, false, false};
+
+    EXPECT_TRUE(culina::cli::execute_command(env, "expect program == none"));
+    EXPECT_EQ(env.expect_failures, 0);
+
+    ASSERT_TRUE(culina::cli::execute_command(env, "manual 80 2 60"));
+    ASSERT_TRUE(culina::cli::execute_command(env, "wait 100ms"));
+    EXPECT_TRUE(culina::cli::execute_command(env, "expect program == manual"));
+    EXPECT_EQ(env.expect_failures, 0);
+}
+
 } // namespace

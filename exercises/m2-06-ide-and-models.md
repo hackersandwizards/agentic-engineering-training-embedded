@@ -1,6 +1,6 @@
 # Close the IDE feedback loop
 
-Duration: 35 minutes
+Duration: 25 minutes
 
 ## Outcome
 
@@ -27,4 +27,3 @@ group can choose a model from the work instead of from brand preference.
 - Selected context, diagnostics and diff review work or are marked unavailable.
 - The model decision names the work each model performs.
 - Tool permissions remain no broader than the demonstrated task.
-

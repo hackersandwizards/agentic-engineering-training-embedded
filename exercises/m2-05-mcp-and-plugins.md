@@ -1,6 +1,6 @@
 # Connect and audit an MCP server
 
-Duration: 30 minutes, after the trainer demo
+Duration: 25 minutes, including the trainer demo
 
 ## Outcome
 

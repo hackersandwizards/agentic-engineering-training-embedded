@@ -1,6 +1,6 @@
 # Research and plan a vertical feature
 
-Duration: 105 minutes with a break: 55 research, 50 plan and peer review
+Duration: 95 minutes with a break: 45 research, 50 plan and peer review
 
 ## Outcome
 

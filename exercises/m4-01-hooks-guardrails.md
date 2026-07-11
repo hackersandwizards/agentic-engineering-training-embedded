@@ -1,6 +1,6 @@
 # Turn hook events into feedback
 
-Duration: 30 minutes
+Duration: 20 minutes
 
 ## Outcome
 
@@ -13,7 +13,7 @@ security or approval boundary.
    expensive failure that deserves automatic feedback.
 2. Extend the hook only enough to run a focused check, record structured output
    or notify a developer when the full gate finishes.
-3. Test success, failure and malformed hook input.
+3. Test success and failure.
 4. Document who can change the hook, where its output goes and what it cannot
    guarantee.
 

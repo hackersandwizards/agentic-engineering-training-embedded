@@ -1,6 +1,6 @@
 # Focused review board
 
-Duration: 35 minutes
+Duration: 30 minutes
 
 ## Outcome
 

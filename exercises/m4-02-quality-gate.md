@@ -1,6 +1,6 @@
 # Add a fitness function to the gate
 
-Duration: 40 minutes
+Duration: 30 minutes
 
 ## Outcome
 

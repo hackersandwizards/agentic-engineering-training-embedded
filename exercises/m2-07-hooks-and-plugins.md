@@ -1,6 +1,6 @@
 # Observe a hook and package a plugin
 
-Duration: 45 minutes
+Duration: 40 minutes
 
 ## Outcome
 
@@ -25,4 +25,3 @@ another developer can activate it without copying files by hand.
 - The hook's authority boundary is explicit.
 - Another clean session discovers and uses the packaged artifact.
 - The repository contains no duplicate source of truth for the packaged content.
-

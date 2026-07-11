@@ -1,6 +1,6 @@
 # Turn verification into a reusable skill
 
-Duration: 45 minutes
+Duration: 30 minutes
 
 ## Outcome
 

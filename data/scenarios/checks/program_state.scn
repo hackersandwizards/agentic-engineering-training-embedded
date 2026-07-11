@@ -1,0 +1,4 @@
+expect program == none
+manual 80 2 60
+wait 100ms
+expect program == manual

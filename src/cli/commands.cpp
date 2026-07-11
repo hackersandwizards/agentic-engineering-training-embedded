@@ -145,6 +145,9 @@ bool handle_expect(CommandEnv& env, const std::vector<std::string>& args) {
     } else if (metric == "state") {
         numeric = false;
         actual_text = app::session_state_name(env.sys->controller().state());
+    } else if (metric == "program") {
+        numeric = false;
+        actual_text = env.sys->controller().program_name();
     } else if (metric == "lid") {
         numeric = false;
         const auto flags = env.sys->store().latest().flags;

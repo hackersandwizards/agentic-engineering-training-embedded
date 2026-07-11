@@ -1,6 +1,6 @@
 # First contact and context audit
 
-Duration: 40 minutes
+Duration: 35 minutes
 
 ## Outcome
 
@@ -29,8 +29,8 @@ and measure the cost of the context loaded before useful work begins.
 8. List what the repository itself is missing. Keep the list; later exercises
    must justify their artifacts against it.
 
-The repository is a deliberately minimal core slice. Gaps you find are the
-material for the next exercises, not oversights.
+The README explains how to run the project. It does not explain the system.
+Derive the architecture and source hierarchy from repository evidence.
 
 For Culina, use `cmake --preset dev`, build the `dev` preset and run one
 scenario under `data/scenarios/checks/`.

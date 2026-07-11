@@ -1,6 +1,6 @@
 # Connect the Agentic SDLC into a factory loop
 
-Duration: 45 minutes plus a trainer demonstration
+Duration: 60 minutes split across two blocks
 
 ## Outcome
 

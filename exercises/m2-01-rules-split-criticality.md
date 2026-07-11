@@ -1,6 +1,6 @@
 # Derive scoped rules from observed friction
 
-Duration: 30 minutes
+Duration: 20 minutes
 
 ## Outcome
 

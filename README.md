@@ -170,6 +170,7 @@ status
 ota-verify 512
 wait 5m
 expect temp >= 99
+expect program == manual
 ```
 
 Two-process mode carries C1-Link over a Unix domain socket:

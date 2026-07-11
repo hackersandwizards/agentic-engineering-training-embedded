@@ -1,6 +1,6 @@
 # Group feature implementation
 
-Duration: 75 minutes before lunch, 45 minutes after
+Duration: 85 minutes before lunch, 45 minutes after
 
 ## Outcome
 

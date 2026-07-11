@@ -1,6 +1,6 @@
 # Build a context-priming skill
 
-Duration: 40 minutes
+Duration: 30 minutes
 
 ## Outcome
 
