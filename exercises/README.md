@@ -27,13 +27,13 @@ closing exercise.
 | 15:10 | Connect one MCP server, plugins walkthrough | `m2-05` |
 | 15:40 | Model selection in depth | trainer-led |
 | 16:00 | Extend robustness coverage under sanitizers | `m2-04` |
-| 16:40 | Day-1 retro against the starter-kit checklist | trainer-led |
+| 16:40 | Day-1 retro against the starter-kit inventory in `m4-03` | trainer-led |
 
 ## Day 2: hands-on transfer and the agentic SDLC
 
 | Time | Focus | Exercise |
 | --- | --- | --- |
-| 09:00 | RPI recap and session hygiene demo | trainer-led |
+| 09:00 | RPI formalization and session hygiene demo | trainer-led |
 | 09:20 | Feature research | `m1-05` |
 | 10:15 | Break | |
 | 10:25 | Feature plan and peer review | `m1-05` |

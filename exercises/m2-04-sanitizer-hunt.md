@@ -18,8 +18,9 @@ and remains clean under sanitizers.
 5. If a defect appears, explain the report, fix the root cause and add the
    smallest permanent regression test.
 
-For Culina, extend the `c1link_dump` tool tests or the command parser tests.
-`data/captures/truncated.hex` is one existing malformed example.
+For Culina, extend the `c1link_dump` tool tests or add negative cases at the
+CLI command boundary. `data/captures/truncated.hex` is one existing malformed
+example.
 
 ## Done when
 
