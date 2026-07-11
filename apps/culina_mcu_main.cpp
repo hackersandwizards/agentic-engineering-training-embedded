@@ -4,6 +4,7 @@
 #include "common/parse_number.h"
 #include "mcu/safety_mcu.h"
 #include "sim/sim_board.h"
+#include "sim/sim_control_server.h"
 #include "sim/socket_transport.h"
 
 #include <chrono>
@@ -13,18 +14,23 @@
 
 int main(int argc, char** argv) {
     const char* socket_path = "/tmp/c1link.sock";
+    const char* control_socket_path = nullptr;
     float water_g = 0.0f;
 
     for (int i = 1; i < argc; ++i) {
         if (std::strcmp(argv[i], "--socket") == 0 && i + 1 < argc) {
             socket_path = argv[++i];
+        } else if (std::strcmp(argv[i], "--control-socket") == 0 && i + 1 < argc) {
+            control_socket_path = argv[++i];
         } else if (std::strcmp(argv[i], "--water") == 0 && i + 1 < argc) {
             if (!culina::parse_float(argv[++i], 0.0f, 2200.0f, &water_g)) {
                 std::fprintf(stderr, "invalid water mass\n");
                 return 2;
             }
         } else {
-            std::fprintf(stderr, "usage: %s [--socket path] [--water grams]\n", argv[0]);
+            std::fprintf(stderr,
+                         "usage: %s [--socket path] [--control-socket path] [--water grams]\n",
+                         argv[0]);
             return 2;
         }
     }
@@ -35,6 +41,10 @@ int main(int argc, char** argv) {
     }
     auto uart = culina::sim::SocketTransport::listen_on(socket_path);
     if (!uart.valid()) {
+        return 1;
+    }
+    auto control = culina::sim::SimControlServer::listen_on(control_socket_path, &board);
+    if (control_socket_path != nullptr && !control.valid()) {
         return 1;
     }
 
@@ -52,6 +62,7 @@ int main(int argc, char** argv) {
     auto next_status = std::chrono::steady_clock::now();
     while (true) {
         board.step_ms(1);
+        control.poll();
         mcu.tick_1ms();
 
         const auto now = std::chrono::steady_clock::now();

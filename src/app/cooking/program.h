@@ -4,6 +4,8 @@
 #include "app/telemetry_store.h"
 #include "common/time_types.h"
 
+#include <cstddef>
+
 namespace culina::app {
 
 struct ProgramContext {
@@ -29,6 +31,8 @@ public:
     // Guided programs pause for user interaction; everything else never does.
     virtual bool awaiting_user() const { return false; }
     virtual void user_next() {}
+    virtual std::size_t progress_current() const { return 0; }
+    virtual std::size_t progress_total() const { return 0; }
 };
 
 constexpr Rpm dial_to_rpm(std::uint8_t dial) {

@@ -1,6 +1,7 @@
 add_library(
     culina_app_lib STATIC
     telemetry_store.cpp
+    application_runtime.cpp
     mcu_client.cpp
     cooking/cooking_controller.cpp
     cooking/manual_mode.cpp

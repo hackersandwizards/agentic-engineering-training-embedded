@@ -42,6 +42,8 @@ public:
     SessionState state() const { return state_; }
     const char* program_name() const { return program_ ? program_->name() : "-"; }
     const char* program_status() const;
+    std::size_t progress_current() const { return program_ ? program_->progress_current() : 0; }
+    std::size_t progress_total() const { return program_ ? program_->progress_total() : 0; }
 
     // Display metrics, refreshed every tick.
     float display_avg_temp_c() const { return display_avg_temp_c_; }

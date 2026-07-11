@@ -21,6 +21,10 @@ public:
 
     bool awaiting_user() const override;
     void user_next() override { advance_requested_ = true; }
+    std::size_t progress_current() const override {
+        return step_index_ < recipe_->step_count ? step_index_ + 1 : recipe_->step_count;
+    }
+    std::size_t progress_total() const override { return recipe_->step_count; }
 
     std::size_t step_index() const { return step_index_; }
 

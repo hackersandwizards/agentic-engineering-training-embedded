@@ -11,6 +11,8 @@ add_executable(
     unit/frame_parser_test.cpp
     unit/link_test.cpp
     unit/telemetry_store_test.cpp
+    unit/application_runtime_test.cpp
+    unit/sim_control_server_test.cpp
     unit/recipe_parser_test.cpp
     unit/ota_updater_test.cpp
     unit/heater_pid_test.cpp
