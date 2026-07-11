@@ -30,12 +30,23 @@
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release"
       }
+    },
+    {
+      "name": "ui",
+      "displayName": "Qt touchscreen simulator",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/ui",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CULINA_BUILD_UI": "ON"
+      }
     }
   ],
   "buildPresets": [
     { "name": "dev", "configurePreset": "dev" },
     { "name": "tsan", "configurePreset": "tsan" },
-    { "name": "release", "configurePreset": "release" }
+    { "name": "release", "configurePreset": "release" },
+    { "name": "ui", "configurePreset": "ui" }
   ],
   "testPresets": [
     {
@@ -51,6 +62,11 @@
     {
       "name": "release",
       "configurePreset": "release",
+      "output": { "outputOnFailure": true }
+    },
+    {
+      "name": "ui",
+      "configurePreset": "ui",
       "output": { "outputOnFailure": true }
     }
   ]

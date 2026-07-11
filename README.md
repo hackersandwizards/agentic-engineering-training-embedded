@@ -31,6 +31,22 @@ status
 Simulated time advances only through `wait`, so scenarios remain deterministic
 and do not depend on host speed.
 
+## Touchscreen simulator
+
+An optional Qt Quick interface runs the application processor and safety MCU as
+separate host processes. On macOS, install Qt and launch both with one command:
+
+```sh
+brew install qt
+just ui
+```
+
+Mouse clicks and trackpad gestures act as touchscreen input. The panel beside
+the Culina display represents physical actions such as adding ingredients or
+opening the lid; those actions travel over a simulation-only control socket,
+not the device's C1-Link protocol. Qt is optional and the normal build and test
+presets remain unchanged.
+
 ## Architecture
 
 ```text
@@ -57,6 +73,7 @@ processor is treated as an untrusted protocol client. See
 | Run all tests | `ctest --preset dev` | `just test` |
 | Run unit tests | `ctest --preset dev -L unit` | `just test dev -L unit` |
 | Run simulator | `./build/dev/apps/culina_sim` | `just run` |
+| Run touchscreen | `./scripts/run-ui.sh` | `just ui` |
 | Format sources | `clang-format -i ...` | `just fmt` |
 | Static analysis | `./scripts/run-clang-tidy.sh` | `just tidy` |
 | Measure loop timing | `./scripts/perf-check.sh` | `just perf` |

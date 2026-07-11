@@ -13,6 +13,9 @@ run *args="":
     cmake --build --preset dev --target culina_sim
     ./build/dev/apps/culina_sim {{ args }}
 
+ui:
+    ./scripts/run-ui.sh
+
 fmt:
     git ls-files -z '*.h' '*.cpp' | xargs -0 clang-format -i
 
