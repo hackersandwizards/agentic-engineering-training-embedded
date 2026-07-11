@@ -1,6 +1,7 @@
 # Build output
 build/
 .cache/
+.agent-events/
 
 # Private trainer material
 trainer/

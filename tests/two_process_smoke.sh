@@ -48,6 +48,18 @@ wait_for_count() {
     return 1
 }
 
+wait_for_safe_status() {
+    attempts=0
+    while [ "$attempts" -lt 100 ]; do
+        echo "status" >&3
+        grep -Eq 'flags 0x01$' "$app_log" && return 0
+        kill -0 "$app_pid" 2>/dev/null || return 1
+        attempts=$((attempts + 1))
+        sleep 0.05
+    done
+    return 1
+}
+
 fail_with_logs() {
     cat "$app_log" >&2
     cat "$mcu_log" >&2
@@ -78,8 +90,7 @@ wait_for_count '^-> complete$' 2 || fail_with_logs
 
 echo "stop" >&3
 wait_for_count '^-> stop complete$' 1 || fail_with_logs
-echo "status" >&3
-wait_for_count 'flags 0x01$' 1 || fail_with_logs
+wait_for_safe_status || fail_with_logs
 echo "quit" >&3
 exec 3>&-
 

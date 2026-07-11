@@ -1,0 +1,15 @@
+{
+  "name": "culina-training",
+  "owner": {
+    "name": "hackers&wizards"
+  },
+  "description": "Local marketplace for Culina training artifacts",
+  "plugins": [
+    {
+      "name": "culina-evidence",
+      "source": "./plugins/culina-evidence",
+      "description": "Trace Culina engineering claims without confusing simulator and hardware evidence",
+      "version": "1.0.0"
+    }
+  ]
+}

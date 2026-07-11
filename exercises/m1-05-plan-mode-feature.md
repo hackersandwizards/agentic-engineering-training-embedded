@@ -19,7 +19,7 @@ verification before source files change.
 3. Review the research. Correct unsupported assumptions before asking for a
    plan.
 4. Require the plan to name exact files, behavior changes, risks, negative
-   cases, tests and the final repository gate.
+   cases, focused tests and the complete build available before Module 4.
 5. Decide what is explicitly out of scope.
 6. Swap plans with another group. Each group reviews the other's plan against
    its acceptance criteria.

@@ -1,0 +1,8 @@
+{
+  "name": "culina-evidence",
+  "description": "Trace Culina engineering claims and report the limits of available evidence.",
+  "version": "1.0.0",
+  "author": {
+    "name": "hackers&wizards"
+  }
+}

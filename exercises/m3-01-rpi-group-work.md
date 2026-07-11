@@ -15,7 +15,8 @@ approved research and plan.
    express the behavior deterministically.
 3. Implement in small steps. Keep unrelated cleanup out of the diff.
 4. Run focused verification after each meaningful step.
-5. Review the final diff against the plan, then run the repository gate.
+5. Review the final diff against the plan, then run the verification skill and
+   complete build. Module 4 will assemble the repository gate.
 6. Save concise evidence for the closing discussion: requirement, changed flow,
    test output and remaining hardware or integration validation.
 
@@ -70,7 +71,7 @@ early hardens its feature instead of starting a second one.
 
 ## Done when
 
-- The baseline and final repository gate are green.
+- The baseline and final focused verification are green.
 - New behavior has positive and negative evidence.
 - The diff matches the approved plan or records why it changed.
 - Remaining hardware validation and assumptions are explicit.

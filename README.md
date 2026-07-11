@@ -12,7 +12,8 @@ configure downloads GoogleTest and therefore needs an internet connection.
 ## Quick start
 
 Install Git, CMake 3.24 or newer, Ninja, a GCC or Clang C++17 compiler,
-`clang-format`, `clang-tidy` and ShellCheck. Then run:
+`clang-format`, `clang-tidy` and ShellCheck. This is the completed reference;
+participants begin from the separate one-commit baseline. Then run:
 
 ```sh
 ./scripts/verify-setup.sh
@@ -99,6 +100,8 @@ runs every test, performs static analysis and checks the release timing budget.
 
 ```text
 apps/            simulator and two-process host applications
+.claude/         example skills, custom agents and observable hook configuration
+.claude-plugin/  local marketplace for the packaged training example
 cmake/           compiler warnings, sanitizers and dependencies
 data/recipes/    guided recipe inputs
 data/scenarios/  demonstrations and executable acceptance checks
@@ -114,7 +117,19 @@ src/sim/         deterministic hardware models and transports
 src/system/      complete single-process system simulation
 tests/           unit, integration, scenario, tool and performance checks
 tools/           host-side protocol diagnostics
+plugins/         shareable agent artifact example
 ```
+
+## Agentic Engineering reference artifacts
+
+The completed repository includes two custom skills, two focused read-only
+reviewers, an observable stop hook and a marketplace plugin. They are reference
+outcomes, not participant starting material. The two-day path in `exercises/`
+builds equivalent artifacts only after participants observe a reason for each.
+
+No MCP server is enabled in the reference repository. MCP configuration depends
+on the external system, credentials and task selected during the exercise; a
+checked-in placeholder would be a non-working integration.
 
 ## C1-Link summary
 

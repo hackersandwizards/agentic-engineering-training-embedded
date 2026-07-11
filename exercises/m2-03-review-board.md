@@ -21,7 +21,7 @@ Choose two or three review roles that match the diff:
 - Resource reviewer: checks bounded memory, timing, allocation and concurrency
   assumptions using repository evidence.
 
-Define each reviewer with the sub-agent mechanism of your coding agent. Give
+Define each reviewer as a custom agent with the mechanism of your coding agent. Give
 each reviewer read-only scope and one concern. Ask for findings ordered by
 severity with file references. Validate every finding yourself and discard
 unsupported style preferences.
@@ -29,5 +29,6 @@ unsupported style preferences.
 ## Done when
 
 - Each reviewer has a distinct question and named evidence source.
+- Tool access and model choice match the reviewer's bounded job.
 - Accepted findings are fixed and reverified, or recorded with an owner.
 - Human reviewers retain the approval decision.

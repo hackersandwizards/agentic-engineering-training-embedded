@@ -4,18 +4,18 @@ Duration: 45 minutes
 
 ## Outcome
 
-The verification path that proved the morning's added tests becomes a reusable
-skill that reports evidence and limitations. On day 2 the same skill verifies
-the feature.
+The verification path that proved the morning's added tests becomes the second
+custom skill. It reports evidence and limitations, then verifies the day-two
+feature.
 
 ## Task
 
-1. Start with the commands that actually proved the morning's work: the
-   focused test, the relevant scenario and the repository gate.
+1. Start with the commands that actually proved the morning's work: the focused
+   test, the relevant scenario and the complete build available at this point.
 2. Package the sequence using the skill mechanism supported by your coding
    agent.
-3. Run the narrow behavioral test first, then the relevant integration or
-   simulation evidence, then the full repository gate.
+3. Run the narrow behavioral test first, then relevant simulation evidence,
+   then the complete build. Module 4 will replace the last step with a gate.
 4. Make the report include commands, exit status, relevant output and any
    layer that was not exercised.
 5. Demonstrate that the skill fails when its chosen test is intentionally

@@ -10,12 +10,10 @@ with a small adoption proposal for its team repository.
 ## Task
 
 1. Inventory the artifacts the group built: repository guidance, scoped rules,
-   the verification skill, reviewer definitions, the MCP configuration, the
-   hook and the gate check. Every entry needs the problem it solved and its
-   first real use case.
-2. Check the inventory for gaps: guidance, rules, at least two skills, an MCP
-   configuration, sub-agent definitions, a hook and a gate check. A gap is
-   acceptable when the group records why the artifact earned no place.
+   two skills, custom-agent definitions, MCP configuration, plugin, hook and
+   gate. Every entry needs the problem it solved and its first real use case.
+2. Check the inventory against the Agentic Engineering one-pager. Remove an
+   artifact that has no demonstrated use rather than keeping it for completeness.
 3. Map each artifact to its equivalent location in your team repository.
    Remove Culina details. Do the mapping live if repository access permits.
 4. Define one two-week experiment with an observable outcome.
@@ -25,5 +23,6 @@ with a small adoption proposal for its team repository.
 ## Done when
 
 - Every proposed artifact has an observed reason to exist.
+- At least two custom skills and one shareable plugin work in a fresh session.
 - The proposal names what must still be adapted or approved.
 - The first experiment is small enough to start in the next normal work cycle.

@@ -1,20 +1,21 @@
-# Guardrails with honest authority
+# Turn hook events into feedback
 
 Duration: 30 minutes
 
 ## Outcome
 
-One automation hook reduces a real workflow mistake without pretending to be a
+The day-one hook becomes a useful feedback loop without pretending to be a
 security or approval boundary.
 
 ## Task
 
-1. Choose an observed problem suited to a hook, such as reminding the agent to
-   run focused tests after changing control logic or notifying a developer when
-   a long gate finishes.
-2. Check the current official documentation for your agent's hook schema.
-3. Implement the smallest reversible hook and test both success and failure.
-4. Document who can change the hook and what it cannot guarantee.
+1. Review the events captured by the day-one hook. Identify one repeated or
+   expensive failure that deserves automatic feedback.
+2. Extend the hook only enough to run a focused check, record structured output
+   or notify a developer when the full gate finishes.
+3. Test success, failure and malformed hook input.
+4. Document who can change the hook, where its output goes and what it cannot
+   guarantee.
 
 Do not store human approval in a file inside the working tree. An agent that can
 edit the protected source can usually edit that file or the hook as well. Code

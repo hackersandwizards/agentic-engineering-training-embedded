@@ -17,7 +17,7 @@ improves a fresh session.
 3. Curate it. Classify every line as universal, path-specific or on-demand.
    Replace copied protocol or safety content with pointers to
    `docs/c1link-protocol.md` and `docs/safety-requirements.md`. Delete
-   anything redundant with an executable check such as `./scripts/gate.sh`.
+   anything a build or focused check can enforce more reliably.
 4. Re-run the probe in a fresh session and compare against step 1.
 5. Commit the guidance.
 
