@@ -1,11 +1,11 @@
 # First contact
 
-Duration: 30 minutes
+Duration: 40 minutes
 
 ## Outcome
 
-You can explain the system boundary, run one representative check and show the
-evidence your coding agent used.
+You can explain the system boundary, run one representative check and name
+what the minimal repository is missing.
 
 ## Task
 
@@ -18,6 +18,11 @@ evidence your coding agent used.
    scenario. Capture the command, exit status and relevant output.
 4. Identify one thing the agent could not establish from the repository, such
    as hardware behavior or an external requirement.
+5. List what the repository itself is missing: standing agent guidance and
+   test coverage for core components. Keep the list. You will add both today.
+
+The repository is a deliberately minimal core slice. Gaps you find are the
+material for the next exercises, not oversights.
 
 For Culina, use `cmake --preset dev`, build the `dev` preset and run one
 scenario under `data/scenarios/checks/`.
@@ -28,3 +33,4 @@ scenario under `data/scenarios/checks/`.
 - The architecture summary distinguishes application, safety controller,
   protocol and physical or simulated environment.
 - Every important claim is either sourced or explicitly marked unknown.
+- The gap list names concrete files or components, not general wishes.

@@ -32,10 +32,9 @@ sudo apt-get install -y build-essential cmake ninja-build clang-18 clang-format-
 export PATH="/usr/lib/llvm-18/bin:$PATH"
 ```
 
-## Verify the fallback snapshot
+## Verify the training snapshot
 
-Use the one-commit Culina snapshot shared by the trainer. Do not clone the
-public reference repository for participant work. After opening the snapshot:
+Use the one-commit Culina snapshot shared by the trainer. After cloning:
 
 ```sh
 cd agentic-engineering-training-embedded
@@ -44,8 +43,10 @@ git rev-list --count HEAD
 ```
 
 The history count must be `1` and the setup command must end with `SETUP OK`.
-Also verify that your assigned team repository opens and that its normal
-build or test command can run.
+
+If your team repository is available, verify that it opens and that its normal
+build or test command runs. You need it only for the transfer exercise on
+day 2.
 
 Windows, Docker, Qt, cross-compilers, probes and physical hardware are not
-required for the Culina fallback.
+required.

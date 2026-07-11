@@ -1,6 +1,6 @@
 # Ground a claim in engineering sources
 
-Duration: 15 minutes, trainer-led short version
+Duration: 20 minutes, trainer-led short version
 
 ## Outcome
 
@@ -20,10 +20,14 @@ For Culina, trace one motor ramp limit from
 `docs/datasheets/motor-driver-mx400.md`, or one safety requirement from
 `docs/safety-requirements.md`.
 
+On the minimal baseline the verification leg of a trace may not exist yet.
+That is a finding, not a failure. Feed it into the add-tests exercise.
+
 The correct outcome can be full agreement. Do not invent a discrepancy to make
 the exercise interesting.
 
 ## Done when
 
-- The trace contains an authoritative source, implementation and test evidence.
+- The trace names an authoritative source, the implementation and the test
+  evidence, or records which of the three is missing.
 - Uncertainty remains visible instead of being filled with assumptions.

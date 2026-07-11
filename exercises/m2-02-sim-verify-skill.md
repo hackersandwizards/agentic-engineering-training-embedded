@@ -1,28 +1,31 @@
-# Turn verification into a reusable workflow
+# Turn verification into a reusable skill
 
-Duration: 25 minutes
+Duration: 45 minutes
 
 ## Outcome
 
-The successful verification path from the feature becomes a reusable workflow
-that reports evidence and limitations.
+The verification path that proved the morning's added tests becomes a reusable
+skill that reports evidence and limitations. On day 2 the same skill verifies
+the feature.
 
 ## Task
 
-1. Start with the commands that actually proved the group feature.
-2. Package the sequence using the mechanism supported by your coding agent.
+1. Start with the commands that actually proved the morning's work: the
+   focused test, the relevant scenario and the repository gate.
+2. Package the sequence using the skill mechanism supported by your coding
+   agent.
 3. Run the narrow behavioral test first, then the relevant integration or
    simulation evidence, then the full repository gate.
-4. Make the report include commands, exit status, relevant output and any layer
-   that was not exercised.
-5. Demonstrate that the workflow fails when its chosen test is intentionally
+4. Make the report include commands, exit status, relevant output and any
+   layer that was not exercised.
+5. Demonstrate that the skill fails when its chosen test is intentionally
    given an impossible expectation. Revert that temporary change immediately.
 
-For Culina, `./scripts/gate.sh` is the final gate. A focused workflow should
+For Culina, `./scripts/gate.sh` is the final gate. A focused skill should
 still select the relevant GoogleTest and scenario before paying the full cost.
 
 ## Done when
 
-- The workflow reproduces the evidence from the completed feature.
+- The skill reproduces the evidence from the morning's work.
 - It fails clearly on a temporary negative control.
 - It describes simulation as model evidence, not hardware validation.

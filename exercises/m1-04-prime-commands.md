@@ -1,6 +1,6 @@
 # Task-specific context package
 
-Duration: 25 minutes, choose only if this solves friction observed today
+Duration: 25 minutes, optional extension after the training
 
 ## Outcome
 
@@ -9,7 +9,7 @@ task without expanding global repository instructions.
 
 ## Task
 
-1. Pick one repeated context problem from today's feature work, such as protocol
+1. Pick one repeated context problem from the training, such as protocol
    changes, control-loop changes or safety review.
 2. Write a tool-supported command, prompt or skill that tells the agent which
    sources to inspect, which checks to run and what evidence to report.

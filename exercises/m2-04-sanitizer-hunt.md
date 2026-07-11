@@ -1,15 +1,16 @@
 # Extend robustness coverage
 
-Duration: 30 minutes, optional
+Duration: 30 minutes
 
 ## Outcome
 
-A host-side parser or command boundary has stronger negative-input coverage and
-remains clean under sanitizers.
+A host-side parser or command boundary has stronger negative-input coverage
+and remains clean under sanitizers.
 
 ## Task
 
-1. Choose a parser, decoder or CLI boundary used by the feature.
+1. Choose a parser, decoder or CLI boundary. The baseline test suite is
+   deliberately thin, so untested negative paths exist.
 2. Identify malformed, truncated, overflowing and out-of-range inputs not yet
    represented in tests.
 3. Add deterministic regression cases without assuming a crash already exists.

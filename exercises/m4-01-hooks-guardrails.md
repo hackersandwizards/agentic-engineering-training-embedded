@@ -1,6 +1,6 @@
 # Guardrails with honest authority
 
-Duration: 20 minutes
+Duration: 30 minutes
 
 ## Outcome
 
@@ -23,6 +23,6 @@ controls; local hooks are developer feedback.
 
 ## Done when
 
-- The hook addresses a problem observed today.
+- The hook addresses a problem observed during the training.
 - Failure explains the next action.
 - The group can state its trust boundary in one sentence.

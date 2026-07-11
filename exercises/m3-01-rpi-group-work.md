@@ -1,6 +1,6 @@
 # Group feature implementation
 
-Duration: 90 minutes
+Duration: 75 minutes before lunch, 45 minutes after
 
 ## Outcome
 
@@ -19,9 +19,7 @@ approved research and plan.
 6. Save concise evidence for the closing discussion: requirement, changed flow,
    test output and remaining hardware or integration validation.
 
-Use a real feature from the assigned team repository whenever possible.
-
-## Culina fallback features
+## Feature options
 
 ### A: Keep warm after manual cooking
 
@@ -35,31 +33,40 @@ Add a displayed-weight estimate that remains useful during vibration. Preserve
 the raw measurement, bound memory and latency, and demonstrate deterministic
 behavior at rest and while mixing.
 
-### C: Recipe portion scaling
+### C: Turbo pulse
 
-Allow a guided recipe to run at a selected portion factor. Scale ingredient
-mass, define which fields do not scale, reject unsafe or unrepresentable values
-and keep original recipe data immutable.
+Add a bounded maximum-speed burst with a hard duration limit and automatic
+stop. Define the permitted duration range, the lid interlock behavior and what
+happens when a second pulse is requested while one runs.
 
-### D: Guided recipe pause and resume
+### D: Dough kneading mode
 
-Pause an active guided recipe in a defined safe actuator state, then resume the
-same step without losing its progress semantics. Define behavior for timed,
-weighing and user-confirmation steps and for faults while paused.
+Add an interval kneading program that alternates mixing and rest phases
+without heating. Define the interval pattern, its end condition and how status
+distinguishes an active phase from a rest phase. Time must advance through the
+simulation, not the host clock.
 
-### E: Reverse rotation
+### E: Sous-vide mode
+
+Hold a target temperature inside a tight band for a long duration. Define the
+permitted temperature range, what counts as leaving the band and the evidence
+that the band holds over simulated hours. Tests must assert the band, not just
+that temperature changed.
+
+### F: Reverse rotation
 
 Add direction to motor control. Direction may change only below 100 RPM. Define
 wire compatibility, transition behavior, telemetry and tests before changing
 the protocol.
 
-### F: Link health diagnostics
+### G: Link health diagnostics
 
 Expose request latency, timeouts and last valid exchange as bounded diagnostic
 telemetry without weakening fault behavior or filling memory during long runs.
 
-The trainer selects features according to group experience. A complete narrow
-slice is better than a broad partial implementation.
+The trainer assigns features according to group experience. A complete narrow
+slice is better than a broad partial implementation. A group that finishes
+early hardens its feature instead of starting a second one.
 
 ## Done when
 
