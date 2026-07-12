@@ -1,0 +1,4 @@
+interface:
+  display_name: "Voice"
+  short_description: "h&w voice and writing rules for any human-readable prose"
+  default_prompt: "Use $voice before drafting any prose that represents h&w."
