@@ -9,6 +9,12 @@
 
 Modern CLI replacements installed via Homebrew. Prefer when running shell commands.
 
+**Browser and frontend:**
+- Use the Chrome DevTools MCP for rendered-page inspection and frontend QA: DOM and styles, screenshots, responsive viewports, animation, console, network, accessibility, and performance traces.
+- Use web search or HTTP tools for semantic research, source retrieval, and citations; use Browser or Chrome control when the task depends on a signed-in session or broader UI interaction.
+- If Chrome DevTools MCP is unavailable, fall back to Browser or Chrome control, then project-local browser automation such as Playwright.
+- Never judge visual design, responsive behavior, or animation from a text crawl alone.
+
 **GNU vs BSD:** unprefixed CLI tools are BSD on macOS, GNU on Linux. Write scripts to run on both (POSIX, no flavor-specific flags). GNU builds are `g*` (`gsed`, `gdate`, `gtimeout`).
 
 **Text and file navigation:**

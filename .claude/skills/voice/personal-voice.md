@@ -180,7 +180,7 @@ Failure mode if you skip step 2: vulnerability without reframe reads as begging.
 | Double option | "Wenn du mitmachen willst: melde dich. Wenn du Ideen hast: sag Bescheid." | Single CTA without agency |
 
 **Pricing and anchoring:**
-- High anchor, then discount: *"Ein eigener Stand kostet schnell 10.000 EUR aufwärts. Ihr könnt mit 2.000 EUR netto dabei sein."*
+- High anchor, then alternative: name the full-cost option first, then the lower offer.
 - "Alles inklusive" removes hidden-cost anxiety.
 - Concrete comparison kills abstraction. Show the alternative cost, then the deal.
 

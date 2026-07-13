@@ -51,7 +51,7 @@ Pitch arcs, intro structures, content formulas. Layered on top of voice + channe
 
 | File | Purpose |
 |------|---------|
-| `signature-phrases.md` | The user's verbatim phrases: real lines from training, sales, talks, Slack, plus three full email exemplars (peer-warm DE, business-warm EN, candid-logistics DE). Use when ghostwriting from a transcript or anchoring a draft that needs more voice depth than `personal-voice.md` provides. |
+| `signature-phrases.md` | The user's verbatim phrases: real lines from training, sales, talks, Slack, plus three email exemplars (peer-warm DE, business-warm EN, candid-logistics DE). Use when ghostwriting from a transcript or anchoring a draft that needs more voice depth than `personal-voice.md` provides. |
 | `brand-vocabulary.md` | Verbatim service offerings, value-prop phrases, approved adjectives, the full competitive-positioning frame, the approved performance-language patterns, and on-brand-vs-off-brand worked rewrites. Use when actively positioning in proposals or sales decks, citing numbers, or rewriting LLM output to on-brand. |
 | `voice-situations.md` | Three narrow scenarios: never-expose internal coordination gaps (when an h&w-side issue lands client-facing), spoken-to-written conversion (Fathom transcripts -> text), and DE/EN language detection. Load only when one of those fits. |
 

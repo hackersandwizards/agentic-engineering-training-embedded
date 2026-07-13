@@ -77,11 +77,11 @@ See `personal-voice.md` § Concession and self-deprecation. Give ground before t
 
 **Speaker outreach with fee question.** Standard frame: honor is ours + travel/hotel covered + fees not default but open to discuss + peer-group list + CTO Summit/Dinner invite + podcast offer. Close with *"Was brauchst du von uns, um eine Entscheidung zu treffen?"* This sentence shifts you from selling to co-deciding.
 
-**Training-price pushback.** Hold the flat per-training anchor: *"Pricing ist immer flat pro Training, nie pro Teilnehmer."* If they push, offer **scope reductions** before discount: shorter format, single track, fewer follow-ups. The flat model is central to the brand.
+**Training-price pushback.** Hold the per-participant model with a cohort cap. Smaller cohorts scale by participant; once the cap is reached, group size changes delivery planning rather than price. If they push below the model, offer **scope reductions** before discount: shorter format, single track, fewer follow-ups.
 
 **Advisor / board setup.** Decouple engagement tier from advisor framing: visibility and network access are STANDARD parts of an advisor relationship, not premium add-ons. Pick a tier proactively (don't punt to next paid meeting). Pair the visibility ask with the cash commitment to earn moral standing. Frame visibility as *"in unser Board of Advisors aufnehmen, zusammen mit X, Y"* (recognition + good company), not as *"öffentlich nennen"* (extraction). Name the secondary marketing motive openly.
 
-**Mentoring scope creep.** Don't auto-absorb. Name it: *"Das geht über den ursprünglichen Scope. Wir können das aufnehmen, dann landen wir bei X Stunden mehr bzw. Y€ zusätzlich."* Silently absorbing teaches the client to keep adding.
+**Mentoring scope creep.** Don't auto-absorb. Name it: *"Das geht über den ursprünglichen Scope. Wir können das aufnehmen, dann sprechen wir über zusätzlichen Aufwand und Budget."* Silently absorbing teaches the client to keep adding.
 
 **Long-term support after a training day.** Name the gap directly: *"Wegen langfristigem Support müssen wir noch mal sprechen, der EK ist dafür hier mit [rate] sehr klein. Wir können dir da nur [rate] geben."* Don't apologize for the price gap between day-rate-bundled scope and ongoing-support scope.
 

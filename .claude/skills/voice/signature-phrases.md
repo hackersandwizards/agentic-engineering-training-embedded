@@ -18,7 +18,7 @@ A draft with lines like these in spirit sounds like the user. A draft with zero 
 
 ## Real email exemplars
 
-Three full emails, verbatim. Notice: zero em-dashes, very short paragraphs (often 1 sentence), `:)` emoticon, `Vllt.` softener, `LG /bene` sign-off, casual opener `Moin`.
+Three email excerpts, verbatim. Notice: zero em-dashes, very short paragraphs (often 1 sentence), `:)` emoticon, `Vllt.` softener, `LG /bene` sign-off, casual opener `Moin`.
 
 **To [client] (German, peer-warm):**
 
@@ -47,8 +47,6 @@ Three full emails, verbatim. Notice: zero em-dashes, very short paragraphs (ofte
 > Moin [contact],
 >
 > Really appreciate you suggesting this. Honestly, it's how I travel myself whenever I can.
->
-> So yes, let's do it that way. We can contribute €3,000 as a flat rate toward the flights. Does that work for you?
 >
 > Hotel for the conference nights and ground travel in Hamburg are on us, separately.
 >
@@ -143,12 +141,9 @@ What to copy from these into LinkedIn / Slack / outreach: short sentences, blank
 - *"Supply-mäßig können wir das liefern."* Supply-side confidence when client scope expands.
 - *"Ich freue mich da sehr, sehr, sehr drauf."* Triple emphasis for genuine excitement.
 
-**Pricing transparency:**
+**Commercial transparency:**
 
-- *"Fast 3.000 Euro die Stunde."* Self-aware about strategic consulting rate, transparent pricing during trainer onboarding.
 - *"Ich habe das alles transparent gemacht. Bin da nicht so wie andere."* Radical pricing transparency as a value, contrast with opaque-pricing vendors.
-- *"Ich verbrauche $6.000 in Tokens... ich zahle aber nur 100"*: Claude Code subsidy transparency, builds trust with enterprise buyers.
-- *"Jetzt wisst ihr, woher diese AI-Bubble kommt"*: on paying $100/month while consuming $6,000 in tokens.
 
 **Live-demo framing:**
 

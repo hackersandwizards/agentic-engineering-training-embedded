@@ -87,7 +87,7 @@ The N stays constant; S-F-A-G swap per audience. Three worked examples below, ea
 ```
 N: "Benedikt from hackers&wizards"
 S: "Your team's AI reality check"
-F: "Saved a [Fortune 500 client] €2M by stopping their AI theatre"
+F: "Stopped a [Fortune 500 client]'s AI theatre before it scaled"
 A: "Curious if your AI investment is actually paying off"
 G: "15-minute audit, I'll spot exactly where you're leaving money on the table"
 ```
