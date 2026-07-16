@@ -18,7 +18,9 @@ Default: `gpt-5.6-luna`, effort `high`.
 
 ## Human writing -> Claude
 
-Claude hits the tone of voice better than Codex. Any human communication (emails including the subject line, messages, WhatsApp, Slack, LinkedIn — anything a person reads as communication, not technical writing) is written by Claude with the `voice` skill. Codex never words such text itself.
+Claude hits the tone of voice better than Codex. Claude writes authored copy that represents h&w or the user and is intended to be sent to other people or published: emails including subject lines, messages and DMs, WhatsApp, Slack, LinkedIn and other social posts, website copy, proposals, quotes, talks, abstracts, client communication, articles, headlines, captions, slide decks, README and documentation copy, announcements, surveys, and review notes. Codex delegates this copy to Claude with the `voice` skill.
+
+This rule does not apply to an agent's own direct conversation with the user, including replies, questions, status updates, explanations, recommendations, technical answers, and task summaries. Each agent writes those itself.
 
 When Codex supervises: gather and verify the facts, then
 
