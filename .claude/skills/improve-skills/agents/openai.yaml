@@ -1,0 +1,4 @@
+interface:
+  display_name: "Improve Skills"
+  short_description: "Turn corrections into leaner reusable skills"
+  default_prompt: "Use $improve-skills to turn this correction into a minimal reusable skill improvement."
