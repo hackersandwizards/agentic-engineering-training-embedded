@@ -33,8 +33,9 @@ counterfactual is true:
 2. Search its instructions and related rules for overlap or contradiction.
 3. Prefer deletion, then replacement, then addition. Add only a new reusable invariant; never add
    the concrete customer, artifact, wording, answer, or outcome.
-4. Keep one owner per behavior. Prefer a test, validator, or script over more prose when the
-   requirement is deterministic.
+4. Keep one owner per behavior. Put invocation-mode policy in the caller's prompt, not an
+   always-loaded rule that must infer external state. Prefer a test, validator, or script over
+   more prose when the requirement is deterministic.
 5. Validate the skill and the affected workflow with the repository's checks. Forward-test only
    when it cannot mutate live systems or require new approval.
 
