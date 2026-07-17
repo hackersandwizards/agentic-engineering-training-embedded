@@ -40,7 +40,7 @@ counterfactual is true:
 
 For canonical global files under `~/.claude/rules` or `~/.claude/skills`, run
 `~/.claude/scripts/sync-agent-config.sh` after validation so the configured repositories receive
-and commit and push the mirrors.
+the mirrors, then commit and push them.
 
 ## Preserve action boundaries
 
