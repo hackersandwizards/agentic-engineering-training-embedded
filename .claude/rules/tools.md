@@ -10,8 +10,8 @@
 Modern CLI replacements installed via Homebrew. Prefer when running shell commands.
 
 **Browser and frontend:**
-- Browser automation priority among available options (highest to lowest): OpenAI's in-app Browser, Chrome DevTools MCP, project-local browser automation such as Playwright. Applies to rendered-page inspection, frontend QA, and signed-in UI interaction.
-- Never judge visual design, responsive behavior, or animation from a text crawl alone.
+- For rendered-page, frontend, or signed-in UI checks, try in order until one works: in-app Browser, Chrome DevTools MCP, repository automation (e.g. Playwright). Before skipping Chrome DevTools, search deferred tools (`ToolSearch` or equivalent); check the repository for automation; await pending connections/searches. Report browser access unavailable only after every applicable option fails, naming failures and unverified live checks.
+- Never judge visuals, responsiveness, or animation from text alone.
 
 **GNU vs BSD:** unprefixed CLI tools are BSD on macOS, GNU on Linux. Write scripts to run on both (POSIX, no flavor-specific flags). GNU builds are `g*` (`gsed`, `gdate`, `gtimeout`).
 
