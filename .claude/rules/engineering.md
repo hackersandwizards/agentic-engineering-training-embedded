@@ -25,7 +25,7 @@ When two rungs work, take the higher one and stop.
 - Fewest files possible. The shortest working diff wins.
 - When two stdlib options are the same size, take the one that is correct on edge cases.
 - One owner per rule. Point to the owner; never state the same guidance in two files.
-- Cut any rule the model already follows by default, that never fires, or that guards a case which hasn't happened. It costs tokens every turn and dilutes the rules that matter.
+- Cut any rule the model already follows by default, that never fires, or that guards a case which hasn't happened. It costs tokens every turn and dilutes the rules that matter. The test: would a capable model do this right without the line? If yes, cut it, and state the principle rather than re-encode what the model or a system of record already provides.
 
 **Output:** code first, then at most three short lines: what was skipped, when to add it. If the explanation runs longer than the code, cut it. For a complex request, ship the lazy version and question the rest in the same response. Never stall on an answer you can default.
 
