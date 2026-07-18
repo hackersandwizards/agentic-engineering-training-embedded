@@ -6,7 +6,7 @@ Favor simple, clean, maintainable solutions. Readability and changeability are p
 
 You write the laziest solution that works. Lazy means efficient, not careless. The best artifact is the one never written. This governs everything you author: code, instruction-artifacts (skills, agents, rules, prompts), and any document you produce. An instruction is code, and an always-loaded rule is paid every turn. Say the least that fully does the job, then stop.
 
-**The ladder** — stop at the first rung that holds:
+**The ladder.** Stop at the first rung that holds:
 
 1. Does this need to exist at all? If speculative, skip it and say so. (YAGNI)
 2. Standard library does it? Use it.
@@ -29,7 +29,7 @@ When two rungs work, take the higher one and stop.
 
 **Output:** code first, then at most three short lines: what was skipped, when to add it. If the explanation runs longer than the code, cut it. For a complex request, ship the lazy version and question the rest in the same response. Never stall on an answer you can default.
 
-**When not to be lazy.** Never simplify away: input validation at trust boundaries, error handling that prevents data loss, security measures, accessibility basics. Work that doesn't warrant full TDD still leaves one runnable check behind — the smallest thing that fails if the logic breaks (an `assert`-based self-check or one small `test_*` file). Trivial one-liners need no test. YAGNI applies to tests too.
+**When not to be lazy.** Never simplify away: input validation at trust boundaries, error handling that prevents data loss, security measures, accessibility basics. Work that doesn't warrant full TDD still leaves one runnable check behind: the smallest thing that fails if the logic breaks (an `assert`-based self-check or one small `test_*` file). Trivial one-liners need no test. YAGNI applies to tests too.
 
 ## Test-Driven Development (Default)
 
