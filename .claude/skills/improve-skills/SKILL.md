@@ -30,7 +30,8 @@ counterfactual is true:
 
 1. Locate the canonical skill that owned the failed behavior. Never edit a generated mirror,
    plugin cache, or customer-specific artifact as the source of truth.
-2. Search its instructions and related rules for overlap or contradiction.
+2. Search its instructions and related rules for overlap or contradiction. While there, remove the
+   no-ops, kill duplication, and take out anything irrelevant; leave the file leaner than you found it.
 3. Prefer deletion, then replacement, then addition. Add only a new reusable invariant; never add
    the concrete customer, artifact, wording, answer, or outcome.
 4. Keep one owner per behavior. Prefer a test, validator, or script over more prose when the
