@@ -19,7 +19,7 @@ Modern CLI replacements installed via Homebrew. Prefer when running shell comman
 - `eza` over `ls`, `bat` over `cat` and `less`
 - `fd` over `find` for terse search; `bfs` when `find` syntax is needed (POSIX-compatible, faster traversal)
 - `rg` over `grep` for code search; `ugrep` for searching inside archives, compressed files, or PDFs
-- `rg -r` is `--replace` (rewrites output), not recursive
+- `rg` recurses by default. Never pass `-r`: it is `--replace` and silently rewrites output. Write `rg -il`, never `rg -ril`.
 - `delta` for diffs, `tree` for directory tree, `fzf` for fuzzy selection
 - `zoxide` for directory jumping (`z <pattern>`)
 
