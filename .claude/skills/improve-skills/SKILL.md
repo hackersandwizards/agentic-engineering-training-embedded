@@ -1,13 +1,31 @@
 ---
 name: improve-skills
 description: >-
-  Turn follow-up corrections to skill-generated work into minimal reusable skill improvements.
-  Use after a user corrects, refines, or externally edits an output, or answers a question the
-  skill should have resolved itself, to decide whether the owning skill should change and update
-  it without encoding the specific case.
+  Shape and improve instruction-artifacts: skills, rules, agents, prompts. Use when authoring,
+  reviewing, trimming, splitting, or rightsizing one, and after a user corrects, refines, or
+  externally edits skill-generated work, or answers a question the skill should have resolved
+  itself, to decide whether the owning artifact should change and update it without encoding the
+  specific case.
 ---
 
 # Improve Skills
+
+## Shape
+
+- **Progressive disclosure by default.** When a skill outgrows one file, split it and route from
+  `SKILL.md` by phase or layer. Models: `crm-sync/SKILL.md`, `voice/SKILL.md`.
+- **Always-on status is earned.** A rule that fires on a minority of turns gets `paths:`
+  frontmatter or becomes a skill. Reference material is never always-on.
+- **Design the interface instead of adding examples.** Examples constrain the exploration space;
+  an expressive parameter, enum, or validator removes the need for the instruction.
+
+Write for a literal reader.
+
+- Positive imperatives with explicit objects.
+- Keep a negative that carries the rule negative; the failure mode is what makes it enforceable.
+- Replace vague adverbs ("usually", "as appropriate", "when relevant") with the actual condition.
+
+## Improve
 
 Complete the user's requested correction first. Then improve a skill only when this
 counterfactual is true:
@@ -30,8 +48,9 @@ counterfactual is true:
 
 1. Locate the canonical skill that owned the failed behavior. Never edit a generated mirror,
    plugin cache, or customer-specific artifact as the source of truth.
-2. Search its instructions and related rules for overlap or contradiction. While there, remove the
-   no-ops, kill duplication, and take out anything irrelevant; leave the file leaner than you found it.
+2. Search its instructions, related rules, and the harness system prompt for overlap or
+   contradiction. While there, remove the no-ops, kill duplication, and take out anything
+   irrelevant; leave the file leaner than you found it.
 3. Prefer deletion, then replacement, then addition. Add only a new reusable invariant; never add
    the concrete customer, artifact, wording, answer, or outcome.
 4. Keep one owner per behavior. Prefer a test, validator, or script over more prose when the
@@ -45,9 +64,8 @@ the mirrors, then commit and push them.
 
 ## Preserve action boundaries
 
-Feedback and review never authorize an external action. In particular, detecting, reading, or
-comparing an edited email draft never authorizes sending it. Send only when the current user
-prompt explicitly orders sending that specific draft; otherwise leave it as a draft.
+Feedback and review never authorize an external action. Detecting, reading, or comparing an
+edited draft is not approval to act on it.
 
 Report a completed improvement in one line naming the skill and the generalized change. If the
 counterfactual fails, continue without a skill edit.

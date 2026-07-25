@@ -48,20 +48,16 @@ TDD applies to features and non-trivial logic in real projects. Scripts, spikes,
 3. **Make it fast**: optimize only after profiling reveals a real bottleneck.
 4. **Remember insights**: compound knowledge so the next session starts smarter.
 
-## Comments (default to none)
+## Comments
 
-The code says *what*; a comment exists only for a *why* the code cannot show. Write far fewer comments than feel natural.
-
-- Do not write a comment that restates what the next line does, names where code came from, or explains why your change is correct. That is talk for the reviewer, not the next reader, and it is noise once the PR merges.
-- Keep only: a non-obvious *why*, a constraint the code can't express, a public API docstring, and directive comments (shellcheck, eslint, noqa, pragma, shebang).
-- When a comment earns its place, make it one short sentence in plain ASCII.
+Match the file's existing comment density and idiom. Keep directive comments (shellcheck, eslint, noqa, pragma, shebang).
 
 ## Documentation Hierarchy
 
 1. Working code: self-documenting through clear naming.
 2. Tests: executable documentation; the tests are the spec.
 3. README / docs: setup, architecture, API specs.
-4. Comments: last resort, per the comments rule above.
+4. Comments: last resort, at the density of the surrounding code.
 
 ## Fail Fast & Validate
 
