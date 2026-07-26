@@ -1,0 +1,4 @@
+interface:
+  display_name: "Agent Feedback"
+  short_description: "Turn corrections into lasting improvements of skills, agents, and memory"
+  default_prompt: "Use $agent-feedback to turn this correction into a minimal reusable improvement."

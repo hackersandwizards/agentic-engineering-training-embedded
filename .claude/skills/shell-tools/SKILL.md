@@ -1,11 +1,12 @@
-# Subagents
+---
+name: shell-tools
+description: >-
+  Preferred CLI tools on this machine and the GNU/BSD portability rule. Use before running
+  shell commands for file search, text search, HTTP, JSON, git hosting, JavaScript, Python,
+  or system inspection, and when writing scripts that must run on macOS and Linux.
+---
 
-- Delegate when: (a) a task spans 3+ files, (b) research could fill the main context, (c) multiple independent queries can run in parallel.
-- One task per subagent for focused execution.
-- Fan out at most 3 subagents at a time; ask before spawning more. Applies doubly in ultra mode, where every extra agent chews quota.
-- Before building or changing Claude Code artifacts (skills, rules, subagents, hooks, output styles, settings, MCP), consult the `claude-code-guide` agent or official docs. Don't guess the frontmatter or mechanics from memory.
-
-# Tooling preferences
+# Shell tools
 
 Modern CLI replacements installed via Homebrew. Prefer when running shell commands.
 

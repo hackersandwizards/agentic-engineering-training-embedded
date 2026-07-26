@@ -1,4 +1,13 @@
-# Model & agent selection
+---
+name: delegation
+description: >-
+  Which Codex model and effort level to pick for technical work, and when Codex-led work
+  hands authored copy back to Claude. Use when delegating a coding task to Codex, choosing
+  a model tier or effort level, or orchestrating a Codex-supervised workflow that produces
+  text for people.
+---
+
+# Delegation
 
 ## Codex (gpt-5.6): technical work
 
