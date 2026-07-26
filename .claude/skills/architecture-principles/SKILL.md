@@ -8,7 +8,7 @@ description: >-
   surrounding code is the standard.
 ---
 
-# Architecture & Engineering Principles
+# Architecture Principles for Client Systems
 
 hackers&wizards brings 20+ years of enterprise engineering experience to every engagement. These
 principles come from building, operating, and scaling large-scale systems. They define what
