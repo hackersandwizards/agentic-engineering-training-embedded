@@ -29,6 +29,7 @@ principles come from building, operating, and scaling large-scale systems. They 
 3. **Low technical barriers**: standardization, open standards, knowledge exchange across teams.
 4. **Coverage of non-functional aspects**: security, performance, resilience, quality pyramid. React with urgency when problems are detected.
 5. **Full ownership and clear responsibility**: you build it, you run it. Everything in production must be owned.
+6. **Retained expertise in core technologies**: AI accelerates engineering, it does not transfer architecture ownership or domain accountability. Keep the team able to explain, debug, and evolve its core systems without the agent. Delegate implementation, never understanding.
 
 ## Architecture Principles
 
