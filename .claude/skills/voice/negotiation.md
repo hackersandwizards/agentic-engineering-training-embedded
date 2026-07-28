@@ -97,6 +97,7 @@ See `personal-voice.md` § Concession and self-deprecation. Give ground before t
 - Bad: Yes/no closing questions: use calibrated How/What.
 - Bad: Skip reciprocity: every ask without an offer back reads as extraction.
 - Bad: Lead with the ask. Order: Substance -> Tier choice -> Reciprocity -> Honesty -> Ask.
+- Bad: Hinge the offer on your own argument (*deswegen*, *therefore*): help reads as a claim on access. Connect to their benefit instead (*"Genau da würde ich dir gern helfen"*).
 - Bad: Hedge the **content** of the ask (*"vielleicht wäre es möglich, dass"*): Konjunktiv belongs on **delivery** (*"wäre es okay"*), never on **substance**.
 - Bad: Counter-anchor below their floor: if their lowest tier works, take it as-is. Grinding damages the relationship more than it saves.
 

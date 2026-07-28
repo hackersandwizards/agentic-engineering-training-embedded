@@ -25,6 +25,7 @@ Write for a literal reader.
 - Positive imperatives with explicit objects.
 - Keep a negative that carries the rule negative; the failure mode is what makes it enforceable.
 - Replace vague adverbs ("usually", "as appropriate", "when relevant") with the actual condition.
+- English for the instruction; quoted examples keep their own language.
 
 ## Improve
 
