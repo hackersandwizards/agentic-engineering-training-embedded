@@ -25,6 +25,8 @@ Write for a literal reader.
 - Positive imperatives with explicit objects.
 - Keep a negative that carries the rule negative; the failure mode is what makes it enforceable.
 - Replace vague adverbs ("usually", "as appropriate", "when relevant") with the actual condition.
+- Cut the history that produced the rule: version changes, vendor incidents, prior bugs, stability
+  caveats, and verification counts. Keep the failure mode only where it makes the rule enforceable.
 - English for the instruction; quoted examples keep their own language.
 
 ## Improve

@@ -47,10 +47,10 @@ principles come from building, operating, and scaling large-scale systems. They 
 
 ## Further files
 
-- `red-flags.md` — Ousterhout's design smells. Load when reviewing code or an existing design.
-- `diagnostics.md` — architecture, process, and systemic failure patterns, plus the build-or-buy
+- `red-flags.md`: Ousterhout's design smells. Load when reviewing code or an existing design.
+- `diagnostics.md`: architecture, process, and systemic failure patterns, plus the build-or-buy
   framework. Load when assessing an organization or making a build-or-buy call.
-- `techniques-principles-practices.md` — the three-column decision framework. Load when writing
+- `techniques-principles-practices.md`: the three-column decision framework. Load when writing
   training content or a proposal that needs the full vocabulary.
 
 The canonical long-form source lives in the company-os repository under

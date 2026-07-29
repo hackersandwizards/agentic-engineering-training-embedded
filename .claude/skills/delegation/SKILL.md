@@ -1,15 +1,14 @@
 ---
 name: delegation
 description: >-
-  Which Codex model and effort level to pick for technical work, and when Codex-led work
-  hands authored copy back to Claude. Use when delegating a coding task to Codex, choosing
-  a model tier or effort level, or orchestrating a Codex-supervised workflow that produces
-  text for people.
+  Codex only: which model tier and effort to run at, and how Codex hands authored copy to
+  Claude to write. One direction only. Claude neither starts Codex nor sets its model, and
+  has nothing to hand to it.
 ---
 
 # Delegation
 
-## Codex (gpt-5.6): technical work
+## Codex model tiers
 
 Default: `gpt-5.6-luna`, effort `high`.
 
@@ -23,18 +22,22 @@ Default: `gpt-5.6-luna`, effort `high`.
 
 - Below sol high, luna at higher effort is the same or better, cheaper.
 - Instead of sol xhigh, use terra ultra. Sol ultra over sol max is rarely worth the cost.
-- `ultra` efforts (terra, sol) delegate to parallel agents and burn usage fast; the fan-out cap in `tools.md` applies.
+- `ultra` efforts fan out to parallel agents and burn usage fast.
 
 ## Human writing -> Claude
 
-Claude hits the tone of voice better than Codex. Claude writes authored copy that represents h&w or the user and is intended to be sent to other people or published: emails including subject lines, messages and DMs, WhatsApp, Slack, LinkedIn and other social posts, website copy, proposals, quotes, talks, abstracts, client communication, articles, headlines, captions, slide decks, README and documentation copy, announcements, surveys, and review notes. Codex delegates this copy to Claude with the `voice` skill.
+Claude hits the tone of voice better than Codex, so Codex hands Claude every piece of authored
+copy the voice rules cover. This does not apply to an agent's own conversation with the user:
+replies, questions, status updates, explanations, recommendations, and technical answers. Each
+agent writes those itself.
 
-This rule does not apply to an agent's own direct conversation with the user, including replies, questions, status updates, explanations, recommendations, technical answers, and task summaries. Each agent writes those itself.
-
-When Codex supervises: gather and verify the facts, then
+Gather and verify the facts, then
 
 ```bash
-claude -p "Write the <mail/message>. Load the voice skill. Facts: sender+signature, recipients, language, purpose, must/must-not facts, new mail or reply. For mails: subject line AND body. Output only the text."
+claude -p "Write the <mail/message>. Facts: sender+signature, recipients, language, purpose, must/must-not facts, new mail or reply. For mails: subject line AND body. Output only the text."
 ```
 
-Review loop: Codex checks facts (names, dates, links, recipients, language, signature), content correctness, and length, never phrasing or tone; those belong entirely to Claude. On a factual error, wrong content, or unfit length, Codex calls `claude -p` again with the previous text plus the concrete finding. Codex delivers Claude's output verbatim: no rewording, no dropped or added sentences, no re-casing, no "polish". Any text change goes through another `claude -p` call.
+Check facts (names, dates, links, recipients, language, signature), content correctness, and
+length. Never phrasing or tone. On a finding, call `claude -p` again with the previous text plus
+the concrete finding. Deliver the output verbatim: no rewording, no dropped or added sentences, no
+re-casing, no polish. Any text change goes through another `claude -p` call.
