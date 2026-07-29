@@ -77,17 +77,6 @@ Match the channel: a real question for LinkedIn, a clear next step for blog/long
 
 **Failure mode if you skip:** ending on the human-impact beat leaves the reader nodding, not moving. The Call closes the energy loop.
 
-## The user's formula quickcard
-
-```
-Hook:      The friction the reader feels right now
-Story:     Lived experience, named, specific
-Question:  What if the surface problem isn't the real one?
-Insight:   The Monday-morning move
-Impact:    Why this matters beyond the technical fix
-Adventure: Forward motion, not summary
-```
-
 ## Pattern: Research-backed posts
 
 When citing external research (whitepaper, study, survey), the instinct is to lead with the source name. Resist it.

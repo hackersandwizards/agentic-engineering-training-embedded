@@ -4,7 +4,7 @@ Slack format constraints layered on the base voice rules: MCP-tool markdown quir
 
 ## Slack markdown via the MCP tool
 
-The MCP Slack tool accepts **standard markdown** and converts it to Slack's native format. This is **different** from Slack's own mrkdwn syntax. The conversions are non-negotiable; getting them wrong produces broken or literal-rendered messages.
+The MCP Slack tool accepts **standard markdown**, not Slack's own mrkdwn syntax, and converts it.
 
 | Format | Correct syntax | Wrong | Failure mode |
 |--------|---------------|-------|--------------|
@@ -25,7 +25,7 @@ The MCP Slack tool accepts **standard markdown** and converts it to Slack's nati
 | Headers | not supported in messages | `##`, `###` | Use `**bold**` for section labels |
 | Nested lists | not supported | | Renders flat regardless of indent |
 
-**Bullet character carve-out:** `brand-voice.md` bans the Unicode bullet (`•`) in customer-facing prose. Slack reverses that: the API requires `•` for proper bullet rendering. This per-channel exception is allowed.
+The Unicode bullet (`•`) is banned in customer-facing prose everywhere else; Slack is the carve-out, because the API requires it.
 
 ## Length tiers
 
@@ -42,23 +42,6 @@ Slack messages are shorter than email. Keep within these caps:
 
 Tier 1 is acknowledgments, status, quick reactions. Tier 2 is anything that needs context.
 
-## Greeting and closing rules (channel-specific)
+## Greeting and closing
 
-Greetings/closings per Slack message type live in `personal-voice.md` (greetings table + channel calibration matrix). Slack-only patterns to remember:
-
-- **DM, continuing same-day exchange:** skip the greeting, jump straight in. The user's pattern: *"So."* or directly into the topic.
-- **Thread reply:** no greeting, no closing. The thread is the context.
-
-## Pre-send checklist (Slack-specific format)
-
-Run before sending. Voice/brand checklists from `personal-voice.md` and `brand-voice.md` still apply.
-
-- [ ] `**bold**` (double asterisks), not `*bold*`
-- [ ] `•` for bullets, not `-`
-- [ ] 4-space indent for code blocks, not triple backticks
-- [ ] No `##` or `###` headers
-- [ ] Links use `<url|display>` syntax, not `[text](url)`
-- [ ] User/channel mentions use `<@USER_ID>` / `<#CHANNEL_ID>`
-- [ ] Within length tier for the message type
-- [ ] Under 5,000 character API limit
-- [ ] Thread replies have no greeting/closing
+**Thread reply:** no greeting, no closing. The thread is the context.

@@ -1,6 +1,6 @@
 # The User's Voice
 
-How the user actually writes. Sourced from the user's real correspondence: sent emails, Slack messages, Fathom transcripts, three high-engagement LinkedIn posts the user singled out as gold standard.
+How the user actually writes.
 
 Apply when drafting **anything signed `/bene` or representing the user directly**: emails, Slack DMs and posts, LinkedIn, speaker outreach, talks, client comms. Recipients must not be able to tell a draft from a message the user typed themselves.
 
@@ -24,15 +24,10 @@ Two recurring registers underneath:
 - **Bold and direct.** Challenge conventional wisdom with experience-backed alternatives. *"SPAs sind legacy"* (in the right context). *"Microservices verhindern Geschwindigkeit"* (in specific situations). *"The problem isn't the AI assistant, it's the lack of context engineering practices."*
 - **Philosophical yet practical.** Ask big questions while shipping real solutions. Connect technical decisions to human impact. Bridge *why* with *how*.
 
-**Superpower:** making complex things simple without dumbing them down.
-
-A draft that doesn't hit any of these notes isn't the user's voice. A draft that hits all four lands.
-
 ## Sentence cadence
 
 - One or two sentences per paragraph. Blank lines between. The rhythm comes from white space, not bold.
 - Short declarative sentences as separate paragraphs are welcome: *"So."* / *"Sehe ich genauso."*
-- Sentence mechanics and length live in `prose-style.md`; it governs when the two guides differ.
 
 ## Epistemic markers
 
@@ -44,11 +39,11 @@ These signal stance and uncertainty. They change meaning, so they aren't filler.
 **English:**
 `I'd say`, `I think`, `honestly`, `in my opinion`
 
-Modal particles and softeners (`mal`, `einfach`, `gern`, `vllt.`, `ggf.`) are warmth-carriers in relational prose: `gern` and `mal` appear in roughly every other real mail ("Ich spreche mal mit ihm", "Sagt einfach Bescheid", "Meld dich gern"). Keep them at that density in email and messages. In authored prose they are filler; see `prose-style.md`.
+Modal particles and softeners (`mal`, `einfach`, `gern`, `vllt.`, `ggf.`) are warmth-carriers in relational prose: `gern` and `mal` appear in roughly every other real mail ("Ich spreche mal mit ihm", "Sagt einfach Bescheid", "Meld dich gern"). Keep them at that density in email and messages.
 
 ## Konjunktiv as deliberate device
 
-Use Konjunktiv (würde, wäre, könnte, hätte) for recommendations, suggestions, and soft asks toward clients. This is respectful client communication, not weakness. In real sent mail it shows up in every third email; it is the default ask-form, not an occasional device.
+Use Konjunktiv (würde, wäre, könnte, hätte) for recommendations, suggestions, and soft asks toward clients. This is respectful client communication, not weakness. It is the default ask-form, not an occasional device.
 
 - "Am 4. März wäre ich gern remote dabei."
 - "Wir könnten das in einem kurzen Call besprechen."
@@ -62,14 +57,14 @@ Use Konjunktiv (würde, wäre, könnte, hätte) for recommendations, suggestions
 
 ## Concession and self-deprecation
 
-Give ground before claiming, and name uncertainty openly. Both moves earn the rest of the sentence: how peer-to-peer authority lands without sounding like a vendor. The user uses these in client meetings; the authenticity is the asset.
+Give ground before claiming, and name uncertainty openly. Both moves earn the rest of the sentence.
 
 - *"Blitzy is a great product. But I don't think it solves your problem here."* (concession)
 - *"I'm not really an expert in X."* (self-deprecation)
 
 ## Voice moves
 
-Three reachable patterns when a draft feels formless or abstract.
+Two reachable patterns when a draft feels formless or abstract.
 
 **Concrete examples.** Real client names, real numbers, real moments. *"[team member] saved an hour on this PR"* beats *"engineering teams achieve disproportionate gains."* When in doubt, name a person.
 
@@ -89,7 +84,6 @@ Good: The user's real register:
 Bad: LinkedIn-influencer ghost:
 - "Everyone's talking about prompt engineering. Almost nobody understands context engineering."
 - "Your AI agent crushed the demo. Then it failed spectacularly in production."
-- "73% of AI projects fail before reaching production."
 
 The bad versions all open with certainty. The user opens with curiosity.
 
@@ -112,21 +106,19 @@ The bad versions all open with certainty. The user opens with curiosity.
 
 ## Closings
 
-**Email closings, measured from 445 real sent mails (Jun-Jul 2026):**
+**Email closings:**
 
 - Default (DE, everyone from close colleague to enterprise client): `LG` + newline + `/bene`.
-- Warm variant, about one in eight LG-closings: `LG und {Wunsch/Dank}` on the LG line (`LG und schönes Wochenende`, `LG und vielen Dank`, `LG und bis bald`, `LG und hab einen schönen Urlaub!`).
+- Warm variant: `LG und {Wunsch/Dank}` on the LG line (`LG und schönes Wochenende`, `LG und vielen Dank`, `LG und bis bald`, `LG und hab einen schönen Urlaub!`).
 - English: `Best,` or `Cheers,` + newline + `/bene`.
 - Authorities, vendors, banks: `BG` + newline + `Stemmildt`.
 - Quick logistics replies and same-thread follow-ups: no sign-off at all.
 
 There is no separate formal register above `LG`; the user closes client and contract mail the same way as peer mail. When in doubt, go warmer rather than more formal.
 
-**`/bene` is never a solo line.** Where `/bene` is used (casual email, signed Slack messages), it sits on a line below a closing word (`LG`, `Cheers`), never on its own; a bare `/bene` reads as abrupt and wrong. The only place no sign-off appears at all is Slack thread replies, LinkedIn posts, and Slack DMs continuing a same-day exchange: there the closing is omitted entirely.
+**`/bene` is never a solo line.** Where `/bene` is used (casual email, signed Slack messages), it sits on a line below a closing word (`LG`, `Cheers`), never on its own.
 
-**Slack:** `LG` + newline + `/bene` for any signed message. For thread replies: no closing at all (no `/bene`, no `LG`).
-
-**LinkedIn:** no sign-off. The post just ends. Optional: *"May your context be rich and your agents aligned."* but only when the post warrants it (rare, mostly announcement-flavored).
+**LinkedIn:** optional *"May your context be rich and your agents aligned."*, only when the post warrants it (rare, mostly announcement-flavored).
 
 **Sign-offs to never use:**
 
@@ -207,11 +199,7 @@ Failure mode if you skip step 2: vulnerability without reframe reads as begging.
 
 *Direct (chasing a decision, pricing, blocking issue):* shorter sentences, no emoticons, concrete numbers, no `gern` softeners. Crisp.
 
-> *"wegen langfristigem Support müssen wir noch mal sprechen, der EK ist dafür hier mit [rate] sehr klein. Wir können dir da nur [rate] geben."*
-
 *Warm (re-engagement, thanks, casual catch-up):* longer sentences, `:)`, expressive vocabulary, relational language.
-
-> *"ich hoffe ihr habt eine tolle Zeit beim Meetup gehabt und konntet am Wochenende das Wetter genießen. Leider haben wir ja in den letzten Wochen nicht mehr so viel gemeinsam gemacht. Vermisse euch etwas :)"*
 
 For LinkedIn, default to warm. For pricing pushback, default to direct.
 
@@ -234,7 +222,6 @@ Where the user's voice adapts per channel. Greetings live in the matrix above; t
 - `_italic_` for action items.
 - Direct opinions without hedging: *"Macht Sinn."* / *"Ist smart."*
 - Stream-of-consciousness flow, not polished structure.
-- The "Would the user type this?" test: if it reads like a drafted email, rewrite.
 
 ## Words and phrases that mark the user's voice
 
@@ -296,12 +283,10 @@ Good: *"Most teams I talk to are scheduling AI work in sprints. The work doesn't
 
 ### Fragment-stacking
 
-Three short fragments in a row sounds like a viral-hook template. The user doesn't speak this way.
+A single short fragment for emphasis works. Stacking three is a viral-hook tic.
 
 Bad: *"Same patterns. Different companies. Every time."*
 Good: *"Same patterns, every time, across very different companies."*
-
-A single short fragment for emphasis works. Stacking three is a tic.
 
 ### Generic advice without personal stake
 
@@ -345,11 +330,11 @@ Bad: *"After my talk at [strategy firm], the CTO of [Big Company] told me..."*
 
 ### Vendor register on technical replies
 
-First-pass drafts on substantive technical-opinion topics (security tools, architecture takes, AI-product reviews) tend to drift into LinkedIn-essay or security-vendor register even when the banned-words list passes. The banned-words list catches buzzwords. It does not catch register drift.
+First-pass drafts on substantive technical-opinion topics (security tools, architecture takes, AI-product reviews) drift into LinkedIn-essay or security-vendor register even when the banned-words list passes: that list catches buzzwords, not register drift.
 
-Specific tells caught in the wild:
+Specific tells:
 
-- *"The real shift isn't X"* / *"It's not just Y, it's Z"*: manifesto framing (the contrastive-reframe AI tell, see `ai-tells.md`)
+- *"The real shift isn't X"* / *"It's not just Y, it's Z"*: manifesto framing
 - Quoting vendor marketing stats (*"Anthropic found 500+ vulns"*) as if they were the user's own observation
 - *"Complements X, doesn't replace Y, Z, W"*: the consultant cleanup-bullet pattern
 - *"What I'd watch on your own repos is..."*: generic-advisor voice
@@ -363,26 +348,9 @@ On a technical question the user reads like a peer Slack message, not a vendor b
 
 When multiple names appear together (slides, captions, talk titles, post bylines, conference programmes, paired portrait marks, attribution lines, joint-author bylines), put the user's name last. Co-presenters, co-authors, co-organisers go first.
 
-**Why:** politeness. Naming the user first reads as self-promoting; leading with the others is the warmer move.
-
 **How to apply:** "[team member] & Bene", never "Bene & [team member]". "Mit [team member], [team member] und Benedikt", at the end. In paired visual marks, the user's portrait/name to the right or bottom. Applies in any language and any medium.
 
-## Quality checklist (before sending)
+## Before sending
 
-Apply when finishing a customer-facing draft. Don't surface to the user.
-
-- [ ] Opening matches channel + relationship (see greeting matrix)
-- [ ] No em-dashes, no decorative Unicode (see `brand-voice.md`)
-- [ ] Epistemic markers used naturally (2-3 per medium text, calibrated to channel)
-- [ ] Konjunktiv for soft asks; Indikativ for facts and own commitments
-- [ ] No banned words (see `brand-voice.md` for the canonical list)
-- [ ] Sentiment detected on incoming, tone calibrated accordingly
-- [ ] Tone slightly warmer than sender's last message
-- [ ] Closing matches the measured closings list (default `LG` + `/bene`)
-- [ ] If `/bene` is present, a closing word (`LG`, `Cheers`, `Best`, etc.) sits on the line above, never solo
-- [ ] Specific numbers where possible, never generic multipliers
-- [ ] Recipient names verified against email addresses
-- [ ] Language consistent throughout (no DE/EN mixing in same paragraph)
-- [ ] Sentence mechanics per `prose-style.md`; blank lines between paragraphs
-- [ ] At least one concrete example, named person, or analogy if making a conceptual point
-- [ ] Passes the "Would the user cringe?" test
+Beyond the rules above, on every customer-facing draft: verify recipient names against their email
+addresses, and keep one language throughout (no DE/EN mixing inside a paragraph).

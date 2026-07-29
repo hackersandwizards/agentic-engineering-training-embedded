@@ -11,7 +11,7 @@ description: >-
 
 Run all six phases in order. Do not skip a phase. Do not stop between phases unless a phase says so.
 
-Do not use the Workflow tool. It is too heavy for a polish. Fan out with direct subagents via the Agent tool only.
+Do not use the Workflow tool. Fan out with direct subagents via the Agent tool only.
 
 ## 1. Preflight
 
@@ -30,7 +30,6 @@ Fan out subagents, one per directory batch, at most 4 in parallel. Each agent ed
 - Delete comments that restate what the code does, name where code came from, or explain why a change is correct. The code already says it.
 - Keep comments that state a non-obvious why or a constraint the code can't express. Tighten them to one short sentence.
 - Keep public API docstrings, license headers, and directive comments (shellcheck, eslint, noqa, pragma, shebang).
-- Rewritten comments use plain ASCII. No em-dashes, no en-dashes, no arrows, no ellipsis character, no curly quotes, no bullets. Short sentences. Why, not what.
 
 Read each agent's report and spot-check one file per batch.
 
@@ -64,9 +63,3 @@ A failing check blocks the commit. Fix the failure or, if it predates the sweep,
 One commit. Message: one line summarizing the sweep, then a short body listing the areas touched.
 
 Push to the branch noted in phase 1. If the push fails (no remote, auth, protected branch), report the error and stop.
-
-## Notes
-
-The sweep is idempotent. The first run on a repo is big, later runs are cheap.
-
-When a rule here fights clarity, clarity wins.

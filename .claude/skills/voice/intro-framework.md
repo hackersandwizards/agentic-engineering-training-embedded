@@ -1,6 +1,6 @@
 # Introduction Framework: NSFAG
 
-Five-beat scaffold for 30-second self-introductions: networking, conference openers, podcast intros, panel intros, *"Stell dich mal kurz vor"*-moments. Adapted from Daniel Priestley's introduction methodology. Skip when context is already established or the host introduced you.
+Five-beat scaffold for 30-second self-introductions: networking, conference openers, podcast intros, panel intros, *"Stell dich mal kurz vor"*-moments. Skip when context is already established or the host introduced you.
 
 ## N: Name, identity with purpose
 
@@ -67,16 +67,6 @@ A specific action they can picture themselves taking.
 > *"I'm asking three questions: Where are you now? Where do you want to be? What's blocking the path?"*
 
 > *"Coffee chat about your biggest technical headache?"*
-
-## NSFAG quickcard
-
-```
-N: "Benedikt from hackers&wizards" + role if needed
-S: Visual metaphor they instantly grasp
-F: One number + one success story
-A: Their benefit, not the user's goal
-G: Specific action they can visualize
-```
 
 ## Tuning by audience
 

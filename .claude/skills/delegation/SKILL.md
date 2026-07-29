@@ -26,8 +26,8 @@ Default: `gpt-5.6-luna`, effort `high`.
 
 ## Human writing -> Claude
 
-Claude hits the tone of voice better than Codex, so Codex hands Claude every piece of authored
-copy the voice rules cover. This does not apply to an agent's own conversation with the user:
+Codex hands Claude every piece of authored copy the voice rules cover. This does not apply to an
+agent's own conversation with the user:
 replies, questions, status updates, explanations, recommendations, and technical answers. Each
 agent writes those itself.
 

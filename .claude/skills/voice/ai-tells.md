@@ -1,14 +1,14 @@
 # AI tells
 
-A detector list, not a positive rule. It catches AI tells; the writing rules themselves live in `prose-style.md`. Run the draft against this file after the four base layers, asking of each paragraph only: "would a reader looking for AI output flag this?" Rewrite anything that triggers without the offending pattern, not around it. One instance is usually enough to flip a paragraph's register from "the user wrote this" to "the user's bot wrote this". DE and EN both; bans apply regardless of punctuation or surface variation.
+A detector list, not a positive rule. Run the draft against it after the four base layers, asking of each paragraph only: "would a reader looking for AI output flag this?" Rewrite anything that triggers without the offending pattern, not around it. DE and EN both; bans apply regardless of punctuation or surface variation.
 
 ## 1. Structural patterns
 
-The single highest-signal category. These shape sentences, not just word choice, so they survive paraphrasing.
+Highest-signal category: these shape sentences, not just word choice, so they survive paraphrasing.
 
 ### Contrastive reframe ("not just X, it's Y")
 
-The #1 catalogued LLM tell: it feigns insight by negating a strawman. Uses in U.S. corporate documents roughly doubled in both 2024 and 2025.
+Feigns insight by negating a strawman.
 
 | Banned | Use instead |
 |--------|-------------|
@@ -29,7 +29,7 @@ The #1 catalogued LLM tell: it feigns insight by negating a strawman. Uses in U.
 
 ### Rule of three (forced triplets)
 
-Triplet adjectives, triplet noun phrases, triplet parallel clauses applied regardless of necessity. Signals statistical pattern matching, not earned rhythm.
+Triplet adjectives, triplet noun phrases, triplet parallel clauses applied regardless of necessity.
 
 - Banned: "fast, reliable, and secure" / "build, measure, learn" / "clarity, speed, focus" when they are not each essential.
 - Use instead: pick the one that matters and cut the rest. If three concepts genuinely belong, break the rhythm: vary clause length so it doesn't read as a triplet.
@@ -43,7 +43,7 @@ Multiple short declaratives in a row, each pretending to be wisdom.
 
 ### Announced count / enumerated preview
 
-Naming how many points are coming before making them. The model commits to a number before the content earns it, so the count reads as scaffolding.
+Naming how many points are coming before making them.
 
 | Banned | Use instead |
 |--------|-------------|
@@ -56,7 +56,7 @@ Exception: a count the argument depends on ("only two of the five survive") stay
 
 ### Soft-challenge verbs ("push on", "poke at")
 
-Hedged consultant-speak that softens a disagreement into a gesture. Signals an LLM smoothing a critique rather than stating it.
+Hedged consultant-speak that softens a disagreement into a gesture.
 
 | Banned | Use instead |
 |--------|-------------|
@@ -66,7 +66,7 @@ Hedged consultant-speak that softens a disagreement into a gesture. Signals an L
 
 ### Elegant variation (synonym hopscotch)
 
-LLM training penalizes repetition, so models swap synonyms for the same referent. Reads as labored.
+Swapping synonyms for the same referent. Reads as labored.
 
 - Banned: "Yankilevsky... the non-conformist artist... their creative output...".
 - Use instead: repeat the noun. Plain repetition reads as confident.
@@ -82,8 +82,6 @@ LLM training penalizes repetition, so models swap synonyms for the same referent
 
 ### The four-beat AI Sentence DNA
 
-Bloomberry's structural finding across ChatGPT, Claude, Gemini, open-source models:
-
 1. Opening: framing claim or landscape statement
 2. Expansion: elaboration or supporting evidence
 3. Contrast: reframe or tension signal (but / however / it's not just)
@@ -96,12 +94,12 @@ When a paragraph follows this skeleton end-to-end, the reader clocks it as AI re
 
 ### Crutch metaphors
 
-- Banned: "load-bearing" ("load-bearing skill / line / assumption / convention"). Overused AI metaphor, reads as a tell within seconds.
+- Banned: "load-bearing" ("load-bearing skill / line / assumption / convention").
 - Use instead: name what it does, "critical", "the part the argument rests on", "the one that matters", "central". DE: "entscheidend" / "trägt das Argument", nicht "load-bearing".
 
 ## 2. Opener / hook patterns
 
-Bloomberry catalogues 17 LLM opener hooks. The most common, banned in all forms:
+Banned in all forms:
 
 | Pattern | Banned example | Use instead |
 |---------|----------------|-------------|
@@ -120,7 +118,7 @@ Bloomberry catalogues 17 LLM opener hooks. The most common, banned in all forms:
 
 ## 3. Transition / bridge fillers
 
-Sentence connectors that pad without adding content. Different from buzzwords (which are nouns/verbs); these are linkers.
+Sentence connectors that pad without adding content.
 
 | Category | Banned | Use instead |
 |----------|--------|-------------|
@@ -133,7 +131,7 @@ Sentence connectors that pad without adding content. Different from buzzwords (w
 
 ## 4. Copula and verb dodging
 
-Subtle but high-signal. LLMs disproportionately avoid plain "is" and "has".
+LLMs disproportionately avoid plain "is" and "has".
 
 | Banned | Use instead |
 |--------|-------------|
@@ -150,21 +148,21 @@ Subtle but high-signal. LLMs disproportionately avoid plain "is" and "has".
 
 ### Title case in headings
 
-LLMs default to Title Case Like This. Wikipedia and most modern style guides use sentence case. h&w voice uses sentence case throughout.
+h&w voice uses sentence case throughout.
 
 - Banned: "Impact of Technology and Digitalization"
 - Use instead: "Impact of technology and digitalization"
 
 ### Excessive boldface
 
-Every key term mechanically bolded, often as inline-header lists.
+Every key term mechanically bolded.
 
 - Banned: "**Context engineering (CE):** the practice of structuring..."
 - Use instead: bold sparingly; never as a substitute for actual headings.
 
 ### Inline-header vertical lists
 
-"**Term:** description" pattern repeated as a list. Reads as slide-deck output, not prose.
+"**Term:** description" repeated as a list. Reads as slide-deck output, not prose.
 
 - Banned:
   ```

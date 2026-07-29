@@ -9,19 +9,13 @@ description: >-
 
 # Engineering
 
-Favor simple, clean, maintainable solutions. Readability and changeability are primary. Small
-functions, single responsibility. Build against real systems; reserve mocks for isolated test
-seams. Verify integration points, APIs, and libraries exist before building on them.
-
-The minimalism ladder is always on and is not repeated here. This skill covers the approach.
+Readability and changeability are primary. Small functions, single responsibility. Reserve mocks
+for isolated test seams.
 
 ## Research before writing
 
-- Investigate before acting: understand the problem, the surrounding system, and what already
-  exists.
 - Use Grep/Glob to map the space. Read files end-to-end when you will edit them, plus immediate
   callers and tests.
-- Check if existing utilities already solve the problem. Reuse beats new code.
 
 ## Conform before creating
 
@@ -58,7 +52,6 @@ runnable check instead. Use judgment.
 1. **Make it work**: functioning code that passes tests.
 2. **Make it right**: refactor for clarity and maintainability.
 3. **Make it fast**: optimize only after profiling reveals a real bottleneck.
-4. **Remember insights**: compound knowledge so the next session starts smarter.
 
 ## One feature at a time
 
@@ -78,7 +71,6 @@ runnable check instead. Use judgment.
 - Validate aggressively at inputs and integration boundaries. Give clear, descriptive errors when
   something breaks.
 - Actively probe edge cases, invalid inputs, and unexpected conditions.
-- Before delivering, ask: "would a staff engineer approve this?"
 
 ## When not to be lazy
 
@@ -101,9 +93,7 @@ Documentation hierarchy, in order of preference:
 
 ## Leave it better
 
-- Small unfixed problems compound. Any work tolerates a few broken windows, then collapses under
-  twenty. Leave it better than you found it, even when fixing something unrelated.
-- Simplify ruthlessly. Elegance is when there's nothing left to take away.
+- Leave it better than you found it, even when fixing something unrelated.
 - Clean up test scripts, data files, temporary backups, and files from abandoned strategies when
   done.
 

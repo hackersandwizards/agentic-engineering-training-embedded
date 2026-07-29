@@ -10,9 +10,7 @@ description: >-
 
 # Architecture Principles for Client Systems
 
-hackers&wizards brings 20+ years of enterprise engineering experience to every engagement. These
-principles come from building, operating, and scaling large-scale systems. They define what
-"good" looks like in the systems we help clients build.
+What "good" looks like in the systems h&w helps clients build.
 
 ## Core Philosophy
 
@@ -45,14 +43,50 @@ principles come from building, operating, and scaling large-scale systems. They 
 - **Make Decisions in Public**: RFCs, ADRs, architecture decision records. Document the why, not just the what.
 - **Security First**: TLS everywhere, threat modeling, security by default, shift left.
 
-## Further files
+## Design red flags (Ousterhout)
 
-- `red-flags.md`: Ousterhout's design smells. Load when reviewing code or an existing design.
-- `diagnostics.md`: architecture, process, and systemic failure patterns, plus the build-or-buy
-  framework. Load when assessing an organization or making a build-or-buy call.
-- `techniques-principles-practices.md`: the three-column decision framework. Load when writing
-  training content or a proposal that needs the full vocabulary.
+Shallow modules, information leakage, temporal decomposition, overexposure, pass-through methods,
+repetition, special-general mixture, conjoined methods, comment repeats code, implementation
+contaminates interface, vague names, hard to pick names, hard to describe, nonobvious code.
 
-The canonical long-form source lives in the company-os repository under
-`src/content/knowledge/software-engineering/`. Read it there when working in that repo and the
-short form is not enough.
+## Diagnostic patterns
+
+**Architecture anti-patterns:** tight coupling between systems, missing test environments, manual
+deployments, shared databases across team boundaries, monolithic frontends, no domain events.
+
+**Process waste:** missing focus, excessive context switching, long wait times, heroism culture,
+knowledge silos, meeting overload, approval bottlenecks, oversized work packages, unfinished
+tickets, unnecessary process gates, scope creep and gold plating, excessive handoffs, bugs as
+unplanned work, manual toil that should be automated.
+
+**Systemic issues:** poor code craftsmanship, missing domain understanding, missing systems
+thinking, no experimentation culture, no learning culture, security as an afterthought.
+
+**Build or buy:** evaluate Functional Complexity, Technical Complexity, Operational Complexity,
+and Unique Business Value. Then run the 5-level cost analysis: License, Integration, Operation,
+Opportunity, Migration.
+
+## Techniques > Principles > Practices
+
+The three-column decision framework, for training content and proposals needing the full
+vocabulary.
+
+**Techniques** (how we approach work): Iteration, Feedback, Incrementalism, Experimentation,
+Empiricism
+
+**Principles** (what guides decisions): Customer Centricity, Assure Speed By Quality, Design For
+Testability, Shift Left On Security, Share Nothing, Couple Loosely, Build Reactively, Deploy
+Continuously, Separate Concerns, Run Observable, Be Agile, Don't Reinvent, Avoid Middle Road,
+Continuous Alignment, YAGNI, Working Backwards
+
+**Practices** (what we do daily): Small Empowered Teams, Mob Programming, Release Spike ASAP,
+Trunk-Based Development, Feature Flags, Self-Contained Systems, Micro Frontends, Server Side
+Includes, HTML over the Wire, API First, Cloud Native, DDD, Reactive Programming, Functional
+Programming, Shared Pattern Library, Feeds & Snapshots, Security Belt, OAuth, TLS Everywhere,
+Runbooks, Chaos Testing, Static Code Analysis, Event Storming, Context Mapping, Team Topologies,
+Arc42, Cost Optimization
+
+## Long form
+
+`src/content/knowledge/software-engineering/` in the company-os repository. Read it there when
+the short form is not enough.

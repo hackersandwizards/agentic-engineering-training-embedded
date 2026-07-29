@@ -8,17 +8,17 @@ description: >-
 
 # Shell tools
 
-Modern CLI replacements installed via Homebrew. Prefer when running shell commands.
+Prefer these over their classic equivalents.
 
 **Browser and frontend:**
-- For rendered-page, frontend, or signed-in UI checks, try in order until one works: in-app Browser, Chrome DevTools MCP, repository automation (e.g. Playwright). Before skipping Chrome DevTools, search deferred tools (`ToolSearch` or equivalent); check the repository for automation; await pending connections/searches. Report browser access unavailable only after every applicable option fails, naming failures and unverified live checks.
+- For rendered-page, frontend, or signed-in UI checks, try in order until one works: in-app Browser, Chrome DevTools MCP, repository automation (e.g. Playwright). Before skipping Chrome DevTools, search deferred tools (`ToolSearch` or equivalent) and check the repository for automation.
 - Never judge visuals, responsiveness, or animation from text alone.
 
 **GNU vs BSD:** unprefixed CLI tools are BSD on macOS, GNU on Linux. Write scripts to run on both (POSIX, no flavor-specific flags). GNU builds are `g*` (`gsed`, `gdate`, `gtimeout`).
 
 **Text and file navigation:**
 - `eza` over `ls`, `bat` over `cat` and `less`
-- `fd` over `find` for terse search; `bfs` when `find` syntax is needed (POSIX-compatible, faster traversal)
+- `fd` over `find` for terse search; `bfs` when `find` syntax is needed
 - `rg` over `grep` for code search; `ugrep` for searching inside archives, compressed files, or PDFs
 - `rg` recurses by default. Never pass `-r`: it is `--replace` and silently rewrites output. Write `rg -il`, never `rg -ril`.
 - `delta` for diffs, `tree` for directory tree, `fzf` for fuzzy selection
@@ -26,7 +26,7 @@ Modern CLI replacements installed via Homebrew. Prefer when running shell comman
 
 **HTTP and data:**
 - `xh` over `curl` and `httpie`
-- `jaq` over `jq` (Rust port, faster), `pandoc` for document conversion
+- `jaq` over `jq`, `pandoc` for document conversion
 - `scrapling` to scrape web pages to markdown (`scrapling extract get <url> out.md`)
 
 **Git and code-host:**

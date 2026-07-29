@@ -4,8 +4,6 @@ Verbatim positioning language, competitive-frame details, performance-language p
 
 ## Approved phrases (offerings, value-props, themes)
 
-The phrases h&w uses consistently across website, content, proposals, and posts. Use these verbatim when the concept fits. Consistency builds the category.
-
 ### Service offerings and positioning
 
 - *"AI developer transformation program"*: commercial service offering.
@@ -29,7 +27,7 @@ For unaware -> problem-aware readers, open with their language, not h&w's:
 - *"Developer productivity declining"*
 - *"Managing technical debt from generative AI"*
 
-These are the words a CTO uses internally before they have language for the solution. Lead with them and the reader nods before you've named yourself.
+These are the words a CTO uses internally before they have language for the solution. Lead with them.
 
 ### Carve-outs from the banned-words list
 
@@ -37,8 +35,6 @@ Some words look banned but have approved uses in specific contexts:
 
 - **"Solution"**: allowed for technical implementations and problem-solving contexts.
 - **"Assistant / Assistants"**: allowed for AI development tools and human-assistance contexts.
-
-Per-word exceptions for terms in the brand-voice banned-words table (Transform, Systematic, Maintain) live in that table's "Why banned" column.
 
 ## Competitive positioning: the full frame
 
@@ -53,7 +49,7 @@ h&w sits on the **methodology and enablement layer** of the agentic-engineering 
 
 **The real competitor:** the client's in-house transformation team trying to build the setup themselves. Success rate is low because configuration, methodology, tool selection, and adoption all have to be mastered at once.
 
-**Why this framing matters:** positioning against tool vendors (Ona/Blitzy/Devin) makes us a weaker substitute. The correct frame: we sell the layer where the value lives. Tools are commodity, configuration and adoption are not. Each new AI platform widens the configuration gap at the client and increases the value of our blueprints.
+Tools are commodity; configuration and adoption are not. Each new AI platform widens the configuration gap at the client.
 
 **How to apply:**
 - In every pitch, sales deck, LinkedIn post, application, or speaker slot: never head-to-head against tool vendors. Use the stack frame.
@@ -64,9 +60,7 @@ h&w sits on the **methodology and enablement layer** of the agentic-engineering 
 
 ## Performance language: approved patterns
 
-`brand-voice.md` carries the rule: name **the metric, the target, and the source**. All three. The approved verbatim patterns:
-
-Each cites metric, target, and source:
+Approved verbatim patterns, each citing metric, target, and source:
 
 - Good: "PR lead times dropped 20%, with over 70% AI-assisted PRs" ([client] pilot)
 - Good: "~90% of developers already use AI" (DORA 2025)

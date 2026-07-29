@@ -1,6 +1,6 @@
 # Voice: Narrow Situations
 
-Three narrow scenarios with specific voice rules. Load only when the situation fits. None fire on a typical email or post.
+Three narrow scenarios with specific voice rules. Load only when the situation fits.
 
 ## Internal coordination gaps: never expose
 
@@ -11,7 +11,7 @@ Instead:
 2. Ask the practical clarification question. (separate invoice? which month? same conditions?)
 3. Skip the why.
 
-**Failure mode if you expose the gap:** clients should experience h&w as coordinated and competent. Even genuine, defensive transparency about internal gaps reads as unprofessional and erodes trust. The fix happens internally; the client sees a clean, warm clarification.
+**Failure mode if you expose the gap:** even genuine transparency about an internal gap reads as unprofessional and erodes trust. The fix happens internally; the client sees a clean, warm clarification.
 
 **Scope:** applies when *we* are the source of the gap. When the *client* caused the issue, naming it and clarifying is fine.
 
@@ -29,7 +29,7 @@ When converting the user's spoken words (Fathom transcripts, talks, recorded con
 - *"vllt."* and *"halt"* on conversion to writing (filler per `prose-style.md`).
 - Pure repetition without rhythm.
 
-The patterns in `personal-voice.md` (Voice character, Voice moves, Concession and self-deprecation) are how the user already speaks. Spoken-to-written conversion is mostly tightening, not voice translation. Goal: a written version that reads like an articulate email from the user, not a polished think-piece.
+Conversion is mostly tightening, not voice translation. Goal: a written version that reads like an articulate email from the user, not a polished think-piece.
 
 ## Language detection (DE vs EN)
 

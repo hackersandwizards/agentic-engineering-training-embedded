@@ -14,7 +14,7 @@ description: >-
 ## Shape
 
 - **Progressive disclosure by default.** When an artifact outgrows one file, split it and route
-  from `SKILL.md` by phase or layer. Models: `crm-sync/SKILL.md`, `voice/SKILL.md`.
+  from `SKILL.md` by phase or layer.
 - **Always-on status is earned.** A rule that fires on a minority of turns gets `paths:`
   frontmatter or becomes a skill. Reference material is never always-on.
 - **Design the interface instead of adding examples.** Examples constrain the exploration space;
@@ -37,6 +37,22 @@ counterfactual is true:
 > With the same information available during the initial run, would a general change have
 > produced the corrected result?
 
+If no, change nothing.
+
+## Pick the owner
+
+Exactly one, and only for a reusable gap:
+
+- **Skill or rule** when the behaviour is shared across tasks or agents.
+- **Agent definition** in `.claude/agents/` when it belongs to one agentic colleague. Route it
+  through the `hr` agent as a feedback conversation; that agent's file and its known failure modes
+  are the record.
+- **Agent memory** in `.claude/agent-memory/` when it is context to carry forward rather than a
+  rule.
+
+Feedback and review never authorize an external action. Detecting, reading, or comparing an edited
+draft is not approval to act on it.
+
 ## Classify the feedback
 
 - Improve retrieval or question timing when the missed information was discoverable or should
@@ -47,17 +63,6 @@ counterfactual is true:
   not infer an improvement from an external action alone.
 - When the artifact already contains the right instruction, remove conflicts, consolidate it, or
   add a deterministic check. Never append a duplicate reminder.
-
-## Pick the owner
-
-Exactly one, and only for a reusable gap:
-
-- **Skill or rule** when the behaviour is shared across tasks or agents.
-- **Agent definition** in `.claude/agents/` when it belongs to one agentic colleague. Route it
-  through `hr` as a feedback conversation; the agent's file and its known failure modes are the
-  record.
-- **Agent memory** in `.claude/agent-memory/` when it is context to carry forward rather than a
-  rule. Follow `agent-memory`: durable meaning, not motion.
 
 ## Update it
 
@@ -77,10 +82,4 @@ For canonical global files under `~/.claude/rules` or `~/.claude/skills`, run
 `~/.claude/scripts/sync-agent-config.sh` after validation so the configured repositories receive
 the mirrors, then commit and push them.
 
-## Preserve action boundaries
-
-Feedback and review never authorize an external action. Detecting, reading, or comparing an
-edited draft is not approval to act on it.
-
-Report a completed improvement in one line naming the artifact and the generalized change. If the
-counterfactual fails, continue without an edit.
+Report a completed improvement in one line naming the artifact and the generalized change.

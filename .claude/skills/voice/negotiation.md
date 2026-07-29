@@ -1,14 +1,12 @@
 # Negotiation: Tactics and Phrasings
 
-Scaffold overlay for any conversation where something concrete is asked for or pushed back on: pricing, scope creep, advisor/partner setup, speaker fees, training discounts, visibility/intros/access. Layers on `personal-voice.md` (warm peer register) and `brand-voice.md` (no buzzwords, named numbers only).
+Scaffold overlay for any conversation where something concrete is asked for or pushed back on: pricing, scope creep, advisor/partner setup, speaker fees, training discounts, visibility/intros/access.
 
 ## North star
 
 Verhandle als Peer, nicht als Bittsteller. Substanz vor Position. Beziehung vor Deal. Senior-Operatoren riechen Diplomatie. Direktheit und Ehrlichkeit schlagen Verkaufsrhetorik immer.
 
 ## Core principles
-
-Distilled from Chris Voss (*Never Split the Difference*) and Fisher/Ury (*Getting to Yes*).
 
 1. **Tactical empathy first.** Honor what they invested (time, words, proposal) before any ask. People negotiate harder when unseen.
 2. **Interests over positions.** Their price is a position; the motivation is the interest. Solve for overlap of motivations, not menus.
@@ -36,7 +34,7 @@ Quote their literal phrasing. Signals deep reading. Builds trust fast.
 ### Tier choice + upgrade door
 *"Für unsere aktuelle Phase passt das Monthly am besten, Frequenz und Aufwand. Lass uns gern damit starten und nach drei Monaten schauen."*
 
-Respects their menu, justifies via fit not cost, leaves upgrade open.
+Respects their menu, justifies via fit not cost, leaves the upgrade open.
 
 ### Reciprocity (both directions, concrete)
 *"Geht natürlich in beide Richtungen. Falls du Themen einbringen willst, eigene Leute auf der Bühne platzieren oder reverse Intros in unser Netzwerk brauchst, sehr gern."*
@@ -71,7 +69,7 @@ Hold price, offer creative scope alternatives. Discounting trains them to ask ag
 ### Concession before claim
 *"Du hast recht, X ist teurer als der Marktdurchschnitt. Der Grund ist Y."*
 
-See `personal-voice.md` § Concession and self-deprecation. Give ground before the sharp claim.
+Give ground before the sharp claim.
 
 ## h&w-specific situations
 
@@ -111,16 +109,3 @@ See `personal-voice.md` § Concession and self-deprecation. Give ground before t
 - [ ] Did you close with a calibrated "How / What" question, not yes/no?
 - [ ] Does the tone read as peer-to-peer or as supplicant?
 - [ ] Have you avoided hedging the content of the ask?
-
-## Quickcard
-
-```
-Substance     -> honor their investment, name what you took away
-Mirror        -> quote their words back literally
-Tier          -> pick proactively, justify via fit not cost
-Upgrade door  -> revisit in N months
-Reciprocity   -> name concretely what you bring back
-Honesty       -> name the secondary motive yourself
-Close         -> How/What question, not yes/no
-Power of no   -> make refusal of parts safe
-```

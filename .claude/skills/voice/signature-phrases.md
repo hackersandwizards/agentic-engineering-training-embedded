@@ -1,12 +1,12 @@
 # Signature Phrases: The User's Real Vocabulary
 
-Verbatim phrases the user uses, sourced from real emails, Slack, sales calls, training, talks, and Fathom transcripts. Load when ghostwriting from a transcript, calibrating an article/blog/talk that should feel verbatim-the-user's, or anchoring a draft needing more voice depth than `personal-voice.md` provides. A draft with 2-3 of these in natural places sounds materially more like the user.
+Verbatim phrases the user uses. Load when ghostwriting from a transcript, calibrating an article/blog/talk that should feel verbatim-the-user's, or anchoring a draft needing more voice depth than `personal-voice.md` provides.
 
 ## Calibration anchors
 
-If you can't tell whether a draft sounds like the user, compare against these. All sourced from real correspondence, verbatim, not paraphrased.
+If you can't tell whether a draft sounds like the user, compare against these.
 
-**Five sentences that are pure user voice** (general voice, from real emails/Slack):
+**Five sentences that are pure user voice:**
 
 1. *"Bekommen wir alles hin."*
 2. *"Profi. Pre-Mortem ist super geil! Danke dir [team member] :)"*
@@ -17,8 +17,6 @@ If you can't tell whether a draft sounds like the user, compare against these. A
 A draft with lines like these in spirit sounds like the user. A draft with zero lines like these sounds like a consultant trained on the user's domain.
 
 ## Real email exemplars
-
-Three email excerpts, verbatim. Notice: zero em-dashes, very short paragraphs (often 1 sentence), `:)` emoticon, `Vllt.` softener, `LG /bene` sign-off, casual opener `Moin`.
 
 **To [client] (German, peer-warm):**
 
@@ -68,8 +66,6 @@ Three email excerpts, verbatim. Notice: zero em-dashes, very short paragraphs (o
 >
 > LG
 > /bene
-
-What to copy from these into LinkedIn / Slack / outreach: short sentences, blank lines between thoughts, one or two epistemic markers per text (not constant), warm-but-direct register, getting to a question fast.
 
 ## Positioning and identity
 

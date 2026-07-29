@@ -1,7 +1,5 @@
 # Brand Voice: hackers&wizards
 
-Sets what h&w sounds like, which words it refuses, and how it talks about results. Owns the brand voice, the canonical banned words, and the Schwartz awareness-stage messaging.
-
 Apply when writing **anything that represents h&w externally**: proposals, posts, slides, website copy, emails, Slack to clients, speaker outreach, talks. Skip for internal commit messages, code comments, raw notes.
 
 ## Brand positioning principles
@@ -32,7 +30,7 @@ The five recurring themes (use to ground longer-form content):
 4. **Team Practices and Change Management:** how team dynamics shift when agents join, and how to make it stick. AI adoption is like Agile twenty years ago, culture, not tools.
 5. **Programming Joy Preservation:** purpose, fulfillment, and craft in agentic software development.
 
-Anchor posts, talks, and proposals to one of these. Consistency across channels and over time is the win.
+Anchor posts, talks, and proposals to one of these.
 
 ## Audience
 
@@ -68,10 +66,6 @@ These are framed as **components of** Agentic Engineering, not competitors to it
 - **"Pragmatic Programming"**: practical, results-oriented development.
 - **"Extreme Programming"**: agile practices adapted for AI-assisted development.
 - **"Vibe Coding"**: the **anti-pattern** Agentic Engineering replaces. Always frame as the problem, never the solution.
-
-## Competitive positioning
-
-h&w sits on the **methodology and enablement layer**, not in competition with AI-coding tools. The real competitor is the client's in-house transformation team trying to build the setup themselves. The full stack frame and application rules live in `brand-vocabulary.md`.
 
 ## The four core client-engagement KPIs
 
@@ -114,13 +108,11 @@ Eugene Schwartz's five awareness stages calibrate **what to say** based on where
 | **4, Product-Aware** | Comparing consultancies and training providers | Differentiate with proof: client names, metrics, testimonials, FAQ that addresses the specific objections of an evaluator. | Generic value-prop copy here loses to competitors who name specific results. |
 | **5, Most Aware** | Decided, needs final motivation | Scarcity ("3 Q4 spots remaining"), clear next step, time-bounded offer. | Re-explaining the value at this stage delays the action. |
 
-**Funnel order:** unaware -> problem-aware -> solution-aware -> product-aware -> most-aware. Website pages should serve all five stages so readers can enter wherever they are and progress.
-
-**On the website specifically:** the homepage opens at stage 1. The methodology page lives at stages 2-3. The Work Together page is stages 4-5.
+**On the website:** every page serves one stage so readers enter where they are. The homepage opens at stage 1, the methodology page at stages 2-3, the Work Together page at stages 4-5.
 
 ## Performance language: the rule
 
-Generic multipliers without a measurement source are corporate filler. Readers stop trusting the writer. When citing performance, name **the metric, the target, and the source**. All three.
+When citing performance, name **the metric, the target, and the source**. All three.
 
 **Banned without a named source:**
 - Bad: "10x improvements / speed / efficiency / productivity"
@@ -132,13 +124,9 @@ Generic multipliers without a measurement source are corporate filler. Readers s
 
 ## Voice exemplars: verbatim only
 
-All "voice anchor" or "real exemplar" lines in any voice rule MUST be exact quotes from confirmed real sources: sent emails, Slack messages, Fathom transcripts, the user's own published posts. Never fabricate them; a fake exemplar poisons every draft that calibrates against it.
-
-If real lines aren't available for a section, leave a gap-note saying real verbatim lines need to be sourced. Don't fill with invention.
+Every "voice anchor" or "real exemplar" line in any voice rule MUST be an exact quote from a confirmed real source. Where none exists, leave a gap-note; a fabricated exemplar poisons every draft that calibrates against it.
 
 ## Banned words
-
-The canonical list. Each entry includes the failure mode so the rule stays enforceable when an edge case shows up.
 
 ### Corporate buzzwords
 

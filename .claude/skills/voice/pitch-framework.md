@@ -1,6 +1,6 @@
 # Pitch Framework: CAPSTONE
 
-Eight-beat scaffold for cold pitches, proposals, talk openers, and sales arcs. Adapted from Daniel Priestley's Key Person of Influence methodology. Skip for in-progress threads where the recipient already has context.
+Eight-beat scaffold for cold pitches, proposals, talk openers, and sales arcs. Skip for in-progress threads where the recipient already has context.
 
 ## C: Clarity, what they get
 
@@ -81,17 +81,3 @@ Leave them with momentum, not a summary.
 - Make them feel the potential.
 
 > *"The magic is real. It's just been buried under bad practices. Let's dig it out together."*
-
-## CAPSTONE quickcard
-
-```
-C: Their win in 10 words
-A: One "holy shit" success story
-P: Their 3am worry
-S: Show the magic happening
-T: Your breaking point story
-O: Their Monday morning smile
-N: One click to start
-E: Energy forward, always
-```
-
