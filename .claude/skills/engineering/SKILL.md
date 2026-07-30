@@ -4,7 +4,7 @@ description: >-
   How to approach building and changing software: research before writing, plan, TDD, the
   work/right/fast progression, documentation hierarchy, fail-fast validation, and what to do when
   stuck. Use before implementing a feature, refactoring, fixing a bug, reviewing a change, or
-  planning non-trivial repository work. Skip for content edits, prose, and CRM data.
+  planning non-trivial repository work. Skip for content edits, prose, and Company OS data.
 ---
 
 # Engineering
@@ -63,8 +63,9 @@ runnable check instead. Use judgment.
   performance checks against baseline.
 - Fix broken links in the chain before moving on.
 - **Cleanup, review, and quality passes scan the whole working tree** (`git status` + `git diff`),
-  not only files touched in the current conversation. In-flight changes from earlier sessions sit
-  alongside today's work.
+  not only files touched in the current conversation. In-flight changes from another session sit
+  alongside today's work: read them for context and leave them to their author. An unstaged change
+  you revert is gone from git for good.
 
 ## Fail fast and validate
 

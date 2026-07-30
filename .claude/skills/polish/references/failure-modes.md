@@ -32,6 +32,18 @@ Found by running the thing, not reading it. A green gate is not evidence that a 
 test files, and look for a production branch keyed on a fixture name, a test mirroring the
 implementation method-for-method, or one asserting only that a mock was called.
 
+## A gate that ran but was never read
+
+Running the check is not the same as honouring it.
+
+- Piping it (`check | tail -4 && commit`) makes the pipeline exit status the *last* command's,
+  so an `&&` chain proceeds over a red gate. Read the exit code, or run the gate on its own line.
+- A commit whose paths the pre-commit hook does not route runs no gate at all. Check what the
+  hook actually matches before trusting it to catch you.
+- When a gate is red, establish whose change made it red before acting. In a shared working tree
+  the failure is often another session's in-flight file, and neither reverting it nor bypassing
+  the gate is yours to do.
+
 ## Fabricated dependencies
 
 Confirm every new helper, import, or package exists and is the canonical one here. A plausible name
