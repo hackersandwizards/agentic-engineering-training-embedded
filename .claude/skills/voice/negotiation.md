@@ -69,7 +69,17 @@ Hold price, offer creative scope alternatives. Discounting trains them to ask ag
 ### Concession before claim
 *"Du hast recht, X ist teurer als der Marktdurchschnitt. Der Grund ist Y."*
 
-Give ground before the sharp claim.
+Give ground before the sharp claim. This is his measured default, not a tactic: 45.3% of his replies
+to an objection open with an agreement token, against a 9.5% baseline. `Wobei` is the
+concede-then-contradict pivot. The five concession moves and the one situation where he refuses flat
+are in `postures.md` posture 2.
+
+### Anchoring and social proof
+- High anchor, then alternative: name the full-cost option first, then the offer.
+- *"Alles inklusive"* removes hidden-cost anxiety. Concrete comparison kills abstraction: show the
+  alternative cost, then the deal.
+- Fait accompli, present tense: *"[Firmen] sind bereits dabei"*, a decided fact, never conditional.
+  "With or without you" energy is subtle confidence, never arrogance.
 
 ## h&w-specific situations
 

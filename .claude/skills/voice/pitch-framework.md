@@ -2,6 +2,10 @@
 
 Eight-beat scaffold for cold pitches, proposals, talk openers, and sales arcs. Skip for in-progress threads where the recipient already has context.
 
+**Evidence status: none.** Nearly every cold pitch in the sampled corpus was agent-drafted or
+otherwise suspect, so this is a designed scaffold, not observed behaviour. Take length, directness,
+and phrasing from `postures.md` postures 3 and 7; take only the beat order from here.
+
 ## C: Clarity, what they get
 
 Open with the outcome they receive, not who you are.

@@ -29,6 +29,31 @@ For unaware -> problem-aware readers, open with their language, not h&w's:
 
 These are the words a CTO uses internally before they have language for the solution. Lead with them.
 
+### Written positioning vocabulary
+
+Attested in LinkedIn posts and the handbook, not in his speech or messages. Use these to recognise
+and reinforce positioning in authored content; a drafted mail or Slack message should not reach for
+them. Counts show how much weight each one carries.
+
+**Concept terms:**
+
+- *"Non-negotiables"*: hard constraints an agent must never violate. Widest reach of the set, 4 posts
+  and 14 handbook/knowledge pages.
+- *"Du bist der Navigator, er ist der Driver."* Pair-programming analogy for agentic work, 7
+  handbook/knowledge pages.
+- *"Eventual Consistency for AI"*: reframe for architects worried about non-determinism, 1 post and 4
+  handbook pages.
+- *"Disposable software"*: AI makes throwaway code economically viable, 1 post.
+- *"Agentic Coaching is the new Agile Coaching"*: the sales analogy clients grasp instantly, because
+  they have all lived through an agile transformation, 1 post.
+
+**Diagnostic framings of the client's situation** (pair with the competitive frame below: the
+in-house team trying to do this alone *is* the lone hero):
+
+- *"Experimentation Trap"*: individuals experiment, the org makes no progress, 2 handbook pages.
+- *"Süppchen kochen"*: everyone cooking their own soup, freestyle chaos, 1 handbook page.
+- *"Stop being the lone hero who saves every sprint."* 1 handbook page.
+
 ### Carve-outs from the banned-words list
 
 Some words look banned but have approved uses in specific contexts:
@@ -75,6 +100,8 @@ Approved verbatim patterns, each citing metric, target, and source:
 
 Bad: *"In today's rapidly evolving technological landscape, organizations must carefully consider the implementation of AI-assisted development tools to optimize their software delivery pipelines while maintaining code quality standards."*
 
-Good: *"Moin. Your team tried AI coding tools and got burned. Mine too. But here's what nobody tells you: AI isn't the problem, we're just using it wrong. Let me show you what actually works."*
+Good (constructed to show the diff, not a verbatim exemplar; real ones are in
+`signature-phrases.md`): *"Moin. Your team tried AI coding tools and got burned. Mine too. AI isn't
+the problem, we're just using it wrong."*
 
 The diff: lived language, specific images, real verbs, peer register.
