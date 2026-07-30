@@ -75,7 +75,7 @@ Give ground before the sharp claim.
 
 **Speaker outreach with fee question.** Standard frame: honor is ours + travel/hotel covered + fees not default but open to discuss + peer-group list + CTO Summit/Dinner invite + podcast offer. Close with *"Was brauchst du von uns, um eine Entscheidung zu treffen?"* This sentence shifts you from selling to co-deciding.
 
-**Training-price pushback.** Hold the per-participant model with a cohort cap. Smaller cohorts scale by participant; once the cap is reached, group size changes delivery planning rather than price. If they push below the model, offer **scope reductions** before discount: shorter format, single track, fewer follow-ups.
+**Training-price pushback.** Hold the per-participant model with a cohort cap. Smaller cohorts scale by participant; once the cap is reached, group size changes delivery planning rather than price. If they push below the model, first offer **scope reductions**: shorter format, single track, fewer follow-ups. If conceding, show the cost basis, what remains for the other side, and the capacity condition; for revenue share, put verified demand evidence before the mechanism.
 
 **Advisor / board setup.** Decouple engagement tier from advisor framing: visibility and network access are STANDARD parts of an advisor relationship, not premium add-ons. Pick a tier proactively (don't punt to next paid meeting). Pair the visibility ask with the cash commitment to earn moral standing. Frame visibility as *"in unser Board of Advisors aufnehmen, zusammen mit X, Y"* (recognition + good company), not as *"öffentlich nennen"* (extraction). Name the secondary marketing motive openly.
 

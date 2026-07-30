@@ -25,24 +25,21 @@ Note the current branch for the push in phase 6.
 
 List source files with `git ls-files`, filtered to code extensions (sh, py, ts, js, tsx, jsx, go, rs, rb, java, kt, swift, c, h, cpp, sql, css, html, yaml, yml, toml). Skip vendored and generated paths (node_modules, dist, build, vendor, lockfiles).
 
-Fan out subagents, one per directory batch, at most 4 in parallel. Each agent edits its batch by these rules:
-
-- Delete comments that restate what the code does, name where code came from, or explain why a change is correct. The code already says it.
-- Keep comments that state a non-obvious why or a constraint the code can't express. Tighten them to one short sentence.
-- Keep public API docstrings, license headers, and directive comments (shellcheck, eslint, noqa, pragma, shebang).
+Fan out subagents, one per directory batch, at most 4 in parallel. Tell each agent to read the
+Comments section of `references/failure-modes.md` and edit its batch by it.
 
 Read each agent's report and spot-check one file per batch.
 
 ## 3. Quality, performance, security review
 
-Fan out subagents, one per module or top-level directory, at most 4 in parallel. Each agent reviews against this checklist and reports findings with file:line.
+Fan out subagents, one per module or top-level directory, at most 4 in parallel. Each agent reviews its
+module for minimalism, design, performance and security, and reads `references/failure-modes.md` in
+full for the defects a competent review misses. Pass that path in every agent's prompt.
 
-- Minimalism: dead code, unused files, abstractions with one implementation, config for values that never change, code that reinvents the stdlib or an installed dependency.
-- Design red flags: shallow modules, pass-through methods, repetition, vague names, nonobvious code.
-- Performance: work inside loops that belongs outside, repeated I/O that could be batched, obvious quadratic passes over data that can grow.
-- Security: missing input validation at trust boundaries, secrets in code, injection via string-built commands or queries, world-readable sensitive files.
+Verify each finding yourself before fixing it. Apply the fixes. Skip findings that would add
+speculative structure.
 
-Verify each finding yourself before fixing it. Apply the fixes. Skip findings that would add speculative structure.
+New failure modes learned during a run belong in `references/failure-modes.md`, not in this file.
 
 ## 4. Gates
 
