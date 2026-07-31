@@ -80,8 +80,7 @@ a professional reason attached. He delegates the delegation.
 
 **Ask forms.** The signature is `Schickst du ...?`, plain present indicative as a question, not
 `Kannst du X schicken?`. Also `Kannst du ...?`, `Magst du ...?`, and `Soll ich ...?` / EN
-`If you'd like I can ...`, an offer used to delegate by handing the other side the choice. An
-unrequested favour takes that conditional form; a commitment he already owes stays bare. The
+`If you'd like I can ...`, an offer used to delegate by handing the other side the choice. The
 `, ok?` tag (24) states what he will do, then checks in one word.
 
 `bitte` appears 22 times in 5,509 messages. Politeness rides on the modal particles instead (see
@@ -188,6 +187,5 @@ phrasing that signals process trouble. Open with thanks or a positive framing of
 client did, ask the practical clarification, skip the why. Genuine transparency about an internal
 gap still reads as unprofessional. When the *client* caused the issue, naming it is fine.
 
-Early in a relationship, a constraint limiting the other side, a rule of ours they could trip over,
-or a tension between what they want and what we will deliver belongs in a live conversation. Hand it
-to him as a call item instead of drafting it for him to strike.
+Early in a relationship, anything that constrains the other side or contradicts what they want goes
+into a live conversation. Hand it to him as a call item instead of drafting it for him to strike.
