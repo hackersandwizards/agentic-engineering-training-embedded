@@ -67,11 +67,10 @@ Three registers. Conflating them is the largest available error.
 
 **Trainer or partner.** `Moin <first name>,` then: frame the work as THEIR opportunity, not our
 need. A personalisation hook, taken from what passed between the two of them directly, never from an
-internal record about the person: an assessment out of the CRM read back to its subject tells them
-we keep notes on them. 2-3 sentences of plain engagement facts, with no adjectives about the
-client. The shape of the work in one line. Then consent before calendar: `Hättest du Lust?` comes
-before `Wie sieht es zeitlich bei dir aus?`, with named date options. The ask lands last, after any
-caveat or constraint, so the message ends on it. No deadline, no urgency, no reply-scaffolding.
+internal record about the person. 2-3 sentences of plain engagement facts, with no adjectives about
+the client. The shape of the work in one line. Then consent before calendar: `Hättest du Lust?`
+comes before `Wie sieht es zeitlich bei dir aus?`, with named date options. The ask lands last,
+after any caveat. No deadline, no urgency, no reply-scaffolding.
 
 **Ops or assistant.** Numbered and imperative. Grants judgement up front, names the stop condition
 explicitly, explains why an item matters, points at the tool rather than supplying the answer, and
@@ -187,13 +186,9 @@ When a client-facing message stems from an internal h&w gap (a session booked ou
 flow, drifted scope, a missed handoff), never write *"wir haben intern festgestellt"* or any
 phrasing that signals process trouble. Open with thanks or a positive framing of whatever the
 client did, ask the practical clarification, skip the why. Genuine transparency about an internal
-gap still reads as unprofessional. When the *client* caused the issue, naming it is fine.
+gap still reads as unprofessional. When the *client* caused the issue, naming it is fine. This
+holds for feedback asks: ask open and stop, rather than naming the shortfall you suspect. Naming it
+tells the client what to be unhappy about.
 
 Early in a relationship, anything that constrains the other side or contradicts what they want goes
 into a live conversation. Hand it to him as a call item instead of drafting it for him to strike.
-
-When asking a client for feedback, ask open and stop. Do not name the shortfall you suspect, do not
-restate what they already received, and do not quote their own earlier conditions back at them.
-Each of those answers the question for the client: it tells them what to be unhappy about, and it
-turns an open question into a log of what we know about them. If they raise the gap, handle it
-then.
