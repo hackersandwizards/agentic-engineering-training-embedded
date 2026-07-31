@@ -79,9 +79,10 @@ closes by pre-absolving confusion.
 a professional reason attached. He delegates the delegation.
 
 **Ask forms.** The signature is `Schickst du ...?`, plain present indicative as a question, not
-`Kannst du X schicken?`. Also `Kannst du ...?`, `Magst du ...?`, and `Soll ich ...?`, an offer used
-to delegate by handing the other side the choice. The `, ok?` tag (24) states what he will do, then
-checks in one word.
+`Kannst du X schicken?`. Also `Kannst du ...?`, `Magst du ...?`, and `Soll ich ...?` / EN
+`If you'd like I can ...`, an offer used to delegate by handing the other side the choice. An
+unrequested favour takes that conditional form; a commitment he already owes stays bare. The
+`, ok?` tag (24) states what he will do, then checks in one word.
 
 `bitte` appears 22 times in 5,509 messages. Politeness rides on the modal particles instead (see
 `personal-voice.md`). Never add `bitte` to make an ask polite.
