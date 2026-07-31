@@ -151,6 +151,10 @@ Use them when they do work the local language can't. Cut them when an everyday w
 
 The test is reader comprehension, not linguistic purity.
 
+**The brief is not the draft.** A briefing carries internal shorthand ("bieten wir ihr ein Sync an").
+Quoting that shorthand back into the message smuggles jargon past this rule. Translate it: the mail
+says "sprechen".
+
 ## When the rule fights the meaning
 
 These rules serve clarity. Break any of them before producing something stilted, false, or dead. A
