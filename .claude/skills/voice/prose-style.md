@@ -143,7 +143,9 @@ Always use proper German Umlaute and Sonderzeichen (ä, ö, ü, ß, Ä, Ö, Ü),
 
 ## Foreign words, jargon, Anglizismen
 
-Use them when they do work the local language can't. Cut them when an everyday word means the same.
+Use them when they do work the local language can't. Cut them when an everyday word means the same,
+including when the shorthand came from the briefing: "bieten wir ihr ein Sync an" -> the mail says
+"sprechen".
 
 - DE: "agentic engineering" stays, field's term of art. "implementieren" when "umsetzen" works ->
   "umsetzen". "Performance" when "Geschwindigkeit" or "Latenz" works -> use the German.
