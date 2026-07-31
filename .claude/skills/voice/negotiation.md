@@ -64,7 +64,7 @@ Set the reference frame so your number reads as fair, not arbitrary.
 ### Pricing pushback (hold the line)
 *"Den Preis können wir nicht weiter runter. Was wir aber machen können: Scope reduzieren auf Y."*
 
-Hold price, offer creative scope alternatives. Discounting trains them to ask again.
+Hold price, offer creative scope alternatives. Discounting trains them to ask again. When you do concede, bound it: what it covers and from when (*"für die nächsten Beauftragungen"*), or they apply it backwards to work already delivered.
 
 ### Concession before claim
 *"Du hast recht, X ist teurer als der Marktdurchschnitt. Der Grund ist Y."*
@@ -116,6 +116,6 @@ are in `postures.md` posture 2.
 - [ ] Did you separate bundled asks so they can decline parts?
 - [ ] Did you include reciprocity (what you bring back, specific)?
 - [ ] If there's a secondary motive, did you name it openly?
-- [ ] Did you close with a calibrated "How / What" question, not yes/no?
-- [ ] Does the tone read as peer-to-peer or as supplicant?
 - [ ] Have you avoided hedging the content of the ask?
+
+Openings, closings and how direct to be are not this file's call. `postures.md` owns them and wins.
