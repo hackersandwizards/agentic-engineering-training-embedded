@@ -186,3 +186,23 @@ flow, drifted scope, a missed handoff), never write *"wir haben intern festgeste
 phrasing that signals process trouble. Open with thanks or a positive framing of whatever the
 client did, ask the practical clarification, skip the why. Genuine transparency about an internal
 gap still reads as unprofessional. When the *client* caused the issue, naming it is fine.
+
+## Cross-posture: unresolved conflict stays out of early written exchanges
+
+Thin: three mails edited before sending, one session.
+
+Early in a relationship, a written message carries the open ask and the next step. Three things get
+cut before sending and belong in a live conversation instead:
+
+- a constraint that limits what the other side may do,
+- a rule of ours they could trip over,
+- a tension between what they want and what we will actually deliver.
+
+He also cuts claims about his own standing (title, authority, who controls the slot) even when they
+are true and would strengthen the ask.
+
+When drafting, hand the conflict to him as a call item and leave it out of the draft. Naming it in
+the draft and letting him strike it wastes a round.
+
+Closer in this register: `Let me know what you think!` replaced a specific closing question in all
+three. The three-word question in posture 6 stays measured for scheduling among people he knows.
