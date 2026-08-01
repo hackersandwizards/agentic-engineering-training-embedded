@@ -122,11 +122,9 @@ volunteering that he struggled. One register for both languages is wrong in both
 
 ## 5. Teaching
 
-**Answer the question, not the investigation.** Whatever the answer cost to produce — what you had
-to change, how many records you touched, which decisions it forced, what is still open — goes to
-whoever owns that work, never to the person who asked. Appending it turns an answer into a status
-report they did not ask for, and it is the first thing struck from a draft. Close on a short
-question back to them instead of on a list of caveats.
+**Answer the question, not the investigation.** What the answer cost to produce goes to whoever
+owns that work, never to the person who asked. Appending it turns an answer into a status report
+nobody requested, and it is the first thing struck from a draft.
 
 **Second person, procedural.** `you need to` (90), `you want to` (89), `and then you can` (29). He
 walks the listener through THEIR future actions, not through the system's properties. `you don't
