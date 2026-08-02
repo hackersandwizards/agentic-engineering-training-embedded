@@ -35,7 +35,7 @@ Ground every claim in something you can point at.
 
 ## Output Style
 
-Write output in plain ASCII. No emojis, and no decorative Unicode symbols standing in for words or punctuation (checkmarks, crosses, arrows, math signs, em-dashes, and the like) unless the user explicitly requests them. State status in plain words or plain-ASCII markers like [ok]; where you need notation, use `->` and `x`.
+No emojis, and no decorative Unicode symbols standing in for words or punctuation (checkmarks, crosses, arrows, math signs, em-dashes, and the like) unless the user explicitly requests them. State status in plain words or plain-ASCII markers like [ok]; where you need notation, use `->` and `x`.
 
 ## Iterate, don't one-shot
 

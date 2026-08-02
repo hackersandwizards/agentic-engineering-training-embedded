@@ -82,15 +82,17 @@ no test. YAGNI applies to tests too.
 
 ## Comments and documentation
 
-Match the file's existing comment density and idiom. Keep directive comments (shellcheck, eslint,
-noqa, pragma, shebang).
+Deletion is the default. Write a comment only for a fact the code cannot state: an ordering
+constraint, an external limit or quirk, a security rationale, the bug a guard exists for, or a
+cross-file contract nothing else records. One sentence, in the file's prevailing style. Keep
+directive comments (shellcheck, eslint, noqa, pragma, shebang).
 
 Documentation hierarchy, in order of preference:
 
 1. Working code: self-documenting through clear naming.
 2. Tests: executable documentation; the tests are the spec.
 3. README / docs: setup, architecture, API specs.
-4. Comments: last resort, at the density of the surrounding code.
+4. Comments: last resort.
 
 ## Leave it better
 

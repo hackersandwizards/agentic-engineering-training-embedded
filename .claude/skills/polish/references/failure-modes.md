@@ -10,8 +10,12 @@ see, work in progress). If the innocent reading holds, drop the finding.
 
 ## Comments
 
-- Delete comments that restate the code, name where it came from, or argue that a change is correct.
-- Keep a non-obvious why or a constraint the code cannot express. One sentence.
+- Deletion is the default. Delete a comment that restates the code, names where it came from, or
+  argues that a change is correct. Delete it rather than shortening it.
+- Keep a non-obvious why or a constraint the code cannot express. One sentence, in the file's
+  prevailing style, never two styles for the same kind of declaration.
+- Not only `//`: sweep `#` (sh, py, yaml, toml), `<!-- -->` (html), `/* */` (css), and the banner
+  blocks that label the section below them.
 - Keep public API docstrings, license headers, and directive comments (shellcheck, eslint, noqa,
   pragma, shebang).
 

@@ -58,13 +58,13 @@ Repeat both until each returns clean or only findings you have verified as false
 
 ## 5. Verify
 
-Run the repo's own checks if present, in this order of discovery: justfile targets, package.json scripts (test, lint, build), Makefile, pytest, cargo test, go test.
+Run the repo's own checks if present, in this order of discovery: a `check`-named script or justfile target, then package.json scripts (test, lint, build), Makefile, pytest, cargo test, go test. Prefer the one-shot over the watcher: `test` is often `vitest`, which never exits.
 
 A failing check blocks the commit. Fix the failure or, if it predates the sweep, report it and stop.
 
 ## 6. Commit and push
 
-Name the files your own run touched as the `git commit` pathspec; `company-os.md` owns that rule.
+Name the files your own run touched as the `git commit` pathspec; `git.md` owns that rule.
 
 One commit. Message: one line summarizing the sweep, then a short body listing the areas touched.
 
