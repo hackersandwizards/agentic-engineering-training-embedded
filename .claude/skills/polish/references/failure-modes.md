@@ -48,8 +48,8 @@ corpus says what the content actually contains.
 
 ## One hole, dug deeper
 
-Finding a defect makes the file it is in feel like the whole job. Take the inventory first — every
-changed area, code and instructions alike — then work the list. A seventh pass over one file while
+Finding a defect makes the file it is in feel like the whole job. Take the inventory first: every
+changed area, code and instructions alike. Then work the list. A seventh pass over one file while
 the other areas have had none is not thoroughness.
 
 ## A gate that ran but was never read
