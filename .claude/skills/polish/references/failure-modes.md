@@ -36,6 +36,22 @@ Found by running the thing, not reading it. A green gate is not evidence that a 
 test files, and look for a production branch keyed on a fixture name, a test mirroring the
 implementation method-for-method, or one asserting only that a mock was called.
 
+A test earns trust by failing. Delete the guard it names and watch it go red; a hand-written
+expected string passes whatever the code does. Beware the runner: Bun caps regex backtracking where
+V8 does not, so a production hang can measure as merely slow under vitest.
+
+## A filter judged by its unit test
+
+Anything that drops, rewrites, or rejects input has to be run over the real corpus before it lands,
+and the output diffed against the unfiltered render. The unit test says what you thought of; the
+corpus says what the content actually contains.
+
+## One hole, dug deeper
+
+Finding a defect makes the file it is in feel like the whole job. Take the inventory first — every
+changed area, code and instructions alike — then work the list. A seventh pass over one file while
+the other areas have had none is not thoroughness.
+
 ## A gate that ran but was never read
 
 Running the check is not the same as honouring it.
