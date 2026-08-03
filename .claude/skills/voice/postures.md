@@ -178,7 +178,7 @@ Thin: n=18. Treat the opening and closing conventions here as provisional.
 - Unprompted explicit reassurance: `Alle Lampen sind grün.`
 - Numbers stated bare and unhedged.
 
-## Unverified: pitch and positioning
+## Pitch and positioning
 
 Nearly every cold pitch in the sampled window was agent-drafted or otherwise suspect, so there is
 no measured posture for pitching. `pitch-framework.md` is a scaffold, not observed behaviour. When
