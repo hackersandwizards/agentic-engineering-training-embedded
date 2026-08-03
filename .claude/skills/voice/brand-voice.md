@@ -110,7 +110,7 @@ Eugene Schwartz's five awareness stages calibrate **what to say** based on where
 
 **On the website:** every page serves one stage so readers enter where they are. The homepage opens at stage 1, the methodology page at stages 2-3, the Work Together page at stages 4-5.
 
-## Performance language: the rule
+## Numbers and status claims: the rule
 
 When citing performance, name **the metric, the target, and the source**. All three.
 
@@ -121,6 +121,12 @@ When citing performance, name **the metric, the target, and the source**. All th
 - Bad: "50% faster" without naming what was measured
 - Bad: "I've helped many companies"
 - Bad: Any percentage claim without metric + target + origin
+
+**Our own facts are not exempt.** Revenue, growth, headcount, engineers trained, client counts,
+community size, and partner or certification status get read out of the system of record before
+they ship. Recalling our own number is how a stale one reaches a reader who can check it. State
+booked and forecast separately, and claim a partner or certification status only at the tier
+actually granted, never at the one applied for.
 
 ## Voice exemplars: verbatim only
 

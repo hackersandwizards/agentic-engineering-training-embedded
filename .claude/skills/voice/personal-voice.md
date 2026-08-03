@@ -273,5 +273,6 @@ medium.
 
 ## Before sending
 
-On every customer-facing draft: verify recipient names against their email addresses, and keep one
-language throughout (no DE/EN mixing inside a paragraph).
+On every customer-facing draft: verify recipient names against their email addresses, check that
+everyone the greeting names is on the recipient list, and keep one language throughout (no DE/EN
+mixing inside a paragraph).
