@@ -122,11 +122,8 @@ When citing performance, name **the metric, the target, and the source**. All th
 - Bad: "I've helped many companies"
 - Bad: Any percentage claim without metric + target + origin
 
-**Our own facts are not exempt.** Revenue, growth, headcount, engineers trained, client counts,
-community size, and partner or certification status get read out of the system of record before
-they ship. Recalling our own number is how a stale one reaches a reader who can check it. State
-booked and forecast separately, and claim a partner or certification status only at the tier
-actually granted, never at the one applied for.
+Two more, with a source or without: booked and forecast revenue stay separate numbers, and a
+partner or certification status is claimed at the tier granted, never at the tier applied for.
 
 ## Voice exemplars: verbatim only
 

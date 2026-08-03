@@ -184,10 +184,10 @@ Nearly every cold pitch in the sampled window was agent-drafted or otherwise sus
 no measured posture for pitching. `pitch-framework.md` is a scaffold, not observed behaviour. When
 drafting one, take length and directness from postures 3 and 7 rather than from the framework.
 
-**The close is stated, not inferred.** First contact ends with an interest question and nothing
-else: no named slots, no booking link, no request to hold time. Named slots (posture 6) belong in
-the reply once the other side has engaged. An unavailability window goes in as a plain fact
-carrying a de-escalation (`no rush at all`), never as an apology and never as a request.
+- First contact closes on an interest question and nothing else: no named slots, no booking link,
+  no request to hold time. Named slots (posture 6) belong in the reply, once they have engaged.
+- An unavailability window is a plain fact carrying a de-escalation (`no rush at all`), never an
+  apology and never a request.
 
 ## Cross-posture: what stays out of a written message
 
