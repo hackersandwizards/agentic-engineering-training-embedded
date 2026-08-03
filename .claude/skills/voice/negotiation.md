@@ -108,6 +108,7 @@ are in `postures.md` posture 2.
 - Bad: Hinge the offer on your own argument (*deswegen*, *therefore*): help reads as a claim on access. Connect to their benefit instead (*"Genau da würde ich dir gern helfen"*).
 - Bad: Hedge the **content** of the ask (*"vielleicht wäre es möglich, dass"*): Konjunktiv belongs on **delivery** (*"wäre es okay"*), never on **substance**.
 - Bad: Counter-anchor below their floor: if their lowest tier works, take it as-is. Grinding damages the relationship more than it saves.
+- Bad: Retreat from their ask straight to your own floor: put a rung in between. Two attempts before the fallback read as effort, one reads as managing them toward a date or a number.
 
 ## Pre-send checklist
 
