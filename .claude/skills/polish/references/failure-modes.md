@@ -19,6 +19,19 @@ see, work in progress). If the innocent reading holds, drop the finding.
 - Keep public API docstrings, license headers, and directive comments (shellcheck, eslint, noqa,
   pragma, shebang).
 
+## Instruction prose that justifies instead of instructing
+
+A skill or rule section grows by explaining itself. Measure it against what an agent does with it.
+
+- Consequence narration: sentences on what goes wrong, where naming the obligation would do. Keep
+  one clause of why only where it stops an agent skipping the step.
+- The bug that prompted the rule, restated as part of the rule ("not under a hardcoded path").
+  State the instruction; drop the history.
+- One observation written as a law ("on every response"). Scope it to what was seen, or verify it.
+
+Cutting here is a check deletion when the sentence carried the only "stop and ask" on a path.
+Removing a rule you still want is not minimal.
+
 ## Silently inert code
 
 Reads as correct, does nothing, passes every gate: nothing is wrong with its syntax or its types, it

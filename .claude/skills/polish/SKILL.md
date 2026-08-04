@@ -11,6 +11,10 @@ description: >-
 
 Run all six phases in order. Do not skip a phase. Do not stop between phases unless a phase says so.
 
+An argument narrows what each phase covers, never which phases run. Scoped to one area, phase 2
+still sweeps the code changed alongside it; report what the scope excluded rather than dropping
+the phase.
+
 Do not use the Workflow tool. Fan out with direct subagents via the Agent tool only.
 
 ## 1. Preflight
