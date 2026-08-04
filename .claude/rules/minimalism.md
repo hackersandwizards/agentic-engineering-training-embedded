@@ -24,7 +24,7 @@ When two rungs work, take the higher one and stop.
   config for a value that never changes.
 - No boilerplate or scaffolding for later. Later can scaffold for itself.
 - Changing something that exists: removal first, then replacement, then addition. Removal that
-  drops a rule is not minimal, so replace it instead. Boring over clever. Clever is what someone
+  drops a rule you still want is not minimal, so replace it instead. Boring over clever. Clever is what someone
   decodes at 3am.
 - Fewest files possible. The shortest working diff wins.
 - One owner per fact or rule. State it once, in the file or section that owns it, and point there;
