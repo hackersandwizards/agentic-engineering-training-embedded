@@ -71,8 +71,8 @@ draft is not approval to act on it.
 2. Search its instructions, related rules, and the harness system prompt for overlap or
    contradiction. While there, remove the no-ops, kill duplication, and take out anything
    irrelevant; leave the file leaner than you found it.
-3. Prefer deletion, then replacement, then addition. Add only a new reusable invariant; never add
-   the concrete customer, artifact, wording, answer, or outcome.
+3. Add only a new reusable invariant; never add the concrete customer, artifact, wording, answer,
+   or outcome.
 4. Keep one owner per behavior. Prefer a test, validator, or script over more prose when the
    requirement is deterministic.
 5. Validate the artifact and the affected workflow with the repository's checks. Forward-test only
