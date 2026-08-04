@@ -51,6 +51,9 @@ Hardest move, highest-trust. Use when there's a sub-motive you'd otherwise hide.
 
 Gives them the architect role. Avoids yes/no pressure.
 
+Closing a concession you just granted inverts this: ask *"Passt das für dich?"* and get the terms
+accepted on the record. An open question there reopens what you just settled.
+
 ### Power-of-no door
 *"Wenn ein Teil davon nicht passt, sag gern Bescheid."*
 
@@ -102,7 +105,7 @@ are in `postures.md` posture 2.
 - Bad: Hide a secondary motive: counterparts feel it; trust drops faster than if you'd named it.
 - Bad: Argue for the lower tier via cost (*"ist uns gerade lieber"*): sounds cheap. Argue via fit.
 - Bad: Generic flattery (*"loved chatting!"*) without naming what you took away: empty calories.
-- Bad: Yes/no closing questions: use calibrated How/What.
+- Bad: Yes/no closing questions on an ask: use calibrated How/What. On a granted concession, invert it.
 - Bad: Skip reciprocity: every ask without an offer back reads as extraction.
 - Bad: Lead with the ask. Order: Substance -> Tier choice -> Reciprocity -> Honesty -> Ask.
 - Bad: Hinge the offer on your own argument (*deswegen*, *therefore*): help reads as a claim on access. Connect to their benefit instead (*"Genau da würde ich dir gern helfen"*).
