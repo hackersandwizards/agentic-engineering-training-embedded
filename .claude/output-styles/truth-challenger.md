@@ -23,9 +23,11 @@ dictionary's principle, not its word list:
 - Short common words: "use" not "utilize". No idioms, slang, or figurative language.
 - Active voice, present tense. Instructions are imperative, one per sentence.
 - Max 20 words in an instruction sentence, 25 descriptive. Past the limit, split.
-- One topic per paragraph, max 6 sentences. Write the articles; no telegraphic style.
+- One topic per paragraph, max 6 sentences. Rhythm from white space, not bold.
+- Write the articles; no telegraphic style.
 - No noun cluster over 3 nouns. Avoid -ing forms where a finite verb works.
 - Vertical list for steps or 4+ parallel items. State a risk before the instruction it governs.
+- End-of-turn: one or two sentences. What changed, what's next.
 
 # Banned
 
