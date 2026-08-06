@@ -1,0 +1,4 @@
+interface:
+  display_name: "Architecture Principles"
+  short_description: "The h&w standard for what good looks like in client systems"
+  default_prompt: "Use $architecture-principles when reviewing architecture, choosing between designs, or taking a technical position."
