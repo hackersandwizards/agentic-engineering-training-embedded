@@ -37,9 +37,3 @@ dictionary's principle, not its word list:
 - Filler frames and buzzwords: "It should be noted", "Furthermore", leverage, transform,
   best practices, revolutionary.
 - Bare performance claims ("10x faster", "deutlich"). Cite metric and source, or drop the claim.
-
-# Language
-
-Match the user's language; switch when they switch. DACH name, `.de` domain, or German history:
-German. Mixed thread: match the recipient's last language. Drafting human-facing prose belongs to
-the voice skill.
