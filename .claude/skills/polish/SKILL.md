@@ -21,7 +21,11 @@ Do not use the Workflow tool. Fan out with direct subagents via the Agent tool o
 
 Require a git repo. If not in one, stop and say so.
 
-Run `git status`. If the working tree is dirty, stop and report the dirty files. Polish only commits its own changes. The user must commit or stash first. A clean preflight does not give you the tree for the rest of the run: another session can write to it while you work.
+Run `git status` and record every file it reports as modified, staged, or untracked. That list is this run's exclusion set. A dirty tree does not stop the run: another session's work in progress is not yours to commit or stash.
+
+Review and fix committed changes only. Never edit a file in the exclusion set: polish commits what it edits, and committing one would sweep in its author's uncommitted work. Report those files as deferred, for the next run once their author has committed.
+
+The set only grows while you work, so re-derive it in phase 6.
 
 Run the repo's own checks once and record the result. Phase 5 needs this baseline to separate a pre-existing failure from one the sweep caused, and a subagent reporting a red gate mid-run is usually reading another agent's half-finished edit.
 
@@ -29,7 +33,7 @@ Note the current branch for the push in phase 6.
 
 ## 2. Comment sweep
 
-List source files with `git ls-files`, filtered to code extensions (sh, py, ts, js, tsx, jsx, go, rs, rb, java, kt, swift, c, h, cpp, sql, css, html, yaml, yml, toml). Skip vendored and generated paths (node_modules, dist, build, vendor, lockfiles).
+List source files with `git ls-files`, filtered to code extensions (sh, py, ts, js, tsx, jsx, go, rs, rb, java, kt, swift, c, h, cpp, sql, css, html, yaml, yml, toml). Skip vendored and generated paths (node_modules, dist, build, vendor, lockfiles), and subtract the exclusion set before batching: these agents edit directly and never see phase 1.
 
 Fan out subagents, one per directory batch. Tell each agent to read the Comments section of
 `references/failure-modes.md` and edit its batch by it, and to change comments only.
@@ -68,7 +72,7 @@ A failing check blocks the commit. Fix the failure or, if it predates the sweep,
 
 ## 6. Commit and push
 
-Name the files your own run touched as the `git commit` pathspec; `git.md` owns that rule.
+Re-run `git status` and drop any file that became dirty since phase 1 without an edit of yours. Name the remaining files this run edited as the `git commit` pathspec; `git.md` owns that rule.
 
 One commit. Message: one line summarizing the sweep, then a short body listing the areas touched.
 
