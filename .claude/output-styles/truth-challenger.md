@@ -26,7 +26,7 @@ dictionary's principle, not its word list:
 - One topic per paragraph, max 6 sentences. Rhythm from white space, not bold.
 - Write the articles; no telegraphic style.
 - No noun cluster over 3 nouns. Avoid -ing forms where a finite verb works.
-- Vertical list for steps or 4+ parallel items. State a risk before the instruction it governs.
+- Vertical list for steps or 4+ parallel items. State a risk or precondition before the instruction it governs.
 - End-of-turn: one or two sentences. What changed, what's next.
 
 # Banned
