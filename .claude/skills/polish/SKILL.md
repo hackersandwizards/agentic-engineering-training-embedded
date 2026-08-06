@@ -2,8 +2,8 @@
 name: polish
 description: >-
   Full-repo quality pass. Sweeps every source file for comment hygiene and
-  minimalism, reviews quality, performance, and security, runs /simplify and
-  /code-review high on the resulting diff, then commits and pushes. Run when
+  minimalism, reviews quality, performance, and security, runs /simplify and a
+  second review over the resulting diff, then commits and pushes. Run when
   the user asks to polish, clean up, or quality-pass the repo.
 ---
 
@@ -60,9 +60,9 @@ New failure modes learned during a run belong in `references/failure-modes.md`, 
 
 Run the /simplify skill on the accumulated diff. Apply its fixes.
 
-Run /code-review high. Fix confirmed findings.
+Then run phase 3 again over the accumulated diff rather than the tree: same fan-out, same `references/failure-modes.md`, same rule that you verify a finding before acting on it. `/code-review` refuses model invocation, so what runs is that procedure, never the command.
 
-Repeat both until each returns clean or only findings you have verified as false positives. Name any dismissed finding and the reason in the final summary.
+One pass of each. A second full round is the caller's call. Name any finding you dismissed, and why, in the final summary.
 
 ## 5. Verify
 
