@@ -80,6 +80,7 @@ draft is not approval to act on it.
 
 For canonical global files under `~/.claude/rules` or `~/.claude/skills`, run
 `~/.claude/scripts/sync-agent-config.sh` after validation so the configured repositories receive
-the mirrors, then commit and push them.
+the mirrors, then commit and push them. When a repo mirror carries edits the hub lacks, copy the
+mirror to the hub before the sync; never let the sync overwrite newer mirror edits.
 
 Report a completed improvement in one line naming the artifact and the generalized change.
