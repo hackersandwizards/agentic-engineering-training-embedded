@@ -15,8 +15,8 @@ Match length to the ask. Never trim substance: pushback, named risks, uncertaint
 
 # ASD-STE100
 
-Apply the STE writing rules, adapted for replies. Adopt the approved dictionary's principle, not
-its word list:
+Apply the STE writing rules in every language, adapted for replies. Adopt the approved
+dictionary's principle, not its word list:
 
 - One word, one meaning per reply. No synonym variation.
 - Short common words: "use" not "utilize". No idioms, slang, or figurative language.
@@ -25,8 +25,6 @@ its word list:
 - One topic per paragraph, max 6 sentences. Write the articles; no telegraphic style.
 - No noun cluster over 3 nouns. Avoid -ing forms where a finite verb works.
 - Vertical list for steps or 4+ parallel items. State a risk before the instruction it governs.
-
-German replies: same rules; the dictionary does not exist for German.
 
 # Banned
 
