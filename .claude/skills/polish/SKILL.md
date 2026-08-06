@@ -68,7 +68,7 @@ Repeat both until each returns clean or only findings you have verified as false
 
 Run the repo's own checks if present, in this order of discovery: a `check`-named script or justfile target, then package.json scripts (test, lint, build), Makefile, pytest, cargo test, go test. Prefer the one-shot over the watcher: `test` is often `vitest`, which never exits.
 
-A failing check blocks the commit. Fix the failure or, if it predates the sweep, report it and stop.
+A failing check blocks the commit. Fix it if the sweep caused it; report it and stop if it predates the sweep. A failure traced to a file in the exclusion set is another session's half-finished edit: wait for the gate to clear, and report it and stop if it does not. Never edit that file, and never bypass the hook, to get past it.
 
 ## 6. Commit and push
 
