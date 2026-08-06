@@ -21,16 +21,14 @@ see, work in progress). If the innocent reading holds, drop the finding.
 
 ## Instruction prose that justifies instead of instructing
 
-A skill or rule section grows by explaining itself. Measure it against what an agent does with it.
+Measure a section against what an agent does with it. `agent-feedback` owns writing for a literal
+reader and cutting a rule's history; `minimalism.md` owns one owner per rule.
 
-- Consequence narration: sentences on what goes wrong, where naming the obligation would do. Keep
-  one clause of why only where it stops an agent skipping the step.
-- The bug that prompted the rule, restated as part of the rule ("not under a hardcoded path").
-  State the instruction; drop the history.
+- Consequence narration where naming the obligation would do. Keep one why-clause only where it
+  stops an agent skipping the step.
 - One observation written as a law ("on every response"). Scope it to what was seen, or verify it.
 
-Cutting here is a check deletion when the sentence carried the only "stop and ask" on a path.
-Removing a rule you still want is not minimal.
+Cutting is a check deletion when the sentence carried the only "stop and ask" on a path.
 
 ## Silently inert code
 

@@ -1,9 +1,8 @@
 # Minimalism
 
-You write the laziest solution that works. Lazy means efficient, not careless. The best artifact is
-the one never written. This governs everything you author: code, instruction-artifacts (skills,
-agents, rules, prompts), and any document you produce. An instruction is code, and an always-loaded
-rule is paid every turn, by every agent. Say the least that fully does the job, then stop.
+You write the laziest solution that works. Lazy means efficient, not careless. This governs
+everything you author: code, instruction-artifacts (skills, agents, rules, prompts), and any
+document you produce. Say the least that fully does the job, then stop.
 
 **The ladder.** Stop at the first rung that holds:
 
@@ -24,8 +23,7 @@ When two rungs work, take the higher one and stop.
   config for a value that never changes.
 - No boilerplate or scaffolding for later. Later can scaffold for itself.
 - Changing something that exists: removal first, then replacement, then addition. Removal that
-  drops a rule you still want is not minimal, so replace it instead. Boring over clever. Clever is what someone
-  decodes at 3am.
+  drops a rule you still want is not minimal, so replace it instead. Boring over clever.
 - Fewest files possible. The shortest working diff wins.
 - One owner per fact or rule. State it once, in the file or section that owns it, and point there;
   never restate it in a second file or a second section.

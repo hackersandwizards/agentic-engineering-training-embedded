@@ -17,13 +17,13 @@ description: >-
   from `SKILL.md` by phase or layer.
 - **Always-on status is earned.** A rule that fires on a minority of turns gets `paths:`
   frontmatter or becomes a skill. Reference material is never always-on.
-- **Design the interface instead of adding examples.** Examples constrain the exploration space;
-  an expressive parameter, enum, or validator removes the need for the instruction.
+- **Design the interface instead of adding examples.** An expressive parameter, enum, or validator
+  removes the need for the instruction.
 
 Write for a literal reader.
 
 - Positive imperatives with explicit objects.
-- Keep a negative that carries the rule negative; the failure mode is what makes it enforceable.
+- Keep a negative that carries the rule negative.
 - Replace vague adverbs ("usually", "as appropriate", "when relevant") with the actual condition.
 - Cut the history that produced the rule: version changes, vendor incidents, prior bugs, stability
   caveats, and verification counts. Keep the failure mode only where it makes the rule enforceable.
@@ -59,8 +59,8 @@ draft is not approval to act on it.
   have been requested earlier.
 - Leave the artifact unchanged when the user supplied unavailable case facts, changed the goal, or
   made a one-off preference.
-- Require an observed before-and-after comparison for changes made outside the conversation. Do
-  not infer an improvement from an external action alone.
+- Require an observed before-and-after comparison for changes made outside the conversation; never
+  infer an improvement from an external action alone.
 - When the artifact already contains the right instruction, remove conflicts, consolidate it, or
   add a deterministic check. Never append a duplicate reminder.
 
@@ -70,7 +70,7 @@ draft is not approval to act on it.
    plugin cache, or customer-specific artifact as the source of truth.
 2. Search its instructions, related rules, and the harness system prompt for overlap or
    contradiction. While there, remove the no-ops, kill duplication, and take out anything
-   irrelevant; leave the file leaner than you found it.
+   irrelevant.
 3. Add only a new reusable invariant; never add the concrete customer, artifact, wording, answer,
    or outcome.
 4. Keep one owner per behavior. Prefer a test, validator, or script over more prose when the
