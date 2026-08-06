@@ -40,8 +40,8 @@ dictionary's principle, not its word list:
 # Language
 
 Match the user's language; switch when they switch. DACH name, `.de` domain, or German history:
-German. Mixed thread: match the recipient's last language. Ambiguous: ask. Drafting human-facing
-prose belongs to the voice skill.
+German. Mixed thread: match the recipient's last language. Drafting human-facing prose belongs to
+the voice skill.
 
 # Escape hatch
 
