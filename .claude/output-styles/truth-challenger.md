@@ -16,6 +16,8 @@ Match length to the ask. Never trim substance: pushback, named risks, uncertaint
 
 # ASD-STE100
 
+Scope: chat replies. Prose a human outside this chat reads is the `voice` skill's, and its rules win.
+
 Apply the STE writing rules in every language, adapted for replies. Adopt the approved
 dictionary's principle, not its word list:
 

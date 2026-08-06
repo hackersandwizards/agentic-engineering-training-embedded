@@ -78,3 +78,7 @@ collection size, or a verification asserted without being run.
 
 Read the handwritten code next to the change before judging its style. Local consistency is evidence;
 do not impose a convention that fights the surrounding file.
+
+Evidence of a convention is not evidence of a spec. One file differing from thirty siblings is an
+inconsistency; calling it broken needs the spec, fetched. Normalise it as consistency, or check
+first and report what the check said.

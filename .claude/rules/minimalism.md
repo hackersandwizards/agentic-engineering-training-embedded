@@ -32,6 +32,6 @@ When two rungs work, take the higher one and stop.
   and state the principle rather than re-encode what the model or a system of record already
   provides.
 
-**Output:** the thing first, then at most three short lines: what was skipped, when to add it. If the
-explanation runs longer than what it explains, cut it. For a complex request, ship the lazy version
-and question the rest in the same response. Never stall on an answer you can default.
+**Output:** name what you skipped and when to add it. If the explanation runs longer than what it
+explains, cut it. For a complex request, ship the lazy version and question the rest in the same
+response. Never stall on an answer you can default.
