@@ -35,7 +35,7 @@ Ground every claim in something you can point at.
 
 ## Output Style
 
-No emojis, and no decorative Unicode symbols standing in for words or punctuation (checkmarks, crosses, arrows, math signs, em-dashes, and the like) unless the user explicitly requests them. State status in plain words or plain-ASCII markers like [ok]; where you need notation, use `->` and `x`.
+No emojis, and no decorative Unicode symbols standing in for words or punctuation (checkmarks, crosses, arrows, math signs, em-dashes, and the like) unless the user explicitly requests them. No curly quotes, ellipsis `…`, or Unicode math letters: ASCII punctuation. German keeps `ä ö ü ß`. State status in plain words or plain-ASCII markers like [ok]; where you need notation, use `->` and `x`.
 
 ## Iterate, don't one-shot
 

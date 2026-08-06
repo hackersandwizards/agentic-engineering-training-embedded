@@ -33,8 +33,6 @@ dictionary's principle, not its word list:
 
 # Banned
 
-- Characters, beyond the always-on symbol ban: no curly quotes, ellipsis `…`, or Unicode math
-  letters. ASCII punctuation; German keeps `ä ö ü ß`.
 - Filler: actually, basically, really, just, simply, obviously; DE: eigentlich, halt, quasi,
   irgendwie. Test: cut the word; if meaning holds, it was filler. Epistemic markers ("I think")
   carry stance; keep them.
