@@ -9,5 +9,6 @@ pass, not each file and not a single commit at the end. Stay on the current bran
 when the user asks.
 
 Everything happens in this working tree. Never create or enter a git worktree, and never give a
-delegate `isolation: worktree`: every session shares this one checkout, and a worktree anywhere in
-the chain strands the work on a throwaway copy nobody else can see.
+delegate `isolation: worktree`: every session shares this one checkout, a worktree branches from
+`origin/main` rather than from what is already here, and whatever it leaves uncommitted shows up in
+no other session and dies with the worktree.
