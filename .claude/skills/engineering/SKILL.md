@@ -41,7 +41,7 @@ Follow RED-GREEN-REFACTOR for new features and non-trivial logic:
 
 1. **RED**: write a concrete failing test that defines the requirement.
 2. **GREEN**: write the minimum code to make it pass.
-3. **REFACTOR**: clean up via `/simplify` and `/code-review high` while keeping tests green.
+3. **REFACTOR**: clean up via `/simplify` and a code review while keeping tests green.
 
 TDD applies to features and non-trivial logic in real projects. Scripts, spikes, one-off tools,
 config tweaks, doc edits, typo fixes, and one-line changes skip the cycle and get the minimal
@@ -57,10 +57,10 @@ runnable check instead. Use judgment.
 
 - Finish one well-defined feature before the next. Defer nice-to-haves until the core is complete
   and verified.
-- **Completion chain:** tests pass -> integration works end-to-end -> `/simplify` ->
-  `/code-review high`. Run `/simplify` before the final summary on any task touching 3+ files or
-  refactoring a non-trivial module. For auth/data/billing/external-API changes, add security and
-  performance checks against baseline.
+- **Completion chain:** tests pass -> integration works end-to-end -> `/simplify` -> code review.
+  Run `/simplify` before the final summary on any task touching 3+ files or refactoring a
+  non-trivial module. For auth/data/billing/external-API changes, add security and performance
+  checks against baseline.
 - Fix broken links in the chain before moving on.
 - **Cleanup, review, and quality passes scan the whole working tree** (`git status` + `git diff`),
   not only files touched in the current conversation. In-flight changes from another session sit
