@@ -21,6 +21,7 @@ Prefer these over their classic equivalents.
 - `fd` over `find` for terse search; `bfs` when `find` syntax is needed
 - `rg` over `grep` for code search; `ugrep` for searching inside archives, compressed files, or PDFs
 - `rg` recurses by default. Never pass `-r`: it is `--replace` and silently rewrites output. Write `rg -il`, never `rg -ril`.
+- `rg` skips dot-directories, so `rg <pattern> .` reports zero hits across every skill, rule, agent and memory under `.claude/`. Pass `--hidden`, name the directory, or use `git grep`. A "no references remain" sweep run without it cannot fail.
 - `delta` for diffs, `tree` for directory tree, `fzf` for fuzzy selection
 - `zoxide` for directory jumping (`z <pattern>`)
 

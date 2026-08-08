@@ -3,7 +3,8 @@
 Load when ghostwriting from a transcript, calibrating an article, blog, or talk that should feel
 verbatim-his, or anchoring a draft that needs more voice depth than `personal-voice.md` provides.
 
-The calibration anchors and email exemplars come from real sent mail. The slogan catalogue below
+The calibration anchors come from real sent mail, and the email exemplars are read from it live
+rather than kept here. The slogan catalogue below
 does not: everything from "Positioning and identity" downward scored **zero occurrences** in the
 sampled corpus (28 of 520 meetings, 240 mails, 5,509 messages). **His meeting and mail vocabulary is
 far plainer than the catalogue implies. Do not reach for a slogan when drafting.** Use the catalogue
@@ -25,49 +26,20 @@ like a consultant trained on his domain.
 
 ## Real email exemplars
 
-**To [client] (German, peer-warm):**
+Read them from Gmail; do not store them here. The mailbox holds every mail he has written,
+unredacted, current, and addressed to the person actually being written to, which a frozen copy
+here is none of. Before a draft that needs voice depth:
 
-> Moin [contact], moin [contact],
->
-> ich hoffe ihr habt eine tolle Zeit beim Meetup gehabt und konntet am Wochenende das Wetter
-> genießen.
->
-> Leider haben wir ja in den letzten Wochen nicht mehr so viel gemeinsam gemacht.
-> Vermisse euch etwas :)
->
-> Und wenn ich mich nicht täusche habe ich noch einiges an Kontingent bei euch übrig.
-> Daher wollte ich einmal fragen, was wir damit anstellen wollen?
->
-> Gibt es etwas, bei dem ich, oder Kollegen von mir euch unterstützen können?
->
-> Vllt. können wir bei euren Projekten mitwirken oder einen Follow-Up Workshop zum Thema Agentic
-> Factories machen?
-> Wir sind da mittlerweile recht intensiv im Thema und können ggf. eure eigenen Aktivitäten noch mal
-> beschleunigen.
->
-> Freue mich auf eure Gedanken!
->
-> LG
-> /bene
+```bash
+gws gmail users messages list --params '{"userId":"me","q":"in:sent -label:os/drafted to:ADDRESS","maxResults":5}'
+gws gmail users messages get --params '{"userId":"me","id":"ID","format":"full"}'
+```
 
-**To [colleague] (German, candid logistics):**
+Drop the `to:` term for the register rather than the relationship, and add a language term where the
+draft is English. Read the new text above the quote header, not the quoted thread.
 
-> Hui. Den Termin hab ich total verpeilt weil er nicht im Kalender steht.
->
-> Jetzt hab ich grad nur noch 17:30 - 18:00 Uhr remote Zeit.
->
-> Aber besser als nichts.
->
-> Vllt. sehen wir uns eh am Wochenende noch mal mit den Kindern.
->
-> Wollte aber gern bzgl. [client] Unterstützung sprechen.
-> Da kommen wir am Wochenende mit den Kindern immer nicht so wirklich zu.
->
-> LG
-> /bene
-
-**English mail: gap.** No verbatim English exemplar is on file. Add one from a real sent mail before
-calibrating English mail against this file.
+`-label:os/drafted` excludes the mail an agent drafted for him. Without it the corpus drifts into
+the fleet's own output and the calibration ends up measuring itself.
 
 ## Positioning and identity
 

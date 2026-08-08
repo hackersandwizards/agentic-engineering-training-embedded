@@ -52,5 +52,5 @@ Other channels (email, LinkedIn, speaker outreach) have no unique mechanics; voi
 
 | File | Purpose |
 |------|---------|
-| `signature-phrases.md` | The user's measured calibration anchors, two verbatim German email exemplars, and his spoken slogan catalogue. Use when ghostwriting from a transcript or anchoring a draft that needs more voice depth than `personal-voice.md` provides. The slogan catalogue is unverified in conversation: read it to recognise his positioning, not to generate his sentences. |
+| `signature-phrases.md` | The user's measured calibration anchors, how to pull real email exemplars from his mailbox, and his spoken slogan catalogue. Use when ghostwriting from a transcript or anchoring a draft that needs more voice depth than `personal-voice.md` provides. The slogan catalogue is unverified in conversation: read it to recognise his positioning, not to generate his sentences. |
 | `brand-vocabulary.md` | Verbatim offerings and value-props, written positioning vocabulary (slogans attested in posts and the handbook), the competitive-positioning frame, approved performance-language patterns, on-brand-vs-off-brand rewrites. Use when positioning in proposals or sales decks, citing numbers, or rewriting LLM output to on-brand. |
