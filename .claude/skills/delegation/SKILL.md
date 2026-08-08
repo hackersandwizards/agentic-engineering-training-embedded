@@ -1,9 +1,9 @@
 ---
 name: delegation
 description: >-
-  Codex only: which model tier and effort to run at, and how Codex hands authored copy to
-  Claude to write. One direction only. Claude neither starts Codex nor sets its model, and
-  has nothing to hand to it.
+  Which model tier and effort to run Codex at, how Codex hands authored copy to Claude to
+  write, and the one thing Claude starts Codex for. Authored copy is Claude's in both
+  directions.
 ---
 
 # Delegation
@@ -41,3 +41,8 @@ Check facts (names, dates, links, recipients, language, signature), content corr
 length. Never phrasing or tone. On a finding, call `claude -p` again with the previous text plus
 the concrete finding. Deliver the output verbatim: no rewording, no dropped or added sentences, no
 re-casing, no polish. Any text change goes through another `claude -p` call.
+
+## Claude -> Codex
+
+Claude starts Codex only for a capability Claude does not have, and never to author text. Image
+generation is that capability today; `image-prompts.md` in the `linkedin` skill owns the call.
