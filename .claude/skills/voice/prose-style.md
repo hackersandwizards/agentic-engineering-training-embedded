@@ -19,9 +19,8 @@ adjectives.
 
 - Long-form (proposals, posts, slides, articles, client docs): main clauses 15-20 words. Hard ceiling
   26. Past 26, split, readers lose the subject.
-- Email, Slack, chat: much shorter, and the numbers are measured, not estimated. Median sentence 5
-  words, 65% at 6 words or fewer. See `personal-voice.md`, "The hard numbers", and do not average
-  upward toward the long-form range.
+- Email, Slack, chat: much shorter, and the numbers are measured, not estimated. Take them from
+  `personal-voice.md`, "The hard numbers", and do not average upward toward the long-form range.
 - One main idea per sentence. Subordinate clauses only when the relation is non-obvious from
   juxtaposition.
 - Inserts (Einschübe, parentheticals): max 6 words or 12 syllables. Past that, the reader backtracks

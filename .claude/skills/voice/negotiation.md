@@ -68,9 +68,9 @@ Hold price, offer creative scope alternatives. When you do concede, bound it: wh
 ### Concession before claim
 *"Du hast recht, X ist teurer als der Marktdurchschnitt. Der Grund ist Y."*
 
-Give ground before the sharp claim; this is his measured default, not a tactic. `Wobei` is the
-concede-then-contradict pivot. The five concession moves and the one situation where he refuses flat
-are in `postures.md` posture 2.
+Give ground before the sharp claim; this is his measured default, not a tactic. The `Wobei` pivot,
+the five concession moves, and the one situation where he refuses flat are in `postures.md`
+posture 2.
 
 ### Anchoring and social proof
 - High anchor, then alternative: name the full-cost option first, then the offer.

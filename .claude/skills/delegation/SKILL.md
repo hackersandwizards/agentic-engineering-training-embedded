@@ -46,3 +46,14 @@ re-casing, no polish. Any text change goes through another `claude -p` call.
 
 Claude starts Codex only for a capability Claude does not have, and never to author text. Image
 generation is that capability today; `image-prompts.md` in the `linkedin` skill owns the call.
+
+Start it with `-s workspace-write`, and pass an absolute in-repo target from the repository root:
+writes are confined to the working root. That sandbox is enforced rather than requested, denying
+the network and leaving `.git` unwritable, so the run cannot commit or push; the model's own tool
+calls, imagegen included, are not shell commands and still work. `--yolo` is the alias of
+`--dangerously-bypass-approvals-and-sandbox`: asked only to generate an image and move it, it has
+staged the file, committed, and pushed. A prompt sentence asking a model not to push is a request;
+the sandbox flag is a boundary. Reach for the flag and let the sentence be thrift. A skill that
+needs the network or a write outside the tree says so and owns that exception.
+
+Verify what a run did with `git log`, never from its own summary.

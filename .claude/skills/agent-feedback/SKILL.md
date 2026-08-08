@@ -44,9 +44,8 @@ If no, change nothing.
 Exactly one, and only for a reusable gap:
 
 - **Skill or rule** when the behaviour is shared across tasks or agents.
-- **Agent definition** in `.claude/agents/` when it belongs to one agentic colleague. Route it
-  through the `hr` agent as a feedback conversation; that agent's file and its known failure modes
-  are the record.
+- **Agent definition** in `.claude/agents/` when it belongs to one agentic colleague. Where the
+  project names an owner for those files, the edit is that owner's to make: report the gap instead.
 - **Agent memory** in `.claude/agent-memory/` when it is context to carry forward rather than a
   rule.
 
@@ -80,7 +79,15 @@ draft is not approval to act on it.
 
 For canonical global files under `~/.claude/rules` or `~/.claude/skills`, run
 `~/.claude/scripts/sync-agent-config.sh` after validation so the configured repositories receive
-the mirrors, then commit and push them. When a repo mirror carries edits the hub lacks, copy the
-mirror to the hub before the sync; never let the sync overwrite newer mirror edits.
+the mirrors, then commit and push them.
+
+Which files are mirrors is the script's own `GLOBAL_RULES` and `GLOBAL_SKILLS` arrays. Check the
+file you are about to edit against them first, per file rather than once per task, and edit the hub
+copy: a mirrored file edited in its repo is reverted by the next sync and no check catches it.
+Before syncing, diff every mirror against the hub, not only the one you touched. Where a mirror
+carries edits the hub lacks, copy it to the hub first, or the sync deletes those lines in every
+repo at once. Build that loop over a shell array; an unquoted parameter does not word-split in zsh,
+so the loop runs once against the whole list and reports no drift. Count the comparisons it made
+and check that number against repos x artifacts before believing a green result.
 
 Report a completed improvement in one line naming the artifact and the generalized change.

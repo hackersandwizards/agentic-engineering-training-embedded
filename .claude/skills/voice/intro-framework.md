@@ -40,7 +40,7 @@ Prove capability with a specific achievement that matters.
 
 > *"30+ teams ignited, 500+ developers in our community, 40+ practitioners in our network."*
 
-Any number cites metric, target, source. Don't say "10x productivity". Name the actual measurement.
+Numbers follow the rule in `brand-voice.md`, "Numbers and status claims".
 
 ## A: Aim, their benefit not your goal
 
