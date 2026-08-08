@@ -13,8 +13,10 @@ description: >-
 
 ## Shape
 
-- **Progressive disclosure by default.** When an artifact outgrows one file, split it and route
-  from `SKILL.md` by phase or layer.
+- **Progressive disclosure by default.** `SKILL.md` stays thin and routes outward to the files
+  carrying the detail. The skill chooses the axis: mode, topic, layer, or surface, as `voice/`
+  splits by layer and `google-api/` by surface. Length never forces a split, and two adjacent
+  skills stay two.
 - **Always-on status is earned.** A rule that fires on a minority of turns gets `paths:`
   frontmatter or becomes a skill. Reference material is never always-on.
 - **Design the interface instead of adding examples.** An expressive parameter, enum, or validator
