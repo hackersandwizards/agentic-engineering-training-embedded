@@ -53,7 +53,9 @@ draft is not approval to act on it.
 ## Before you add a line
 
 Grep the skills, rules, agent files and memories for the fact. If it already exists, the change is
-a move, and the move's second half is the deletion. Keep one owner per behavior.
+a move, and the move's second half is the deletion. A finding that contradicts, supersedes or
+answers a line already there is no addition either: rewrite that line where it stands, and delete
+what it resolved. Keep one owner per behavior.
 
 ## Mirrors and sync
 
