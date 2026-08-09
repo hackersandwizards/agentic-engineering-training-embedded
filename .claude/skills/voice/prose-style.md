@@ -60,6 +60,19 @@ Banned modifiers without numbers: `deutlich, signifikant, erheblich, massiv, con
 substantial, significant, dramatic`. Failure mode: the reader reads corporate filler and stops
 trusting the claim.
 
+## Three or more parties: name each one
+
+When a partner, a subcontractor, and an end client all appear in the same message, `wir` / `uns` /
+`we` reads as any sender-side combination. Write the company name for each party and keep `wir` only
+where the recipient is inside it. Sweep the finished draft pronoun by pronoun, and use the shorthand
+the counterparty already uses in the thread.
+
+- "Daraus machen wir einen Festpreis" -> "Daraus macht h&w einen Festpreis"
+- Joint, so it stays: "Den Überschuss teilen wir."
+
+Failure mode: the reader assigns cost, risk, and upside to the wrong party, and the ambiguity sits
+exactly where the money is.
+
 ## Filler: cut on sight (authored prose)
 
 These words almost always survive their own deletion. Test: read the sentence without the word; if
