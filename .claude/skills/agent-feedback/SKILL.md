@@ -39,25 +39,36 @@ draft is not approval to act on it.
 
 - **Progressive disclosure by default.** `SKILL.md` stays thin and routes outward to the files
   carrying the detail. The skill chooses the axis: mode, topic, layer, or surface, as `voice/`
-  splits by layer and `google-api/` by surface. Length never forces a split, and two adjacent
-  skills stay two.
+  splits by layer. Length never forces a split, and two adjacent skills stay two.
 - **Always-on status is earned.** A rule that fires on a minority of turns gets `paths:`
   frontmatter or becomes a skill. Reference material is never always-on.
 - **Design the interface instead of adding examples.** An expressive parameter, enum, or validator
   removes the need for the instruction. Prefer a test, validator, or script over more prose when
   the requirement is deterministic.
 
+## Before you add a line
+
+Grep the skills, rules, agent files and memories for the fact. If it already exists, the change is
+a move, and the move's second half is the deletion. Keep one owner per behavior.
+
 ## Mirrors and sync
 
-Which files are mirrors is the script's own `GLOBAL_RULES` and `GLOBAL_SKILLS` arrays. Check the
-file you are about to edit against them first, per file rather than once per task, and edit the hub
-copy: a mirrored file edited in its repo is reverted by the next sync and no check catches it.
-Before syncing, diff every mirror against the hub, not only the one you touched. Where a mirror
-carries edits the hub lacks, copy it to the hub first, or the sync deletes those lines in every
-repo at once. Build that loop over a shell array; an unquoted parameter does not word-split in zsh,
-so the loop runs once against the whole list and reports no drift. Count the comparisons it made
-and check that number against repos x artifacts before believing a green result.
+Which files are mirrors is the script's own `GLOBAL_RULES` and `GLOBAL_SKILLS` arrays, and `FORKS`
+names the repo-and-skill pairs the hub deliberately does not own. Check the file you are about to
+edit against all three first, per file rather than once per task, and edit the hub copy: a mirrored
+file edited in its repo is destroyed by the next sync, which swaps the whole directory rather than
+merging it, so a repo-local file added inside a mirrored skill directory goes too, and no check
+catches either.
 
-For canonical global files under `~/.claude/rules` or `~/.claude/skills`, run
-`~/.claude/scripts/sync-agent-config.sh` after validation so the configured repositories receive
-the mirrors, then commit and push them.
+Before syncing, diff every mirror against the hub, not only the one you touched. Where a mirror
+that is not a declared fork carries edits the hub lacks, copy it to the hub first, or the sync
+deletes those lines in every repo at once. A declared fork drifting from the hub is the fork
+working: leave it, and never lift it into the hub. Build that loop over a shell array; an unquoted
+parameter does not word-split in zsh, so the loop runs once against the whole list and reports no
+drift. Count the comparisons it made and check that number against repos x artifacts less the
+declared forks before believing a green result.
+
+The hub is a git repository of its own: commit the hub copy there with its paths named. For
+canonical global files under `~/.claude/rules` or `~/.claude/skills`, run
+`~/.claude/scripts/sync-agent-config.sh` afterwards; it commits and pushes the mirrors in every
+configured repository itself.

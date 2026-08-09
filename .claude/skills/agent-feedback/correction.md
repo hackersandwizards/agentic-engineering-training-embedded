@@ -30,8 +30,10 @@ If no, change nothing.
 Exactly one, and only for a reusable gap:
 
 - **Skill or rule** when the behaviour is shared across tasks or agents.
-- **Agent definition** in `.claude/agents/` when it belongs to one agentic colleague. Where the
-  project names an owner for those files, the edit is that owner's to make: report the gap instead.
+- **Project instructions** in `CLAUDE.md` when it binds every task in one repository.
+- **Agent definition** in `.claude/agents/` when it belongs to one agentic colleague. The project's
+  own instructions, its rules, or the agent file itself name who owns those files: read that before
+  editing one, and where an owner is named the edit is theirs, so report the gap instead.
 - **Agent memory** in `.claude/agent-memory/` when it is context to carry forward rather than a
   rule.
 
@@ -45,8 +47,7 @@ Exactly one, and only for a reusable gap:
    irrelevant.
 3. Add only a new reusable invariant; never add the concrete customer, work product, wording,
    answer, or outcome.
-4. Keep one owner per behavior.
-5. Validate the artifact and the affected workflow with the repository's checks. Forward-test only
+4. Validate the artifact and the affected workflow with the repository's checks. Forward-test only
    when it cannot mutate live systems or require new approval.
 
 Report a completed improvement in one line naming the artifact and the generalized change.
