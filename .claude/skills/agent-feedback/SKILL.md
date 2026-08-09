@@ -42,6 +42,10 @@ draft is not approval to act on it.
   splits by layer. Length never forces a split, and two adjacent skills stay two.
 - **Always-on status is earned.** A rule that fires on a minority of turns gets `paths:`
   frontmatter or becomes a skill. Reference material is never always-on.
+- **A cut is not finished until the description matches it.** The frontmatter `description`, and
+  `agents/openai.yaml`'s `short_description` beside it, decide whether the artifact is reachable at
+  all. Re-read both against what the body now says, or the skill loads on the tasks it no longer
+  covers and stays shut on the ones it does.
 - **Design the interface instead of adding examples.** An expressive parameter, enum, or validator
   removes the need for the instruction. Prefer a test, validator, or script over more prose when
   the requirement is deterministic.
