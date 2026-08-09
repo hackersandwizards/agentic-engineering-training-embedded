@@ -11,6 +11,30 @@ description: >-
 
 # Agent Feedback
 
+Two jobs. A rule inside one binds that job only; what binds both is in this file.
+
+| Job | File | Enter it for |
+|---|---|---|
+| Author an artifact | this file | writing, reviewing, trimming, splitting, or rightsizing a skill, rule, agent definition, or agent memory, with no correction behind it |
+| Turn a correction into an improvement | [correction.md](correction.md) | a user corrected, refined, or externally edited agent-generated work, or answered a question the system should have resolved itself |
+
+Authoring enters here directly and never answers the correction gate. The correction job decides
+whether anything changes and what owns it, then writes the edit under the rules below.
+
+## Boundary
+
+Feedback and review never authorize an external action. Detecting, reading, or comparing an edited
+draft is not approval to act on it.
+
+## Write for a literal reader
+
+- Positive imperatives with explicit objects.
+- Keep a negative that carries the rule negative.
+- Replace vague adverbs ("usually", "as appropriate", "when relevant") with the actual condition.
+- Cut the history that produced the rule: version changes, vendor incidents, prior bugs, stability
+  caveats, and verification counts. Keep the failure mode only where it makes the rule enforceable.
+- English for the instruction; quoted examples keep their own language.
+
 ## Shape
 
 - **Progressive disclosure by default.** `SKILL.md` stays thin and routes outward to the files
@@ -20,68 +44,10 @@ description: >-
 - **Always-on status is earned.** A rule that fires on a minority of turns gets `paths:`
   frontmatter or becomes a skill. Reference material is never always-on.
 - **Design the interface instead of adding examples.** An expressive parameter, enum, or validator
-  removes the need for the instruction.
+  removes the need for the instruction. Prefer a test, validator, or script over more prose when
+  the requirement is deterministic.
 
-Write for a literal reader.
-
-- Positive imperatives with explicit objects.
-- Keep a negative that carries the rule negative.
-- Replace vague adverbs ("usually", "as appropriate", "when relevant") with the actual condition.
-- Cut the history that produced the rule: version changes, vendor incidents, prior bugs, stability
-  caveats, and verification counts. Keep the failure mode only where it makes the rule enforceable.
-- English for the instruction; quoted examples keep their own language.
-
-## Improve
-
-Complete the user's requested correction first. Then change an artifact only when this
-counterfactual is true:
-
-> With the same information available during the initial run, would a general change have
-> produced the corrected result?
-
-If no, change nothing.
-
-## Pick the owner
-
-Exactly one, and only for a reusable gap:
-
-- **Skill or rule** when the behaviour is shared across tasks or agents.
-- **Agent definition** in `.claude/agents/` when it belongs to one agentic colleague. Where the
-  project names an owner for those files, the edit is that owner's to make: report the gap instead.
-- **Agent memory** in `.claude/agent-memory/` when it is context to carry forward rather than a
-  rule.
-
-Feedback and review never authorize an external action. Detecting, reading, or comparing an edited
-draft is not approval to act on it.
-
-## Classify the feedback
-
-- Improve retrieval or question timing when the missed information was discoverable or should
-  have been requested earlier.
-- Leave the artifact unchanged when the user supplied unavailable case facts, changed the goal, or
-  made a one-off preference.
-- Require an observed before-and-after comparison for changes made outside the conversation; never
-  infer an improvement from an external action alone.
-- When the artifact already contains the right instruction, remove conflicts, consolidate it, or
-  add a deterministic check. Never append a duplicate reminder.
-
-## Update it
-
-1. Locate the canonical artifact that owned the failed behavior. Never edit a generated mirror,
-   plugin cache, or customer-specific artifact as the source of truth.
-2. Search its instructions, related rules, and the harness system prompt for overlap or
-   contradiction. While there, remove the no-ops, kill duplication, and take out anything
-   irrelevant.
-3. Add only a new reusable invariant; never add the concrete customer, artifact, wording, answer,
-   or outcome.
-4. Keep one owner per behavior. Prefer a test, validator, or script over more prose when the
-   requirement is deterministic.
-5. Validate the artifact and the affected workflow with the repository's checks. Forward-test only
-   when it cannot mutate live systems or require new approval.
-
-For canonical global files under `~/.claude/rules` or `~/.claude/skills`, run
-`~/.claude/scripts/sync-agent-config.sh` after validation so the configured repositories receive
-the mirrors, then commit and push them.
+## Mirrors and sync
 
 Which files are mirrors is the script's own `GLOBAL_RULES` and `GLOBAL_SKILLS` arrays. Check the
 file you are about to edit against them first, per file rather than once per task, and edit the hub
@@ -92,4 +58,6 @@ repo at once. Build that loop over a shell array; an unquoted parameter does not
 so the loop runs once against the whole list and reports no drift. Count the comparisons it made
 and check that number against repos x artifacts before believing a green result.
 
-Report a completed improvement in one line naming the artifact and the generalized change.
+For canonical global files under `~/.claude/rules` or `~/.claude/skills`, run
+`~/.claude/scripts/sync-agent-config.sh` after validation so the configured repositories receive
+the mirrors, then commit and push them.
