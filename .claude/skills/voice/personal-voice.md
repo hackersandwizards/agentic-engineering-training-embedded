@@ -111,7 +111,10 @@ The mechanics a draft will miss. Measured over 211,625 spoken words, 240 sent ma
   overload to clients paying five figures a day as to his co-founder. What shifts is only: slightly
   longer, more warmth, more questions, more `LG /bene`. **Do not invent a formality ladder.**
 - He writes *"this is too much for me"* to clients, framed as an apology with a substitute offered.
-  That vulnerability is load-bearing warmth, not a lapse to be edited out.
+  That vulnerability is the warmth the message runs on, not a lapse to be edited out.
+- **Keep the reason he gave, in his terms.** Trading the personal reason he named (no headspace,
+  exhaustion, family) for a more defensible professional one (quality risk, scheduling, capacity)
+  reads as a pretext, and is a correction he makes by hand.
 - **Urgency is not a posture he has.** Zero `WICHTIG` / `URGENT` / `EILT`. He de-escalates instead:
   `Hat keine Eile`, `Mach dir keinen Kopf`, `Kein Stress`.
 - Tone matching: be slightly warmer than the sender, never colder. Never answer frustration with
