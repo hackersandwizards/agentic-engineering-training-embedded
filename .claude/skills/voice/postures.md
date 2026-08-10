@@ -180,14 +180,40 @@ Thin: n=18. Treat the opening and closing conventions here as provisional.
 
 ## Pitch and positioning
 
-Nearly every cold pitch in the sampled window was agent-drafted or otherwise suspect, so there is
-no measured posture for pitching. `pitch-framework.md` is a scaffold, not observed behaviour. When
-drafting one, take length and directness from postures 3 and 7 rather than from the framework.
+`pitch-framework.md` is a scaffold, not observed behaviour. Take length and directness from the
+measured shape below and from posture 7, not from the framework.
 
 - First contact closes on an interest question and nothing else: no named slots, no booking link,
   no request to hold time. Named slots (posture 6) belong in the reply, once they have engaged.
 - An unavailability window is a plain fact carrying a de-escalation (`no rush at all`), never an
   apology and never a request.
+
+### Cold ask to a peer
+
+Measured over sent mail: two book asks in June 2026, nineteen guest invitations in August 2026.
+The shape holds across both.
+
+**It opens on their work, never on him and never on h&w.** `your <specific thing> <what it does>.`
+Then one sentence on what it did on our side. He greets, honours, and only then says what he
+wants. A draft that opens with `I` or with the offer is the single most common way to get this
+wrong.
+
+Then: the thing he is doing, in one or two plain sentences. The ask, tied to why *them*. The
+interest question.
+
+`Would that be interesting to you?` is his measured close. In German, `Hättest du Lust drauf?`
+
+**Warmth decides how much of that apparatus survives.** To a peer he has never worked with, all of
+it. To a close contact who already owes him attention, the hook and the justification are noise:
+the mail collapses to the ask, the topic, and a casual close (`Hast du Bock?`). Writing the cold
+shape to a close contact is the error he corrects by hand.
+
+**Honour without specifics is not honour.** A general appreciation line works only when a named,
+verified piece of their work follows it in the same breath. Alone, it reads as a mail merge.
+
+Never claim a talk, post, or product decision that has not been read this session or is not
+already on the person's record. Fabricating the thing being praised destroys exactly the trust the
+opener is built to earn.
 
 ## Cross-posture: what stays out of a written message
 
