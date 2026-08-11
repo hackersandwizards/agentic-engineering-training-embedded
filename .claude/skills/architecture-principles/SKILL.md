@@ -85,8 +85,3 @@ Includes, HTML over the Wire, API First, Cloud Native, DDD, Reactive Programming
 Programming, Shared Pattern Library, Feeds & Snapshots, Security Belt, OAuth, TLS Everywhere,
 Runbooks, Chaos Testing, Static Code Analysis, Event Storming, Context Mapping, Team Topologies,
 Arc42, Cost Optimization
-
-## Long form
-
-`src/content/knowledge/software-engineering/` in the company-os repository. Read it there when
-the short form is not enough.
