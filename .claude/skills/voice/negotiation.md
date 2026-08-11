@@ -72,6 +72,13 @@ Give ground before the sharp claim; this is his measured default, not a tactic. 
 the five concession moves, and the one situation where he refuses flat are in `postures.md`
 posture 2.
 
+### An unbudgeted number carries its agreement
+*"Wir hatten ja verabredet, dass X aus dem Kontingent läuft."*
+
+A figure the counterpart did not budget for reads as a surprise charge unless the sentence before
+it names the agreement it came from, and the sentence after it says why it is that size. Both facts
+sit in our own records; read them before sending the number bare.
+
 ### Anchoring and social proof
 - High anchor, then alternative: name the full-cost option first, then the offer.
 - *"Alles inklusive"* removes hidden-cost anxiety. Concrete comparison kills abstraction: show the

@@ -36,9 +36,14 @@ Verbatim: `Ok` `Alles klar.` `ja genau` `Top.` `Stark!` `done` `In der Tat.` `Ja
 
 The most distinctive posture, and the one most easily written backwards.
 
-**Written: negation first, reason second.** Bare negation as its own sentence, then a separate
-short sentence carrying the reason. `Ne.` `Nein.` `Nope.` `Nö.` `Keine Chance.` He never builds to
-a no.
+**Written refusal: negation first, reason second.** Bare negation as its own sentence, then a
+separate short sentence carrying the reason. `Ne.` `Nein.` `Nope.` `Nö.` `Keine Chance.` He never
+builds to a no.
+
+**Written addition: confirmation first.** A message that adds a cost, a condition or a number the
+other side did not expect is not a refusal, and the negation-first shape is wrong for it. Name what
+already works, then add. Opening on the gap instead (`Da müssen wir noch mal gucken`) turns an
+agreement into a problem before the reader reaches the number.
 
 **Live: agreement token first.** 45.3% of his replies to an objection open with `ja`, `genau`,
 `yeah`, `klar` or `stimmt`, against a 9.5% baseline across all turns. A 4.8x lift. He yields the
@@ -225,5 +230,7 @@ gap still reads as unprofessional. When the *client* caused the issue, naming it
 holds for feedback asks: ask open and stop, rather than naming the shortfall you suspect. Naming it
 tells the client what to be unhappy about.
 
-Early in a relationship, anything that constrains the other side or contradicts what they want goes
-into a live conversation. Hand it to him as a call item instead of drafting it for him to strike.
+Anything that constrains the other side or contradicts what they want closes by offering a live
+conversation, whatever the age of the relationship. Where the message is his to send, that offer
+goes in it. Where the point needs him in the room, hand it to him as a call item instead of
+drafting it for him to strike.
