@@ -109,7 +109,8 @@ The mechanics a draft will miss. Measured over 211,625 spoken words, 240 sent ma
 
 - **There is no client register.** Same `du`, same `Moin`, same `xD`, same typos, same admissions of
   overload to clients paying five figures a day as to his co-founder. What shifts is only: slightly
-  longer, more warmth, more questions, more `LG /bene`. **Do not invent a formality ladder.**
+  longer, more warmth, more questions, more `LG /bene`, and an ask goes Konjunktiv instead of
+  imperative. **Do not invent a formality ladder.**
 - He writes *"this is too much for me"* to clients, framed as an apology with a substitute offered.
   That vulnerability is the warmth the message runs on, not a lapse to be edited out.
 - **Keep the reason he gave, in his terms.** Trading the personal reason he named (no headspace,

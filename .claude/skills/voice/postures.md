@@ -230,7 +230,8 @@ gap still reads as unprofessional. When the *client* caused the issue, naming it
 holds for feedback asks: ask open and stop, rather than naming the shortfall you suspect. Naming it
 tells the client what to be unhappy about.
 
-Anything that constrains the other side or contradicts what they want closes by offering a live
-conversation, whatever the age of the relationship. Where the message is his to send, that offer
-goes in it. Where the point needs him in the room, hand it to him as a call item instead of
+Anything that constrains the other side or contradicts what they want closes by offering to settle
+it together, whatever the age of the relationship. Offer the decision, not the channel:
+*"lass uns das zusammen abstimmen"* over *"lass uns telefonieren"*, which reduces a shared call to
+logistics. Where the message is his to send, that offer goes in it. Where the point needs him in the room, hand it to him as a call item instead of
 drafting it for him to strike.
