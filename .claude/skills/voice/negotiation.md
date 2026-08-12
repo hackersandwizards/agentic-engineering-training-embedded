@@ -18,6 +18,7 @@ Verhandle als Peer, nicht als Bittsteller. Substanz vor Position. Beziehung vor 
 8. **Framing move.** *"Dich öffentlich nennen"* sounds extractive; *"dich in unser Board of Advisors aufnehmen"* sounds like recognition. Pick the recognition frame.
 9. **BATNA awareness.** Keep the tone calm, not clutching: the deal doesn't have to happen.
 10. **Mirror (last 3 words).** Quote their phrasing back to signal listening and surface more information. Use sparingly in writing, more often on calls.
+11. **Clarify before you counter.** Where the basis of their number is disputed or unknown, the message that asks for the basis carries no counter-offer and no concession. Both turn a clarification into a negotiation, and the answer comes back shaped by the figure it now has to beat. Name your figure in the next message, once the basis is settled.
 
 ## Phrasings
 
