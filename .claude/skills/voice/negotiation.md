@@ -124,4 +124,7 @@ sit in our own records; read them before sending the number bare.
 - [ ] If there's a secondary motive, did you name it openly?
 - [ ] Have you avoided hedging the content of the ask?
 
-Openings, closings and how direct to be are not this file's call. `postures.md` owns them and wins.
+Openings, closings, how direct to be, and the warmth register are not this file's call.
+`postures.md` and `personal-voice.md` own them and win: this file supplies the move, they supply
+the wording. A tactic that lands as an ultimatum, a deadline, or a comparison scored at the
+counterparty's expense arrived in the wrong register, however sound the move underneath it.
