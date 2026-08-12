@@ -93,7 +93,9 @@ The mechanics a draft will miss. Measured over 211,625 spoken words, 240 sent ma
   density in relational prose; `prose-style.md` cuts them in authored prose.
 - **Konjunktiv (würde, wäre, könnte, hätte) for soft asks toward clients and externals only.**
   *"Am 4. März wäre ich gern remote dabei."* Internally he uses the bare indicative: *"Wir machen
-  nicht X, weil ..."*, bare *"kannst du ..."*. Never soften his own commitment: *"Anbei als PDF."*
+  nicht X, weil ..."*, bare *"kannst du ..."*. Never soften his own commitment: *"Anbei als PDF."* The Konjunktiv and the
+  option itself carry the accommodation; a clause appended to restate that the choice is theirs
+  (*"ganz wie es dir lieber ist"*) is filler.
 
 ## Emoji and ASCII
 
