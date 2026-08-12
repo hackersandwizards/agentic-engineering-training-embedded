@@ -18,7 +18,7 @@ Verhandle als Peer, nicht als Bittsteller. Substanz vor Position. Beziehung vor 
 8. **Framing move.** *"Dich öffentlich nennen"* sounds extractive; *"dich in unser Board of Advisors aufnehmen"* sounds like recognition. Pick the recognition frame.
 9. **BATNA awareness.** Keep the tone calm, not clutching: the deal doesn't have to happen.
 10. **Mirror (last 3 words).** Quote their phrasing back to signal listening and surface more information. Use sparingly in writing, more often on calls.
-11. **Clarify before you counter.** Where the basis of their number is disputed or unknown, the message that asks for the basis carries no counter-offer and no concession. Both turn a clarification into a negotiation, and the answer comes back shaped by the figure it now has to beat. Name your figure in the next message, once the basis is settled.
+11. **Clarify before you counter.** Where the basis of their number is disputed or unknown, the message asking for that basis carries no counter-offer and no concession: the answer comes back shaped by the figure it has to beat. Name your figure in the next message, once the basis is settled.
 
 ## Phrasings
 
@@ -114,7 +114,7 @@ sit in our own records; read them before sending the number bare.
 - Bad: Hinge the offer on your own argument (*deswegen*, *therefore*): help reads as a claim on access. Connect to their benefit instead (*"Genau da würde ich dir gern helfen"*).
 - Bad: Hedge the **content** of the ask (*"vielleicht wäre es möglich, dass"*): Konjunktiv belongs on **delivery** (*"wäre es okay"*), never on **substance**.
 - Bad: Counter-anchor below their floor: if their lowest tier works, take it as-is. Grinding damages the relationship more than it saves.
-- Bad: Cite a ratio (percent of revenue, per day, per head) as proof the deal is thin without first computing it against every rate their own contract or price list already carries: a figure landing near one they publish arms them, and your own ask reads as the outlier.
+- Bad: Cite a ratio (percent of revenue, per day, per head) as proof the deal is thin before computing it against the rates their own contract carries: land near one of theirs and your ask is the outlier, not their offer.
 - Bad: Retreat from their ask straight to your own floor: put a rung in between. Two attempts before the fallback read as effort, one reads as managing them toward a date or a number.
 
 ## Pre-send checklist
