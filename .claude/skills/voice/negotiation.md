@@ -114,6 +114,7 @@ sit in our own records; read them before sending the number bare.
 - Bad: Hinge the offer on your own argument (*deswegen*, *therefore*): help reads as a claim on access. Connect to their benefit instead (*"Genau da würde ich dir gern helfen"*).
 - Bad: Hedge the **content** of the ask (*"vielleicht wäre es möglich, dass"*): Konjunktiv belongs on **delivery** (*"wäre es okay"*), never on **substance**.
 - Bad: Counter-anchor below their floor: if their lowest tier works, take it as-is. Grinding damages the relationship more than it saves.
+- Bad: Cite a ratio (percent of revenue, per day, per head) as proof the deal is thin without first computing it against every rate their own contract or price list already carries: a figure landing near one they publish arms them, and your own ask reads as the outlier.
 - Bad: Retreat from their ask straight to your own floor: put a rung in between. Two attempts before the fallback read as effort, one reads as managing them toward a date or a number.
 
 ## Pre-send checklist
