@@ -37,7 +37,9 @@ Each layer constrains the next; the more concrete rule beats the more abstract o
 |------|---------|------|
 | `slack-channel.md` | Slack via the MCP tool | Markdown quirks and Slack-only conventions |
 
-Other channels (email, LinkedIn, speaker outreach) have no unique mechanics; voice + prose is enough.
+Voice owns the prose, never where it lands. Load the channel's own skill alongside it: `email`,
+`linkedin`, `slack`. Prose that already exists in a draft or a record is revised in place through
+that skill, not reproduced in chat.
 
 ## Scaffold overlays: apply when the situation matches
 
