@@ -57,6 +57,10 @@ a move, and the move's second half is the deletion. A finding that contradicts, 
 answers a line already there is no addition either: rewrite that line where it stands, and delete
 what it resolved. Keep one owner per behavior.
 
+A skill wrapping a tool has a second owner you did not write: the MCP server's own instructions,
+the tool schemas, the CLI's `--help`. Read those first and keep only what they leave out. A line
+restating them is maintained twice and goes stale silently when the vendor changes it.
+
 ## Mirrors and sync
 
 Which files are mirrors is the script's own `GLOBAL_RULES` and `GLOBAL_SKILLS` arrays, and `FORKS`
