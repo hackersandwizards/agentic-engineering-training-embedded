@@ -25,7 +25,8 @@ Run `git status` and record every file it reports as modified, staged, or untrac
 
 Review and fix committed changes only. Never edit a file in the exclusion set: polish commits what it edits, and committing one would sweep in its author's uncommitted work. Report those files as deferred, for the next run once their author has committed.
 
-The set only grows while you work, so re-derive it in phase 6.
+The set moves both ways while you work: a new edit adds a file, and another session committing its
+work drops one out. So re-derive it in phase 6 rather than assuming phase 1's list still holds.
 
 Run the repo's own checks once and record the result. Phase 5 needs this baseline to separate a pre-existing failure from one the sweep caused, and a subagent reporting a red gate mid-run is usually reading another agent's half-finished edit.
 
@@ -54,6 +55,11 @@ a pointer to a path that no longer exists, and a cap or boundary that contradict
 Verify each finding yourself before fixing it. Apply the fixes. Skip findings that would add
 speculative structure.
 
+**A fix to a mirrored file goes into the hub copy, never this repo's.** `agent-feedback`'s "Mirrors
+and sync" section owns which files those are and why: the sync swaps the whole directory, so a fix
+applied here is gone at the next run and no check catches it. Check each instruction file you are
+about to edit against that section first.
+
 New failure modes learned during a run belong in `references/failure-modes.md`, not in this file.
 
 ## 4. Gates
@@ -67,6 +73,8 @@ One pass of each. A second full round is the caller's call. Name any finding you
 ## 5. Verify
 
 Run the repo's own checks if present, in this order of discovery: a `check`-named script or justfile target, then package.json scripts (test, lint, build), Makefile, pytest, cargo test, go test. Prefer the one-shot over the watcher: `test` is often `vitest`, which never exits.
+
+Read "A gate that ran but was never read" in `references/failure-modes.md` before you run it. That section is passed to the phase 2-4 subagents and never to you, and both traps in it are this phase's: a piped gate reports the last command's exit status, and a commit whose paths the pre-commit hook does not route runs no gate at all. Run the gate on its own line and read `$?`.
 
 A failing check blocks the commit. Fix it if the sweep caused it; report it and stop if it predates the sweep. A failure traced to a file in the exclusion set is another session's half-finished edit: wait for the gate to clear, and report it and stop if it does not. Never edit that file, and never bypass the hook, to get past it.
 
