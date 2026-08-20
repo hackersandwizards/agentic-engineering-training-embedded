@@ -4,6 +4,10 @@ The situational register a draft is in. This is the primary axis for relational 
 WhatsApp, iMessage, DMs): the posture decides length, the opening and closing move, how direct to
 be, and which verbatim phrasings are available. Name the posture before writing a word.
 
+Pick it from what the recipient does next, never from the volume of work behind the message. Where
+a decision was made, whoever has to use the result gets a status update. The decision record goes
+only to whoever made the decision.
+
 Authored prose (LinkedIn, articles, proposals, slides) has no posture. Use the scaffold overlays in
 `SKILL.md` instead.
 
