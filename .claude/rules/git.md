@@ -2,10 +2,12 @@
 
 Name the paths on `git commit` itself, `--amend` included. Never `git add -A` or `git add .`, and
 never a bare `git commit`: another session sharing this working tree may already hold entries in
-the index, and a commit without a pathspec takes all of them. `git add` each new file by name
-before committing it: a pathspec takes what is modified under it and skips what is untracked, so
-naming a directory leaves a new file out while committing everything that points at it, and the
-local gate still passes because it reads the working tree.
+the index, and a commit without a pathspec takes all of them. `git add` each new file by name, and
+both paths of a `git mv`, before committing: a pathspec takes what is modified under it and skips
+what is untracked, so naming a directory leaves a new file out while committing everything that
+points at it, and naming only a rename's destination commits its add while its delete stays staged,
+leaving the file at both paths. Either way the local gate still passes, because it reads the
+working tree rather than the commit.
 
 A pathspec says which paths fold into `HEAD`, never whose commit `HEAD` still is. Verify that
 before `--amend`, or another session's commit landing between your two is the one your work folds
