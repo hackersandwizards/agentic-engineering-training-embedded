@@ -28,6 +28,7 @@ Each layer constrains the next; the more concrete rule beats the more abstract o
 |-------|------|------|
 | 1. Brand | `brand-voice.md` | h&w-as-a-company: positioning, banned words, performance-language, banned Unicode, awareness-stage messaging, audience, sender identity |
 | 2. The user's voice | `personal-voice.md` | The user specifically, and only what holds across every posture: character, the measured hard numbers, greeting and sign-off, orthography and particles, emoji, anti-patterns. Leads in relational prose; defers to `prose-style.md` on sentence mechanics in authored prose. |
+| 2b. Stefan's voice | `stefan-voice.md` | Stefan specifically: his greeting, sign-off and address form, which differ from the other founder's. Read it instead of `personal-voice.md` when the mail is signed by Stefan; who signs comes from the record's `assignee`. |
 | 3. Prose | `prose-style.md` | Sentence mechanics (DE/EN) and German orthography. Authority on mechanics in authored prose. |
 | 4. AI-tells filter | `ai-tells.md` | Detector list of structures, openers, transitions, copula dodges, and formatting tics that mark prose as LLM-generated. Run the draft against it after layers 1-3. |
 

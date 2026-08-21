@@ -5,14 +5,16 @@ Five-beat scaffold for 30-second self-introductions: networking, conference open
 ## N: Name, identity with purpose
 
 Introduce yourself simply. Add `hackers&wizards` and role only when it serves the message.
+`[FIRST-NAME]` below is whoever the draft is for, read off their person record; the examples are
+the shape, not one person's script.
 
-- *"Benedikt from hackers&wizards"* flows naturally.
+- *"[FIRST-NAME] from hackers&wizards"* flows naturally.
 - Role only if it adds immediate value.
 - Conversational, not formal.
 
-> *"I'm Benedikt, Agentic Engineering Practitioner at hackers&wizards. I help CTOs elevate their teams to become confident AI practitioners."*
+> *"I'm [FIRST-NAME], Agentic Engineering Practitioner at hackers&wizards. I help CTOs elevate their teams to become confident AI practitioners."*
 
-> *"Benedikt from hackers&wizards. I help engineering teams ship faster with better code and fulfilled developers."*
+> *"[FIRST-NAME] from hackers&wizards. I help engineering teams ship faster with better code and fulfilled developers."*
 
 ## S: Same, instant mental picture
 
@@ -75,7 +77,7 @@ The N stays constant; S-F-A-G swap per audience. Three worked examples below, ea
 **Skeptical enterprise CTO** (cares about money and risk):
 
 ```
-N: "Benedikt from hackers&wizards"
+N: "[FIRST-NAME] from hackers&wizards"
 S: "Your team's AI reality check"
 F: "Stopped a [Fortune 500 client]'s AI theatre before it scaled"
 A: "Curious if your AI investment is actually paying off"
@@ -85,7 +87,7 @@ G: "15-minute audit, I'll spot exactly where you're leaving money on the table"
 **Startup founder** (cares about lean execution):
 
 ```
-N: "Benedikt from hackers&wizards"
+N: "[FIRST-NAME] from hackers&wizards"
 S: "Your AI cofounder, before you can afford one"
 F: "Trained 30+ teams to ship without growing headcount"
 A: "Curious how lean a team can stay if agents do the boring parts"
@@ -95,7 +97,7 @@ G: "20-minute call about your next hire vs your next agent"
 **Engineering conference / mixed dev audience** (cares about craft):
 
 ```
-N: "Benedikt from hackers&wizards"
+N: "[FIRST-NAME] from hackers&wizards"
 S: "Senior engineer with three agents running in parallel"
 F: "500+ developers in our community, shipping with agents daily"
 A: "Want to see what context engineering looks like in real code"

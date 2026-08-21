@@ -207,4 +207,15 @@ Screen readers can't read decorative Unicode. Customer-facing text (LinkedIn pos
 
 ## Sender identity
 
-All h&w correspondence sent as: `Benedikt Stemmildt | hackers&wizards <benedikt@hackersandwizards.dev>` (default Gmail sender).
+Two facts, and they are not the same one:
+
+- **The envelope** is the authenticated account the draft is created in. It is whatever `gws` is
+  authenticated as, never a name written into a template.
+- **The signature** is the person who owns the work: a deal's or deliverable's `assignee`, read off
+  their person record for the first name and the booking link. `scripts/delivery-actions.ts`
+  resolves it this way for every delivery mail, and a record that names no owner withholds the body
+  rather than signing it with somebody else's name.
+
+Where a mail deliberately goes out of one colleague's mailbox on another's behalf, the work catalog
+row that owns the workflow says so and is the only place that does: for certificate and survey
+mail, `work-catalog/references/delivery.md`, DELIVERY-CERTIFICATE-001.
