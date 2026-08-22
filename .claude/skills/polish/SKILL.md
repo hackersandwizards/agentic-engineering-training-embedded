@@ -50,9 +50,9 @@ they do not edit.
 
 Review the instruction artifacts as their own module: `.claude/` rules, agents, and skills, plus
 `CLAUDE.md`. An instruction counts as code for this review. Look for a pointer to a path that no
-longer exists, a cap or boundary that contradicts an always-on rule, and one rule stated in two
-files — the last only within a single skill, or among the artifacts that are not skills. The same
-rule carried by two different skills is not a finding: a skill is self-contained, and redundancy
+longer exists, and a cap or boundary that contradicts an always-on rule. Look for one rule stated in
+two files only within a single skill, or among the artifacts that are not skills. The same rule
+carried by two different skills is not a finding: a skill is self-contained, and redundancy
 between skills is the price of that. The defect there is the reverse, a skill pointing at a rule, an
 agent, a memory file or another skill's file instead of stating the thing itself. Naming another
 skill so the reader loads it is fine, as is naming the repository data and scripts the skill acts on.
