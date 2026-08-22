@@ -186,13 +186,13 @@ Empty filler that survives its own deletion:
 - "Please find attached" -> "Hier wie besprochen: [link]"
 - "As per our conversation" -> name the conversation: "Wie gestern besprochen"
 
-### Banned style: no decorative Unicode
+### Banned style: no decorative punctuation
 
-Screen readers can't read decorative Unicode. Customer-facing text (LinkedIn posts, emails, website copy, proposals) is plain ASCII punctuation only.
+Screen readers can't read decorative Unicode. Customer-facing text (LinkedIn posts, emails, website copy, proposals) is plain ASCII punctuation only, and a dash is not punctuation in it.
 
 | Banned | Use instead |
 |--------|-------------|
-| em-dash (`—`) and en-dash (`–`) | period, comma, or colon |
+| any dash setting off a phrase or clause, whether em-dash (`—`), en-dash (`–`) or ASCII hyphen (`-`) | period, comma, or colon. The hyphen keeps its two other jobs, joining a compound (`hand-drawn`) and opening a bullet |
 | curly/smart quotes (`'` `'` `"` `"`) | straight quotes (`'` `"`) |
 | ellipsis (`…`) | three periods (`...`) |
 | arrows (`→` `←`) | `->`, `<-`, or words ("then", "to") |
