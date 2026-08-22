@@ -49,16 +49,21 @@ the defects a competent review misses. Pass that path in every agent's prompt. R
 they do not edit.
 
 Review the instruction artifacts as their own module: `.claude/` rules, agents, and skills, plus
-`CLAUDE.md`. `minimalism.md` counts an instruction as code. Look for one rule stated in two files,
-a pointer to a path that no longer exists, and a cap or boundary that contradicts an always-on rule.
+`CLAUDE.md`. An instruction counts as code for this review. Look for a pointer to a path that no
+longer exists, a cap or boundary that contradicts an always-on rule, and one rule stated in two
+files — the last only within a single skill, or among the artifacts that are not skills. The same
+rule carried by two different skills is not a finding: a skill is self-contained, and redundancy
+between skills is the price of that. The defect there is the reverse, a skill pointing at a rule, an
+agent, a memory file or another skill's file instead of stating the thing itself. Naming another
+skill so the reader loads it is fine, as is naming the repository data and scripts the skill acts on.
 
 Verify each finding yourself before fixing it. Apply the fixes. Skip findings that would add
 speculative structure.
 
-**A fix to a mirrored file goes into the hub copy, never this repo's.** `agent-feedback`'s "Mirrors
-and sync" section owns which files those are and why: the sync swaps the whole directory, so a fix
-applied here is gone at the next run and no check catches it. Check each instruction file you are
-about to edit against that section first.
+**A fix to a mirrored file goes into the hub copy, never this repo's.** The sync swaps the whole
+directory, so a fix applied here is gone at the next run and no check catches it. Load
+`agent-feedback` before you edit any instruction file: it decides which files are mirrors, and how
+to sync one once you have changed it.
 
 New failure modes learned during a run belong in `references/failure-modes.md`, not in this file.
 
@@ -80,7 +85,7 @@ A failing check blocks the commit. Fix it if the sweep caused it; report it and 
 
 ## 6. Commit and push
 
-Re-run `git status` and drop any file that became dirty since phase 1 without an edit of yours. Name the remaining files this run edited as the `git commit` pathspec; `git.md` owns that rule.
+Re-run `git status` and drop any file that became dirty since phase 1 without an edit of yours. Name the remaining files this run edited as the `git commit` pathspec: never `git add -A` and never a bare `git commit`, or another session's staged work lands in your commit.
 
 One commit. Message: one line summarizing the sweep, then a short body listing the areas touched.
 

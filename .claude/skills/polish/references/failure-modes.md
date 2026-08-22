@@ -1,8 +1,7 @@
 # Failure modes
 
 Defects a competent review misses by default. Everything a reviewer already checks (dead code,
-shallow modules, injection, N+1, secrets) needs no list here; `minimalism.md` owns the minimalism
-ladder.
+shallow modules, injection, N+1, secrets), and the minimalism ladder itself, needs no list here.
 
 Report at most 5 to 8 findings, merged by root cause. Each one names **the check that proves the fix
 worked**, and **the most plausible innocent explanation** (local convention, a constraint you cannot
@@ -21,8 +20,8 @@ see, work in progress). If the innocent reading holds, drop the finding.
 
 ## Instruction prose that justifies instead of instructing
 
-Measure a section against what an agent does with it. `agent-feedback` owns writing for a literal
-reader and cutting a rule's history; `minimalism.md` owns one owner per rule.
+Measure a section against what an agent does with it: an instruction is written for a literal
+reader, and a rule's history is not part of the rule.
 
 - Consequence narration where naming the obligation would do. Keep one why-clause only where it
   stops an agent skipping the step.
@@ -43,7 +42,7 @@ Found by running the thing, not reading it. A green gate is not evidence that a 
 
 ## Weakened verification
 
-`collaboration.md` forbids weakening a check to make it pass. Review for it having happened: diff the
+A check is never weakened to make it pass. Review for it having happened: diff the
 test files, and look for a production branch keyed on a fixture name, a test mirroring the
 implementation method-for-method, or one asserting only that a mock was called.
 
