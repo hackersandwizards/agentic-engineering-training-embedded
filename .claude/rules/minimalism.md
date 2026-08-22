@@ -30,8 +30,10 @@ When two rungs work, take the higher one and stop.
 - One owner per fact or rule. State it once, in the file or section that owns it, and point there;
   never restate it in a second file or a second section. This stops at a skill's edge: a skill's
   files point only at that same skill's files and at the repository data and scripts it acts on,
-  never at another skill, rule, agent or memory file, by link or by name. Redundancy between skills
-  is the price of that independence.
+  never at another skill, rule, agent or memory file, by link or by name. A skill whose subject
+  matter is the inventory of those artifacts is the exception, bounded to the rows it catalogs:
+  naming which artifact owns which mechanic is that content, not a dependency on it. Redundancy
+  between skills is the price of that independence.
 - Cut any rule the model already follows by default, that never fires, or that guards a case which
   hasn't happened and would announce itself when it does. The test: would a capable model do this
   right without the line? If yes, cut it,
