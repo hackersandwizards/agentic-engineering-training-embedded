@@ -59,12 +59,11 @@ what it resolved. Keep one owner per behavior.
 
 Cutting a skill's reference to another artifact is a deletion, never a substitution: a description
 in place of the name ("the skill that owns the page mechanics") is the same reference, and a shorter
-file is the success criterion. Write the fact in place only where that pointer was its sole carrier
-and the skill cannot run without it. Read the target's frontmatter first: an always-on rule is
-already in the reader's context and its citation simply goes, while a `paths:`-scoped rule loads
-only once a matching file is opened, which is after the skill's instruction has fired, so its clause
-is inlined. A token matching an artifact's name as data, a field value, a channel, an area, is not a
-reference and stays.
+file is the success criterion. Inline the fact only where that pointer was its sole carrier and the
+skill cannot run without it. Check the target's frontmatter: an always-on rule is already in the
+reader's context, so the citation simply goes; a `paths:`-scoped rule loads only after the skill has
+fired, so its clause is inlined. A name appearing as data, a field value, a channel, an area, is not
+a reference and stays.
 
 A skill wrapping a tool has a second owner you did not write: the MCP server's own instructions,
 the tool schemas, the CLI's `--help`. Read those first and keep only what they leave out. A line

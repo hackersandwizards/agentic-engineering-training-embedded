@@ -20,9 +20,8 @@ Commit and push each finished batch without being asked: one coherent unit of wo
 pass, not each file and not a single commit at the end. Stay on the current branch; branch only
 when the user asks.
 
-`.git/index.lock` is another session committing, not stale state. Wait and retry; deleting it
-lets two commits write the index at once and corrupts the one already in flight. If it outlives
-several retries, report it rather than clearing it.
+`.git/index.lock` is another session committing, not stale state: deleting it corrupts the commit
+already in flight. Wait and retry; if it outlives several retries, report it rather than clearing it.
 
 Everything happens in this working tree. Never create or enter a git worktree, and never give a
 delegate `isolation: worktree`: every session shares this one checkout, a worktree branches from

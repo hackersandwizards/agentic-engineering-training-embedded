@@ -216,5 +216,5 @@ Two facts, and they are not the same one:
   resolves it this way for every delivery mail, and a record that names no owner withholds the body
   rather than signing it with somebody else's name.
 
-Where a mail deliberately goes out of one colleague's mailbox on another's behalf, the workflow that
-owns it says so. Do not infer it here.
+Where a mail goes out of one colleague's mailbox on another's behalf, the workflow that owns it says
+so; never infer it here.

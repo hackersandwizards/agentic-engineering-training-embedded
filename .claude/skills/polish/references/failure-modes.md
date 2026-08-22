@@ -42,9 +42,9 @@ Found by running the thing, not reading it. A green gate is not evidence that a 
 
 ## Weakened verification
 
-A check is never weakened to make it pass. Review for it having happened: diff the
-test files, and look for a production branch keyed on a fixture name, a test mirroring the
-implementation method-for-method, or one asserting only that a mock was called.
+Review for a check weakened to make it pass: diff the test files, and look for a production branch
+keyed on a fixture name, a test mirroring the implementation method-for-method, or one asserting
+only that a mock was called.
 
 A test earns trust by failing: delete the guard it names and watch it go red. Bun caps regex
 backtracking where V8 does not, so a production hang can measure as merely slow under vitest. Code
