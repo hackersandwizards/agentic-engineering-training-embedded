@@ -45,6 +45,6 @@ re-casing, no polish. Any text change goes through another `claude -p` call.
 ## Claude -> Codex
 
 Claude starts Codex only for a capability Claude does not have, and never to author text. Image
-generation is that capability today; `image-prompts.md` in the `linkedin` skill owns the call.
+generation is that capability today.
 
 Verify what a run did with `git log`, never from its own summary.

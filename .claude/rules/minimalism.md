@@ -29,13 +29,9 @@ When two rungs work, take the higher one and stop.
 - Fewest files possible. The shortest working diff wins.
 - One owner per fact or rule. State it once, in the file or section that owns it, and point there;
   never restate it in a second file or a second section. **This holds within a skill and stops at
-  its edge.** A skill is self-contained: its files may point at files of the same skill, and at the
-  repository data and scripts the skill acts on, and at nothing else under `.claude/`. Redundancy
-  between skills is the price of that independence. The line is instruction against operand: a rule,
-  a procedure or a standard held in a rule file, an agent, a memory file or another skill is
-  borrowed, and gets written into the skill rather than pointed at; a data file, a script or a
-  config value the skill reads or runs is an operand, and is named where it lives. Naming another
-  skill so the reader loads it is a call rather than a copy, and stays allowed.
+  its edge.** A skill's files point at files of that same skill and at the repository data and
+  scripts it acts on, and at nothing else under `.claude/`: no other skill, rule, agent or memory
+  file, by link or by name. Redundancy between skills is the price of that independence.
 - Cut any rule the model already follows by default, that never fires, or that guards a case which
   hasn't happened and would announce itself when it does. The test: would a capable model do this
   right without the line? If yes, cut it,

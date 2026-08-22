@@ -53,17 +53,17 @@ Review the instruction artifacts as their own module: `.claude/` rules, agents, 
 longer exists, and a cap or boundary that contradicts an always-on rule. Look for one rule stated in
 two files only within a single skill, or among the artifacts that are not skills. The same rule
 carried by two different skills is not a finding: a skill is self-contained, and redundancy
-between skills is the price of that. The defect there is the reverse, a skill pointing at a rule, an
-agent, a memory file or another skill's file instead of stating the thing itself. Naming another
-skill so the reader loads it is fine, as is naming the repository data and scripts the skill acts on.
+between skills is the price of that. The defect there is the reverse, a skill naming a rule, an
+agent, a memory file or another skill at all instead of stating the thing itself. Naming the
+repository data and scripts the skill acts on is fine.
 
 Verify each finding yourself before fixing it. Apply the fixes. Skip findings that would add
 speculative structure.
 
 **A fix to a mirrored file goes into the hub copy, never this repo's.** The sync swaps the whole
-directory, so a fix applied here is gone at the next run and no check catches it. Load
-`agent-feedback` before you edit any instruction file: it decides which files are mirrors, and how
-to sync one once you have changed it.
+directory, so a fix applied here is gone at the next run and no check catches it.
+`~/.claude/scripts/sync-agent-config.sh` lists what is mirrored: edit and commit in the hub, then
+run it, and read its output rather than its exit status.
 
 New failure modes learned during a run belong in `references/failure-modes.md`, not in this file.
 

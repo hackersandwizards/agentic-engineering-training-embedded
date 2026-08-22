@@ -216,6 +216,5 @@ Two facts, and they are not the same one:
   resolves it this way for every delivery mail, and a record that names no owner withholds the body
   rather than signing it with somebody else's name.
 
-Where a mail deliberately goes out of one colleague's mailbox on another's behalf, the work catalog
-row that owns the workflow says so and is the only place that does: for certificate and survey
-mail, `work-catalog/references/delivery.md`, DELIVERY-CERTIFICATE-001.
+Where a mail deliberately goes out of one colleague's mailbox on another's behalf, the workflow that
+owns it says so. Do not infer it here.
