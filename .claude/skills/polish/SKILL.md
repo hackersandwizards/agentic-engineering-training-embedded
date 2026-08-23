@@ -76,7 +76,7 @@ One pass of each. A second full round is the caller's call. Name any finding you
 
 Run the repo's own checks if present, in this order of discovery: a `check`-named script or justfile target, then package.json scripts (test, lint, build), Makefile, pytest, cargo test, go test. Prefer the one-shot over the watcher: `test` is often `vitest`, which never exits.
 
-Read "A gate that ran but was never read" in `references/failure-modes.md` before you run it. That section is passed to the phase 2-4 subagents and never to you, and both traps in it are this phase's: a piped gate reports the last command's exit status, and a commit whose paths the pre-commit hook does not route runs no gate at all. Run the gate on its own line and read `$?`.
+Read "A gate that ran but was never read" in `references/failure-modes.md` before you run it. Both traps in it are this phase's: a piped gate reports the last command's exit status, and a commit whose paths the pre-commit hook does not route runs no gate at all. Run the gate on its own line and read `$?`.
 
 A failing check blocks the commit. Fix it if the sweep caused it; report it and stop if it predates the sweep. A failure traced to a file in the exclusion set is another session's half-finished edit: wait for the gate to clear, and report it and stop if it does not. Never edit that file, and never bypass the hook, to get past it.
 
