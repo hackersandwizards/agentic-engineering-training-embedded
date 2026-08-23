@@ -65,6 +65,26 @@ reader's context, so the citation simply goes; a `paths:`-scoped rule loads only
 fired, so its clause is inlined. A name appearing as data, a field value, a channel, an area, is not
 a reference and stays.
 
+## Widening a mandate
+
+Work an agent definition's opening rule forbids is settled by narrowing that rule until it is true
+as stated, never by appending an exception: a reader holding two rules and no precedence is worse
+off than one holding a wrong rule. Name the second mandate as its own sentence beside the first,
+then bound the reword by area, or a scope like "work nobody owns" hands that colleague every
+unowned row there is.
+
+**Narrow only where the new work is genuinely that colleague's.** A rule protecting a colleague
+from its own channel is not in the way, and narrowing it to fit an assignment is how a protective
+boundary dies. Where the work is somebody else's, refuse the row instead of weakening the sentence.
+
+**Write every exclusion, and every positive obligation, as an act rather than as a class of record
+or a channel.** A widening onto a new input surface falsifies "not for <class>" and
+"<channel> is <colleague>'s" silently, and no check fails: the opening sentence is what everyone
+watches while the `description` and the handover bullets go quietly untrue. So read each one against
+the new rows and test which act its *reason* reached; a reason that was ever mechanism-specific dies
+with the mechanism, which makes the record and not the skill the wrong side. Repair by splitting the
+acts, never by adding "except".
+
 A skill wrapping a tool has a second owner you did not write: the MCP server's own instructions,
 the tool schemas, the CLI's `--help`. Read those first and keep only what they leave out. A line
 restating them is maintained twice and goes stale silently when the vendor changes it.

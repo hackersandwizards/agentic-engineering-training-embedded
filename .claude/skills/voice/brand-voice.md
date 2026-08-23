@@ -125,6 +125,24 @@ When citing performance, name **the metric, the target, and the source**. All th
 Two more, with a source or without: booked and forecast revenue stay separate numbers, and a
 partner or certification status is claimed at the tier granted, never at the tier applied for.
 
+## Client names: anonymize by default
+
+Anonymize every client in anything written. A name stands only where a public URL showing h&w and
+that client together can be cited, and that URL then belongs in the sources list. Our own documents
+license nothing: a release note in a deal or company record, or a reference line in one of our own
+onepagers, is not public coverage. This binds our delivery data too, so trainer feedback, attendee
+surveys and assignment records yield their anonymized statement and never their origin.
+
+**A description can function as a name.** Sector plus two or three technical specifics often
+identifies one company in a niche. Test each case by asking whether the remaining details narrow it
+to a countable set, and drop the sector first: the coupling, the risk and the driver carry the
+argument, the industry rarely does. Describe the situation instead of the customer, at one notch of
+abstraction.
+
+Where a name would visibly strengthen a case and public coverage is likely but unproven, write it
+anonymized and name that case in the report, for the founder to decide separately. A third-party
+publisher cited as a source is a citation, not a client name, and stays.
+
 ## Voice exemplars: verbatim only
 
 Every "voice anchor" or "real exemplar" line in any voice rule MUST be an exact quote from a confirmed real source. Where none exists, leave a gap-note; a fabricated exemplar poisons every draft that calibrates against it.
