@@ -4,12 +4,12 @@ Load when ghostwriting from a transcript, calibrating an article, blog, or talk 
 verbatim-his, or anchoring a draft that needs more voice depth than `personal-voice.md` provides.
 
 The calibration anchors come from real sent mail, and the email exemplars are read from it live
-rather than kept here. The slogan catalogue below
-does not: everything from "Positioning and identity" downward scored **zero occurrences** in the
-sampled corpus (28 of 520 meetings, 240 mails, 5,509 messages). **His meeting and mail vocabulary is
-far plainer than the catalogue implies. Do not reach for a slogan when drafting.** Use the catalogue
-to recognise his positioning, not to generate his sentences. Slogans attested in written material
-live in `brand-vocabulary.md` instead.
+rather than kept here. The slogan catalogue below does not: sampling the corpus (28 of 520
+meetings, 240 mails, 5,509 messages) found almost none of it, and the few entries that do carry a
+count are rare next to his ordinary vocabulary. **His meeting and mail vocabulary is far plainer
+than the catalogue implies. Do not reach for a slogan when drafting, whether or not it is
+attested.** Use the catalogue to recognise his positioning, not to generate his sentences.
+Slogans attested in written material live in `brand-vocabulary.md` instead.
 
 ## Calibration anchors
 

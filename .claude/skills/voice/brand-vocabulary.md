@@ -79,7 +79,7 @@ Tools are commodity; configuration and adoption are not. Each new AI platform wi
 **How to apply:**
 - In every pitch, sales deck, LinkedIn post, application, or speaker slot: never head-to-head against tool vendors. Use the stack frame.
 - When asked "who is your competition?", the honest answer is "the client's in-house team that tries to do this themselves."
-- Never frame [strategy firm] or [strategy firm] as competitors. Complementary.
+- Never frame [strategy firm 1] or [strategy firm 2] as competitors. Complementary.
 - [client] is a client, never a competitor.
 - [partner] is a delivery partner, never a competitor.
 

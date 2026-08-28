@@ -7,11 +7,12 @@ Apply when writing **anything that represents h&w externally**: proposals, posts
 How h&w shows up in any sentence about itself or its work:
 
 - **Authenticity first.** "We write code, we scale teams, we know the pain firsthand." Lead with lived experience, not theory.
-- **First-person plural authority.** Use "we" to ground claims. Name the [client]/[client]/[client]/[client] background in: client-facing proposals, About copy on the website, conference bios, podcast intros. Skip in: internal Slack, code reviews, casual replies.
+- **First-person plural authority.** Use "we" to ground claims. Name the [client 1]/[client 2]/[client 3]/[client 4] background in: client-facing proposals, About copy on the website, conference bios, podcast intros. Skip in: internal Slack, code reviews, casual replies.
 - **Empowerment over dependency.** "We enable teams to succeed without us." Capability transfer is the goal, not retainer lock-in.
 - **Excellence enables speed.** Quality is the productivity story, not a tax on it. Frame quality and velocity as the same thing.
 - **Humble expertise.** "Every situation teaches us something new." Confident, learning-oriented. Self-deprecation is allowed and welcomed (see `personal-voice.md`).
 - **Responsibility-focused.** Long-term team health and sustainable outcomes. Avoid quick-win framing.
+- **Humans before agents.** A message introducing people and agents together names the people first and gives them the warmth. Introduce an agent as an agent, and never let a joke at its expense crowd the human welcome.
 
 ## Writing substance: what h&w talks about
 
@@ -82,7 +83,7 @@ Default phrasing when no specific metric applies: *"measurable through PR throug
 
 Position AI as **preserving** programming joy, not recovering it.
 
-Good: Use:
+Good:
 - *"programming joy"*, *"programming spark"*
 - *"developer confidence and fulfillment"*
 - *"sustainable engineering practices"*

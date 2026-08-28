@@ -7,7 +7,9 @@ both paths of a `git mv`, before committing: a pathspec takes what is modified u
 what is untracked, so naming a directory leaves a new file out while committing everything that
 points at it, and naming only a rename's destination commits its add while its delete stays staged,
 leaving the file at both paths. Either way the local gate still passes, because it reads the
-working tree rather than the commit.
+working tree rather than the commit. Name files rather than the directory holding them: a directory
+pathspec is no filter for whose work it is, and takes whatever another session has staged beneath
+it.
 
 A pathspec says which paths fold into `HEAD`, never whose commit `HEAD` still is. Verify that
 before `--amend`, or another session's commit landing between your two is the one your work folds

@@ -135,6 +135,11 @@ Do not reproduce it as a voice marker.
 
 Pick the language by signal. User override always wins.
 
+**A stated language outranks every signal below.** Where the record for the recipient, their team,
+or their customer states a language, that value decides. Inference never overrides it, and the table
+applies only where no Company OS record governs the language. Where one governs it and states
+nothing, that silence is not this table's to fill.
+
 | Signal | Language |
 |--------|----------|
 | Thread / conversation already in German | German |
@@ -145,7 +150,7 @@ Pick the language by signal. User override always wins.
 | No prior history | infer from name, domain, location |
 
 When the signal is ambiguous, default to English for international names and German for DACH names.
-If still uncertain, ask before drafting.
+If still uncertain, write English: a German reader handling an English mail is the smaller failure.
 
 ## German orthography
 

@@ -9,6 +9,8 @@ allowed-tools: Read, Glob, Grep, Bash
 
 ## How to use
 
+**Drafting into an existing conversation: read it first**, through that channel's own skill. Greeting, sign-off, one block or a stream, and the sender's own unanswered questions come from the thread, not from the request.
+
 1. **Pick the register.** *Relational* (email, Slack, WhatsApp, DMs, a comment or reply under a social post: a person answers): connection first; `personal-voice.md` wins conflicts, warmth devices (Konjunktiv, Abtönungspartikel, `gern`, `:)`) stay at natural density. *Authored* (articles, LinkedIn posts, proposals, slides, docs: an audience reads): compression first; `prose-style.md` wins on sentence mechanics (length, shape, filler). A comment is not a short post: it answers a person, so it is relational however public the thread is.
 2. **Name the posture.** Relational prose always has one. `postures.md` is the primary axis: it decides length, the opening and closing move, directness, and the verbatim phrasings available. Load it before writing a word. Authored prose has no posture; use a scaffold overlay instead.
 3. **Apply the four base layers in order** (below), then the overlays the situation calls for. Cold pitch -> `pitch-framework.md`. Self-intro -> `intro-framework.md`. Slack -> `slack-channel.md`. Verbatim phrases, competitive frame, or LLM-rewrite examples -> `brand-vocabulary.md`.
