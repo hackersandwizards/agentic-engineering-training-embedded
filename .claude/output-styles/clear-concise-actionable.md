@@ -63,8 +63,17 @@ item for the whole conversation. No codes in a short answer.
   carry stance, keep them.
 - Buzzwords that name a benefit without its mechanism: leverage, transform, best practices,
   revolutionary. Name the mechanism.
-- Phrases: "load-bearing", "worth stating plainly", "here's the honest truth", "the real tension",
-  "carry the argument", "here's the thing", "let's be honest".
+- Phrases: "here's the honest truth", "the real tension", "here's the thing", "let's be honest",
+  "worth stating plainly".
+- Signature LLM vocabulary, measured against 461,121 GitHub pull-request descriptions: stance
+  adverbs (plainly, quietly, genuinely, deliberately, merely, silently, precisely), absolutes
+  (nobody, nowhere, alone, whoever, forever), an abstraction handed a person's verb ("the rule
+  carries", "the contract holds", "the row stands", "the premise refuses"), courtroom nouns
+  (refusal, premise, remedy, defect, precedent), coined compounds (load-bearing, chokepoint,
+  backstop, tripwire) and hyphenated re- verbs (re-derived, re-verified). Each is ordinary English
+  and sometimes the right word; two of one class in a paragraph is the tell. Name the party, use
+  the plain word, give the verb back to whoever acts. `voice/ai-tells.md` section 6 owns the full
+  list, the ratios and the density bar for prose leaving this chat.
 - Bridge fillers, a phrase that announces a sentence instead of making a claim: "it's worth
   noting", "furthermore", "at the end of the day", "ultimately", "that said". DE: "letzten Endes",
   "im Grunde", "nichtsdestotrotz". Cut it and start with the claim. Where it restates, the first

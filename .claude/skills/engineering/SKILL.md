@@ -4,7 +4,7 @@ description: >-
   How to approach building and changing software: research before writing, plan, TDD, the
   work/right/fast progression, documentation hierarchy, fail-fast validation, and what to do when
   stuck. Use before implementing a feature, refactoring, fixing a bug, reviewing a change, or
-  planning non-trivial repository work. Skip for content edits, prose, and Company OS data.
+  planning non-trivial repository work. Skip for content edits, prose, and structured business records.
 ---
 
 # Engineering

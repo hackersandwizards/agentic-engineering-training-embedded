@@ -137,7 +137,7 @@ Pick the language by signal. User override always wins.
 
 **A stated language outranks every signal below.** Where the record for the recipient, their team,
 or their customer states a language, that value decides. Inference never overrides it, and the table
-applies only where no Company OS record governs the language. Where one governs it and states
+applies only where no such record governs the language. Where one governs it and states
 nothing, that silence is not this table's to fill.
 
 | Signal | Language |
