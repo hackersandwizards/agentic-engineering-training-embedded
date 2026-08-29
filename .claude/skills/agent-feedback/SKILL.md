@@ -106,7 +106,5 @@ parameter does not word-split in zsh, so the loop runs once against the whole li
 drift. Count the comparisons it made and check that number against repos x artifacts less the
 declared forks before believing a green result.
 
-The hub is a git repository of its own: commit the hub copy there with its paths named. For
-canonical global files under `~/.claude/rules` or `~/.claude/skills`, run
-`~/.claude/scripts/sync-agent-config.sh` afterwards; it commits and pushes the mirrors in every
-configured repository itself.
+The hub is a git repository of its own: commit the hub copy there with its paths named, then run
+the sync script, which commits and pushes the mirrors in every configured repository itself.

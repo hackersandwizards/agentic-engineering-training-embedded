@@ -59,8 +59,8 @@ speculative structure.
 
 **A fix to a mirrored file goes into the hub copy, never this repo's.** The sync swaps the whole
 directory, so a fix applied here is gone at the next run and no check catches it.
-`~/.claude/scripts/sync-agent-config.sh` lists what is mirrored: edit and commit in the hub, then
-run it, and read its output rather than its exit status.
+The sync script lists what is mirrored: edit and commit in the hub, then run it, and read its
+output rather than its exit status.
 
 New failure modes learned during a run belong in `references/failure-modes.md`, not in this file.
 
