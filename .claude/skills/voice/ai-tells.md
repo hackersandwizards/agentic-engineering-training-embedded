@@ -92,11 +92,6 @@ When a paragraph follows this skeleton end-to-end, the reader clocks it as AI re
 - Removing the contrast pivot in the middle. The claim stands without it.
 - Cutting the closing imperative unless it names a specific next step.
 
-### Crutch metaphors
-
-- Banned: "load-bearing" ("load-bearing skill / line / assumption / convention").
-- Use instead: name what it does, "critical", "the part the argument rests on", "the one that matters", "central". DE: "entscheidend" / "trägt das Argument", nicht "load-bearing".
-
 ## 2. Opener / hook patterns
 
 Banned in all forms:
@@ -175,3 +170,57 @@ Every key term mechanically bolded.
 ### Emoji as section markers
 
 Banned: 🚀 / 💡 / 🔍 / ⚠️ / ✅ as headings or bullets in customer-facing prose.
+
+## 6. Signature vocabulary
+
+Measured, not guessed. `github.com/louisabraham/load-bearing` groups 461,121 GitHub pull-request descriptions written between 2025-01-06 and 2026-08-17 into ten clusters by vocabulary alone, with no per-week parameter, so a cluster's growth is in what people wrote. One cluster was 0.7% of the corpus in January 2025 and is 36.6% in August 2026, still rising 1.2 points a week. Its author reads it as Claude. The words below are that cluster's own, with the ratio of how much more often it writes them than all nine other clusters combined.
+
+**A ratio is not a ban.** Most of these are ordinary English and sometimes the right word. What marks the text is density: the cluster reaches for a stance adverb, an absolute, and a verdict verb inside one paragraph, and a person writing to a deadline does not. Our own 185 published LinkedIn posts run at a median of 3.6 of these per thousand words; 52 sit at zero and the worst carries 10 in 579 words. Across all of them: `nobody` 91, `carries` 84, `deliberately` 72, `nothing` 52, `honestly` 23.
+
+**The bar: at most two of these words in one piece, and never two of the same class in one paragraph.** Half our published posts already clear it. Past that, rewrite the sentence carrying the third.
+
+### 6a. Stance adverbs
+
+The garnish a model adds to sound careful. `plainly` 34x, `quietly` 30x, `genuinely` 24x, `deliberately` 24x, `loudly` 18x, `provably` 17x, `empirically` 16x, `merely` 16x, `vacuously` 16x, `legitimately` 14x, `structurally` 14x, `precisely` 14x, `honestly` 12x, `silently` 10x, `demonstrably` 9x.
+
+Cut the adverb, or replace it with the evidence it stands in for.
+
+- "The pipeline quietly broke" -> "The pipeline broke and no test caught it."
+- "We genuinely believe" -> "We believe" or give the reason to.
+- "deliberately small" -> say who decided it and why.
+
+### 6b. Absolutes
+
+`nobody` 25x, `nowhere` 20x, `nothing` 19x, `alone` 14x, `whoever` 13x, `forever` 13x, `somebody` 11x, `neither` 10x, `whichever` 10x.
+
+Name the party instead. The absolute is a rhetorical move; the name is information.
+
+- "Nobody owns the pipeline" -> "The pipeline has no owner" or name the team that should.
+- "There is nowhere else for it to be" -> cut the sentence, the point was made.
+
+### 6c. The abstraction that acts
+
+An abstract noun as the subject of a verb only a person performs. `carries` 21x, `carrying` 20x, `refuses` 23x, `rests` 17x, `refused` 17x, `carried` 16x, `admits` 16x, `holds` 15x, `settles` 14x, `says` 14x, `decides` 13x, `lands` 12x, `stands` 11x, `buys` 11x, `governs` 10x, `pays` 10x.
+
+Put the person or the system back in the subject position.
+
+- "The rule carries the consequence" -> "Whoever breaks the rule pays for it" or name the cost.
+- "The contract holds" -> "The contract still applies."
+
+### 6d. Courtroom nouns
+
+Adjudication register in a business document. `refusal` 28x, `premise` 23x, `ruling` 22x, `asymmetry` 19x, `defect` 18x, `precedent` 16x, `remedy` 13x, `symptom` 13x, `obligation` 11x, `verdict` 10x, `caveat` 9x, `hazard` 9x.
+
+Use the plain word: bug, fix, assumption, what we owe, the catch. A `defect` in a client mail about software is a bug, and a `remedy` is a fix.
+
+### 6e. Coined compounds and the `re-` verb
+
+The invented compact noun: `load-bearing` 39x (the corpus's top word at 929 uses inside against 82 outside), `rung` 18x, `lever` 17x, `carve-out` 17x, `throwaway` 16x, `backstop` 16x, `seam` 16x, `chokepoint` 16x, `machinery` 14x, `wedge` 13x, `tripwire` 11x, `knob` 10x, `ratchet` 9x, `ladder` 9x.
+
+And the hyphenated `re-`: `re-derived` 27x, `re-verified` 15x, `re-measured` 13x, `re-read` 12x, `re-checked` 9x, `re-confirmed` 8x.
+
+Name what the thing does. Not "the load-bearing assumption" but "the assumption everything else depends on", or "critical", or "central". Not "re-verified" but "checked again". DE: "entscheidend" or "trägt das Argument", never "load-bearing".
+
+### 6f. German drafts
+
+The corpus is English, so the words above do not transfer and the classes do. Check a German draft class by class: Haltungs-Adverbien (`schlicht`, `still`, `bewusst`, `nachweislich`), Absolutwörter (`niemand`, `nirgends`, `nichts`), abstrakte Subjekte mit Personen-Verben ("die Regel trägt", "der Vertrag entscheidet"), Gerichtsvokabular (`Anspruch`, `Präzedenzfall`, `Befund`, `Mangel`). Those German examples are translations of the measured classes and are not themselves measured; the density bar in 6 applies to them the same way.
