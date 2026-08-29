@@ -4,8 +4,12 @@ description: >-
   The h&w standard for what "good" looks like in client systems. Load when reviewing architecture
   or code structure, making a technical recommendation, choosing between designs, writing a
   proposal or training content that takes a technical position, or diagnosing why an engineering
-  organization is slow. Skip for routine implementation inside an existing codebase, where the
-  surrounding code is the standard.
+  organization is slow. Use for "review this architecture", "is this architecture any good",
+  "architecture review", "what is wrong with this design", "architecture red flags",
+  "how should we structure this", "microservices or monolith", "build or buy",
+  "should we build this ourselves", "why is this team slow", "why are we shipping so slowly".
+  Skip for routine implementation inside an existing codebase, where the surrounding code is the
+  standard.
 ---
 
 # Architecture Principles for Client Systems
