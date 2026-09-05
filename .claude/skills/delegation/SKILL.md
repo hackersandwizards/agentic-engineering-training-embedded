@@ -17,8 +17,10 @@ decides the default.
 |------|-----|
 | astra low | everyday coding |
 | astra high | planning, hard bugs, architecture, final review |
+| luna high | eval runs, where the fixture is fixed and volume sets the cost |
 
 - Astra accepts `low`, `medium`, `high`, `xhigh`, `max`. It has no `none`.
+- `codex exec --model` overrides the config per invocation. The email-reply evals run luna.
 - OpenAI recommends `high` for interactive coding. We run `low` on cost.
 - Keep `auto_compact_token_limit` near 200K. Above 272K input tokens, input bills at 2x and output
   at 1.5x.
