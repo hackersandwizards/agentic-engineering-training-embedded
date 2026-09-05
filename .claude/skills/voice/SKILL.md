@@ -20,7 +20,7 @@ allowed-tools: Read, Glob, Grep, Bash
 
 | File | Owns |
 |------|------|
-| `postures.md` | The eight measured situational registers of relational prose: quick reply, decision/pushback, delegation/ask, repair, teaching, scheduling, intro, status update. Length, opening and closing moves, directness, verbatim phrasings. Also marks what the evidence does not cover. |
+| `postures.md` | The nine measured situational registers of relational prose: quick reply, decision/pushback, delegation/ask, repair, teaching, scheduling, intro, status update, LinkedIn DM. Length, opening and closing moves, directness, verbatim phrasings. Also marks what the evidence does not cover. |
 
 ## The four base layers (apply in order)
 

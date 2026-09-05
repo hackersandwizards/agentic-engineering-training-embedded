@@ -24,6 +24,7 @@ corpus. Where a posture is thin or unverified, it says so.
 | 6 Scheduling / admin | times, slots, logistics | a time, or named slots |
 | 7 Intro / relationship note | connecting two people, or reconnecting | median 118 characters |
 | 8 Status update | telling people where things stand | short declaratives |
+| 9 LinkedIn DM | the message goes through LinkedIn messaging | one block, median 11 words |
 
 ## 1. Quick reply
 
@@ -186,6 +187,29 @@ Thin: n=18. Treat the opening and closing conventions here as provisional.
 - Good news is paired with the risk.
 - Unprompted explicit reassurance: `Alle Lampen sind grün.`
 - Numbers stated bare and unhedged.
+
+## 9. LinkedIn DM
+
+Measured over 5,910 hand-written outbound LinkedIn DMs, 2017 to 2024, numbers in
+`signature-phrases.md`. The channel changes five things a mail-shaped draft gets wrong; for
+everything else the message keeps whichever posture above it is otherwise in.
+
+- **One message carries the whole turn.** 19% of turns are more than one message, against 62% in
+  the messaging corpus. Greeting, context, ask and sign-off go in one block; never a stream.
+- **`Hey <Name>,` is a real opener here.** Thread openers: `Moin` 55%, `Hey` 25%, bare 20%, both
+  carrying the first name and neither sorting by warmth. Replies: no greeting 85%, no sign-off
+  88%.
+- **`LG /bene` on a thread opener (61%), rarely on a reply (12%). English closes `Best, /bene`,**
+  once `Cheers` in seven years.
+- **The ask sits in the middle, the mechanics after it.** A warmth question in a third, one or two
+  sentences of why now in half, then `Hast du Lust ...?` or `Wollen wir mal ...?`, then the tail
+  that lowers the stakes: `oder so?`, a lunch instead of a call, or the booking link in the same
+  message (23%, measured on asks to existing connections). The first-contact rule under Pitch and
+  positioning, no booking link, stands: a cold pitch is not one of those asks.
+- **A no is a `leider` clause, not a bare `Nein.`** `Leider nicht.` / `Ich muss leider schieben`,
+  the reason as its own sentence, then the alternative slot or window (41%) and a smiley (46%).
+  Negation-first once in 99 declines. Nearly every LinkedIn decline is scheduling; a refusal of a
+  proposition is five in seven years, too thin to shape.
 
 ## Pitch and positioning
 

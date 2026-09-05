@@ -32,6 +32,8 @@ because the API requires it.
 
 ## Conventions
 
+- The trainer channels (`#trainer` and every regional trainer channel) are written in English,
+  whatever language the surrounding conversation used.
 - `_italic_` for action items in a DM to a close peer.
 - Thread reply: no greeting, no closing. The thread is the context.
 - Hard ceiling 5,000 characters (Slack API). His own messages run nowhere near it: median 43
