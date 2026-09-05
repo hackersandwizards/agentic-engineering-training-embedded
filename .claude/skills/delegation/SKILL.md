@@ -10,19 +10,20 @@ description: >-
 
 ## Codex model tiers
 
-Default: `gpt-5.6-luna`, effort `high`.
+Default: `gpt-6-astra`, effort `low`. Plan mode runs `high`. `.codex/config.toml` sets both and
+decides the default.
 
 | Pick | For |
 |------|-----|
-| luna high | everyday coding |
-| luna xhigh | better quality without switching models |
-| terra medium | bigger features |
-| terra high | repo-wide changes |
-| sol high | judgment: planning, hard bugs, architecture, final review |
+| astra low | everyday coding |
+| astra high | planning, hard bugs, architecture, final review |
 
-- Below sol high, luna at higher effort is the same or better, cheaper.
-- Instead of sol xhigh, use terra ultra. Sol ultra over sol max is rarely worth the cost.
-- `ultra` efforts fan out to parallel agents and burn usage fast.
+- Astra accepts `low`, `medium`, `high`, `xhigh`, `max`. It has no `none`.
+- OpenAI recommends `high` for interactive coding. We run `low` on cost.
+- Keep `auto_compact_token_limit` near 200K. Above 272K input tokens, input bills at 2x and output
+  at 1.5x.
+- Astra bills $10/$50 per 1M against luna's $0.20/$1.20. Nothing published compares a cheaper 5.6
+  tier at high effort against Astra at low.
 
 ## Human writing -> Claude
 
