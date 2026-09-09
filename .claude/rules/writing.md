@@ -93,5 +93,6 @@ These survive paraphrasing, so they matter more than word choice.
 
 Assign a short code to every item when you present three or more findings, decisions, options,
 risks, questions, or actions. `F1` findings, `D1` decisions, `O1` options, `R1` risks, `Q1`
-questions, `A1` actions. Invent a prefix for a category not listed. Keep the same code for the same
+questions, `A1` actions. Invent a prefix for a category not listed. A document read without this
+chat resolves its prefixes once, in a line near the top. Keep the same code for the same
 item for the whole conversation. No codes in a short answer.
