@@ -10,7 +10,7 @@ description: >-
 
 ## Codex model tiers
 
-Default: `gpt-6-astra`, effort `low`. Plan mode runs `high`. `.codex/config.toml` sets both and
+Default: `gpt-6-astra`, effort `low`, chosen on cost. Plan mode runs `high`. `.codex/config.toml` sets both and
 decides the default.
 
 | Pick | For |
@@ -21,11 +21,6 @@ decides the default.
 
 - Astra accepts `low`, `medium`, `high`, `xhigh`, `max`. It has no `none`.
 - `codex exec --model` overrides the config per invocation. The email-reply evals run luna.
-- OpenAI recommends `high` for interactive coding. We run `low` on cost.
-- Keep `auto_compact_token_limit` near 200K. Above 272K input tokens, input bills at 2x and output
-  at 1.5x.
-- Astra bills $10/$50 per 1M against luna's $0.20/$1.20. Nothing published compares a cheaper 5.6
-  tier at high effort against Astra at low.
 
 ## Human writing -> Claude
 

@@ -28,7 +28,20 @@ pass, not each file and not a single commit at the end. Stay on the current bran
 when the user asks.
 
 `.git/index.lock` is another session committing, not stale state: deleting it corrupts the commit
-already in flight. Wait and retry; if it outlives several retries, report it rather than clearing it.
+already in flight. The pre-commit hook holds it for well over a minute, so retrying means a couple
+of minutes of looping. Wait and retry; if it outlives that, name the owning process and report it
+rather than clearing it.
+
+A successful commit and a push that prints a ref update are not evidence the work landed. Read
+`HEAD` back for those paths with `git ls-tree HEAD -- <paths>` before reporting anything committed.
+`git commit <path>` answering `no changes added to commit` usually means another session already
+swept your edit into its own commit, so find it with `git log -S` before editing again.
+
+The author on a commit names the checkout a change ran in, never the hand that decided it. Every
+session here commits under the machine's own git identity, agent runs included, and an agent commit
+is marked only by its `Co-Authored-By` line. Take the date and the changed lines from `git log` and
+attribute nothing to it: where provenance decides an escalation, the evidence is a message, a record
+body or a run transcript, and the honest answer is often "unrecorded".
 
 Everything happens in this working tree. Never create or enter a git worktree, and never give a
 delegate `isolation: worktree`: every session shares this one checkout, a worktree branches from

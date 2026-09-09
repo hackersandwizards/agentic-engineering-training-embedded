@@ -21,6 +21,8 @@ When two rungs work, take the higher one and stop.
 
 **Rules:**
 
+- Deliver what was requested, at the requested scope. Do not widen the work into cleanup,
+  refactoring, documentation, or an adjacent feature.
 - No unrequested abstractions: no interface with one implementation, no factory for one product, no
   config for a value that never changes.
 - No boilerplate or scaffolding for later. Later can scaffold for itself.
@@ -34,7 +36,10 @@ When two rungs work, take the higher one and stop.
   matter is the inventory of those artifacts is the exception, bounded to the rows it catalogs:
   naming which artifact owns which mechanic is that content, not a dependency on it. The exception
   runs one way only: a row ID of that inventory is such a name, and no other skill cites one.
-  Redundancy between skills is the price of that independence.
+  Redundancy between skills is the price of that independence. One owner per fact stops again
+  at a list whose gaps read as answers. Ask what a missing row would tell a reader. Where it
+  answers "nothing is needed here", the row stays though it restates its owner. Where it sends
+  the reader looking elsewhere, the row goes.
 - Cut any rule the model already follows by default, that never fires, or that guards a case which
   hasn't happened and would announce itself when it does. The test: would a capable model do this
   right without the line? If yes, cut it, and state the principle rather than re-encode what the

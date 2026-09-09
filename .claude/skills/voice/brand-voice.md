@@ -144,6 +144,21 @@ Where a name would visibly strengthen a case and public coverage is likely but u
 anonymized and name that case in the report, for the founder to decide separately. A third-party
 publisher cited as a source is a citation, not a client name, and stays.
 
+## Documents written for one client
+
+A client document is prose beside a drawing, not a report template. Cut a table that repeats the
+graphic next to it. Draw a timeline rather than tabulating it, and let the drawing carry what the
+prose would otherwise describe. Open points and preconditions are the writer's own checklist: they
+belong in the mail or in the record, never in the document.
+
+Say what we saw: the situation, what we did, what happened. Leave out citations, borrowed
+benchmarks, and any passage about what is or is not published on a topic. The client's own
+published figures stay.
+
+A claim a founder confirms and the records do not evidence stays in the document at full strength,
+written as our reading. Do not soften it, do not drop it, and do not dress it up as a case. Raise
+the record gap once and take the answer as the decision.
+
 ## Voice exemplars: verbatim only
 
 Every "voice anchor" or "real exemplar" line in any voice rule MUST be an exact quote from a confirmed real source. Where none exists, leave a gap-note; a fabricated exemplar poisons every draft that calibrates against it.

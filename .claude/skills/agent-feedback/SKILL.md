@@ -33,6 +33,10 @@ draft is not approval to act on it.
 - Replace vague adverbs ("usually", "as appropriate", "when relevant") with the actual condition.
 - Cut the history that produced the rule: version changes, vendor incidents, prior bugs, stability
   caveats, and verification counts. Keep the failure mode only where it makes the rule enforceable.
+- An artifact may state a rule or a measurement. It may not state a status, because a status goes
+  false while the file sits untouched and no gate reads it.
+- A terminal phrase stops everything rather than the half it was scoped to. Name the half it
+  governs, or a run parks its finding in whatever escape hatch sits beside it.
 - English for the instruction; quoted examples keep their own language.
 
 ## Shape
@@ -40,6 +44,15 @@ draft is not approval to act on it.
 - **Progressive disclosure by default.** `SKILL.md` stays thin and routes outward to the files
   carrying the detail. The skill chooses the axis: mode, topic, layer, or surface. Length never
   forces a split, and two adjacent skills stay two.
+- **A rule's binding outranks a tidier axis.** A section-scoped rule already misread once earns a
+  file of its own. Check what the first gate in a body does to each occasion the description names:
+  the mode that gate locks out is the cut.
+- **An invariant goes in the file where it fires, never in the router**, because a run routed to the
+  job file never reads the router. A caller stating a caveat about another file's behaviour that the
+  other file does not state itself means the owner is wrong, not the caller.
+- **Finish a split by having an agent with no context walk one whole job through the new files.**
+  Give it the skill directory rather than one file: a walker confined to one file reports as missing
+  what sits next door by design.
 - **Always-on status is earned.** A rule that fires on a minority of turns gets `paths:`
   frontmatter or becomes a skill. Reference material is never always-on.
 - **A cut is not finished until the description matches it.** The frontmatter `description`, and
@@ -53,7 +66,16 @@ draft is not approval to act on it.
 ## Before you add a line
 
 Grep the skills, rules, agent files and memories for the fact. If it already exists, the change is
-a move, and the move's second half is the deletion. A finding that contradicts, supersedes or
+a move, and the move's second half is the deletion.
+
+A line obliging an agent to report a value is incomplete until it names the field the consumer joins
+on. Open the consuming artifact and carry its key back into the line, because the one-owner grep
+finds a fact stated twice and never a fact that arrives with no key.
+
+Any gate deciding whether to produce an artifact answers two questions separately: what makes this
+possible, and what makes it wanted. Every suppressing condition ships with its trace, naming the
+item it dropped and the reason in the run report, or a wrong suppression leaves no evidence
+anywhere. A finding that contradicts, supersedes or
 answers a line already there is no addition either: rewrite that line where it stands, and delete
 what it resolved. Keep one owner per behavior.
 
@@ -76,6 +98,10 @@ unowned row there is.
 **Narrow only where the new work is genuinely that colleague's.** A rule protecting a colleague
 from its own channel is not in the way, and narrowing it to fit an assignment is how a protective
 boundary dies. Where the work is somebody else's, refuse the row instead of weakening the sentence.
+
+**Name the artifact a proposed run produces, in one noun, before citing a rule against it.** Check
+that the rule takes that noun as its object: a read run that emits material fires no write-time
+formula. A rule that does not fire is a boundary to propose, not one to enforce.
 
 **Write every exclusion, and every positive obligation, as an act rather than as a class of record
 or a channel.** A widening onto a new input surface falsifies "not for <class>" and

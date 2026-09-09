@@ -2,6 +2,12 @@
 
 Verbatim positioning language, competitive-frame details, performance-language patterns, and on-brand vs. off-brand worked rewrites. Load when positioning h&w in proposals/decks, citing performance numbers, rewriting LLM output to on-brand, or auditing offering/value-prop language.
 
+**Read what h&w has already published before writing a frame, a model or a ladder in your own
+words.** A published frame is checkable by the reader, so a reworded one reads as a second version
+of the same claim. Read that page for what it says against us as well, and state the limitation
+first where it applies. Quote the live page rather than a wording someone handed you, and where the
+line turns out to be unpublished, write it as our own position instead of attributing it.
+
 ## Approved phrases (offerings, value-props, themes)
 
 ### Service offerings and positioning

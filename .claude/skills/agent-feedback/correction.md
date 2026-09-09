@@ -24,6 +24,9 @@ If no, change nothing.
   infer an improvement from an external action alone.
 - When the artifact already contains the right instruction, remove conflicts, consolidate it, or
   add a deterministic check. Never append a duplicate reminder.
+- When output is blamed on an existing rule, read that rule, take its stated threshold, and measure
+  the output against it. Output that passes means the rule is missing, not violated: author the
+  missing one instead of enforcing the one that already held.
 
 ## Pick the owner
 
@@ -36,6 +39,20 @@ Exactly one, and only for a reusable gap:
   editing one, and where an owner is named the edit is theirs, so report the gap instead.
 - **Agent memory** in `.claude/agent-memory/` when it is context to carry forward rather than a
   rule.
+
+A boundary guarding the content of one write belongs to the skill that performs the write. One
+guarding whether the agent may act at all belongs to the agent definition, because a skill sees the
+write and never the chain that produced it.
+
+Three tests before changing a rule that looks like it failed:
+
+- An agent definition governs only the runs that load it. Where the top-level session, or an agent
+  file you do not own, reaches the same hazard, the owner is an always-on rule.
+- Where an agent skipped a check the rule demands, read that agent's own memory for the line that
+  licensed the skip and repair that line. Where an agent file restates the rule in a narrower scope,
+  that narrowing is the defect: widen the clause where it stands rather than adding a second one.
+- One agent failing under a fleet rule earns a bound in that agent's own file. A second agent
+  failing the same way is the signal to promote the bound into the rule.
 
 ## Update it
 

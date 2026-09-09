@@ -15,6 +15,11 @@ An argument narrows what each phase covers, never which phases run. Scoped to on
 still sweeps the code changed alongside it; report what the scope excluded rather than dropping
 the phase.
 
+The argument also scopes where you hunt for defects, never which proven defects you may correct.
+Once a fact is verified false, fix every live copy of it, the generator that produced them
+included, in files the argument never named. The phase 1 exclusion set still binds: a file another
+session is editing is reported as deferred whatever it contains.
+
 Do not use the Workflow tool. Fan out with direct subagents via the Agent tool only.
 
 ## 1. Preflight

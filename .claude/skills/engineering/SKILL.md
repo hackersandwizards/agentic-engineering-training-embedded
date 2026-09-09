@@ -72,6 +72,11 @@ runnable check instead. Use judgment.
 - Validate aggressively at inputs and integration boundaries. Give clear, descriptive errors when
   something breaks.
 - Actively probe edge cases, invalid inputs, and unexpected conditions.
+- A parser answering "malformed" with the same value it gives "legitimately empty" turns a loud
+  failure into a silent one. Put that gate at the parser, never at each consumer.
+- Repairing a record that read as absent does not re-run the jobs that skipped it while it was
+  absent, and those jobs left no trace of the skip. Find the window between the corruption and the
+  repair, then check the repaired records against their untouched siblings.
 
 ## When not to be lazy
 
@@ -99,6 +104,9 @@ Documentation hierarchy, in order of preference:
 - Leave it better than you found it, even when fixing something unrelated.
 - Clean up test scripts, data files, temporary backups, and files from abandoned strategies when
   done.
+- Removing a collection, a skill or an agent also deletes the tests that named it. Diff the deleted
+  cases against the production code they exercised and port every case whose subject still exists.
+  No gate goes red when coverage disappears.
 
 ## When stuck: STOP -> INVESTIGATE -> SIMPLIFY -> CLARIFY -> SEARCH
 

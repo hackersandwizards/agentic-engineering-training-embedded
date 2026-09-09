@@ -168,6 +168,11 @@ Use them when they do work the local language can't. Cut them when an everyday w
 
 The test is reader comprehension, not linguistic purity.
 
+**One exception the rule above otherwise breaks: German prose in this field writes `AI`, not `KI`,
+in every compound** (`AI-Adoption`, `AI-gestützte Entwicklung`). Cutting it to the everyday German
+word is what produces the error. Our documents travel in sets, and a single `KI` puts the set at
+odds with itself before the reader has read any of it.
+
 ## When the rule fights the meaning
 
 These rules serve clarity. Break any of them before producing something stilted, false, or dead. A

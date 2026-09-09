@@ -7,6 +7,10 @@ Report at most 5 to 8 findings, merged by root cause. Each one names **the check
 worked**, and **the most plausible innocent explanation** (local convention, a constraint you cannot
 see, work in progress). If the innocent reading holds, drop the finding.
 
+Before reporting two passages as contradictory, name the object each one governs in one word. Where
+the two words differ there is no finding. A finding whose stated basis has been refuted is
+finished, never re-argued on a fresh objection.
+
 ## Comments
 
 - Deletion is the default. Delete a comment that restates the code, names where it came from, or
