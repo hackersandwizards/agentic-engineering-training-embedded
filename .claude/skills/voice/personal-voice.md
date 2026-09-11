@@ -5,15 +5,14 @@ apply it to anything a person signs or sends directly, emails, Slack DMs and pos
 speaker outreach, talks, client comms. Recipients must not be able to tell a draft from a message
 the signer typed themselves.
 
-The profile rests on two people's measured writing. **What leads** below is measured across one
-founder's sent client mail and outranks every other line in this file but the two exceptions right
-after it: where a later line disagrees, What leads wins. Everything after the exceptions is
-measured on the other founder's corpus and holds wherever What leads is silent.
+**What leads** below is the default for every signer, and `## Mail Stefan signs` is the one
+person section that departs from it. Where any other line disagrees with What leads, What leads
+wins. The measured writing after that holds wherever What leads is silent.
 
 Who signs is the `assignee` on the record the work hangs off, never a default. Where no record names
 an owner, that is a stop: ask, rather than picking a person and signing in their name. Anchor a
 specific draft on the signer's own recent sent mail to that person where you can reach it, opener
-and sign-off included. What leads and the two exceptions hold only where that mail cannot be
+and sign-off included. What leads and the person section hold only where that mail cannot be
 reached.
 
 Situational moves (length, openings, closings, directness, the verbatim phrasings per situation)
@@ -21,8 +20,13 @@ live in `postures.md`. This file is what holds regardless of posture.
 
 ## What leads
 
-- **Opener:** `Hallo <Vorname>,` or `Hey <Vorname>,`. Not `Moin`.
-- **Sign-off:** `Viele Grüße, <Vorname>` on one line, with the signer's own first name.
+- **Opener:** `Moin <Vorname>,`, in German and English. Two recipients: `Moin ihr beiden` or
+  `Moin {Name}, moin {Name}`. Group: `Moin zusammen`.
+- **Sign-off:** `LG` + newline + the sign-off name. Warm variant on the `LG` line: `LG und schönes
+  Wochenende`, `LG und vielen Dank`, `LG und bis bald`. English: `Best,` + newline + the sign-off
+  name.
+- **Sign-off name:** the first name. Benedikt signs `/bene`: the slash is part of the signature,
+  never `Bene`, never `- Bene`.
 - **Closing line before the sign-off**, on a mail that hands a thread to other people, a trainer
   introduction above all: `Bei Fragen meldet ihr euch gerne jederzeit bei mir!`, verbatim, `gerne`
   included.
@@ -32,25 +36,14 @@ live in `postures.md`. This file is what holds regardless of posture.
 - The odd typo and the odd comma splice stay standing. Do not polish them out of a draft that is
   otherwise the signer's.
 
-## Mail Benedikt signs
+## Mail Stefan signs
 
-His own mail keeps the opener and the sign-off measured on his corpus, and What leads holds for it
-in everything else:
+His opener and sign-off, and What leads for everything else:
 
-- **Opener:** `Moin <Vorname>,`. Two recipients: `Moin ihr beiden` or `Moin {Name}, moin {Name}`.
-  Group: `Moin zusammen`.
-- **Sign-off: `LG` + newline + `/bene`. The slash is part of the signature**, not decoration. Never
-  `Bene`, never `- Bene`. Warm variant on the `LG` line: `LG und schönes Wochenende`, `LG und
-  vielen Dank`, `LG und bis bald`.
-- **English:** `Best,` + newline + `/bene`.
-
-## Mail Romy signs
-
-Her own mail keeps the opener and the sign-off of her reviewed trainer-mail copy, and What leads
-holds for it in everything else:
-
-- **Opener:** `Moin <Vorname>,`.
-- **Sign-off:** `LG` + newline + `Romy`.
+- **Opener:** `Hallo <Vorname>,` or `Hey <Vorname>,`. Two recipients: `Hallo ihr beiden`. Group:
+  `Hallo zusammen`. English: `Hi <Vorname>,`.
+- **Sign-off:** `Viele Grüße, Stefan` on one line. Thank-you form: `Vielen Dank und viele Grüße,
+  Stefan`. English: `Best,` + newline + `Stefan`, the default.
 
 ## North star
 
@@ -65,8 +58,8 @@ Slack messages, it doesn't ship.
 
 Four constants that hold across every channel:
 
-- **Always direct.** Whether opening a mail or presenting at a conference, the register is
-  unguarded. *"Hallo zusammen"* not *"Sehr geehrte Damen und Herren"*. Technical precision with
+- **Always direct.** Whether opening with *"Moin"* or presenting at a conference, the register is
+  unguarded. *"Moin zusammen"* not *"Sehr geehrte Damen und Herren"*. Technical precision with
   human warmth.
 - **Always teaching.** From Hacker School kids to enterprise CTOs, every interaction has a
   teach-moment. *"I don't have all the answers, but here's what I've learned."*
@@ -105,21 +98,16 @@ The mechanics a draft will miss. Measured over 211,625 spoken words, 240 sent ma
 
 ## Greeting, opening, sign-off
 
-Opener and sign-off are under What leads and the two exceptions. The rest of this section is
-measured on the second corpus.
+Opener and sign-off are under What leads and Mail Stefan signs. The rest of this section is
+measured on the corpus under The hard numbers.
 
 - The person is named nearly always (125 named against 7 bare).
-- The second corpus greets `Moin <Name>,` in business, personal, German and English alike, and
-  `Hallo <Name>` appears **once in 5,509 messages**.
-- Two recipients or a group: the leading corpus measured no group opener, so keep the shape of the
-  `Moin` forms above with the opener word the signer uses. Under What leads that is
-  `Hallo ihr beiden`, `Hallo zusammen`.
+- `Moin <Name>,` greets in business, personal, German and English mail alike, and `Hallo <Name>`
+  appears **once in 5,509 messages**.
 - Mid-conversation, same thread, same day: no greeting at all.
 - **Mail openings, measured over sent mail:** the most common opener is thanks (*"danke für das gute
   Gespräch gestern"*), then soft re-engagement (*"ich wollte kurz nachhören, ..."*). The
   `wollte`-opener is deliberate warmth, not throat-clearing.
-- English, for every signer but Benedikt: `Best,` + newline + the signer's first name. No English
-  opener is measured.
 - Quick logistics replies and same-thread follow-ups: no sign-off.
 - Authorities, vendors, banks: `BG` + newline + the signer's surname. Unverified in the corpus; the
   sampled window contains no such mail.
