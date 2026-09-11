@@ -7,7 +7,7 @@ Apply when writing **anything that represents h&w externally**: proposals, posts
 How h&w shows up in any sentence about itself or its work:
 
 - **Authenticity first.** "We write code, we scale teams, we know the pain firsthand." Lead with lived experience, not theory.
-- **First-person plural authority.** Use "we" to ground claims. Name the [client 1]/[client 2]/[client 3]/[client 4] background in: client-facing proposals, About copy on the website, conference bios, podcast intros. Skip in: internal Slack, code reviews, casual replies.
+- **First-person plural authority.** Use "we" to ground claims. Name the employers the founders led engineering at, as their public bios list them, in: client-facing proposals, About copy on the website, conference bios, podcast intros. Skip in: internal Slack, code reviews, casual replies.
 - **Empowerment over dependency.** "We enable teams to succeed without us." Capability transfer is the goal, not retainer lock-in.
 - **Excellence enables speed.** Quality is the productivity story, not a tax on it. Frame quality and velocity as the same thing.
 - **Humble expertise.** "Every situation teaches us something new." Confident, learning-oriented. Self-deprecation is allowed and welcomed (see `personal-voice.md`).
@@ -106,7 +106,7 @@ Eugene Schwartz's five awareness stages calibrate **what to say** based on where
 | **1, Unaware** | CTO senses developer-productivity friction but hasn't named it | Open with the friction, not the solution. *"Declining team velocity. Code-quality drift. Tech debt nobody's tracking."* No mention of AI yet. | Leading with "AI" loses readers who haven't connected their pain to AI adoption. |
 | **2, Problem-Aware** | Knows there's an AI-adoption issue, hasn't connected it to systematic practices | Amplify the specific pain (longer review cycles, junior outputs, morale drift) before naming the cause. | Skipping to solutions reads as a sales pitch and loses the reader who hasn't felt the pain explicitly. |
 | **3, Solution-Aware** | Researching different approaches to AI adoption | Position the **category**: context engineering vs prompt engineering vs vibe coding. Educate on the differences. | Pitching h&w specifically before the reader has chosen a category framing makes us sound interchangeable with tooling vendors. |
-| **4, Product-Aware** | Comparing consultancies and training providers | Differentiate with proof: client names, metrics, testimonials, FAQ that addresses the specific objections of an evaluator. | Generic value-prop copy here loses to competitors who name specific results. |
+| **4, Product-Aware** | Comparing consultancies and training providers | Differentiate with proof: client names where a public URL shows h&w and that client together, metrics, testimonials, FAQ that addresses the specific objections of an evaluator. | Generic value-prop copy here loses to competitors who name specific results. |
 | **5, Most Aware** | Decided, needs final motivation | Scarcity ("3 Q4 spots remaining"), clear next step, time-bounded offer. | Re-explaining the value at this stage delays the action. |
 
 **On the website:** every page serves one stage so readers enter where they are. The homepage opens at stage 1, the methodology page at stages 2-3, the Work Together page at stages 4-5.

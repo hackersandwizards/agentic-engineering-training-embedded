@@ -63,18 +63,20 @@ in-house team trying to do this alone *is* the lone hero):
 **"Assistant" and "Assistants"** look banned but are allowed for AI development tools and
 human-assistance contexts.
 
+**"Transformation"** stays in the offering name *"AI developer transformation program"* above.
+
 ## Competitive positioning: the full frame
 
-h&w sits on the **methodology and enablement layer** of the agentic-engineering stack: not in competition with AI-coding tools.
+h&w sits on the **practices and enablement layer** of the agentic-engineering stack: not in competition with AI-coding tools.
 
 **The stack:**
 - **Tooling layer (ecosystem, building blocks):** Ona (formerly Gitpod), Blitzy, Cognition Devin, GitHub Copilot Workspace, Claude Code, OpenAI Codex, Cursor, sovereign models (Qwen, DeepSeek, Llama).
-- **h&w layer (methodology, configuration, enablement, capability transfer):** pre-configured blueprints, training, embedded mentoring, community.
+- **h&w layer (practices, configuration, enablement, capability transfer):** pre-configured blueprints, training, embedded mentoring, community.
 - **Strategy layer (complementary):** they build strategy, h&w executes operationally.
 
 **Firm name casing: preserve the firm's canonical capitalization.** When a partner firm's own employees write the name in a non-canonical case in signatures or emails (e.g., lowercase), h&w prose (emails, Slack, drafts, proposals, NDAs, reviews) still uses the canonical form. The single exception is verbatim quotes from partner-side material (e.g. legal clauses lifted from their template): preserve the original casing there.
 
-**The real competitor:** the client's in-house transformation team trying to build the setup themselves. Success rate is low because configuration, methodology, tool selection, and adoption all have to be mastered at once.
+**The real competitor:** the client's in-house team trying to build the setup themselves. Success rate is low because configuration, practices, tool selection, and adoption all have to be mastered at once.
 
 Tools are commodity; configuration and adoption are not. Each new AI platform widens the configuration gap at the client.
 

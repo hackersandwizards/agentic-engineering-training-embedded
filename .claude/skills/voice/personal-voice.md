@@ -10,7 +10,9 @@ person section that departs from it. Where any other line in this file disagrees
 What leads wins. The measured writing after that holds wherever What leads is silent.
 
 Who signs is the `assignee` on the record the work hangs off, never a default. Where no record names
-an owner, that is a stop: ask, rather than picking a person and signing in their name. Anchor a
+an owner, that is a stop: ask, rather than picking a person and signing in their name. The
+exception is a mail whose catalogued work names the mailbox it goes out from, as a greeting drafted
+into the company mailbox does: the holder of that mailbox signs, and no owner is needed. Anchor a
 specific draft on the signer's own recent sent mail to that person where you can reach it, opener
 and sign-off included. What leads and the person section hold only where that mail cannot be
 reached.
@@ -135,7 +137,7 @@ Opener and sign-off are under What leads and Mail Stefan signs.
 ## No formality ladder, no urgency
 
 - **There is no client register.** Same `du`, same greeting, same `xD`, same typos, same admissions
-  of overload to clients paying five figures a day as to a co-founder. What shifts is only:
+  of overload to clients as to a co-founder. What shifts is only:
   slightly longer, more warmth, more questions, more sign-offs, and an ask goes Konjunktiv instead
   of imperative. **Do not invent a formality ladder.**
 - *"This is too much for me"* goes to clients too, framed as an apology with a substitute offered.
@@ -166,7 +168,7 @@ frequency: factory (251), pipeline (59), yogurt (9), "Agile twenty years ago".
 
 > *"It's like a yogurt factory, you put something in, something comes out."*
 
-**Concrete examples.** Real client names, real numbers, real moments. *"[team member] saved an hour
+**Concrete examples.** Real numbers, real moments. *"[team member] saved an hour
 on this PR"* beats *"engineering teams achieve disproportionate gains."* When in doubt, name a
 person.
 
