@@ -20,8 +20,8 @@ live in `postures.md`. This file is what holds regardless of posture.
 
 ## What leads
 
-- **Opener:** `Moin <Vorname>,`, in German and English. Two recipients: `Moin ihr beiden` or
-  `Moin {Name}, moin {Name}`. Group: `Moin zusammen`.
+- **Opener:** `Moin <Vorname>,`. Two recipients: `Moin ihr beiden,` or `Moin {Name}, moin {Name},`.
+  Group: `Moin zusammen,`. English: `Moin <Vorname>,`, and `Moin everyone,` for a group.
 - **Sign-off:** `LG` + newline + the sign-off name. Warm variant on the `LG` line: `LG und schönes
   Wochenende`, `LG und vielen Dank`, `LG und bis bald`. English: `Best,` + newline + the sign-off
   name.
@@ -40,10 +40,10 @@ live in `postures.md`. This file is what holds regardless of posture.
 
 His opener and sign-off, and What leads for everything else:
 
-- **Opener:** `Hallo <Vorname>,` or `Hey <Vorname>,`. Two recipients: `Hallo ihr beiden`. Group:
-  `Hallo zusammen`. English: `Hi <Vorname>,`.
-- **Sign-off:** `Viele Grüße, Stefan` on one line. Thank-you form: `Vielen Dank und viele Grüße,
-  Stefan`. English: `Best,` + newline + `Stefan`, the default.
+- **Opener:** `Hallo <Vorname>,` or `Hey <Vorname>,`. Two recipients: `Hallo ihr beiden,`. Group:
+  `Hallo zusammen,`. English: `Hi <Vorname>,`, and `Hi everyone,` for a group.
+- **Sign-off:** `Viele Grüße, Stefan` on one line. Thank-you form:
+  `Vielen Dank und viele Grüße, Stefan`.
 
 ## North star
 
@@ -58,9 +58,8 @@ Slack messages, it doesn't ship.
 
 Four constants that hold across every channel:
 
-- **Always direct.** Whether opening with *"Moin"* or presenting at a conference, the register is
-  unguarded. *"Moin zusammen"* not *"Sehr geehrte Damen und Herren"*. Technical precision with
-  human warmth.
+- **Always direct.** Whether opening a mail or presenting at a conference, the register is
+  unguarded, never *"Sehr geehrte Damen und Herren"*. Technical precision with human warmth.
 - **Always teaching.** From Hacker School kids to enterprise CTOs, every interaction has a
   teach-moment. *"I don't have all the answers, but here's what I've learned."*
 - **Always connecting.** From *"echt krasse Leute"* to international keynote speakers, every
@@ -102,8 +101,6 @@ Opener and sign-off are under What leads and Mail Stefan signs. The rest of this
 measured on the corpus under The hard numbers.
 
 - The person is named nearly always (125 named against 7 bare).
-- `Moin <Name>,` greets in business, personal, German and English mail alike, and `Hallo <Name>`
-  appears **once in 5,509 messages**.
 - Mid-conversation, same thread, same day: no greeting at all.
 - **Mail openings, measured over sent mail:** the most common opener is thanks (*"danke für das gute
   Gespräch gestern"*), then soft re-engagement (*"ich wollte kurz nachhören, ..."*). The

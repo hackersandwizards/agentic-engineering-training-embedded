@@ -199,8 +199,8 @@ everything else the message keeps whichever posture above it is otherwise in.
 - **`Hey <Name>,` is a real opener here.** Thread openers: `Moin` 55%, `Hey` 25%, bare 20%, both
   carrying the first name and neither sorting by warmth. Replies: no greeting 85%, no sign-off
   88%.
-- **`LG /bene` on a thread opener (61%), rarely on a reply (12%). English closes `Best, /bene`,**
-  once `Cheers` in seven years.
+- **A sign-off on a thread opener (61%), rarely on a reply (12%).** `Cheers` closed an English DM
+  once in seven years.
 - **The ask sits in the middle, the mechanics after it.** A warmth question in a third, one or two
   sentences of why now in half, then `Hast du Lust ...?` or `Wollen wir mal ...?`, then the tail
   that lowers the stakes: `oder so?`, a lunch instead of a call, or the booking link in the same

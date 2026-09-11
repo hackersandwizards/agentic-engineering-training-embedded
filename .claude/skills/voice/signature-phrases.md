@@ -47,11 +47,10 @@ each template once. A phrasing that lives only in a template is not an anchor. D
   A first message after a connection request opens `Danke fürs Annehmen` 1 / 28 and a reply to one
   `Danke für die Anfrage` 8 / 17.
 - **Closings.** No sign-off on 56% / 54% of all DMs. `LG /bene` on 45% / 61% of thread openers
-  and 7% / 12% of replies. `/bene` 1,001 against `/benedikt` 107 and `/benedict` 13. **English DMs
-  close `Best, /bene` (61) against `Cheers` once: on LinkedIn `Best,` is the measured default,
-  not `Cheers,`.** `LG und ...` warm variants 4 / 10 in total. A smiley is the closer on 29% / 21%
-  (`:)`, `:P`, `:D`), `Danke` on 3.5% / 2.9%. Posts end on `!` 50% / 41%, on `:)` 14% / 14%, on
-  `?` 0% / 8%.
+  and 7% / 12% of replies. `/bene` 1,001 against `/benedikt` 107 and `/benedict` 13. English DMs
+  close `Best, /bene` (61) against `Cheers` once. `LG und ...` warm variants 4 / 10 in total. A
+  smiley is the closer on 29% / 21% (`:)`, `:P`, `:D`), `Danke` on 3.5% / 2.9%. Posts end on `!`
+  50% / 41%, on `:)` 14% / 14%, on `?` 0% / 8%.
 - **Language.** DMs German 80% / 75%, English 4% / 14%, the rest one-liners that carry neither.
   Posts German 47% / 51%, English 8% / 46%.
 - **Emoji: 0.004 / 0.005 per DM, on 0.3% / 0.5% of DMs.** ASCII instead: 49% / 41% of DMs carry
