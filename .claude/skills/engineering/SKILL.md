@@ -99,9 +99,8 @@ Documentation hierarchy, in order of preference:
 3. README / docs: setup, architecture, API specs.
 4. Comments: last resort.
 
-## Leave it better
+## Finish clean
 
-- Leave it better than you found it, even when fixing something unrelated.
 - Clean up test scripts, data files, temporary backups, and files from abandoned strategies when
   done.
 - Removing a collection, a skill or an agent also deletes the tests that named it. Diff the deleted

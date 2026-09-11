@@ -11,9 +11,6 @@ only to whoever made the decision.
 Authored prose (LinkedIn, articles, proposals, slides) has no posture. Use the scaffold overlays in
 `SKILL.md` instead.
 
-Evidence: 211,625 spoken words, 240 sent mails, 5,509 messages. The numbers below come from that
-corpus. Where a posture is thin or unverified, it says so.
-
 | Posture | Fires when | Typical length |
 |---------|-----------|----------------|
 | 1 Quick reply | something needs only acknowledging | 1-3 words |
@@ -143,7 +140,6 @@ need to` (16): he teaches by removing obligations about as often as by adding th
 **Comprehension is checked inline, never explicitly.** 720 inline assent tags (`ne?` 294,
 `right?` 426) against 7 explicit checks (*"macht das Sinn?"*, *"any questions?"*). A 100:1 ratio.
 In writing this becomes a short confirming clause at the end of a claim, not a rhetorical question.
-This is the single most transferable finding in the corpus.
 
 **Anthropomorphic mapping** is the core move for a non-technical listener: the machine explained as
 a person doing the same job badly. It defuses the mystique without dumbing anything down. He then
@@ -213,18 +209,12 @@ everything else the message keeps whichever posture above it is otherwise in.
 
 ## Pitch and positioning
 
-`pitch-framework.md` is a scaffold, not observed behaviour. Take length and directness from the
-measured shape below and from posture 7, not from the framework.
-
 - First contact closes on an interest question and nothing else: no named slots, no booking link,
   no request to hold time. Named slots (posture 6) belong in the reply, once they have engaged.
 - An unavailability window is a plain fact carrying a de-escalation (`no rush at all`), never an
   apology and never a request.
 
 ### Cold ask to a peer
-
-Measured over sent mail: two book asks in June 2026, nineteen guest invitations in August 2026.
-The shape holds across both.
 
 **It opens on their work, never on him and never on h&w.** `your <specific thing> <what it does>.`
 Then one sentence on what it did on our side. He greets, honours, and only then says what he

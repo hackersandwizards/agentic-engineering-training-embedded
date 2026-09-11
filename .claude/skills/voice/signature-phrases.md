@@ -1,12 +1,8 @@
 # Signature Phrases: The User's Real Vocabulary
 
-Load when ghostwriting from a transcript, calibrating an article, blog, or talk that should feel
-verbatim-his, or anchoring a draft that needs more voice depth than `personal-voice.md` provides.
-
 The calibration anchors are measured from real sent mail and from his LinkedIn export; the email
 exemplars are read from the mailbox live rather than kept here. The slogan catalogue below does
-not: sampling the corpus (28 of 520 meetings, 240 mails, 5,509 messages) found almost none of it,
-and the few entries that do carry a count are rare next to his ordinary vocabulary. **His meeting
+not: the corpus holds almost none of it. **His meeting
 and mail vocabulary is far plainer than the catalogue implies. Do not reach for a slogan when
 drafting, whether or not it is attested.** Use the catalogue to recognise his positioning, not to
 generate his sentences. Slogans attested in written material live in `brand-vocabulary.md` instead.
@@ -24,12 +20,9 @@ generate his sentences. Slogans attested in written material live in `brand-voca
 A draft with lines like these in spirit sounds like him. A draft with zero lines like these sounds
 like a consultant trained on his domain.
 
-**LinkedIn DM and post anchors (measured 2026-09-02 from the 2024-09 export):** 6,407 outbound
-DMs from 2017-09 to 2024-09 and 121 posts with a commentary, split at 2021/2022 because the
-register moved. 470 of the 2022-24 DMs (10.5%, and 22.7% of those 15 words or longer) are
-copy-pasted outreach templates in 28 clusters, the largest 239 messages; every number below counts
-each template once. A phrasing that lives only in a template is not an anchor. DM numbers read
-2017-21 / 2022-24.
+**LinkedIn DM and post anchors**, split at 2021/2022 because the register moved. Copy-pasted
+outreach templates count once in every number below, and a phrasing that lives only in a template
+is not an anchor. DM numbers read 2017-21 / 2022-24.
 
 - **DM length: median 9 / 11 words, p90 32 / 40. 67% / 59% under 15 words** (54% with the
   templates counted), 0.7% / 1.3% at 100 or more. Thread openers median 23 / 24 words.
@@ -58,9 +51,8 @@ each template once. A phrasing that lives only in a template is not an anchor. D
   0 / 0.31 per post, on 13% of 2022-24 posts, mostly conference and event posts.
 - **Question in 28% / 32% of DMs, 11% end on one; exclamation in 18% / 26%.** Posts: question 8% /
   15%, exclamation 61% / 57%.
-- `Sie` or `Ihnen` in 0.16% / 0.27%. Em-dash 0 in 5,910 DMs, 2 in posts (one 2020 caption shared
-  twice). `bitte` 13 / 19. `gern` 121 / 348 against `gerne` 6 / 18, `grad` 82 / 144 against
-  `gerade` 1 / 8, `vllt` 40 / 105 against `vielleicht` 2 / 12, `ggf.` 18 / 34, `bissi` 15 / 17,
+- `Sie` or `Ihnen` in 0.16% / 0.27%. Em-dash 0 in 5,910 DMs, 2 in posts. `bitte` 13 / 19. `gern`
+  121 / 348 against `gerne` 6 / 18, `grad` 82 / 144 against `gerade` 1 / 8, `vllt` 40 / 105 against `vielleicht` 2 / 12, `ggf.` 18 / 34, `bissi` 15 / 17,
   `nen` 41 / 94.
 - **A DM that asks** (hand-written, 15+ words, a question and an ask form; n=59 / 223): greets 75%
   / 74%. The sentence after the greeting is context 54% / 50%, a warmth question 19% / 37%, the
@@ -208,8 +200,8 @@ the fleet's own output and the calibration ends up measuring itself.
 - *"Ich denke ja immer beim Reden."*
 - *"Unser FastAPI Repository ist natürlich super ordentlich."* Self-deprecating humor about training
   repos being unrealistically clean.
-- *"Ehrlicherweise"*: real but far rarer than earlier guidance claimed. 44 occurrences, 0.36 per
-  1000 words, roughly 39x rarer than `also`. It is a marker, not a tic. He is self-aware about it:
+- *"Ehrlicherweise"*: real but rare. 44 occurrences, 0.36 per 1000 words, roughly 39x rarer than
+  `also`. It is a marker, not a tic. He is self-aware about it:
   *"ich benutze das Wort ehrlicherweise gerade ehrlicherweise relativ viel."*
 
 **Blunt tool assessments:**
@@ -219,9 +211,8 @@ the fleet's own output and the calibration ends up measuring itself.
   as identity marker.
 - *"Man braucht die IDE irgendwie nicht mehr so richtig."*
 
-These are jokes about tools, not a model for disagreeing with a person. **How he actually pushes
-back is measured in `postures.md` posture 2**: agreement token first when live, bare negation first
-in writing. Nothing in this file describes a pushback shape.
+These are jokes about tools, not a model for disagreeing with a person: that is `postures.md`
+posture 2.
 
 ## Vision and empowerment
 

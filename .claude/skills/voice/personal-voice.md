@@ -6,8 +6,8 @@ speaker outreach, talks, client comms. Recipients must not be able to tell a dra
 the signer typed themselves.
 
 **What leads** below is the default for every signer, and `## Mail Stefan signs` is the one
-person section that departs from it. Where any other line disagrees with What leads, What leads
-wins. The measured writing after that holds wherever What leads is silent.
+person section that departs from it. Where any other line in this file disagrees with What leads,
+What leads wins. The measured writing after that holds wherever What leads is silent.
 
 Who signs is the `assignee` on the record the work hangs off, never a default. Where no record names
 an owner, that is a stop: ask, rather than picking a person and signing in their name. Anchor a
@@ -25,6 +25,8 @@ live in `postures.md`. This file is what holds regardless of posture.
 - **Sign-off:** `Liebe Grüße` + newline + the sign-off name, no comma. English: `Kind regards,` +
   newline + the sign-off name. One form per language: a thank-you goes in the body, never into the
   sign-off.
+- **LinkedIn message sign-off:** the short form, `LG` + the sign-off name on one line. English:
+  `Cheers,` + the sign-off name on one line. The opener stays as above.
 - **Sign-off name:** the first name. Benedikt signs `/bene`: the slash is part of the signature,
   never `Bene`, never `- Bene`.
 - **Closing line before the sign-off**, on a mail that hands a thread to other people, a trainer
@@ -76,7 +78,7 @@ Two recurring registers underneath:
 
 ## The hard numbers
 
-The mechanics a draft will miss. Measured over 211,625 spoken words, 240 sent mails, 5,509 messages.
+The mechanics a draft will miss.
 
 - **Median sentence: 5 words. 65% of sentences are 6 words or fewer. 1.6% are 20 or more.** This
   holds even in the longest analytical messages. It is the hardest number to hit and the first one
@@ -91,13 +93,11 @@ The mechanics a draft will miss. Measured over 211,625 spoken words, 240 sent ma
 - **Zero em-dashes and zero semicolons across 600k+ characters.** Every em-dash in the corpus is
   pasted machine output. Both a rule and a detection signal: an em-dash in this voice means the text
   is not the signer's. (The ban itself lives in `brand-voice.md`.)
-- **Typos stay uncorrected.** Zero correction messages. Perfectly clean prose in this voice is out
-  of character; leave the lowercase sentence opener and the missing comma alone.
+- **Zero correction messages.** Perfectly clean prose in this voice is out of character.
 
 ## Greeting, opening, sign-off
 
-Opener and sign-off are under What leads and Mail Stefan signs. The rest of this section is
-measured on the corpus under The hard numbers.
+Opener and sign-off are under What leads and Mail Stefan signs.
 
 - The person is named nearly always (125 named against 7 bare).
 - Mid-conversation, same thread, same day: no greeting at all.
@@ -105,8 +105,7 @@ measured on the corpus under The hard numbers.
   Gespräch gestern"*), then soft re-engagement (*"ich wollte kurz nachhören, ..."*). The
   `wollte`-opener is deliberate warmth, not throat-clearing.
 - Quick logistics replies and same-thread follow-ups: no sign-off.
-- Authorities, vendors, banks: `BG` + newline + the signer's surname. Unverified in the corpus; the
-  sampled window contains no such mail.
+- Authorities, vendors, banks: `BG` + newline + the signer's surname.
 - **Never:** *"Best regards"*, *"Sincerely"*, *"MfG"*, *"Hochachtungsvoll"*, *"Ciao"*, or any
   signature with a quote attached.
 
@@ -118,8 +117,7 @@ measured on the corpus under The hard numbers.
 - **German particle layer**, the politeness and warmth carrier: `also` (the planning token,
   14/1000), `mal` (500), `schon` (406), `ja` (387), `einfach` (125), `halt` (77), `genau`,
   `so ein bisschen` (the core hedge), `so eine Art` (approximation frame), `ich sag mal` (downtoner
-  before a strong claim), `gucken` / `guck mal` (the verb for investigate). Keep these at natural
-  density in relational prose; `prose-style.md` cuts them in authored prose.
+  before a strong claim), `gucken` / `guck mal` (the verb for investigate).
 - **Konjunktiv (würde, wäre, könnte, hätte) for soft asks toward clients and externals only.**
   *"Am 4. März wäre ich gern remote dabei."* Internally the bare indicative: *"Wir machen nicht X,
   weil ..."*, bare *"kannst du ..."*. Never soften your own commitment: *"Anbei als PDF."* The
@@ -133,8 +131,6 @@ measured on the corpus under The hard numbers.
   working from a fixed list.
 - `…` marks resignation or an unfinished thought. `-.-` exasperation at circumstances. `xD`
   self-directed absurdity.
-- The absence of a smiley is the anger signal, see `postures.md` posture 2.
-- Pictograph emoji as section markers: never (`brand-voice.md`).
 
 ## No formality ladder, no urgency
 
@@ -265,8 +261,6 @@ Good: *"I've been deep in agentic engineering since the alpha. Hands in the code
 ### Reacting without adding
 
 Bad: *"Everyone's talking about AI. I agree, it's important!"*
-Good: *"Everyone's talking about AI. Almost nobody is talking about why most teams roll it out and
-then get stuck."*
 
 ### Name-dropping for status
 

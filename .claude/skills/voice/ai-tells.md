@@ -167,17 +167,13 @@ Every key term mechanically bolded.
   ```
 - Use instead: full sentences, or a real two-column table if the items are genuinely parallel.
 
-### Emoji as section markers
-
-Banned: 🚀 / 💡 / 🔍 / ⚠️ / ✅ as headings or bullets in customer-facing prose.
-
 ## 6. Signature vocabulary
 
-Measured, not guessed. `github.com/louisabraham/load-bearing` groups 461,121 GitHub pull-request descriptions written between 2025-01-06 and 2026-08-17 into ten clusters by vocabulary alone, with no per-week parameter, so a cluster's growth is in what people wrote. One cluster was 0.7% of the corpus in January 2025 and is 36.6% in August 2026, still rising 1.2 points a week. Its author reads it as Claude. The words below are that cluster's own, with the ratio of how much more often it writes them than all nine other clusters combined.
+Measured, not guessed. `github.com/louisabraham/load-bearing` groups 461,121 GitHub pull-request descriptions into ten clusters by vocabulary alone, and its author reads one of them as Claude. The words below are that cluster's own, with the ratio of how much more often it writes them than all nine other clusters combined.
 
-**A ratio is not a ban.** Most of these are ordinary English and sometimes the right word. What marks the text is density: the cluster reaches for a stance adverb, an absolute, and a verdict verb inside one paragraph, and a person writing to a deadline does not. Our own 185 published LinkedIn posts run at a median of 3.6 of these per thousand words; 52 sit at zero and the worst carries 10 in 579 words. Across all of them: `nobody` 91, `carries` 84, `deliberately` 72, `nothing` 52, `honestly` 23.
+**A ratio is not a ban.** Most of these are ordinary English and sometimes the right word. What marks the text is density: the cluster reaches for a stance adverb, an absolute, and a verdict verb inside one paragraph, and a person writing to a deadline does not. Across our own published LinkedIn posts: `nobody` 91, `carries` 84, `deliberately` 72, `nothing` 52, `honestly` 23.
 
-**The bar: at most two of these words in one piece, and never two of the same class in one paragraph.** Half our published posts already clear it. Past that, rewrite the sentence carrying the third.
+**The bar: at most two of these words in one piece, and never two of the same class in one paragraph.** Past that, rewrite the sentence carrying the third.
 
 ### 6a. Stance adverbs
 

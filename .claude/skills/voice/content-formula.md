@@ -71,8 +71,6 @@ This beat separates h&w content from vendor content. Vendors stop at the technic
 
 Forward motion, not summary. A specific next step framed as possibility.
 
-> *"Where's your team going to be in six sprints?"*
-
 Match the channel: a real question for LinkedIn, a clear next step for blog/long-form, a Monday-morning first move for a talk.
 
 **Failure mode if you skip:** ending on the human-impact beat leaves the reader nodding, not moving. The Call closes the energy loop.

@@ -4,11 +4,6 @@ Apply when drafting any prose a human will read: emails, proposals, posts, slide
 Slack messages, client docs. Skip for code, command output, raw data dumps, and quoted source
 material.
 
-This file is the authority on sentence mechanics in **authored** prose (articles, posts, proposals,
-slides, docs). In **relational** prose (email, Slack, WhatsApp, DMs) `personal-voice.md` wins on
-warmth devices and owns the measured sentence and message lengths; everything else here (verbs,
-passive, concrete, orthography) still applies.
-
 ## North star
 
 Short sentences, strong verbs, concrete nouns, no filler. The DE/EN deltas are vocabulary, not
@@ -82,7 +77,7 @@ Epistemic markers (`I think`, `glaub ich`, `I'm not sure`) carry stance and aren
 
 **Relational-prose exception.** In email, Slack, and personal messages, Abtönungspartikel (`mal`,
 `einfach`, `doch`, `eh`, `schon`, `halt`) and softeners (`gern`, `vllt.`, `ggf.`) carry politeness
-and warmth: "Sagt einfach Bescheid" invites, "Sagt Bescheid" instructs. Keep them at his measured
+and warmth: "Sagt einfach Bescheid" invites, "Sagt Bescheid" instructs. Keep them at the measured
 density (`personal-voice.md`). The filler sentence-frames and EN connectors below stay banned
 everywhere.
 
@@ -104,12 +99,8 @@ Filler sentence-frames (cut the frame, lead with the claim):
 
 ## No throat-clearing openers
 
-Lead with the claim, the conflict, or a concrete scene. Do not open with the year, a dictionary
-definition, a famous quote, or a generic state-of-the-world sentence, unless the relevance lands in
-the next clause.
-
-Failure mode: "In today's fast-paced world ..." or "Seit jeher beschäftigt die Menschheit ..." marks
-the writer as corporate and the reader bails before the content arrives.
+Do not open with the year, a dictionary definition, or a famous quote, unless the relevance lands in
+the next clause: the reader bails before the content arrives.
 
 ## Spoken to written
 
@@ -135,9 +126,10 @@ Do not reproduce it as a voice marker.
 
 Pick the language by signal. User override always wins.
 
-**A stated language outranks every signal below.** Where the record for the recipient, their team,
-or their customer states a language, that value decides. Inference never overrides it, and the table
-applies only where no such record governs the language. Where one governs it and states
+**A stated language outranks every signal below but one.** Where the record for the recipient,
+their team, or their customer states a language, that value decides, unless every message in the
+thread runs in another language: then the thread decides. The table applies only where no such
+record governs the language. Where one governs it and states
 nothing, that silence is not this table's to fill.
 
 | Signal | Language |

@@ -39,7 +39,7 @@ false, or dead.
   revolutionary. Name the mechanism.
 - Phrases: "here's the honest truth", "the real tension", "here's the thing", "let's be honest",
   "worth stating plainly".
-- Signature LLM vocabulary, measured against 461,121 GitHub pull-request descriptions: stance
+- Signature LLM vocabulary: stance
   adverbs (plainly, quietly, genuinely, deliberately, merely, silently, precisely), absolutes
   (nobody, nowhere, alone, whoever, forever), an abstraction handed a person's verb ("the rule
   carries", "the contract holds", "the row stands", "the premise refuses"), courtroom nouns

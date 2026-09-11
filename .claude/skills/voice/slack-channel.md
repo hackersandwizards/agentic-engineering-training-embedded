@@ -36,5 +36,4 @@ because the API requires it.
   whatever language the surrounding conversation used.
 - `_italic_` for action items in a DM to a close peer.
 - Thread reply: no greeting, no closing. The thread is the context.
-- Hard ceiling 5,000 characters (Slack API). His own messages run nowhere near it: median 43
-  characters, 0.7% over 320.
+- Hard ceiling 5,000 characters (Slack API).

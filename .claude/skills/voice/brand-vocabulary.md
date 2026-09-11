@@ -1,7 +1,5 @@
 # Brand Vocabulary: h&w Phrase Reference
 
-Verbatim positioning language, competitive-frame details, performance-language patterns, and on-brand vs. off-brand worked rewrites. Load when positioning h&w in proposals/decks, citing performance numbers, rewriting LLM output to on-brand, or auditing offering/value-prop language.
-
 **Read what h&w has already published before writing a frame, a model or a ladder in your own
 words.** A published frame is checkable by the reader, so a reworded one reads as a second version
 of the same claim. Read that page for what it says against us as well, and state the limitation
@@ -64,7 +62,6 @@ in-house team trying to do this alone *is* the lone hero):
 
 Some words look banned but have approved uses in specific contexts:
 
-- **"Solution"**: allowed for technical implementations and problem-solving contexts.
 - **"Assistant / Assistants"**: allowed for AI development tools and human-assistance contexts.
 
 ## Competitive positioning: the full frame

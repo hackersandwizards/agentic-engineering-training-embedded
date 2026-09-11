@@ -235,9 +235,8 @@ Screen readers can't read decorative Unicode. Customer-facing text (LinkedIn pos
 
 **Carve-outs:**
 - Pictograph emojis (📅 ✅ 🚀) are technically accessible but absent from the user's real writing, skip them in customer-facing copy.
-- German Umlaute (`ä ö ü ß`) are language characters, not decoration. Always preserve. See `prose-style.md` (German orthography).
+- German Umlaute (`ä ö ü ß`) are language characters, not decoration.
 - ASCII emoticons (`:)` `;)` `xD`) where a real Slack message would land them.
-- Slack format quirks (incl. the `•` bullet the Slack API requires): see `slack-channel.md`.
 
 ## Sender identity
 
@@ -245,10 +244,5 @@ Two facts, and they are not the same one:
 
 - **The envelope** is the authenticated account the draft is created in. It is whatever `gws` is
   authenticated as, never a name written into a template.
-- **The signature** is the person who owns the work: a deal's or deliverable's `assignee`, read off
-  their person record for the first name and the booking link. A script rendering the mail resolves
-  it the same way, and a record that names no owner withholds the body rather than signing it with
-  somebody else's name.
-
-Where a mail goes out of one colleague's mailbox on another's behalf, the workflow that owns it says
-so; never infer it here.
+- **The signature** is whoever signs under `personal-voice.md`, read off their person record for the
+  first name and the booking link.
