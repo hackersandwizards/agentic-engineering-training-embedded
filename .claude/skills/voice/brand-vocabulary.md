@@ -107,7 +107,7 @@ Approved verbatim patterns, each citing metric, target, and source:
 Bad: *"In today's rapidly evolving technological landscape, organizations must carefully consider the implementation of AI-assisted development tools to optimize their software delivery pipelines while maintaining code quality standards."*
 
 Good (constructed to show the diff, not a verbatim exemplar; real ones are in
-`signature-phrases.md`): *"Hey. Your team tried AI coding tools and got burned. Mine too. AI isn't
+`signature-phrases.md`): *"Moin. Your team tried AI coding tools and got burned. Mine too. AI isn't
 the problem, we're just using it wrong."*
 
 The diff: lived language, specific images, real verbs, peer register.

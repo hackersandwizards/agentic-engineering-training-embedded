@@ -214,9 +214,9 @@ These signal marketing breathlessness rather than real claims:
 
 Empty filler that survives its own deletion:
 
-- "I just wanted to follow up" -> "Hallo {Name}, wie sieht's aus mit [topic]?"
+- "I just wanted to follow up" -> the signer's opener (`personal-voice.md`), then "wie sieht's aus mit [topic]?"
 - "I am writing to inquire" -> state the question
-- "I hope this email finds you well" -> "Hallo {Name}"
+- "I hope this email finds you well" -> the signer's opener alone (`personal-voice.md`)
 - "Please find attached" -> "Hier wie besprochen: [link]"
 - "As per our conversation" -> name the conversation: "Wie gestern besprochen"
 
