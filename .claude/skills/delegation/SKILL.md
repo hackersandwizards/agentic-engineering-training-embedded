@@ -10,8 +10,8 @@ description: >-
 
 ## Codex model tiers
 
-Default: `gpt-6-astra`, effort `low`, chosen on cost. Plan mode runs `high`. `.codex/config.toml` sets both and
-decides the default.
+Default: whatever `.codex/config.toml` sets, a repository's own before `~/.codex/config.toml`. Set
+in a repository, it is `gpt-6-astra` at effort `low`, chosen on cost, with plan mode at `high`.
 
 | Pick | For |
 |------|-----|
@@ -20,7 +20,7 @@ decides the default.
 | luna high | eval runs, where the fixture is fixed and volume sets the cost |
 
 - Astra accepts `low`, `medium`, `high`, `xhigh`, `max`. It has no `none`.
-- `codex exec --model` overrides the config per invocation. The email-reply evals run luna.
+- `codex exec --model` overrides the config per invocation.
 
 ## Human writing -> Claude
 

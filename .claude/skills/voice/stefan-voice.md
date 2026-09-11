@@ -13,6 +13,7 @@ picking a founder and inheriting their voice with them.
 
 - **Opener:** `Hallo <Vorname>,` or `Hey <Vorname>,`. Not `Moin`.
 - **Sign-off:** `Viele Grüße, Stefan` on one line.
+- **Closing line before the sign-off**, on a mail that hands a thread to other people, a trainer introduction above all: `Bei Fragen meldet ihr euch gerne jederzeit bei mir!`, verbatim, `gerne` included.
 - **Address:** `du` throughout.
 - **Length:** three to five short sentences.
 - **Bullets:** none, unless he is listing groups or dates.

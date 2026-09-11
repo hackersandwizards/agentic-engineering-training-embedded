@@ -35,8 +35,7 @@ each template once. A phrasing that lives only in a template is not an anchor. D
   templates counted), 0.7% / 1.3% at 100 or more. Thread openers median 23 / 24 words.
 - **Post length: median 4.5 / 15 words, p90 25 / 57, longest 179.** A third of the 2017-21 posts
   are one word (`Neat.` `Hammer` `Insane!`); 13% of 2022-24 posts reach 50 words. Up to 2024 his
-  posts are share captions, not essays; the essay register starts with the 2025 pipeline in
-  `src/content/posts/`.
+  posts are share captions, not essays; the essay register starts with the 2025 post pipeline.
 - **One message carries the whole turn.** 27% / 19% of his turns are more than one message inside
   three minutes (mean 1.45 / 1.26), against 62% in the messaging corpus in `personal-voice.md`.
 - **Openings.** No greeting on 84% / 75% of all DMs, because most are mid-thread: replies open bare

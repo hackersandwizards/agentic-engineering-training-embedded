@@ -63,6 +63,9 @@ Running the check is not the same as honouring it.
   so an `&&` chain proceeds over a red gate. Read the exit code, or run the gate on its own line.
 - A commit whose paths the pre-commit hook does not route runs no gate at all. Check what the
   hook actually matches before trusting it to catch you.
+- `git diff --cached --name-only` reports a rename by its new path alone, so a check scoped to
+  that list never sees the path that went away. A hook building a scope from it needs
+  `--no-renames`.
 - When a gate is red, establish whose change made it red before acting. In a shared working tree
   the failure is often another session's in-flight file, and neither reverting it nor bypassing
   the gate is yours to do.
