@@ -89,6 +89,7 @@ A failing check blocks the commit. Fix it if the sweep caused it; report it and 
 
 Re-run `git status` and drop any file that became dirty since phase 1 without an edit of yours. Name the remaining files this run edited as the `git commit` pathspec.
 
-One commit. Message: one line summarizing the sweep, then a short body listing the areas touched.
+Commit each coherent batch once it passes the gate, rather than one commit at the end. Message: one
+line summarizing the batch, then a short body listing the areas touched.
 
 Push to the branch noted in phase 1. If the push fails (no remote, auth, protected branch), report the error and stop.

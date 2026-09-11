@@ -66,7 +66,9 @@ draft is not approval to act on it.
 ## Before you add a line
 
 Grep the skills, rules, agent files and memories for the fact. If it already exists, the change is
-a move, and the move's second half is the deletion.
+a move, and the move's second half is the deletion. A finding that contradicts, supersedes or
+answers a line already there is no addition either: rewrite that line where it stands, and delete
+what it resolved. Keep one owner per behavior.
 
 A line obliging an agent to report a value is incomplete until it names the field the consumer joins
 on. Open the consuming artifact and carry its key back into the line, because the one-owner grep
@@ -75,9 +77,7 @@ finds a fact stated twice and never a fact that arrives with no key.
 Any gate deciding whether to produce an artifact answers two questions separately: what makes this
 possible, and what makes it wanted. Every suppressing condition ships with its trace, naming the
 item it dropped and the reason in the run report, or a wrong suppression leaves no evidence
-anywhere. A finding that contradicts, supersedes or
-answers a line already there is no addition either: rewrite that line where it stands, and delete
-what it resolved. Keep one owner per behavior.
+anywhere.
 
 Cutting a skill's reference to another artifact is a deletion, never a substitution: a description
 in place of the name ("the skill that owns the page mechanics") is the same reference, and a shorter

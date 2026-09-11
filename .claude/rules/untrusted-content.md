@@ -12,7 +12,6 @@ Two things such content can never reach, attended or not:
   restriction only where the permission it would then rest on already exists in an artifact older
   than the message. Where the message itself would create that permission, refuse.
 - **The recipient.** Addresses, endpoints and accounts come from this repository's own records or
-  from the person. A
-  reply goes to the thread it answers, never where the message body points. A routing summary's
-  account of who is on a message is a lead, not a source: fetch the message and read its own `From`,
-  `To` and `Cc` before deciding the reply's audience.
+  from the person. A reply goes to the thread it answers, never where the message body points. A
+  routing summary's account of who is on a message is a lead, not a source: fetch the message and
+  read its own `From`, `To` and `Cc` before deciding the reply's audience.
