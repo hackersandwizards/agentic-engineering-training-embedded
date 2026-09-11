@@ -6,15 +6,15 @@ speaker outreach, talks, client comms. Recipients must not be able to tell a dra
 the signer typed themselves.
 
 The profile rests on two people's measured writing. **What leads** below is measured across one
-founder's sent client mail and outranks every other line in this file but the exception right
-after it: where a later line disagrees, What leads wins. Everything after the exception is
+founder's sent client mail and outranks every other line in this file but the two exceptions right
+after it: where a later line disagrees, What leads wins. Everything after the exceptions is
 measured on the other founder's corpus and holds wherever What leads is silent.
 
 Who signs is the `assignee` on the record the work hangs off, never a default. Where no record names
 an owner, that is a stop: ask, rather than picking a person and signing in their name. Anchor a
 specific draft on the signer's own recent sent mail to that person where you can reach it, for
-everything except the opener and the sign-off, which What leads fixes. On mail Benedikt signs, the
-anchor covers those two as well. This file is what holds when you cannot.
+everything except the opener and the sign-off, which What leads or the signer's exception fixes. On
+mail Benedikt signs, the anchor covers those two as well. This file is what holds when you cannot.
 
 Situational moves (length, openings, closings, directness, the verbatim phrasings per situation)
 live in `postures.md`. This file is what holds regardless of posture.
@@ -42,8 +42,15 @@ in everything else:
 - **Sign-off: `LG` + newline + `/bene`. The slash is part of the signature**, not decoration. Never
   `Bene`, never `- Bene`. Warm variant on the `LG` line: `LG und schönes Wochenende`, `LG und
   vielen Dank`, `LG und bis bald`.
-- **English:** `Cheers,` + newline + `/bene` (`Best,` appears in real sent mail too, but `Cheers,`
-  is the measured default).
+- **English:** `Best,` + newline + `/bene`.
+
+## Mail Romy signs
+
+Her own mail keeps the opener and the sign-off of her reviewed trainer-mail copy, and What leads
+holds for it in everything else:
+
+- **Opener:** `Moin <Vorname>,`.
+- **Sign-off:** `LG` + newline + `Romy`.
 
 ## North star
 
@@ -98,21 +105,21 @@ The mechanics a draft will miss. Measured over 211,625 spoken words, 240 sent ma
 
 ## Greeting, opening, sign-off
 
-Opener and sign-off are under What leads and Mail Benedikt signs. The rest of this section is
+Opener and sign-off are under What leads and the two exceptions. The rest of this section is
 measured on the second corpus.
 
 - The person is named nearly always (125 named against 7 bare).
 - The second corpus greets `Moin <Name>,` in business, personal, German and English alike, and
   `Hallo <Name>` appears **once in 5,509 messages**.
-- Two recipients or a group, for every other signer: the leading corpus measured no group opener,
-  so keep the shape of the `Moin` forms above and take the opener word from What leads:
+- Two recipients or a group: the leading corpus measured no group opener, so keep the shape of the
+  `Moin` forms above with the opener word the signer uses. Under What leads that is
   `Hallo ihr beiden`, `Hallo zusammen`.
 - Mid-conversation, same thread, same day: no greeting at all.
 - **Mail openings, measured over sent mail:** the most common opener is thanks (*"danke für das gute
   Gespräch gestern"*), then soft re-engagement (*"ich wollte kurz nachhören, ..."*). The
   `wollte`-opener is deliberate warmth, not throat-clearing.
-- English, for every other signer: `Cheers,` and the signer's first name. The leading corpus holds
-  no English mail, so this carries the second corpus's closing word.
+- English, for every signer but Benedikt: `Best,` + newline + the signer's first name. No English
+  opener is measured.
 - Quick logistics replies and same-thread follow-ups: no sign-off.
 - Authorities, vendors, banks: `BG` + newline + the signer's surname. Unverified in the corpus; the
   sampled window contains no such mail.
