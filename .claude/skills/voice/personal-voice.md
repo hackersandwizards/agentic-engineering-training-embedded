@@ -12,9 +12,9 @@ measured on the other founder's corpus and holds wherever What leads is silent.
 
 Who signs is the `assignee` on the record the work hangs off, never a default. Where no record names
 an owner, that is a stop: ask, rather than picking a person and signing in their name. Anchor a
-specific draft on the signer's own recent sent mail to that person where you can reach it, for
-everything except the opener and the sign-off, which What leads or the signer's exception fixes. On
-mail Benedikt signs, the anchor covers those two as well. This file is what holds when you cannot.
+specific draft on the signer's own recent sent mail to that person where you can reach it, opener
+and sign-off included. What leads and the two exceptions hold only where that mail cannot be
+reached.
 
 Situational moves (length, openings, closings, directness, the verbatim phrasings per situation)
 live in `postures.md`. This file is what holds regardless of posture.
@@ -126,11 +126,8 @@ measured on the second corpus.
 - **Never:** *"Best regards"*, *"Sincerely"*, *"MfG"*, *"Hochachtungsvoll"*, *"Ciao"*, or any
   signature with a quote attached.
 
-## Orthography, hedges, particles
+## Hedges and particles
 
-- `grad` 216 against `gerade` 5. `vllt` 71 against `vielleicht` 2. `nen` 176 for `einen`. **`gern`
-  174-34 against `gerne` 6-3.** Write the short form. The closing line under What leads keeps its
-  `gerne`: it is verbatim.
 - **Hedging is post-positioned.** Trailing `glaube ich` (51) outranks leading `Ich glaube` (42).
 - English epistemic markers in actual use: `I think`, `actually`, `basically`, `I'm not sure`,
   `I don't know`. Not `honestly` (0), not `in my opinion` (5), not `I'd say` (15).

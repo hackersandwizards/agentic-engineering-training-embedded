@@ -155,8 +155,7 @@ If still uncertain, write English: a German reader handling an English mail is t
 ## German orthography
 
 Always use proper German Umlaute and Sonderzeichen (ä, ö, ü, ß, Ä, Ö, Ü), never ASCII fallbacks like
-`ae`, `oe`, `ue`, `ss`. Example: `grüße`, not `gruesse`. His short forms are not typos and stay:
-`grad`, `vllt`, `nen`, `gern` (`personal-voice.md`).
+`ae`, `oe`, `ue`, `ss`. Example: `grüße`, not `gruesse`.
 
 ## Foreign words, jargon, Anglizismen
 

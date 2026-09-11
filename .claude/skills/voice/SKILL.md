@@ -29,7 +29,7 @@ Each layer constrains the next; the more concrete rule beats the more abstract o
 | Layer | File | Owns |
 |-------|------|------|
 | 1. Brand | `brand-voice.md` | h&w-as-a-company: positioning, banned words, performance-language, banned Unicode, awareness-stage messaging, audience, sender identity, client naming |
-| 2. Personal voice | `personal-voice.md` | The one shared voice of everyone who writes under their own name, whoever signs, and only what holds across every posture: character, the measured hard numbers, greeting and sign-off, orthography and particles, emoji, anti-patterns. Leads in relational prose; defers to `prose-style.md` on sentence mechanics in authored prose. |
+| 2. Personal voice | `personal-voice.md` | The one shared voice of everyone who writes under their own name, whoever signs, and only what holds across every posture: character, the measured hard numbers, greeting and sign-off, hedges and particles, emoji, anti-patterns. Leads in relational prose; defers to `prose-style.md` on sentence mechanics in authored prose. |
 | 3. Prose | `prose-style.md` | Sentence mechanics (DE/EN) and German orthography. Authority on mechanics in authored prose. |
 | 4. AI-tells filter | `ai-tells.md` | Detector list of structures, openers, transitions, copula dodges, formatting tics, and the measured signature vocabulary that mark prose as LLM-generated. Run the draft against it after layers 1-3; the vocabulary check is a density bar, not a word ban. |
 
