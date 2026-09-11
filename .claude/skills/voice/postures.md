@@ -75,12 +75,12 @@ disappears. Smileys are not decoration here; dropping one is the message.
 
 Three registers. Conflating them is the largest available error.
 
-**Trainer or partner.** `Moin <first name>,` then: frame the work as THEIR opportunity, not our
-need. A personalisation hook, taken from what passed between the two of them directly, never from an
-internal record about the person. 2-3 sentences of plain engagement facts, with no adjectives about
-the client. The shape of the work in one line. Then consent before calendar: `Hättest du Lust?`
-comes before `Wie sieht es zeitlich bei dir aus?`, with named date options. The ask lands last,
-after any caveat. No deadline, no urgency, no reply-scaffolding.
+**Trainer or partner.** The opener from `personal-voice.md`, then: frame the work as THEIR
+opportunity, not our need. A personalisation hook, taken from what passed between the two of them
+directly, never from an internal record about the person. 2-3 sentences of plain engagement facts,
+with no adjectives about the client. The shape of the work in one line. Then consent before
+calendar: `Hättest du Lust?` comes before `Wie sieht es zeitlich bei dir aus?`, with named date
+options. The ask lands last, after any caveat. No deadline, no urgency, no reply-scaffolding.
 
 **Ops or assistant.** Numbered and imperative. Grants judgement up front, names the stop condition
 explicitly, explains why an item matters, points at the tool rather than supplying the answer, and
