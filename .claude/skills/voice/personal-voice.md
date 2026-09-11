@@ -21,10 +21,10 @@ live in `postures.md`. This file is what holds regardless of posture.
 ## What leads
 
 - **Opener:** `Moin <Vorname>,`. Two recipients: `Moin ihr beiden,` or `Moin {Name}, moin {Name},`.
-  Group: `Moin zusammen,`. English: `Moin <Vorname>,`, and `Moin everyone,` for a group.
-- **Sign-off:** `LG` + newline + the sign-off name. Warm variant on the `LG` line: `LG und schönes
-  Wochenende`, `LG und vielen Dank`, `LG und bis bald`. English: `Best,` + newline + the sign-off
-  name.
+  Group: `Moin zusammen,`. English: `Hi <Vorname>,`, and `Hi everyone,` for a group.
+- **Sign-off:** `Liebe Grüße` + newline + the sign-off name, no comma. English: `Kind regards,` +
+  newline + the sign-off name. One form per language: a thank-you goes in the body, never into the
+  sign-off.
 - **Sign-off name:** the first name. Benedikt signs `/bene`: the slash is part of the signature,
   never `Bene`, never `- Bene`.
 - **Closing line before the sign-off**, on a mail that hands a thread to other people, a trainer
@@ -38,12 +38,11 @@ live in `postures.md`. This file is what holds regardless of posture.
 
 ## Mail Stefan signs
 
-His opener and sign-off, and What leads for everything else:
+His German opener and sign-off, and What leads for everything else:
 
 - **Opener:** `Hallo <Vorname>,` or `Hey <Vorname>,`. Two recipients: `Hallo ihr beiden,`. Group:
-  `Hallo zusammen,`. English: `Hi <Vorname>,`, and `Hi everyone,` for a group.
-- **Sign-off:** `Viele Grüße, Stefan` on one line. Thank-you form:
-  `Vielen Dank und viele Grüße, Stefan`.
+  `Hallo zusammen,`.
+- **Sign-off:** `Viele Grüße, Stefan` on one line.
 
 ## North star
 
