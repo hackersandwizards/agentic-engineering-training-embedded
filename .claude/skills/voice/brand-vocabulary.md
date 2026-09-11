@@ -60,9 +60,8 @@ in-house team trying to do this alone *is* the lone hero):
 
 ### Carve-outs from the banned-words list
 
-Some words look banned but have approved uses in specific contexts:
-
-- **"Assistant / Assistants"**: allowed for AI development tools and human-assistance contexts.
+**"Assistant" and "Assistants"** look banned but are allowed for AI development tools and
+human-assistance contexts.
 
 ## Competitive positioning: the full frame
 
