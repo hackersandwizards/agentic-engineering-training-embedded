@@ -18,10 +18,11 @@ because `reset` and `rebase` destroy whatever a third session has staged. Abando
 races: a wrong grouping over a correct tree is not worth rewriting commits other sessions are
 already building on.
 
-`git checkout --` and `git restore` read the same moving `HEAD`, so a revert of your own edit
-installs whatever another session committed there since your run started, and destroys whatever a
-third has uncommitted under the path. Read `HEAD` for those paths before reverting, and name the
-paths there too.
+`git checkout -- <path>` restores that path from the index, not from `HEAD`, so it installs
+whatever another session staged there. `git restore` does the same, and both destroy whatever a
+third session has uncommitted under the path. Revert by naming the source instead,
+`git show HEAD:<path> > <path>`, and read `HEAD` for those paths first: it moves while your run is
+open, so a revert of your own edit can install another session's commit.
 
 Commit and push each finished batch without being asked: one coherent unit of work whose checks
 pass, not each file and not a single commit at the end. Stay on the current branch; branch only
