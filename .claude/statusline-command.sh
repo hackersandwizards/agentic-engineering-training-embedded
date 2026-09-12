@@ -3,7 +3,7 @@
 # (extract/pct_color/time_color/render_bar assign via `printf -v "$var"`, which
 #  the linter cannot trace, so it flags every consumer as unset.)
 #
-#   [Project ·] [Branch* ·] [(REBASING 3/7) ·] [ahead/behind ·] [Agent ·] Model · [Effort ·] context bar XX% · [rate-limit bar XX% Xh Xm] [· status]
+#   [Project ·] [Branch* ·] [(REBASING 3/7) ·] [ahead/behind ·] [Agent ·] Model · [Effort ·] context bar XX% · [rate-limit bar XX% Xh Xm] [· account] [· $cost] [· status]
 #
 # Colors match the starship prompt; effort badges match Claude's UI.
 
@@ -35,6 +35,11 @@ CTX_BAR_RED=26  CTX_BAR_YELLOW=16
 RL5_RED=80   RL5_YELLOW=50
 
 STATUS_CACHE_TTL=300   STATUS_FETCH_TIMEOUT=5
+
+# $TMPDIR is mode 700 on macOS. The /tmp fallback is not, so every value read
+# back out of these caches is validated before use.
+CACHE_DIR="${TMPDIR:-/tmp}"
+CACHE_DIR="${CACHE_DIR%/}"
 
 format_countdown() {
     local secs="$1" var="$2"
@@ -98,6 +103,24 @@ extract '"context_window_size":([0-9]+)'                ctx_size    200000
 extract '"effort":\{[^}]*"level":"([^"]+)"'             effort      ""
 extract '"five_hour":\{[^}]*"used_percentage":([0-9]+)' rl5_pct     ""
 extract '"five_hour":\{[^}]*"resets_at":([0-9]+)'       rl5_resets  ""
+extract '"total_cost_usd":([0-9]+(\.[0-9]+)?)[,}]'      cost_usd    ""
+
+# .claude.json is 160 KB with emailAddress near the end, so the answer is cached.
+# An account switch rewrites the file, so mtime invalidates the cache. Keyed by
+# source path: a session pinned to another CLAUDE_CONFIG_DIR keeps its own entry.
+acct_file="${CLAUDE_CONFIG_DIR:-$HOME}/.claude.json"
+acct_cache="$CACHE_DIR/claude-statusline-account${acct_file//\//-}.cc"
+account=""
+if [[ $acct_file -nt $acct_cache ]]; then
+    # The local part alone collides across accounts held in one name; the first
+    # domain label separates them and the rest carries no signal.
+    extract '"emailAddress"[[:space:]]*:[[:space:]]*"([^@"]+@[^."]+)' account "" \
+            "$(grep -oE '"emailAddress"[[:space:]]*:[[:space:]]*"[^"]*"' "$acct_file" 2>/dev/null)"
+    printf '%s\n' "$account" > "$acct_cache.tmp" && mv "$acct_cache.tmp" "$acct_cache"
+elif [[ -f $acct_cache ]]; then
+    read -r account < "$acct_cache"
+fi
+[[ $account =~ ^[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+$ ]] || account=""
 
 # Claude excludes output_tokens from context usage. Strip rate_limits first so the token
 # regexes only see the context-window block; "input_tokens" does not match inside
@@ -201,11 +224,16 @@ if [[ -n $rl5_pct ]]; then
     out+=" ${SEP} ${rl5_bar} ${rl5_time_color}${rl5_time}${RESET}"
 fi
 
+[[ -n $account ]] && out+=" ${SEP} ${GRAY}${account}${RESET}"
+# %f reads and writes under LC_NUMERIC: a comma-decimal locale both rejects the
+# JSON number and prints the wrong one.
+LC_ALL=C printf -v cost_disp "\$%.2f" "${cost_usd:-0}"
+[[ $cost_disp != "\$0.00" ]] && out+=" ${SEP} ${GRAY}${cost_disp}${RESET}"
+
 # Caches the component status string alone, so the hot path never regexes a 30 KB
-# JSON. $TMPDIR over /tmp: mode 700 on macOS, so nobody can pre-create the path.
-status_dir="${TMPDIR:-/tmp}"
-status_cache="${status_dir%/}/claude-statusline-status.cc"
-status_expiry_file="${status_dir%/}/claude-statusline-status.expiry"
+# JSON.
+status_cache="$CACHE_DIR/claude-statusline-status.cc"
+status_expiry_file="$CACHE_DIR/claude-statusline-status.expiry"
 status_expiry=0
 # Guard the read: `< missing 2>/dev/null` still leaks an "No such file" error
 # because the input redirect is opened before 2>/dev/null takes effect.
