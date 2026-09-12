@@ -81,7 +81,10 @@ These survive paraphrasing, so they matter more than word choice.
 
 # Banned formatting
 
-- Semicolons, em-dashes, dash chaining.
+- Semicolons, dash chaining, and any dash setting off a phrase or clause, whether em-dash, en-dash
+  or a spaced ASCII hyphen. Use a period, comma, or colon instead. The hyphen keeps its other jobs:
+  joining a compound (`hand-drawn`), a kebab-case name, opening a bullet, and a range or flag in
+  code.
 - Title case in headings: use sentence case.
 - Boldface as a substitute for a heading, or every key term mechanically bolded. Rhythm comes from
   white space.
