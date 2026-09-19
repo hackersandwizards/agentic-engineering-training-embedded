@@ -168,7 +168,7 @@ for i in $(seq -w 1 40); do
   n=$((10#$i % 4))
   pushes=""
   for ((k = 1; k <= n; k++)); do pushes="${pushes}push: m${k}\n"; done
-  printf "# case c$i\n\n${pushes}expect: depth=$n\n" > "evals/cases/c$i/prompt.md"
+  printf '# case c%s\n\n%bexpect: depth=%s\n' "$i" "$pushes" "$n" > "evals/cases/c$i/prompt.md"
 done
 
 cat > brief/client-mail.md <<'MD'

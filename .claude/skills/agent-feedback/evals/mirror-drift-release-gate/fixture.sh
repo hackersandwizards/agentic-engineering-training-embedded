@@ -5,7 +5,6 @@
 # behaves like a real one: it adopts uncommitted hub changes, swaps mirrored skill directories
 # whole, skips forks, commits each mirror, and writes ./.sync-ran. Git and coreutils only.
 set -euo pipefail
-ROOT="$PWD"
 ident() { git -C "$1" config user.name "Eval Fixture"; git -C "$1" config user.email "fixture@example.invalid"; }
 
 mkdir -p hub/skills/deploy hub/rules hub/scripts
