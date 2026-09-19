@@ -1,228 +1,191 @@
-# Brand Voice: hackers&wizards
+# Brand voice: hackers&wizards
 
-Apply when writing **anything that represents h&w externally**: proposals, posts, slides, website copy, emails, Slack to clients, speaker outreach, talks. Skip for internal commit messages, code comments, raw notes.
+Apply when writing anything that represents h&w externally: proposals, posts, slides, website copy,
+emails, Slack to clients, speaker outreach, talks.
 
 ## Brand positioning principles
 
-How h&w shows up in any sentence about itself or its work:
-
-- **Authenticity first.** "We write code, we scale teams, we know the pain firsthand." Lead with lived experience, not theory.
-- **First-person plural authority.** Use "we" to ground claims. Name the employers the founders led engineering at, as their public bios list them, in: client-facing proposals, About copy on the website, conference bios, podcast intros. Skip in: internal Slack, code reviews, casual replies.
-- **Empowerment over dependency.** "We enable teams to succeed without us." Capability transfer is the goal, not retainer lock-in.
-- **Excellence enables speed.** Quality is the productivity story, not a tax on it. Frame quality and velocity as the same thing.
-- **Humble expertise.** "Every situation teaches us something new." Confident, learning-oriented. Self-deprecation is allowed and welcomed (see `personal-voice.md`).
-- **Responsibility-focused.** Long-term team health and sustainable outcomes. Avoid quick-win framing.
-- **Humans before agents.** A message introducing people and agents together names the people first and gives them the warmth. Introduce an agent as an agent, and never let a joke at its expense crowd the human welcome.
+- Authenticity first. "We write code, we scale teams, we know the pain firsthand."
+- First-person plural authority. Use "we" to ground claims. Name the employers the founders led
+  engineering at, as their public bios list them, in client-facing proposals, About copy, conference
+  bios and podcast intros; not in internal Slack, code reviews or casual replies.
+- Empowerment over dependency. "We enable teams to succeed without us."
+- Excellence enables speed. Quality and velocity are the same thing, never a tax on each other.
+- Humble expertise. "Every situation teaches us something new."
+- Responsibility-focused. Long-term team health and sustainable outcomes over quick wins.
+- Humans before agents. A message introducing people and agents together names the people first
+  and gives them the warmth. Introduce an agent as an agent, and never let a joke at its expense
+  crowd the human welcome.
 
 ## Writing substance: what h&w talks about
 
-When in doubt whether a claim is on-brand, run it against this list:
+Experience-based claims backed by real client examples; sustainability language ("long-term",
+"sustainable", "over time", "preserving"); capability building ("internal capability", "knowledge
+transfer", "independent improvement"); learning orientation.
 
-- **Experience-based claims:** back assertions with firsthand knowledge and real client examples.
-- **Sustainability language:** "long-term", "sustainable", "over time", "preserving" outcomes.
-- **Capability building:** "internal capability", "knowledge transfer", "independent improvement".
-- **Learning orientation:** acknowledge every context offers fresh insights.
+The five recurring themes, one of which anchors every post, talk and proposal:
 
-The five recurring themes (use to ground longer-form content):
+1. Agentic Engineering Practices: from scattered AI adoption to confident AI practitioners. Vibe
+   Coding is fine for prototypes, not for lasting software.
+2. Context Engineering Foundations: multi-layer context architectures; context engineering as the
+   bottleneck.
+3. Quality at Scale with Agents: AI-friendly architecture, testing strategies, quality gates.
+4. Team Practices and Change Management: AI adoption is like Agile twenty years ago, culture, not
+   tools.
+5. Programming Joy Preservation: purpose, fulfillment, and craft in agentic software development.
 
-1. **Agentic Engineering Practices:** elevating teams from scattered AI adoption to confident AI practitioners. Vibe Coding is fine for prototypes, not for lasting software.
-2. **Context Engineering Foundations:** building multi-layer context architectures that make agents effective. Context engineering as the bottleneck.
-3. **Quality at Scale with Agents:** AI-friendly architecture, testing strategies, quality gates for agentic development.
-4. **Team Practices and Change Management:** how team dynamics shift when agents join, and how to make it stick. AI adoption is like Agile twenty years ago, culture, not tools.
-5. **Programming Joy Preservation:** purpose, fulfillment, and craft in agentic software development.
-
-Anchor posts, talks, and proposals to one of these.
-
-## Audience
-
-CTOs, VPs of Engineering, Tech Leads, and senior developers. Peer language, not vendor language. They've seen every consulting deck. Surprise them with specifics they haven't.
+Audience: CTOs, VPs of Engineering, Tech Leads, senior developers. Peer language, not vendor
+language. They've seen every consulting deck; surprise them with specifics they haven't.
 
 ## Core positioning: the verbatim set
 
-The terms h&w uses consistently. Use verbatim when the concept fits. The consistency builds the category.
+Primary headlines, in priority order: "Elevate Your Teams" (main value proposition), "Your whole
+company, in tune with agentic engineering." (the claim, its results named in the copy under it),
+"From scattered AI adoption to confident AI practitioners" (journey positioning).
 
-### Primary headlines (priority order)
+Terms, verbatim: "Agentic Engineering" (primary: the h&w framework unifying AI-assisted
+development, prompt engineering, context engineering, modern software engineering, pragmatic
+programming), "Agentic Product Engineering" (the product-domain extension), "Functional Agentic
+Engineering" (functional programming as the technical paradigm), "AI-Assisted Development",
+"AI-Augmented Development", "Agentic engineering practices", "Structured AI development".
 
-1. **"Elevate Your Teams"**: main value proposition.
-2. **"Faster Delivery. Better Code. Fulfilled Teams."**: supporting tagline.
-3. **"From scattered AI adoption to confident AI practitioners"**: journey positioning.
-
-### Core positioning terms (use verbatim)
-
-- **"Agentic Engineering"**: primary term. The h&w framework that unifies autonomous software development: AI-assisted development, prompt engineering, context engineering, modern software engineering, pragmatic programming.
-- **"Agentic Product Engineering"**: extension of Agentic Engineering into the product domain (user testing, personas, AI-assisted prototyping, spec-driven development).
-- **"Functional Agentic Engineering"**: functional programming as the technical paradigm: immutability, pure functions, composability applied to AI-assisted development.
-- **"AI-Assisted Development"**: key aspect of Agentic Engineering.
-- **"AI-Augmented Development"**: alternative term.
-- **"Agentic engineering practices"**: the implementation.
-- **"Structured AI development"**: process-focused approach.
-
-### Components unified under Agentic Engineering
-
-These are framed as **components of** Agentic Engineering, not competitors to it:
-
-- **"Context Engineering"**: managing AI conversation context and memory. Core component.
-- **"Modern Software Engineering"**: contemporary practices integrated with AI.
-- **"Prompt Engineering"**: structured AI interaction techniques.
-- **"Pragmatic Programming"**: practical, results-oriented development.
-- **"Extreme Programming"**: agile practices adapted for AI-assisted development.
-- **"Vibe Coding"**: the **anti-pattern** Agentic Engineering replaces. Always frame as the problem, never the solution.
+Components of Agentic Engineering, never competitors to it: "Context Engineering" (core
+component), "Modern Software Engineering", "Prompt Engineering", "Pragmatic Programming", "Extreme
+Programming". "Vibe Coding" is the anti-pattern Agentic Engineering replaces: always the problem,
+never the solution.
 
 ## The four core client-engagement KPIs
 
-Standard KPIs measured in every h&w client engagement. Reference them when discussing measurability. They replace any vague *"we improve productivity"* claim.
+Reference them when discussing measurability; they replace any vague "we improve productivity".
 
-1. **PR Throughput:** merged PRs per week/team. Measured via Git Analytics (history retroactively available).
-2. **AI Utilization:** % of PRs/tasks with AI support. Measured automatically via Claude Code co-author tags, or via PR-template checkbox.
-3. **Change Confidence:** developer self-reported confidence in changes, 1-5 scale. Monthly survey, baseline at engagement start.
-4. **Change Failure Rate:** % failed builds/deployments on test stage. Measured via CI/CD (hardest to measure, team-dependent).
+1. PR Throughput: merged PRs per week/team. Measured via Git Analytics (history retroactively
+   available).
+2. AI Utilization: % of PRs/tasks with AI support. Measured via Claude Code co-author tags, or a
+   PR-template checkbox.
+3. Change Confidence: developer self-reported confidence in changes, 1-5 scale. Monthly survey,
+   baseline at engagement start.
+4. Change Failure Rate: % failed builds/deployments on test stage. Measured via CI/CD.
 
-Default phrasing when no specific metric applies: *"measurable through PR throughput, AI utilization, change confidence, and failure rates."*
+Default phrasing when no specific metric applies: *"measurable through PR throughput, AI
+utilization, change confidence, and failure rates."*
 
 ## Developer well-being language
 
-Position AI as **preserving** programming joy, not recovering it.
+AI preserves programming joy, never recovers it. Good: "programming joy", "programming spark",
+"developer confidence and fulfillment", "sustainable engineering practices", "cognitive load
+reduction", "long-term career health", "preserve the craft". Never "burnout recovery", "therapy" or
+other psychological terms, "enjoy programming again", "rediscover joy".
 
-Good:
-- *"programming joy"*, *"programming spark"*
-- *"developer confidence and fulfillment"*
-- *"sustainable engineering practices"*
-- *"cognitive load reduction"*
-- *"long-term career health"*
-- *"preserve the craft"*
+## Messaging by awareness stage
 
-Bad: Avoid (failure mode in parens):
-- *"burnout recovery"* (implies the developer is already burned out)
-- *"therapy"* / psychological terms (medicalizes a craft conversation)
-- *"enjoy programming again"* (implies the joy is lost)
-- *"rediscover joy"* (same, implies lost)
+Website, content marketing, posts and cold-channel copy open where the reader sits; direct mail to
+a known contact does not need this.
 
-## Messaging by awareness stage (Schwartz framework)
+1. Unaware: open with the friction, no mention of AI yet. *"Declining team velocity. Code-quality
+   drift. Tech debt nobody's tracking."*
+2. Problem-aware: amplify the specific pain (longer review cycles, junior outputs, morale drift)
+   before naming the cause.
+3. Solution-aware: position the category, context engineering vs prompt engineering vs vibe
+   coding, before pitching h&w.
+4. Product-aware: differentiate with proof: client names where a public URL shows h&w and that
+   client together, metrics, testimonials, an FAQ for the evaluator's objections.
+5. Most aware: scarcity ("3 Q4 spots remaining"), a clear next step, a time-bounded offer.
 
-Eugene Schwartz's five awareness stages calibrate **what to say** based on where the reader sits. Apply when writing the website, content marketing, posts, or any cold-channel copy where the reader's awareness is unknown. Less relevant for direct emails to known contacts.
+On the website every page serves one stage: the homepage stage 1, the methodology page stages 2-3,
+the Work Together page stages 4-5.
 
-| Stage | Reader state | Opening move | Failure mode |
-|-------|--------------|-------------|--------------|
-| **1, Unaware** | CTO senses developer-productivity friction but hasn't named it | Open with the friction, not the solution. *"Declining team velocity. Code-quality drift. Tech debt nobody's tracking."* No mention of AI yet. | Leading with "AI" loses readers who haven't connected their pain to AI adoption. |
-| **2, Problem-Aware** | Knows there's an AI-adoption issue, hasn't connected it to systematic practices | Amplify the specific pain (longer review cycles, junior outputs, morale drift) before naming the cause. | Skipping to solutions reads as a sales pitch and loses the reader who hasn't felt the pain explicitly. |
-| **3, Solution-Aware** | Researching different approaches to AI adoption | Position the **category**: context engineering vs prompt engineering vs vibe coding. Educate on the differences. | Pitching h&w specifically before the reader has chosen a category framing makes us sound interchangeable with tooling vendors. |
-| **4, Product-Aware** | Comparing consultancies and training providers | Differentiate with proof: client names where a public URL shows h&w and that client together, metrics, testimonials, FAQ that addresses the specific objections of an evaluator. | Generic value-prop copy here loses to competitors who name specific results. |
-| **5, Most Aware** | Decided, needs final motivation | Scarcity ("3 Q4 spots remaining"), clear next step, time-bounded offer. | Re-explaining the value at this stage delays the action. |
+## Numbers and status claims
 
-**On the website:** every page serves one stage so readers enter where they are. The homepage opens at stage 1, the methodology page at stages 2-3, the Work Together page at stages 4-5.
+When citing performance, name the metric, the target, and the source. All three. Banned without
+them: "10x improvements", "2x faster", any bare multiplier, "order of magnitude", "50% faster"
+without what was measured, "I've helped many companies", any percentage without metric, target and
+origin.
 
-## Numbers and status claims: the rule
-
-When citing performance, name **the metric, the target, and the source**. All three.
-
-**Banned without a named source:**
-- Bad: "10x improvements / speed / efficiency / productivity"
-- Bad: "2x faster", "5x", any bare multiplier
-- Bad: "Order of magnitude improvements"
-- Bad: "50% faster" without naming what was measured
-- Bad: "I've helped many companies"
-- Bad: Any percentage claim without metric + target + origin
-
-Two more, with a source or without: booked and forecast revenue stay separate numbers, and a
-partner or certification status is claimed at the tier granted, never at the tier applied for.
+Booked and forecast revenue stay separate numbers, and a partner or certification status is claimed
+at the tier granted, never at the tier applied for.
 
 ## Client names: anonymize by default
 
-Anonymize every client in anything written. A name stands only where a public URL showing h&w and
-that client together can be cited, and that URL then belongs in the sources list. Our own documents
-license nothing: a release note in a deal or company record, or a reference line in one of our own
-onepagers, is not public coverage. This binds our delivery data too, so trainer feedback, attendee
-surveys and assignment records yield their anonymized statement and never their origin.
+A client name stands only where a public URL showing h&w and that client together can be cited, and
+that URL then belongs in the sources list. Our own documents license nothing: a release note in a
+record or a reference line in one of our onepagers is not public coverage. Trainer feedback,
+attendee surveys and assignment records yield their anonymized statement and never their origin.
 
-**A description can function as a name.** Sector plus two or three technical specifics often
-identifies one company in a niche. Test each case by asking whether the remaining details narrow it
-to a countable set, and drop the sector first: the coupling, the risk and the driver carry the
-argument, the industry rarely does. Describe the situation instead of the customer, at one notch of
-abstraction.
-
-Where a name would visibly strengthen a case and public coverage is likely but unproven, write it
-anonymized and name that case in the report, for the founder to decide separately. A third-party
-publisher cited as a source is a citation, not a client name, and stays.
+A description can function as a name: sector plus two or three technical specifics often identifies
+one company. Drop the sector first and describe the situation at one notch of abstraction. Where a
+name would visibly strengthen a case and public coverage is likely but unproven, write it anonymized
+and name that case in the report for the founder to decide. A third-party publisher cited as a
+source is a citation, not a client name.
 
 ## Documents written for one client
 
 A client document is prose beside a drawing, not a report template. Cut a table that repeats the
-graphic next to it. Draw a timeline rather than tabulating it, and let the drawing carry what the
-prose would otherwise describe. Open points and preconditions are the writer's own checklist: they
-belong in the mail or in the record, never in the document.
+graphic next to it; draw a timeline rather than tabulating it. Open points and preconditions are
+the writer's own checklist: they belong in the mail or in the record, never in the document.
 
 Say what we saw: the situation, what we did, what happened. Leave out citations, borrowed
 benchmarks, and any passage about what is or is not published on a topic. The client's own
 published figures stay.
 
 A claim a founder confirms and the records do not evidence stays in the document at full strength,
-written as our reading. Do not soften it, do not drop it, and do not dress it up as a case. Raise
-the record gap once and take the answer as the decision.
+written as our reading. Raise the record gap once and take the answer as the decision.
 
 ## Voice exemplars: verbatim only
 
-Every "voice anchor" or "real exemplar" line in any voice rule MUST be an exact quote from a confirmed real source. Where none exists, leave a gap-note; a fabricated exemplar poisons every draft that calibrates against it.
+Every "voice anchor" or "real exemplar" line in any voice rule is an exact quote from a confirmed
+real source. Where none exists, leave a gap-note; a fabricated exemplar poisons every draft that
+calibrates against it.
 
 ## Banned words
 
-### Corporate buzzwords
+Corporate buzzwords, with the replacement:
 
-| Word | Why banned | Use instead |
-|------|-----------|-------------|
-| **Transform / Transformation** | Overused buzzword. Exception: "Transform scattered AI adoption into systematic practices" is approved for website hero copy only. | "convert", "shift", "rebuild", or name the actual change |
-| **Evolve / Evolution** | Same overuse, vague trajectory framing | name the specific change |
-| **Systematic** | Consultancy jargon. Exception: "Systematic thinking" and "Systematic practices" stay allowed in website/marketing copy. | "structured", "organized" |
-| **Methodology / Method / Methodical** | Academic-consultancy term, distances from action | "framework", "practices", "way of working" |
-| **Approach** | Vague consultancy hedge | name the specific thing being done |
-| **Collaboration** | Vague, overused | name what specifically is shared |
-| **Partnership** | Corporate speak | "working together", "joint engagement" |
-| **Communication** | Generic | name the specific channel or message |
-| **Workflow** | Process jargon | name the specific sequence |
-| **Guide** (as verb) | Patronizing | "show", "walk through" |
-| **Discipline** | Rigid/military connotation | "practice", "habit" |
-| **Chaos** | Overly dramatic | name the actual disorder |
-| **Tool** (alone) | Too generic | name the actual product |
-| **AI** (when used generically) | Too broad | "Claude Code", "agentic engineering", or the specific product |
-| **AI coding tools / assistants** | "Coding" too narrow | "agentic engineering tools" |
-| **AI augmentation** | Too technical/niche | "AI-assisted development" |
-| **Master / Mastery** | Overused achievement framing | "proficiency", "competence", "excellence" |
-| **Proven / Proved** | Overused credibility claim | "tested", "validated", "established" |
-| **Insatiable** | Hyperbolic | "relentless" |
-| **Expert / Expertise** | Overused credibility claim | "mentor", "practitioner", "knowledge" |
-| **Individual** (as redundant qualifier) | Adds nothing | drop it, just "productivity", "developer experience" |
-| **Maintain / Maintaining** (in business contexts) | Stale corporate verb. Exception: technical contexts ("maintaining code", "maintaining systems") stay allowed. | "preserve", "sustain", "ensure", "keep" |
-| **Turn** (as overused action) | Overused | "convert", "empower" |
-| **Synergies** | Buzzword | name the specific overlap |
-| **Leverage** | Buzzword | "use", "build on", "apply" |
-| **Battle-tested** | Reads like marketing copy. Never appears in the user's real writing. | name the actual production track record |
-| **Force multiplier / Disproportionate** (gains, returns) | Strategic-deck vocabulary | name the actual leverage or the actual ratio |
-| **Real talk:** | Authenticity theatre, not authenticity | drop the frame, lead with the claim |
-| **Pre-training state / post-training state** | Too abstracted | concrete time anchor: "first hour", "week six" |
+| Word | Use instead |
+|------|-------------|
+| Transform / Transformation (allowed once: "Transform scattered AI adoption into systematic practices" in website hero copy) | "convert", "shift", "rebuild", or name the change |
+| Evolve / Evolution | name the specific change |
+| Systematic (allowed in website and marketing copy: "Systematic thinking", "Systematic practices") | "structured", "organized" |
+| Methodology / Method / Methodical | "framework", "practices", "way of working" |
+| Approach | name the specific thing being done |
+| Collaboration | name what is shared |
+| Partnership | "working together", "joint engagement" |
+| Communication | name the channel or message |
+| Workflow | name the sequence |
+| Guide (verb) | "show", "walk through" |
+| Discipline | "practice", "habit" |
+| Chaos | name the actual disorder |
+| Tool (alone) | name the product |
+| AI (generic) | "Claude Code", "agentic engineering", or the specific product |
+| AI coding tools / assistants | "agentic engineering tools" |
+| AI augmentation | "AI-assisted development" |
+| Master / Mastery | "proficiency", "competence", "excellence" |
+| Proven / Proved | "tested", "validated", "established" |
+| Insatiable | "relentless" |
+| Expert / Expertise | "mentor", "practitioner", "knowledge" |
+| Individual (redundant qualifier) | drop it |
+| Maintain / Maintaining in business contexts (technical contexts stay: "maintaining code") | "preserve", "sustain", "keep" |
+| Turn (as overused action) | "convert", "empower" |
+| Synergies | name the overlap |
+| Leverage | "use", "build on", "apply" |
+| Battle-tested | name the production track record |
+| Force multiplier / Disproportionate (gains, returns) | name the ratio |
+| Real talk: | drop the frame, lead with the claim |
+| Pre-training state / post-training state | a concrete time anchor: "first hour", "week six" |
 
-### Hype vocabulary
+Hype: "Revolutionary", "Disruptive / Disruption" (describe what is replaced), "Best practices"
+(*"what works in this context"*, *"in my experience"*, name the constraint), "Never" / "Always" as
+universal claims (name the condition: *"on a tight deadline,"*; literal accuracy stays: *"never use
+eval()"*).
 
-These signal marketing breathlessness rather than real claims:
+Corporate sentence frames: "I just wanted to follow up" -> the signer's opener, then "wie sieht's
+aus mit [topic]?"; "I am writing to inquire" -> state the question; "I hope this email finds you
+well" -> the opener alone; "Please find attached" -> "Hier wie besprochen: [link]"; "As per our
+conversation" -> "Wie gestern besprochen".
 
-| Word | Why banned | Use instead |
-|------|-----------|-------------|
-| **Revolutionary** | Overused hype | name the actual change |
-| **Disruptive / Disruption** | Overused hype | describe what's being replaced |
-| **Best practices** | Frames opinions as universal truth, kills nuance | *"what works in this context"*, *"in my experience"*, name the constraint |
-| **Never** / **Always** (as universal claims) | Respect context, almost no rule is absolute | name the condition: *"on a tight deadline,"* *"with a junior team"* (carve-out: literal accuracy is fine, *"never use eval()"*) |
+## No decorative punctuation
 
-### Corporate sentence frames
-
-Empty filler that survives its own deletion:
-
-- "I just wanted to follow up" -> the signer's opener (`personal-voice.md`), then "wie sieht's aus mit [topic]?"
-- "I am writing to inquire" -> state the question
-- "I hope this email finds you well" -> the signer's opener alone (`personal-voice.md`)
-- "Please find attached" -> "Hier wie besprochen: [link]"
-- "As per our conversation" -> name the conversation: "Wie gestern besprochen"
-
-### Banned style: no decorative punctuation
-
-Screen readers can't read decorative Unicode. Customer-facing text (LinkedIn posts, emails, website copy, proposals) is plain ASCII punctuation only, and a dash is not punctuation in it.
+Screen readers can't read decorative Unicode. Customer-facing text (LinkedIn posts, emails, website
+copy, proposals) is plain ASCII punctuation only, and a dash is not punctuation in it.
 
 | Banned | Use instead |
 |--------|-------------|
@@ -233,16 +196,13 @@ Screen readers can't read decorative Unicode. Customer-facing text (LinkedIn pos
 | bullets (`•` `·`) in prose | ASCII hyphen-space (`- `), and only for enumerated concrete items |
 | math letters (Unicode 𝗯𝗼𝗹𝗱 / 𝑖𝑡𝑎𝑙𝑖𝑐) | normal text. Screen readers spell these letter by letter |
 
-**Carve-outs:**
-- Pictograph emojis (📅 ✅ 🚀) are technically accessible but absent from the user's real writing, skip them in customer-facing copy.
-- German Umlaute (`ä ö ü ß`) are language characters, not decoration.
-- ASCII emoticons (`:)` `;)` `xD`) where a real Slack message would land them.
+Carve-outs: pictograph emojis (📅 ✅ 🚀) are accessible but absent from the user's real writing, so
+skip them in customer-facing copy. German Umlaute (`ä ö ü ß`) are language characters. ASCII
+emoticons (`:)` `;)` `xD`) where a real Slack message would land them.
 
 ## Sender identity
 
-Two facts, and they are not the same one:
-
-- **The envelope** is the authenticated account the draft is created in. It is whatever `gws` is
-  authenticated as, never a name written into a template.
-- **The signature** is whoever signs under `personal-voice.md`, read off their person record for the
-  first name and the booking link.
+Two facts, and they are not the same one: the envelope is the authenticated account the draft is
+created in, whatever `gws` is authenticated as, never a name written into a template. The
+signature is whoever signs under `personal-voice.md`, read off the signer's own record for the
+first name and the booking link.

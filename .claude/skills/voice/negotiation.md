@@ -1,130 +1,120 @@
-# Negotiation: Tactics and Phrasings
+# Negotiation: tactics and phrasings
 
-Scaffold overlay for any conversation where something concrete is asked for or pushed back on: pricing, scope creep, advisor/partner setup, speaker fees, training discounts, visibility/intros/access.
-
-## North star
-
-Verhandle als Peer, nicht als Bittsteller. Substanz vor Position. Beziehung vor Deal. Senior-Operatoren riechen Diplomatie. Direktheit und Ehrlichkeit schlagen Verkaufsrhetorik immer.
+Scaffold overlay for any conversation where something concrete is asked for or pushed back on:
+pricing, scope creep, advisor or partner setup, speaker fees, training discounts, visibility, intros,
+access. Verhandle als Peer, nicht als Bittsteller. Direktheit und Ehrlichkeit schlagen
+Verkaufsrhetorik immer.
 
 ## Core principles
 
-1. **Tactical empathy first.** Honor what they invested (time, words, proposal) before any ask.
-2. **Interests over positions.** Their price is a position; the motivation is the interest. Solve for overlap of motivations, not menus.
-3. **Mutual gain, not extraction.** Name the reciprocity explicitly.
-4. **Anchor respect.** When they set numbers first, don't grind below. Pick within their menu; justify via **fit**, never cost.
-5. **Calibrated questions.** "Wie" / "Was" beats "Würdest du" / "Wäre es okay".
-6. **Power of no.** Decouple bundled asks so they can decline parts.
-7. **Radical honesty about secondary motives.** Name your second-order goals (visibility, marketing, network) yourself before they suspect.
-8. **Framing move.** *"Dich öffentlich nennen"* sounds extractive; *"dich in unser Board of Advisors aufnehmen"* sounds like recognition. Pick the recognition frame.
-9. **BATNA awareness.** Keep the tone calm, not clutching: the deal doesn't have to happen.
-10. **Mirror (last 3 words).** Quote their phrasing back to signal listening and surface more information. Use sparingly in writing, more often on calls.
-11. **Clarify before you counter.** Where the basis of their number is disputed or unknown, the message asking for that basis carries no counter-offer and no concession: the answer comes back shaped by the figure it has to beat. Name your figure in the next message, once the basis is settled.
+1. Tactical empathy first. Honor what they invested (time, words, proposal) before any ask, with a
+   specific: *"Erstmal: das Gespräch war für uns richtig wertvoll, danke dir. Ich nehme drei, vier
+   Sachen mit, an denen wir jetzt direkt arbeiten."* Generic flattery (*"loved chatting!"*) without
+   naming what you took away is empty.
+2. Anchor respect. When they set numbers first, don't grind below. Pick within their menu and
+   justify via fit, never cost: *"ist uns gerade lieber"* sounds cheap.
+3. Calibrated questions. "Wie" / "Was" beats "Würdest du" / "Wäre es okay".
+4. Power of no. Decouple bundled asks so they can decline parts; bundled into one yes/no, both feel
+   bigger.
+5. Radical honesty about secondary motives. Name your second-order goals (visibility, marketing,
+   network) yourself: *"Hand aufs Herz: A steht für uns klar im Vordergrund, deshalb auch X. Aber B
+   ist ehrlicherweise auch Teil von dem, was wir uns davon versprechen. Das wollte ich lieber offen
+   sagen."*
+6. Framing move. *"Dich öffentlich nennen"* sounds extractive; *"dich in unser Board of Advisors
+   aufnehmen"* sounds like recognition.
+7. BATNA awareness. Keep the tone calm, not clutching: the deal doesn't have to happen.
+8. Mirror. Quote their literal phrasing back (*"Genau das, was du als 'ausführlicher als gestern'
+   beschrieben hast."*). Sparingly in writing, more often on calls.
+9. Clarify before you counter. Where the basis of their number is disputed or unknown, the message
+   asking for that basis carries no counter-offer and no concession. Name your figure in the next
+   message, once the basis is settled.
+10. A sweetener lapses with the offer it came with. When they decline your number, what you
+    attached to it (prepayment, a fast yes, extra scope) is off the table too. Offer it again only
+    sized to the new number, and smaller than before.
 
 ## Phrasings
 
-### Tactical-empathy opener
-*"Erstmal: das Gespräch war für uns richtig wertvoll, danke dir. Ich nehme drei, vier Sachen mit, an denen wir jetzt direkt arbeiten."*
+### Pricing pushback: concede, hold, offer scope
 
-Action-evidence beats generic thanks.
+In this order, one plain sentence each:
 
-### Mirror
-*"Genau das, was du als 'ausführlicher als gestern' beschrieben hast."*
+1. Concede their point by name: *"Du hast recht, X ist teurer als der Marktdurchschnitt. Der Grund
+   ist Y."* Giving ground first is his measured default (the `Wobei` pivot and the five moves are in
+   `postures.md` posture 2).
+2. Hold: *"Den Preis können wir nicht weiter runter."*
+3. Offer scope: *"Was wir aber machen können: Scope reduzieren auf Y."*
 
-Quote their literal phrasing.
-
-### Tier choice + upgrade door
-*"Für unsere aktuelle Phase passt das Monthly am besten, Frequenz und Aufwand. Lass uns gern damit starten und nach drei Monaten schauen."*
-
-### Reciprocity (both directions, concrete)
-*"Geht natürlich in beide Richtungen. Falls du Themen einbringen willst, eigene Leute auf der Bühne platzieren oder reverse Intros in unser Netzwerk brauchst, sehr gern."*
-
-Name what you actually have (community, stage slots, network), not abstract "synergies".
-
-### Radical honesty about secondary motive
-*"Hand aufs Herz: A steht für uns klar im Vordergrund, deshalb auch X. Aber B ist ehrlicherweise auch Teil von dem, was wir uns davon versprechen. Das wollte ich lieber offen sagen."*
-
-Use when there's a sub-motive you'd otherwise hide.
+When you do concede, bound it: what it covers and from when (*"für die nächsten Beauftragungen"*),
+or they apply it backwards to work already delivered.
 
 ### Calibrated closing question
-*"Wie würdest du das aufsetzen wollen?"* / *"Was wäre für dich der nächste Schritt?"*
 
-Gives them the architect role, not a yes/no.
-
-Closing a concession you just granted inverts this: ask *"Passt das für dich?"* and get the terms
-accepted on the record. An open question there reopens what you just settled.
+*"Wie würdest du das aufsetzen wollen?"* / *"Was wäre für dich der nächste Schritt?"* Closing a
+concession you just granted inverts this: ask *"Passt das für dich?"* and get the terms accepted.
+An open question there reopens what you just settled.
 
 ### Power-of-no door
+
 *"Wenn ein Teil davon nicht passt, sag gern Bescheid."*
 
-### Anchor-setting (when going first)
-*"Bei sowas liegt der typische Marktpreis bei X. Wir würden uns über Y verständigen."*
+### Tier choice and upgrade door
 
-Set the reference frame so your number reads as fair, not arbitrary.
+*"Für unsere aktuelle Phase passt das Monthly am besten, Frequenz und Aufwand. Lass uns gern damit
+starten und nach drei Monaten schauen."*
 
-### Pricing pushback (hold the line)
-*"Den Preis können wir nicht weiter runter. Was wir aber machen können: Scope reduzieren auf Y."*
+### Reciprocity, both directions, concrete
 
-Hold price, offer creative scope alternatives. When you do concede, bound it: what it covers and from when (*"für die nächsten Beauftragungen"*), or they apply it backwards to work already delivered.
+*"Geht natürlich in beide Richtungen. Falls du Themen einbringen willst, eigene Leute auf der Bühne
+platzieren oder reverse Intros in unser Netzwerk brauchst, sehr gern."* Name what you have
+(community, stage slots, network), not "synergies".
 
-### Concession before claim
-*"Du hast recht, X ist teurer als der Marktdurchschnitt. Der Grund ist Y."*
+### Anchor-setting, when going first
 
-Give ground before the sharp claim; this is his measured default, not a tactic. The `Wobei` pivot,
-the five concession moves, and the one situation where he refuses flat are in `postures.md`
-posture 2.
-
-### An unbudgeted number carries its agreement
-*"Wir hatten ja verabredet, dass X aus dem Kontingent läuft."*
-
-A figure the counterpart did not budget for reads as a surprise charge unless the sentence before
-it names the agreement it came from, and the sentence after it says why it is that size. Both facts
-sit in our own records; read them before sending the number bare.
-
-### Anchoring and social proof
-- High anchor, then alternative: name the full-cost option first, then the offer.
-- *"Alles inklusive"* removes hidden-cost anxiety. Concrete comparison kills abstraction: show the
-  alternative cost, then the deal.
-- Fait accompli, present tense: *"[Firmen] sind bereits dabei"*, a decided fact, never conditional.
-  "With or without you" energy is subtle confidence, never arrogance.
+*"Bei sowas liegt der typische Marktpreis bei X. Wir würden uns über Y verständigen."* High anchor,
+then the alternative. *"Alles inklusive"* removes hidden-cost anxiety. Fait accompli in the present
+tense: *"[Firmen] sind bereits dabei"*, never conditional.
 
 ## h&w-specific situations
 
-**Speaker outreach with fee question.** Standard frame: honor is ours + travel/hotel covered + fees not default but open to discuss + peer-group list + CTO Summit/Dinner invite + podcast offer. Close with *"Was brauchst du von uns, um eine Entscheidung zu treffen?"*
+**Speaker outreach with fee question.** Honor is ours + travel and hotel covered + fees not default
+but open to discuss + peer-group list + CTO Summit/Dinner invite + podcast offer. Close with *"Was
+brauchst du von uns, um eine Entscheidung zu treffen?"*
 
-**Training-price pushback.** Hold the per-participant model with a cohort cap. Smaller cohorts scale by participant; once the cap is reached, group size changes delivery planning rather than price. If they push below the model, first offer **scope reductions**: shorter format, single track, fewer follow-ups. If conceding, show the cost basis, what remains for the other side, and the capacity condition; for revenue share, put verified demand evidence before the mechanism.
+**Training-price pushback.** Hold the per-participant model with a cohort cap. Once the cap is
+reached, group size changes delivery planning rather than price. If they push below the model, first
+offer scope reductions: shorter format, single track, fewer follow-ups. If conceding, show the cost
+basis, what remains for the other side, and the capacity condition; for revenue share, put verified
+demand evidence before the mechanism.
 
-**Advisor / board setup.** Decouple engagement tier from advisor framing: visibility and network access are STANDARD parts of an advisor relationship, not premium add-ons. Pick a tier proactively (don't punt to next paid meeting). Pair the visibility ask with the cash commitment to earn moral standing. Frame visibility as *"in unser Board of Advisors aufnehmen, zusammen mit X, Y"*, never as *"öffentlich nennen"*. Name the secondary marketing motive openly.
+**Advisor / board setup.** Visibility and network access are standard parts of an advisor
+relationship, not premium add-ons. Pick a tier proactively rather than punting to the next paid
+meeting. Pair the visibility ask with the cash commitment. Frame it as *"in unser Board of Advisors
+aufnehmen, zusammen mit X, Y"*, never as *"öffentlich nennen"*, and name the marketing motive.
 
-**Mentoring scope creep.** Don't auto-absorb. Name it: *"Das geht über den ursprünglichen Scope. Wir können das aufnehmen, dann sprechen wir über zusätzlichen Aufwand und Budget."*
+**Mentoring scope creep.** *"Das geht über den ursprünglichen Scope. Wir können das aufnehmen, dann
+sprechen wir über zusätzlichen Aufwand und Budget."*
 
-**Long-term support after a training day.** Name the gap directly: *"Wegen langfristigem Support müssen wir noch mal sprechen, der EK ist dafür hier mit [rate] sehr klein. Wir können dir da nur [rate] geben."* Don't apologize for the price gap between day-rate-bundled scope and ongoing-support scope.
+**Long-term support after a training day.** *"Wegen langfristigem Support müssen wir noch mal
+sprechen, der EK ist dafür hier mit [rate] sehr klein. Wir können dir da nur [rate] geben."* No
+apology for the gap between day-rate scope and ongoing-support scope.
 
-**Asking a senior contact for an intro / favor.** Three-line maximum. Specific ask, low-effort path, easy out: *"Falls passend: könntest du uns kurz vorstellen? Wenn nicht, kein Stress."*
+**Asking a senior contact for an intro or favor.** Three lines: specific ask, low-effort path, easy
+out. *"Falls passend: könntest du uns kurz vorstellen? Wenn nicht, kein Stress."*
 
 ## Anti-patterns
 
-- Bad: Punt the model question to "next meeting" when next meeting is paid: locks out free clarification.
-- Bad: Bundle decoupled asks into one yes/no: reads as conditional, makes both feel bigger.
-- Bad: Hide a secondary motive: counterparts feel it; trust drops faster than if you'd named it.
-- Bad: Argue for the lower tier via cost (*"ist uns gerade lieber"*): sounds cheap. Argue via fit.
-- Bad: Generic flattery (*"loved chatting!"*) without naming what you took away: empty calories.
-- Bad: Lead with the ask. Order: Substance -> Tier choice -> Reciprocity -> Honesty -> Ask.
-- Bad: Hinge the offer on your own argument (*deswegen*, *therefore*): help reads as a claim on access. Connect to their benefit instead (*"Genau da würde ich dir gern helfen"*).
-- Bad: Hedge the **content** of the ask (*"vielleicht wäre es möglich, dass"*): Konjunktiv belongs on **delivery** (*"wäre es okay"*), never on **substance**.
-- Bad: Counter-anchor below their floor: if their lowest tier works, take it as-is. Grinding damages the relationship more than it saves.
-- Bad: Cite a ratio (percent of revenue, per day, per head) as proof the deal is thin before computing it against the rates their own contract carries: land near one of theirs and your ask is the outlier, not their offer.
-- Bad: Retreat from their ask straight to your own floor: put a rung in between. Two attempts before the fallback read as effort, one reads as managing them toward a date or a number.
+- Lead with the ask. Order: substance -> tier choice -> reciprocity -> honesty -> ask.
+- Hinge the offer on your own argument (*deswegen*, *therefore*): help reads as a claim on access.
+  Connect to their benefit instead (*"Genau da würde ich dir gern helfen"*).
+- Hedge the content of the ask (*"vielleicht wäre es möglich, dass"*): Konjunktiv belongs on
+  delivery (*"wäre es okay"*), never on substance.
+- Counter-anchor below their floor: if their lowest tier works, take it as-is.
+- Cite a ratio (percent of revenue, per day, per head) as proof the deal is thin before computing
+  it against the rates their own contract carries.
+- Retreat from their ask straight to your own floor: put a rung in between. Two attempts before the
+  fallback read as effort, one reads as managing them toward a date or a number.
 
-## Pre-send checklist
-
-- [ ] Did you honor THEIR investment first (specific, not generic thanks)?
-- [ ] Did you name a concrete tier / number / next step rather than leaving it open?
-- [ ] Did you separate bundled asks so they can decline parts?
-- [ ] Did you include reciprocity (what you bring back, specific)?
-- [ ] If there's a secondary motive, did you name it openly?
-- [ ] Have you avoided hedging the content of the ask?
-
-Openings, closings, how direct to be, and the warmth register are not this file's call.
-`postures.md` and `personal-voice.md` own them and win: this file supplies the move, they supply
-the wording. A tactic that lands as an ultimatum, a deadline, or a comparison scored at the
-counterparty's expense arrived in the wrong register, however sound the move underneath it.
+Openings, closings, how direct to be, and the warmth register are `postures.md` and
+`personal-voice.md`'s call: this file supplies the move, they supply the wording. A tactic that
+lands as an ultimatum, a deadline, or a comparison scored at the counterparty's expense arrived in
+the wrong register, however sound the move underneath it.

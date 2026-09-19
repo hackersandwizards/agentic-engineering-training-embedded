@@ -5,52 +5,44 @@ description: >-
 allowed-tools: Read, Glob, Grep, Bash
 ---
 
-# Voice: Postures over a Layered Stack
+# Voice: postures over a layered stack
 
-## How to use
+Drafting into an existing conversation: read it first. Greeting, sign-off, one block or a stream, and the sender's own unanswered questions come from the thread, not from the request.
 
-**Drafting into an existing conversation: read it first.** Greeting, sign-off, one block or a stream, and the sender's own unanswered questions come from the thread, not from the request.
-
-1. **Pick the register.** *Relational* (email, Slack, WhatsApp, DMs, a comment or reply under a social post: a person answers): connection first; `personal-voice.md` wins conflicts. *Authored* (articles, LinkedIn posts, proposals, slides, docs: an audience reads): compression first; `prose-style.md` wins on sentence mechanics (length, shape, filler). A comment is not a short post: it answers a person, so it is relational however public the thread is.
-2. **Name the posture.** Relational prose always has one. `postures.md` is the primary axis. Load it before writing a word. Authored prose has no posture; use a scaffold overlay instead.
-3. **Apply the four base layers in order** (below), then the overlays the situation calls for. Cold pitch -> `pitch-framework.md`. Self-intro -> `intro-framework.md`. Slack -> `slack-channel.md`. Verbatim phrases, competitive frame, or LLM-rewrite examples -> `brand-vocabulary.md`.
-4. **Conflicts: specificity wins, then the register's lead file.** Posture beats every layer on length, openings, closings, and directness. Layers beat the posture on everything else. Channel mechanics beat both where they explicitly carve out (Slack format quirks live in `slack-channel.md`).
+1. Pick the register. Relational (email, Slack, WhatsApp, DMs, a comment or reply under a social post: a person answers): `personal-voice.md` wins conflicts. Authored (articles, LinkedIn posts, proposals, slides, docs: an audience reads): `prose-style.md` wins on sentence mechanics. A comment answers a person, so it is relational however public the thread is.
+2. Name the posture. Relational prose always has one: read `postures.md` before writing a word. Authored prose has no posture and takes a scaffold overlay instead.
+3. Apply the four base layers in order, then the overlays the situation calls for.
+4. Conflicts: the posture beats every layer on length, openings, closings and directness. Layers beat the posture on everything else. Channel mechanics beat both where they carve out.
 
 ## The primary axis
 
-| File | Owns |
-|------|------|
-| `postures.md` | The nine measured situational registers of relational prose: quick reply, decision/pushback, delegation/ask, repair, teaching, scheduling, intro, status update, LinkedIn DM. Length, opening and closing moves, directness, verbatim phrasings. Also marks what the evidence does not cover. |
+`postures.md`: the nine measured situational registers of relational prose (quick reply, decision/pushback, delegation/ask, repair, teaching, scheduling, intro, status update, LinkedIn DM). Length, opening and closing moves, directness, verbatim phrasings.
 
-## The four base layers (apply in order)
+## The four base layers, in order
 
-Each layer constrains the next; the more concrete rule beats the more abstract one. Layers 1-3 are positive (write *from* them). Layer 4 is a filter (check *against* it after drafting).
+Layers 1-3 are positive: write from them. Layer 4 is a filter: check the draft against it.
 
 | Layer | File | Owns |
 |-------|------|------|
-| 1. Brand | `brand-voice.md` | h&w-as-a-company: positioning, banned words, performance-language, banned Unicode, awareness-stage messaging, audience, sender identity, client naming |
-| 2. Personal voice | `personal-voice.md` | The one shared voice of everyone who writes under their own name, whoever signs, and only what holds across every posture: character, the measured hard numbers, greeting and sign-off, hedges and particles, emoji, anti-patterns. |
-| 3. Prose | `prose-style.md` | Sentence mechanics (DE/EN) and German orthography. |
-| 4. AI-tells filter | `ai-tells.md` | Detector list of structures, openers, transitions, copula dodges, formatting tics, and the measured signature vocabulary that mark prose as LLM-generated. Run the draft against it after layers 1-3; the vocabulary check is a density bar, not a word ban. |
+| 1 Brand | `brand-voice.md` | h&w as a company: positioning terms, KPIs, banned words, numbers, banned Unicode, client naming, sender identity |
+| 2 Personal voice | `personal-voice.md` | The one shared voice of everyone who writes under their own name: greeting and sign-off, the measured numbers, hedges and particles, emoji, anti-patterns |
+| 3 Prose | `prose-style.md` | Sentence mechanics (DE/EN), language choice, German orthography |
+| 4 AI-tells filter | `ai-tells.md` | Structures, openers, transitions, copula dodges and the measured signature vocabulary that mark prose as LLM output. The vocabulary check is a density bar, not a word ban |
 
-## Channel overlays: apply when the channel matches
+## Overlays, when the channel or situation matches
 
-| File | Channel | Owns |
-|------|---------|------|
+| File | When | Owns |
+|------|------|------|
 | `slack-channel.md` | Slack via the MCP tool | Markdown quirks and Slack-only conventions |
+| `content-formula.md` | Post-length content: LinkedIn essays, blog articles, talk arcs | Six beats, the research-backed pattern |
+| `negotiation.md` | Pricing pushback, advisor or partner setup, speaker fees, training scope, scope creep, asking for visibility, intros or access | Tactics and h&w-specific phrasings |
+| `intro-framework.md` | 30-second self-introduction | NSFAG: Name, Same, Fame, Aim, Game |
 
-## Scaffold overlays: apply when the situation matches
+A cold pitch, a proposal opener or speaker outreach takes its shape from `postures.md`, "Pitch and positioning".
 
-| File | Situation | Owns |
-|------|-----------|------|
-| `pitch-framework.md` | Cold pitch, proposal, talk opener, sales arc | CAPSTONE: Clarity, Authority, Problem, Solution, The-Why, Opportunity, Next-step, Essence |
-| `intro-framework.md` | 30-second self-introduction at networking, conferences, podcasts | NSFAG: Name, Same, Fame, Aim, Game |
-| `content-formula.md` | Post-length content: LinkedIn essays, blog articles, talk arcs | Hook, Story, Question, Insight, Impact, Adventure |
-| `negotiation.md` | Pricing pushback, advisor/partner setup, speaker fees, training-scope discussions, mentoring scope creep, asking for visibility/intros/access | Tactical empathy, calibrated questions, mutual-gain framing, h&w-specific situations |
-
-## On-demand reference: load for deep calibration
+## Reference, for deep calibration
 
 | File | Purpose |
 |------|---------|
-| `signature-phrases.md` | The user's measured calibration anchors, how to pull real email exemplars from his mailbox, and his spoken slogan catalogue. Use when ghostwriting from a transcript or anchoring a draft that needs more voice depth than `personal-voice.md` provides. |
-| `brand-vocabulary.md` | Verbatim offerings and value-props, written positioning vocabulary (slogans attested in posts and the handbook), the competitive-positioning frame, approved performance-language patterns, on-brand-vs-off-brand rewrites. Use when positioning in proposals or sales decks, citing numbers, or rewriting LLM output to on-brand. |
+| `signature-phrases.md` | The user's measured calibration anchors, how to pull real email exemplars from his mailbox, and his spoken slogan catalogue. Use when ghostwriting from a transcript or anchoring a draft that needs more voice depth than `personal-voice.md` gives |
+| `brand-vocabulary.md` | Verbatim offerings and value props, written positioning vocabulary, the competitive frame, approved performance language. Use when positioning in proposals or sales decks, or citing numbers |

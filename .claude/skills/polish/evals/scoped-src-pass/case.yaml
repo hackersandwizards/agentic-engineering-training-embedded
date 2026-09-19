@@ -1,0 +1,5 @@
+schema_version: "1.1"
+name: scoped-src-pass
+description: Quality pass scoped to src/ where one false fact (amounts as integer cents) also lives in README.md, in the template that generates it, and in another author's uncommitted file under src/; the copies outside the scope get fixed, the uncommitted one is deferred.
+context:
+  scaffold_script: fixture.sh

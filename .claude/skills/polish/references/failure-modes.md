@@ -1,7 +1,7 @@
 # Failure modes
 
-Defects a competent review misses by default. Everything a reviewer already checks (dead code,
-shallow modules, injection, N+1, secrets), and the minimalism ladder itself, needs no list here.
+Defects a competent review misses by default. What every reviewer already checks (dead code,
+shallow modules, injection, N+1, secrets) needs no entry here.
 
 Report at most 5 to 8 findings, merged by root cause. Each one names **the check that proves the fix
 worked**, and **the most plausible innocent explanation** (local convention, a constraint you cannot
@@ -13,12 +13,12 @@ finished, never re-argued on a fresh objection.
 
 ## Comments
 
-- Deletion is the default. Delete a comment that restates the code, names where it came from, or
-  argues that a change is correct. Delete it rather than shortening it.
-- Keep a non-obvious why or a constraint the code cannot express. One sentence, in the file's
+- Deletion is the default. Delete, rather than shorten, a comment that restates the code, names
+  where it came from, or argues that a change is correct.
+- Keep a non-obvious why or a constraint the code cannot express: one sentence, in the file's
   prevailing style, never two styles for the same kind of declaration.
-- Not only `//`: sweep `#` (sh, py, yaml, toml), `<!-- -->` (html), `/* */` (css), and the banner
-  blocks that label the section below them.
+- Sweep `#`, `<!-- -->` and `/* */` as well as `//`, and the banner blocks that label the section
+  below them.
 - Keep public API docstrings, license headers, and directive comments (shellcheck, eslint, noqa,
   pragma, shebang).
 
@@ -30,13 +30,21 @@ reader, and a rule's history is not part of the rule.
 - Consequence narration where naming the obligation would do. Keep one why-clause only where it
   stops an agent skipping the step.
 - One observation written as a law ("on every response"). Scope it to what was seen, or verify it.
+- Procedure a capable model runs unprompted: numbered steps in the obvious order, tool names in
+  sequence, a mode list over verbs the tool schema already names, a default restated as a rule.
+- A branch, flag or mode whose other arm nobody takes, and a per-person or per-machine exception
+  where one default with the person read off the session would do.
+
+What stays is what the model gets wrong without the line: a measured number, a verbatim phrasing,
+a silent failure, a file convention. Where the skill carries an eval suite, run it before and after
+the cut; a grader that turns red names the one line to restore. Where it carries none, list the
+skill's traps first and re-read each cut against that list.
 
 Cutting is a check deletion when the sentence carried the only "stop and ask" on a path.
 
 ## Silently inert code
 
-Reads as correct, does nothing, passes every gate: nothing is wrong with its syntax or its types, it
-simply never fires.
+Reads as correct, passes every gate, and never fires.
 
 - A selector or condition that cannot match. Scoped CSS against slotted content is the canonical case:
   the child carries the caller's scope, so the rule needs `:global` or it matches nothing.
@@ -46,9 +54,9 @@ Found by running the thing, not reading it. A green gate is not evidence that a 
 
 ## Weakened verification
 
-Review for a check weakened to make it pass: diff the test files, and look for a production branch
-keyed on a fixture name, a test mirroring the implementation method-for-method, or one asserting
-only that a mock was called.
+Diff the test files for a check weakened to make it pass: a production branch keyed on a fixture
+name, a test mirroring the implementation method-for-method, or one asserting only that a mock was
+called.
 
 A test earns trust by failing: delete the guard it names and watch it go red. Bun caps regex
 backtracking where V8 does not, so a production hang can measure as merely slow under vitest. Code
@@ -57,18 +65,16 @@ output.
 
 ## A gate that ran but was never read
 
-Running the check is not the same as honouring it.
-
 - Piping it (`check | tail -4 && commit`) makes the pipeline exit status the *last* command's,
-  so an `&&` chain proceeds over a red gate. Read the exit code, or run the gate on its own line.
+  so an `&&` chain proceeds over a red gate. Run the gate on its own line and read its exit code.
 - A commit whose paths the pre-commit hook does not route runs no gate at all. Check what the
-  hook actually matches before trusting it to catch you.
+  hook matches before trusting it to catch you.
 - `git diff --cached --name-only` reports a rename by its new path alone, so a check scoped to
   that list never sees the path that went away. A hook building a scope from it needs
   `--no-renames`.
-- When a gate is red, establish whose change made it red before acting. In a shared working tree
-  the failure is often another session's in-flight file, and neither reverting it nor bypassing
-  the gate is yours to do.
+- When a gate is red, establish whose change made it red before acting, from `git status` and
+  `git diff` alone. In a shared working tree the failure is often another session's in-flight
+  file, and neither stashing it, reverting it nor bypassing the gate is yours to do.
 
 ## Fabricated dependencies
 

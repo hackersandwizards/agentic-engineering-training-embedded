@@ -1,16 +1,15 @@
-# Slack Channel Mechanics
+# Slack channel mechanics
 
-Slack format constraints layered on the base voice rules. Apply when sending or drafting any Slack
-message via the Slack MCP tool. Length and shape come from the posture (`postures.md`), not from
-this file.
+Format constraints for any Slack message sent or drafted via the Slack MCP tool. Length and shape
+come from the posture (`postures.md`).
 
 ## Slack markdown via the MCP tool
 
-The MCP Slack tool accepts **standard markdown**, not Slack's own mrkdwn syntax, and converts it.
+The MCP Slack tool accepts standard markdown, not Slack's own mrkdwn syntax, and converts it.
 
 | Format | Correct syntax | Wrong | Failure mode |
 |--------|---------------|-------|--------------|
-| Bold | `**text**` (double asterisks) | `*text*` | Single-asterisks render as italic |
+| Bold | `**text**` (double asterisks) | `*text*` | Single asterisks render as italic |
 | Italic | `*text*` (single asterisks) | | `_text_` also works |
 | Bold + Italic | `_**text**_` or `**_text_**` | `*_text_*` | Wrap one inside the other |
 | Strikethrough | `~~text~~` (double tilde) | | `~text~` also works |

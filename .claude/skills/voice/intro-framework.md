@@ -1,105 +1,24 @@
-# Introduction Framework: NSFAG
+# Introduction framework: NSFAG
 
-Five-beat scaffold for 30-second self-introductions: networking, conference openers, podcast intros, panel intros, *"Stell dich mal kurz vor"*-moments. Skip when context is already established or the host introduced you.
+Five-beat scaffold for 30-second self-introductions: networking, conference openers, podcast and
+panel intros, *"Stell dich mal kurz vor"* moments. Skip when the host introduced you.
+`[FIRST-NAME]` is whoever the draft is for; the examples are the shape, not one person's script.
 
-## N: Name, identity with purpose
+- N, Name: *"[FIRST-NAME] from hackers&wizards"*. Role only if it adds immediate value.
+  *"I'm [FIRST-NAME], Agentic Engineering Practitioner at hackers&wizards. I help CTOs elevate their
+  teams to become confident AI practitioners."* / *"[FIRST-NAME] from hackers&wizards. I help
+  whole companies get in tune with agentic engineering, so they ship faster."*
+- S, Same: an instant mental picture. *"Think of me as a translator between developers and AI."* /
+  *"I'm like a driving instructor, but for AI coding."*
+- F, Fame: one number plus one success story, result not title, under the numbers rule in
+  `brand-voice.md`. *"I helped scale [client] from 200M to 1.2B in revenue."* / *"30+ teams
+  ignited, 500+ developers in our community, 40+ practitioners in our network."*
+- A, Aim: their benefit, never your goal. *"I'm curious why some teams fly with AI while others
+  crash."* / *"I help teams skip the AI mistakes I've seen a hundred times."* Never *"I want to
+  grow my consultancy"*.
+- G, Game: a next step they can picture themselves taking. *"I'm asking three questions: Where are
+  you now? Where do you want to be? What's blocking the path?"* / *"Coffee chat about your biggest
+  technical headache?"*
 
-Introduce yourself simply. Add `hackers&wizards` and role only when it serves the message.
-`[FIRST-NAME]` below is whoever the draft is for, read off their person record; the examples are
-the shape, not one person's script.
-
-- *"[FIRST-NAME] from hackers&wizards"* flows naturally.
-- Role only if it adds immediate value.
-- Conversational, not formal.
-
-> *"I'm [FIRST-NAME], Agentic Engineering Practitioner at hackers&wizards. I help CTOs elevate their teams to become confident AI practitioners."*
-
-> *"[FIRST-NAME] from hackers&wizards. I help engineering teams ship faster with better code and fulfilled developers."*
-
-## S: Same, instant mental picture
-
-Create an immediate visual comparison they can grasp.
-
-- Familiar role or situation.
-- Visual and relatable.
-- Must click instantly.
-
-> *"Think of me as a translator between developers and AI."*
-
-> *"I'm like a driving instructor, but for AI coding."*
-
-**Failure mode if you skip:** without a metaphor, the listener has no shelf to put you on. They forget the name within minutes.
-
-## F: Fame, one number + one success story
-
-Prove capability with a specific achievement that matters.
-
-- Lead with the most relevant result.
-- Specific numbers.
-- Result, not titles.
-
-> *"I helped scale [client] from 200M to 1.2B in revenue."*
-
-> *"30+ teams ignited, 500+ developers in our community, 40+ practitioners in our network."*
-
-Numbers follow the rule in `brand-voice.md`, "Numbers and status claims".
-
-## A: Aim, their benefit not your goal
-
-Frame your purpose in terms of their interests.
-
-- Their challenges.
-- Genuine curiosity.
-- Connect to their world.
-
-> *"I'm curious why some teams fly with AI while others crash."*
-
-> *"I help teams skip the AI mistakes I've seen a hundred times."*
-
-**Failure mode if you frame around your goal:** *"I want to grow my consultancy"* turns the listener off. *"I help teams skip the AI mistakes..."* makes them lean in.
-
-## G: Game, visualizable next step
-
-A specific action they can picture themselves taking.
-
-- Concrete and specific.
-- Easy to participate.
-- They should see themselves in it.
-
-> *"I'm asking three questions: Where are you now? Where do you want to be? What's blocking the path?"*
-
-> *"Coffee chat about your biggest technical headache?"*
-
-## Tuning by audience
-
-The N stays constant; S-F-A-G swap per audience. Three worked examples below, each landing on what that audience actually cares about.
-
-**Skeptical enterprise CTO** (cares about money and risk):
-
-```
-N: "[FIRST-NAME] from hackers&wizards"
-S: "Your team's AI reality check"
-F: "Stopped a [Fortune 500 client]'s AI theatre before it scaled"
-A: "Curious if your AI investment is actually paying off"
-G: "15-minute audit, I'll spot exactly where you're leaving money on the table"
-```
-
-**Startup founder** (cares about lean execution):
-
-```
-N: "[FIRST-NAME] from hackers&wizards"
-S: "Your AI cofounder, before you can afford one"
-F: "Trained 30+ teams to ship without growing headcount"
-A: "Curious how lean a team can stay if agents do the boring parts"
-G: "20-minute call about your next hire vs your next agent"
-```
-
-**Engineering conference / mixed dev audience** (cares about craft):
-
-```
-N: "[FIRST-NAME] from hackers&wizards"
-S: "Senior engineer with three agents running in parallel"
-F: "500+ developers in our community, shipping with agents daily"
-A: "Want to see what context engineering looks like in real code"
-G: "Demo at the booth, bring your trickiest refactor"
-```
+The N stays constant; S-F-A-G swap per audience: a skeptical enterprise CTO cares about money and
+risk, a startup founder about lean execution, a conference crowd about craft.

@@ -1,0 +1,5 @@
+schema_version: "1.1"
+name: mail-handoff-brief
+description: A claude -p draft with two factual errors (the weekday and a link digit) and three tone baits (a casual opener, a lowercase product name the facts prescribe, a long sentence); the brief Codex follows must find the facts only, get the correction from another claude -p call with the previous text plus the findings, and deliver that output verbatim.
+context:
+  scaffold_script: fixture.sh

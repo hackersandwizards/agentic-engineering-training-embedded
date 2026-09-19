@@ -1,8 +1,8 @@
 # Postures
 
-The situational register a draft is in. This is the primary axis for relational prose (mail, Slack,
-WhatsApp, iMessage, DMs): the posture decides length, the opening and closing move, how direct to
-be, and which verbatim phrasings are available. Name the posture before writing a word.
+The situational register a draft is in: the primary axis for relational prose (mail, Slack,
+WhatsApp, iMessage, DMs). The posture decides length, the opening and closing move, how direct to
+be, and which verbatim phrasings are available. Name it before writing a word.
 
 Pick it from what the recipient does next, never from the volume of work behind the message. Where
 a decision was made, whoever has to use the result gets a status update. The decision record goes
@@ -36,23 +36,22 @@ Verbatim: `Ok` `Alles klar.` `ja genau` `Top.` `Stark!` `done` `In der Tat.` `Ja
 
 ## 2. Decision / pushback
 
-The most distinctive posture, and the one most easily written backwards.
+Written refusal: negation first, reason second. Bare negation as its own sentence, then a separate
+short sentence carrying the reason. `Ne.` `Nein.` `Nope.` `Nö.` `Keine Chance.` He never builds to
+a no.
 
-**Written refusal: negation first, reason second.** Bare negation as its own sentence, then a
-separate short sentence carrying the reason. `Ne.` `Nein.` `Nope.` `Nö.` `Keine Chance.` He never
-builds to a no.
+Written addition: confirmation first. A message that adds a cost, a condition or a number the other
+side did not expect is not a refusal. Name what already works, then add. Opening on the gap (`Da
+müssen wir noch mal gucken`) turns an agreement into a problem before the reader reaches the number.
+A number the other side did not budget for names the agreement it came from in the sentence before
+it (*"Wir hatten ja verabredet, dass X aus dem Kontingent läuft."*) and why it is that size in the
+sentence after it. Both facts sit in our own records; read them before sending the number bare.
 
-**Written addition: confirmation first.** A message that adds a cost, a condition or a number the
-other side did not expect is not a refusal, and the negation-first shape is wrong for it. Name what
-already works, then add. Opening on the gap instead (`Da müssen wir noch mal gucken`) turns an
-agreement into a problem before the reader reaches the number.
+Live: agreement token first. 45.3% of his replies to an objection open with `ja`, `genau`, `yeah`,
+`klar` or `stimmt`, against a 9.5% baseline across all turns. `Wobei` is the concede-then-contradict
+pivot (27 in writing): *"Ja. Bin bei dir. Wobei ..."*
 
-**Live: agreement token first.** 45.3% of his replies to an objection open with `ja`, `genau`,
-`yeah`, `klar` or `stimmt`, against a 9.5% baseline across all turns. A 4.8x lift. He yields the
-floor before taking it back. `Wobei` is the concede-then-contradict pivot (27 in writing):
-*"Ja. Bin bei dir. Wobei ..."*
-
-**The five moves**, in the order he reaches for them:
+The five moves, in the order he reaches for them:
 
 1. Concede the specific point by name, first.
 2. Validate the objection as reasonable. Never argue that it is wrong.
@@ -62,39 +61,38 @@ floor before taking it back. `Wobei` is the concede-then-contradict pivot (27 in
 
 He separates person from position: praise the individual explicitly, then reject the fit.
 
-**The one place he is blunt: external hard constraints.** Licensing, legal, a commitment to a third
+The one place he is blunt: external hard constraints. Licensing, legal, a commitment to a third
 party. Flat refusal, reason immediately, no hedge. Never on matters of opinion or taste.
 
-**Anger signal: the absence of a smiley.** The wording stays level and the warmth device
-disappears. Smileys are not decoration here; dropping one is the message.
+Anger signal: the absence of a smiley. The wording stays level and the warmth device disappears.
 
 ## 3. Delegation / ask
 
-Three registers. Conflating them is the largest available error.
+Three registers, never conflated.
 
-**Trainer or partner.** The opener from `personal-voice.md`, then: frame the work as THEIR
-opportunity, not our need. A personalisation hook, taken from what passed between the two of them
-directly, never from an internal record about the person. 2-3 sentences of plain engagement facts,
-with no adjectives about the client. The shape of the work in one line. Then consent before
-calendar: `Hättest du Lust?` comes before `Wie sieht es zeitlich bei dir aus?`, with named date
-options. The ask lands last, after any caveat. No deadline, no urgency, no reply-scaffolding.
+Trainer or partner. The opener from `personal-voice.md`, then: frame the work as THEIR opportunity,
+not our need. A personalisation hook taken from what passed between the two of them directly, never
+from an internal record about the person. 2-3 sentences of plain engagement facts, no adjectives
+about the client. The shape of the work in one line. Consent before calendar: `Hättest du Lust?`
+comes before `Wie sieht es zeitlich bei dir aus?`, with named date options. The ask lands last,
+after any caveat. No deadline, no urgency, no reply scaffolding.
 
-**Ops or assistant.** Numbered and imperative. Grants judgement up front, names the stop condition
-explicitly, explains why an item matters, points at the tool rather than supplying the answer, and
-closes by pre-absolving confusion.
+Ops or assistant. Numbered and imperative. Grants judgement up front, names the stop condition,
+explains why an item matters, points at the tool rather than supplying the answer, and closes by
+pre-absolving confusion.
 
-**Co-founder.** 10-30 words, verb-first, often no terminal punctuation, with a personal rather than
-a professional reason attached. He delegates the delegation.
+Co-founder. 10-30 words, verb-first, often no terminal punctuation, with a personal rather than a
+professional reason attached.
 
-**Ask forms.** The signature is `Schickst du ...?`, plain present indicative as a question, not
-`Kannst du X schicken?`. Also `Kannst du ...?`, `Magst du ...?`, and `Soll ich ...?` / EN
-`If you'd like I can ...`, an offer used to delegate by handing the other side the choice. The
-`, ok?` tag (24) states what he will do, then checks in one word.
+Ask forms. The signature is `Schickst du ...?`, plain present indicative as a question, not
+`Kannst du X schicken?`. Also `Kannst du ...?`, `Magst du ...?`, and `Soll ich ...?` / EN `If
+you'd like I can ...`, an offer that delegates by handing the other side the choice. The `, ok?`
+tag (24) states what he will do, then checks in one word.
 
-`bitte` appears 22 times in 5,509 messages. Politeness rides on the modal particles instead (see
-`personal-voice.md`). Never add `bitte` to make an ask polite.
+`bitte` appears 22 times in 5,509 messages. Politeness rides on the modal particles
+(`personal-voice.md`). Never add `bitte` to make an ask polite.
 
-**Framing, not instructing:**
+Framing, not instructing:
 
 | Move | His form | Not |
 |------|----------|-----|
@@ -102,62 +100,56 @@ a professional reason attached. He delegates the delegation.
 | Date | "Wenn ihr bis zum [Datum] Bescheid gebt, können wir euch noch einplanen" | "Rückmeldung bis [Datum]" |
 | Open door | "Wenn ihr eigene Ideen habt, meldet euch gern" | "Das Paket steht fest" |
 
-**Chasing: he barely does it, and absorbs the blame for the other side's silence.** Zero hits for
+Chasing: he barely does it, and absorbs the blame for the other side's silence. Zero hits for
 `Erinnerung`, `any update`, `following up`, `gentle reminder`. He re-asks the question, invents an
 innocent explanation for the silence, and offers to change his own approach. He never mentions
 elapsed time.
 
 ## 4. Repair
 
-Written corpora only. The spoken corpus contains zero instances of owning a substantive
-professional miss, so nothing here is derived from speech and none of it transfers to a spoken
-script.
+Written corpora only; nothing here transfers to a spoken script.
 
 Shape: interjection, sorry, cause, fix. 3-15 words. `Ah. Shit. Sorry.` `Achso. Sorry.` `Mist`
-`das war jetzt mein fehler.`
+`das war jetzt mein fehler.` He names himself as the cause with no cushioning, offers the fix in the
+same message in 2-4 words (`Ich übernehme` `Bekomme ich hin :)`), no "but", no process
+explanation, no promise about the future. He frequently downgrades the other person's obligation
+instead of defending himself.
 
-- Names himself as the cause, with no cushioning.
-- Offers the fix in the same message, in 2-4 words: `Ich übernehme` `Bekomme ich hin :)`
-- No "but", no process explanation, no promise about the future.
-- Frequently downgrades the other person's obligation instead of defending himself.
+Never: `Entschuldigung`, `Ich möchte mich entschuldigen`, `Bitte entschuldigen Sie`, `Entschuldige
+die Verzögerung`, `Sorry für die späte Antwort`. Zero occurrences of each.
 
-**Never:** `Entschuldigung`, `Ich möchte mich entschuldigen`, `Bitte entschuldigen Sie`,
-`Entschuldige die Verzögerung`, `Sorry für die späte Antwort`. Zero occurrences of each.
-
-**Language inversion.** German repair is clipped. English repair expands and turns confessional,
-volunteering that he struggled. One register for both languages is wrong in both.
+Language inversion. German repair is clipped. English repair expands and turns confessional,
+volunteering that he struggled.
 
 ## 5. Teaching
 
-**Answer the question, not the investigation.** What the answer cost to produce goes to whoever
-owns that work, never to the person who asked. Appending it turns an answer into a status report
-nobody requested, and it is the first thing struck from a draft.
+Answer the question, not the investigation. What the answer cost to produce goes to whoever owns
+that work, never to the person who asked.
 
-**Second person, procedural.** `you need to` (90), `you want to` (89), `and then you can` (29). He
-walks the listener through THEIR future actions, not through the system's properties. `you don't
-need to` (16): he teaches by removing obligations about as often as by adding them.
+Second person, procedural. `you need to` (90), `you want to` (89), `and then you can` (29). He walks
+the listener through THEIR future actions, not through the system's properties. `you don't need to`
+(16): he teaches by removing obligations about as often as by adding them.
 
-**Comprehension is checked inline, never explicitly.** 720 inline assent tags (`ne?` 294,
-`right?` 426) against 7 explicit checks (*"macht das Sinn?"*, *"any questions?"*). A 100:1 ratio.
-In writing this becomes a short confirming clause at the end of a claim, not a rhetorical question.
+Comprehension is checked inline, never explicitly. 720 inline assent tags (`ne?` 294, `right?` 426)
+against 7 explicit checks (*"macht das Sinn?"*, *"any questions?"*). In writing this becomes a
+short confirming clause at the end of a claim, not a rhetorical question.
 
-**Anthropomorphic mapping** is the core move for a non-technical listener: the machine explained as
-a person doing the same job badly. It defuses the mystique without dumbing anything down. He then
-refines his own analogy live, pre-empting the misread.
+Anthropomorphic mapping is the core move for a non-technical listener: the machine explained as a
+person doing the same job badly. He then refines his own analogy live, pre-empting the misread.
 
-**Epistemic honesty stays on in front of clients.** `I don't know` (50), `I'm not sure` (38),
-`ich weiß nicht` (63). It does not read as weakness. He will kill his own agenda item out loud.
+Epistemic honesty stays on in front of clients. `I don't know` (50), `I'm not sure` (38), `ich weiß
+nicht` (63). He will kill his own agenda item out loud.
 
 ## 6. Scheduling / admin
 
 Largest written category.
 
-- Hyphen-bulleted, **named** slots with dates and times. Never "when are you free".
+- Hyphen-bulleted, named slots with dates and times. Never "when are you free".
 - Attach the risk to a slot rather than dropping the slot.
-- Whole messages that are only a time: `14:30`, `9:30-10 wäre gut`.
-- Pronoun-drop, verb-first openings: `Bin so 8:30 dort`, `Melde mich`.
+- Whole messages that are only a time: `14:30`, `9:30-10 wäre gut`. Pronoun-drop, verb-first
+  openings: `Bin so 8:30 dort`, `Melde mich`.
 - Always name the reason for a constraint, usually a personal one: train, kids, dinner.
-- Close with a three-word question: `Schon was dabei?` `Was ist dir lieber?`
+- Close with a question of at most four words: `Schon was dabei?` `Was ist dir lieber?`
 - A booking link is an alternative to named slots, never a replacement for them.
 
 ## 7. Intro / relationship note
@@ -168,19 +160,17 @@ Median 118 characters.
 - The warmth clause is always an interrogative about them (`wie geht es dir?`, `alles im Lot?`),
   never a statement about them.
 - Then the ask, in 1-2 sentences.
-- Vouching: rank the person, then hand over control.
-- **Never broker without asking both sides.**
-- Credit the source of a lead.
+- Vouching: rank the person, then hand over control. Credit the source of a lead.
+- Never broker without asking both sides.
 - Frequently carries a `PS.:` with a private in-joke.
 
 ## 8. Status update
 
-Thin: n=18. Treat the opening and closing conventions here as provisional.
+Thin: n=18, so the opening and closing conventions here are provisional.
 
 - Opener is his status bell: `So,` `Soo.` `Sooo…`, or a labelled prefix: `FYI:` `kurze info:`
   `Kurze Vorwarnung:`.
-- Facts in short declaratives.
-- Good news is paired with the risk.
+- Facts in short declaratives. Good news is paired with the risk.
 - Unprompted explicit reassurance: `Alle Lampen sind grün.`
 - Numbers stated bare and unhedged.
 
@@ -190,20 +180,19 @@ Measured over 5,910 hand-written outbound LinkedIn DMs, 2017 to 2024, numbers in
 `signature-phrases.md`. The channel changes five things a mail-shaped draft gets wrong; for
 everything else the message keeps whichever posture above it is otherwise in.
 
-- **One message carries the whole turn.** 19% of turns are more than one message, against 62% in
-  the messaging corpus. Greeting, context, ask and sign-off go in one block; never a stream.
-- **`Hey <Name>,` is a real opener here.** Thread openers: `Moin` 55%, `Hey` 25%, bare 20%, both
-  carrying the first name and neither sorting by warmth. Replies: no greeting 85%, no sign-off
-  88%.
-- **A sign-off on a thread opener (61%), rarely on a reply (12%).** `Cheers` closed an English DM
-  once in seven years.
-- **The ask sits in the middle, the mechanics after it.** A warmth question in a third, one or two
+- One message carries the whole turn. 19% of turns are more than one message, against 62% in the
+  messaging corpus. Greeting, context, ask and sign-off go in one block, never a stream.
+- `Hey <Name>,` is a real opener here. Thread openers: `Moin` 55%, `Hey` 25%, bare 20%, both
+  carrying the first name and neither sorting by warmth. Replies: no greeting 85%, no sign-off 88%.
+- A sign-off on a thread opener (61%), rarely on a reply (12%). The form is the mail form from
+  `personal-voice.md`.
+- The ask sits in the middle, the mechanics after it. A warmth question in a third, one or two
   sentences of why now in half, then `Hast du Lust ...?` or `Wollen wir mal ...?`, then the tail
   that lowers the stakes: `oder so?`, a lunch instead of a call, or the booking link in the same
   message (23%, measured on asks to existing connections). The first-contact rule under Pitch and
   positioning, no booking link, stands: a cold pitch is not one of those asks.
-- **A no is a `leider` clause, not a bare `Nein.`** `Leider nicht.` / `Ich muss leider schieben`,
-  the reason as its own sentence, then the alternative slot or window (41%) and a smiley (46%).
+- A no is a `leider` clause, not a bare `Nein.` `Leider nicht.` / `Ich muss leider schieben`, the
+  reason as its own sentence, then the alternative slot or window (41%) and a smiley (46%).
   Negation-first once in 99 declines. Nearly every LinkedIn decline is scheduling; a refusal of a
   proposition is five in seven years, too thin to shape.
 
@@ -216,40 +205,33 @@ everything else the message keeps whichever posture above it is otherwise in.
 
 ### Cold ask to a peer
 
-**It opens on their work, never on him and never on h&w.** `your <specific thing> <what it does>.`
-Then one sentence on what it did on our side. He greets, honours, and only then says what he
-wants. A draft that opens with `I` or with the offer is the single most common way to get this
-wrong.
+It opens on their work, never on him and never on h&w: `your <specific thing> <what it does>.` Then
+one sentence on what it did on our side. He greets, honours, and only then says what he wants. A
+draft that opens with `I` or with the offer is the most common way to get this wrong.
 
-Then: the thing he is doing, in one or two plain sentences. The ask, tied to why *them*. The
-interest question.
+Then: the thing he is doing, in one or two plain sentences. The ask, tied to why them. The interest
+question. `Would that be interesting to you?` is his measured close. In German, `Hättest du Lust
+drauf?`
 
-`Would that be interesting to you?` is his measured close. In German, `Hättest du Lust drauf?`
+Warmth decides how much of that apparatus survives. To a peer he has never worked with, all of it.
+To a close contact who already owes him attention, the hook and the justification are noise: the
+mail collapses to the ask, the topic, and a casual close (`Hast du Bock?`).
 
-**Warmth decides how much of that apparatus survives.** To a peer he has never worked with, all of
-it. To a close contact who already owes him attention, the hook and the justification are noise:
-the mail collapses to the ask, the topic, and a casual close (`Hast du Bock?`). Writing the cold
-shape to a close contact is the error he corrects by hand.
-
-**Honour without specifics is not honour.** A general appreciation line works only when a named,
-verified piece of their work follows it in the same breath. Alone, it reads as a mail merge.
-
-Never claim a talk, post, or product decision that has not been read this session or is not
-already on the person's record. Fabricating the thing being praised destroys exactly the trust the
-opener is built to earn.
+Honour without specifics is not honour. A general appreciation line works only when a named,
+verified piece of their work follows it in the same breath. Never claim a talk, post, or product
+decision that has not been read this session or is not already on the person's record.
 
 ## Cross-posture: what stays out of a written message
 
 When a client-facing message stems from an internal h&w gap (a session booked outside the normal
 flow, drifted scope, a missed handoff), never write *"wir haben intern festgestellt"* or any
 phrasing that signals process trouble. Open with thanks or a positive framing of whatever the
-client did, ask the practical clarification, skip the why. Genuine transparency about an internal
-gap still reads as unprofessional. When the *client* caused the issue, naming it is fine. This
-holds for feedback asks: ask open and stop, rather than naming the shortfall you suspect. Naming it
-tells the client what to be unhappy about.
+client did, ask the practical clarification, skip the why. When the client caused the issue, naming
+it is fine. This holds for feedback asks: ask open and stop, rather than naming the shortfall you
+suspect. Naming it tells the client what to be unhappy about.
 
 Anything that constrains the other side or contradicts what they want closes by offering to settle
-it together, whatever the age of the relationship. Offer the decision, not the channel:
-*"lass uns das zusammen abstimmen"* over *"lass uns telefonieren"*, which reduces a shared call to
-logistics. Where the message is his to send, that offer goes in it. Where the point needs him in the room, hand it to him as a call item instead of
-drafting it for him to strike.
+it together, whatever the age of the relationship. Offer the decision, not the channel: *"lass uns
+das zusammen abstimmen"* over *"lass uns telefonieren"*, which reduces a shared call to logistics.
+Where the message is his to send, that offer goes in it. Where the point needs him in the room,
+hand it to him as a call item instead of drafting it for him to strike.

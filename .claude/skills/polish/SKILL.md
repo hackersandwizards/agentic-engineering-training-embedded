@@ -9,63 +9,40 @@ description: >-
 
 # Polish
 
-Run all six phases in order. Do not skip a phase. Do not stop between phases unless a phase says so.
+Run the six phases in order. Stop only where a phase says so.
 
-An argument narrows what each phase covers, never which phases run. Scoped to one area, phase 2
-still sweeps the code changed alongside it; report what the scope excluded rather than dropping
-the phase.
+An argument narrows what each phase covers, never which phases run. Report what the scope excluded.
 
 The argument also scopes where you hunt for defects, never which proven defects you may correct.
 Once a fact is verified false, fix every live copy of it, the generator that produced them
 included, in files the argument never named. The phase 1 exclusion set still binds: a file another
 session is editing is reported as deferred whatever it contains.
 
-Do not use the Workflow tool. Fan out with direct subagents via the Agent tool only.
+Fan out with the Agent tool, never the Workflow tool.
 
 ## 1. Preflight
-
-Require a git repo. If not in one, stop and say so.
 
 Run `git status` and record every file it reports as modified, staged, or untracked. That list is this run's exclusion set. A dirty tree does not stop the run: another session's work in progress is not yours to commit or stash.
 
 Review and fix committed changes only. Never edit a file in the exclusion set: polish commits what it edits, and committing one would sweep in its author's uncommitted work. Report those files as deferred, for the next run once their author has committed.
 
-The set moves both ways while you work: a new edit adds a file, and another session committing its
-work drops one out. So re-derive it in phase 6 rather than assuming phase 1's list still holds.
-
-Run the repo's own checks once and record the result. Phase 5 needs this baseline to separate a pre-existing failure from one the sweep caused, and a subagent reporting a red gate mid-run is usually reading another agent's half-finished edit.
-
-Note the current branch for the push in phase 6.
+Run the repo's own checks once and record the result: this baseline separates a pre-existing failure from one the sweep caused. A subagent reporting a red gate mid-run is usually reading another agent's half-finished edit.
 
 ## 2. Comment sweep
 
-List source files with `git ls-files`, filtered to code extensions (sh, py, ts, js, tsx, jsx, go, rs, rb, java, kt, swift, c, h, cpp, sql, css, html, yaml, yml, toml). Skip vendored and generated paths (node_modules, dist, build, vendor, lockfiles), and subtract the exclusion set before batching: these agents edit directly and never see phase 1.
+List source files with `git ls-files`, skip vendored and generated paths, and subtract the exclusion set before batching: the batch agents edit directly and never see phase 1.
 
-Fan out subagents, one per directory batch. Tell each agent to read the Comments section of
-`references/failure-modes.md` and edit its batch by it, and to change comments only.
-
-Read each agent's report and spot-check one file per batch.
+Fan out one subagent per directory batch, told to read the Comments section of `references/failure-modes.md` and to change comments only. Spot-check one file per batch.
 
 ## 3. Quality, performance, security review
 
-Fan out subagents, one per module or top-level directory. Each agent reviews its module for
-minimalism, design, performance and security, and reads `references/failure-modes.md` in full for
-the defects a competent review misses. Pass that path in every agent's prompt. Reviewers report;
-they do not edit.
+Fan out one subagent per module or top-level directory to review it for minimalism, design, performance and security, with the path of `references/failure-modes.md` in its prompt to read in full. Reviewers report and do not edit.
 
-Review the instruction artifacts as their own module: `.claude/` rules, agents, and skills, plus
-`CLAUDE.md`. An instruction counts as code for this review. Look for a pointer to a path that no
-longer exists, a cap or boundary that contradicts an always-on rule, one rule stated twice inside a
-single skill or among the artifacts that are not skills, and any skill pointing outside its own
-directory at another skill, rule, agent or memory file instead of stating the thing itself.
+Review the instruction artifacts as their own module: `.claude/` rules, agents, and skills, plus `CLAUDE.md`. Look for a pointer to a path that no longer exists, a cap or boundary that contradicts an always-on rule, one rule stated twice inside a single skill or among the artifacts that are not skills, and any skill pointing outside its own directory at another skill, rule, agent or memory file instead of stating the thing itself.
 
-Verify each finding yourself before fixing it. Apply the fixes. Skip findings that would add
-speculative structure.
+Verify each finding yourself before fixing it. Skip findings that would add speculative structure.
 
-**A fix to a mirrored file goes into the hub copy, never this repo's.** The sync swaps the whole
-directory, so a fix applied here is gone at the next run and no check catches it.
-The sync script lists what is mirrored: edit and commit in the hub, then run it, and read its
-output rather than its exit status.
+**A fix to a mirrored file goes into the hub copy, never the mirror.** The sync swaps the whole directory, so a fix applied to the mirror is gone at the next run and no check catches it. The sync script lists what is mirrored: edit and commit in the hub, then run it, and read its output rather than its exit status.
 
 New failure modes learned during a run belong in `references/failure-modes.md`, not in this file.
 
@@ -73,15 +50,15 @@ New failure modes learned during a run belong in `references/failure-modes.md`, 
 
 Run the /simplify skill on the accumulated diff. Apply its fixes.
 
-Then run phase 3 again over the accumulated diff rather than the tree: same fan-out, same `references/failure-modes.md`, same rule that you verify a finding before acting on it. `/code-review` refuses model invocation, so what runs is that procedure, never the command.
+Then run phase 3 again over the accumulated diff rather than the tree. `/code-review` refuses model invocation, so what runs is that procedure, never the command.
 
-One pass of each. A second full round is the caller's call. Name any finding you dismissed, and why, in the final summary.
+One pass of each. Name any finding you dismissed, and why, in the final summary.
 
 ## 5. Verify
 
-Run the repo's own checks if present, in this order of discovery: a `check`-named script or justfile target, then package.json scripts (test, lint, build), Makefile, pytest, cargo test, go test. Prefer the one-shot over the watcher: `test` is often `vitest`, which never exits.
+Run the repo's own checks. Prefer the one-shot over the watcher: `test` is often `vitest`, which never exits.
 
-Read "A gate that ran but was never read" in `references/failure-modes.md` before you run it. Both traps in it are this phase's: a piped gate reports the last command's exit status, and a commit whose paths the pre-commit hook does not route runs no gate at all. Run the gate on its own line and read `$?`.
+Run the gate on its own line and read `$?`. "A gate that ran but was never read" in `references/failure-modes.md` names this phase's two traps.
 
 A failing check blocks the commit. Fix it if the sweep caused it; report it and stop if it predates the sweep. A failure traced to a file in the exclusion set is another session's half-finished edit: wait for the gate to clear, and report it and stop if it does not. Never edit that file, and never bypass the hook, to get past it.
 
@@ -89,7 +66,6 @@ A failing check blocks the commit. Fix it if the sweep caused it; report it and 
 
 Re-run `git status` and drop any file that became dirty since phase 1 without an edit of yours. Name the remaining files this run edited as the `git commit` pathspec.
 
-Commit each coherent batch once it passes the gate, rather than one commit at the end. Message: one
-line summarizing the batch, then a short body listing the areas touched.
+Commit each coherent batch once it passes the gate.
 
-Push to the branch noted in phase 1. If the push fails (no remote, auth, protected branch), report the error and stop.
+Push to the branch you started on. If the push fails, report the error and stop.

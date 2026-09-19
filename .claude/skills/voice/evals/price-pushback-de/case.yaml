@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: price-pushback-de
+description: Stefan answers a prospect who pushes the per-head price down, bundles four asks into one, and wants a later date. The price holds, scope alternatives go first, the asks come apart.
+context:
+  add_dirs:
+    - thread
