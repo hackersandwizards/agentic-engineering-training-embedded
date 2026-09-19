@@ -5,8 +5,8 @@ panel intros, *"Stell dich mal kurz vor"* moments. Skip when the host introduced
 `[FIRST-NAME]` is whoever the draft is for; the examples are the shape, not one person's script.
 
 - N, Name: *"[FIRST-NAME] from hackers&wizards"*. Role only if it adds immediate value.
-  *"[FIRST-NAME] from hackers&wizards. I help whole companies get in tune with agentic
-  engineering, so they ship faster."*
+  *"[FIRST-NAME] from hackers&wizards. I get engineering teams in flow with agentic
+  engineering, so the speed they gain reaches their customers."*
 - S, Same: an instant mental picture. *"Think of me as a translator between developers and AI."* /
   *"I'm like a driving instructor, but for AI coding."*
 - F, Fame: one number plus one success story, result not title, under the numbers rule in

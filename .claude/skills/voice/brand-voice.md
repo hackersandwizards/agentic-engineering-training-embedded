@@ -39,8 +39,11 @@ language. They've seen every consulting deck; surprise them with specifics they 
 
 ## Core positioning: the verbatim set
 
-Primary headline: "Your whole company, in tune with agentic engineering." (the claim, its results
-named in the copy under it).
+Primary headline: "Your whole company unstoppable, in flow with agentic engineering." (the claim,
+its results named in the copy under it). Flow is the emotional result, where "thrive" stood before.
+The result under the claim is the speed the teams gain reaching the customers, and it is stated as
+an outcome, lead time from request to production and the cost of a shipped change, never as output
+such as pull request counts or tool use.
 
 Every text leaving the company tells the message in one order: the buyer's problem in the words
 buyers use for it, the idea that answers it, the claim, the result for the client, the way there,
@@ -51,8 +54,8 @@ The vision and the whole offer speak of product development and enablement. A co
 engineering teams, training and mentoring, never "product teams".
 
 Why us is two kinds of experience, always named together: more than 20 years building large
-software systems, and work with agents since the first tools at the end of 2022, Claude Code before
-its public beta, production software built with agents since mid-2025. A large consultancy has the
+software systems, and work with agents since the first tools at the end of 2022, alpha access to
+Claude Code, production software built with agents since mid-2025. A large consultancy has the
 first without the second, and a newcomer the second without the first.
 
 Terms, verbatim: "Agentic Engineering" (primary: the h&w framework unifying AI-assisted
