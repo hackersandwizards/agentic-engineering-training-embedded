@@ -47,6 +47,14 @@ buyers use for it, the idea that answers it, the claim, the result for the clien
 and the training or product last. A problem stated in our vocabulary instead of theirs, or a text
 that opens on the product, has the order wrong.
 
+The vision and the whole offer speak of product development and enablement. A concrete text says
+engineering teams, training and mentoring, never "product teams".
+
+Why us is two kinds of experience, always named together: more than 20 years building large
+software systems, and work with agents since the first tools at the end of 2022, Claude Code before
+its public beta, production software built with agents since mid-2025. A large consultancy has the
+first without the second, and a newcomer the second without the first.
+
 Terms, verbatim: "Agentic Engineering" (primary: the h&w framework unifying AI-assisted
 development, prompt engineering, context engineering, modern software engineering, pragmatic
 programming), "Agentic Product Engineering" (the product-domain extension), "Functional Agentic
