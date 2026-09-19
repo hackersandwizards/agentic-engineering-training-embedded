@@ -25,8 +25,8 @@ transfer", "independent improvement"); learning orientation.
 
 The five recurring themes, one of which anchors every post, talk and proposal:
 
-1. Agentic Engineering Practices: from scattered AI adoption to confident AI practitioners. Vibe
-   Coding is fine for prototypes, not for lasting software.
+1. Agentic Engineering Practices: from coding agents everywhere to a company that releases faster
+   with them. Vibe Coding is fine for prototypes, not for lasting software.
 2. Context Engineering Foundations: multi-layer context architectures; context engineering as the
    bottleneck.
 3. Quality at Scale with Agents: AI-friendly architecture, testing strategies, quality gates.
@@ -39,9 +39,13 @@ language. They've seen every consulting deck; surprise them with specifics they 
 
 ## Core positioning: the verbatim set
 
-Primary headlines, in priority order: "Elevate Your Teams" (main value proposition), "Your whole
-company, in tune with agentic engineering." (the claim, its results named in the copy under it),
-"From scattered AI adoption to confident AI practitioners" (journey positioning).
+Primary headline: "Your whole company, in tune with agentic engineering." (the claim, its results
+named in the copy under it).
+
+Every text leaving the company tells the message in one order: the buyer's problem in the words
+buyers use for it, the idea that answers it, the claim, the result for the client, the way there,
+and the training or product last. A problem stated in our vocabulary instead of theirs, or a text
+that opens on the product, has the order wrong.
 
 Terms, verbatim: "Agentic Engineering" (primary: the h&w framework unifying AI-assisted
 development, prompt engineering, context engineering, modern software engineering, pragmatic
@@ -142,7 +146,7 @@ Corporate buzzwords, with the replacement:
 
 | Word | Use instead |
 |------|-------------|
-| Transform / Transformation (allowed once: "Transform scattered AI adoption into systematic practices" in website hero copy) | "convert", "shift", "rebuild", or name the change |
+| Transform / Transformation ("transformation" stays as the name of a multi-step program, never for one training or event) | "convert", "shift", "rebuild", or name the change |
 | Evolve / Evolution | name the specific change |
 | Systematic (allowed in website and marketing copy: "Systematic thinking", "Systematic practices") | "structured", "organized" |
 | Methodology / Method / Methodical | "framework", "practices", "way of working" |
