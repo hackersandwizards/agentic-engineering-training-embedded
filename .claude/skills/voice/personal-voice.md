@@ -34,6 +34,7 @@ Situational moves (length, openings, closings, directness, the phrasings per sit
 - Opener: `Hallo <Vorname>,` or `Hey <Vorname>,`. Two recipients: `Hallo ihr beiden,`. Group:
   `Hallo zusammen,`.
 - Sign-off: `Viele Grüße, Stefan` on one line.
+- English: `Hi <Vorname>,` or `Hey <Vorname>,`, signed `Cheers, Stefan` on one line.
 
 ## Character
 

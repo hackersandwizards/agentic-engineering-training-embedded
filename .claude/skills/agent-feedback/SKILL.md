@@ -67,6 +67,11 @@ only when it cannot mutate live systems or require new approval.
   what sits next door by design.
 - A rule that fires on a minority of turns gets `paths:` frontmatter or becomes a skill. Reference
   material is never always-on.
+- A rule rising into a router is re-scoped per mode as a list of what each mode may write, never
+  universalized into one sentence. A surface several operations share (reading a profile) is its
+  own file, and a step whose mechanics contradict the shared ones is a surface, not an operation.
+  Pair a prohibition with a route to the owner of the excluded work. Freeze the text before
+  dispatching a cold walker.
 
 ## Adding or cutting a line
 

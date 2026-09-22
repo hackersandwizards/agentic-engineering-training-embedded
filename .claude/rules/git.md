@@ -7,6 +7,9 @@ Other sessions share this working tree and its index.
 - `git add` each new file by name, and both paths of a `git mv`, before committing. A pathspec
   skips untracked files, and naming only a rename's destination leaves the file at both paths. The
   local gate still passes, because it reads the working tree rather than the commit.
+- A case-only rename commits nothing through a pathspec where `core.ignorecase` is true: the commit
+  reports success and leaves the rename staged. Rename through an intermediate name in two commits
+  (`Foo` -> `foo-case` -> `foo`) and read `git ls-tree HEAD -- <dir>` afterwards.
 - Name files, not the directory holding them. A file can still hold another session's uncommitted
   lines beside yours: read each path's own diff, commit the clean paths now, and leave a shared file
   until its other author has committed.
@@ -18,6 +21,11 @@ Other sessions share this working tree and its index.
   your run is open.
 - Commit and push each finished batch without being asked: one coherent unit whose checks pass.
   Stay on the current branch unless the user asks for another.
+- On a rejected push, `git pull --rebase` refuses over unstaged files. A plain `git pull` is safe
+  where `git diff --name-only HEAD origin/main` and `git diff --name-only` share no path. Where they
+  overlap, leave the commit local and report it. Never stash another session's work. "Untracked
+  files would be overwritten" naming a peer's new files clears once the peer commits: poll `git
+  status --porcelain`, then pull again.
 - `.git/index.lock` is another session committing. The pre-commit hook holds it for over a minute:
   wait and retry, and if it outlives a couple of minutes, name the owning process and report it.
   Never delete it.

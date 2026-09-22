@@ -34,6 +34,8 @@ List source files with `git ls-files`, skip vendored and generated paths, and su
 
 Fan out one subagent per directory batch, told to read the Comments section of `references/failure-modes.md` and to change comments only. Spot-check one file per batch.
 
+The corpus is curated (comment density 1.4%), so tell each batch that zero changes is an acceptable result. Before deleting a comment on a magic number, grep the file for the other numbers doing a similar job: where a sibling uses a different value, the comment is the only statement that the divergence is deliberate, so keep it.
+
 ## 3. Quality, performance, security review
 
 Fan out one subagent per module or top-level directory to review it for minimalism, design, performance and security, with the path of `references/failure-modes.md` in its prompt to read in full. Reviewers report and do not edit.
