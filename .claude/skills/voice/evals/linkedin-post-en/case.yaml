@@ -1,6 +1,0 @@
-schema_version: "1.1"
-name: linkedin-post-en
-description: An English LinkedIn post under Benedikt's name from a thesis, engagement numbers and a survey, with the client to be anonymized and the thesis handed over in a banned shape.
-context:
-  add_dirs:
-    - notes

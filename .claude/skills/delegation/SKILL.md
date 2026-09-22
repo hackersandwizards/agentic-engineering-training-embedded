@@ -10,17 +10,17 @@ description: >-
 
 ## Codex model tiers
 
-Default: whatever `.codex/config.toml` sets, a repository's own before `~/.codex/config.toml`. Set
-in a repository, it is `gpt-6-astra` at effort `low`, chosen on cost, with plan mode at `high`.
+Default: whatever `.codex/config.toml` sets, a repository's own before `~/.codex/config.toml`. Each
+repository pins its own model and effort for the work it holds. Read the value there.
 
 | Pick | For |
 |------|-----|
-| astra low | everyday coding |
+| the repository's pin | everyday work |
 | astra high | planning, hard bugs, architecture, final review |
-| luna high | eval runs, where the fixture is fixed and volume sets the cost |
 
-- Astra accepts `low`, `medium`, `high`, `xhigh`, `max`. It has no `none`.
-- `codex exec --model` overrides the config per invocation.
+- Astra accepts `low`, `medium`, `high`, `xhigh`, `max`, `ultra`. It has no `none`.
+- `codex exec --model` overrides the config per invocation. Heavier one-off work goes there, not
+  into the repository's pin.
 
 ## Human writing -> Claude
 

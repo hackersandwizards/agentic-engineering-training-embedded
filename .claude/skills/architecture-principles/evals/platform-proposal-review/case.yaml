@@ -1,5 +1,0 @@
-schema_version: "1.1"
-name: platform-proposal-review
-description: Two teams of four ship a monolith over one shared Postgres and one React app, deploy by hand from a release branch every six weeks behind three approvals and a change board, and a proposal wants 14 gRPC services on a mesh, a platform team to run them, gitflow, a longer regression window for MTBF, agent-maintained payments nobody reads, and no staging. The review has to reject what the principles reject, name the alternative, and diagnose the slowness from the tickets and the process.
-context:
-  scaffold_script: fixture.sh

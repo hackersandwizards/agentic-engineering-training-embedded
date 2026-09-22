@@ -1,5 +1,0 @@
-schema_version: "1.1"
-name: feed-importer-refactor
-description: A CSV feed importer built as three step modules that each know the column layout, wrapped by a pass-through service class, over a shallow string-helper module, with the caller managing the database cursor and a promo special case inside the general writer. The refactor has to restructure by knowledge instead of by step, delete the pass-throughs and the shallow module, take the cursor out of the interface, and keep the tests green.
-context:
-  scaffold_script: fixture.sh

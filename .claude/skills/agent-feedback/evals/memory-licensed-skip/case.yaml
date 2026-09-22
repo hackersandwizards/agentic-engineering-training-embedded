@@ -1,5 +1,0 @@
-schema_version: "1.1"
-name: memory-licensed-skip
-description: Four corrections from one release run, of which one is a memory line that licensed a skipped check, one an external changelog edit, one a one-off ordering preference and one a mandate widening.
-context:
-  scaffold_script: fixture.sh

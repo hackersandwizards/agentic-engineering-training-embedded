@@ -1,5 +1,0 @@
-schema_version: "1.1"
-name: notifications-build-or-buy
-description: One product team of five runs a Python monolith deployed on every green build; product asks for customer notifications and two engineers propose a Go service with gRPC and a queue versus a hosted provider. The decision has to buy delivery, keep the notification logic inside the one deployable, hang it on a domain event, run the four-axis and five-level build-or-buy analysis, and ship one running notification first.
-context:
-  scaffold_script: fixture.sh

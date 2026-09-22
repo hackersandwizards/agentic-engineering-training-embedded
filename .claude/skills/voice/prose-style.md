@@ -50,11 +50,6 @@ Relational-prose exception. In email, Slack, and personal messages, Abtönungspa
 and warmth: "Sagt einfach Bescheid" invites, "Sagt Bescheid" instructs. Keep them at the measured
 density in `personal-voice.md`.
 
-Banned everywhere: the filler frames "Es ist festzustellen, dass", "Es ist wichtig zu betonen,
-dass", "Man kann sagen, dass", "In diesem Zusammenhang", "It should be noted that", "It is
-important to mention that", "One could argue that", and the connectors "Furthermore", "Moreover",
-"In conclusion". Cut the frame and lead with the claim.
-
 ## Spoken to written
 
 Converting his spoken words (Fathom transcripts, talks, recordings) is tightening, not
@@ -91,6 +86,10 @@ Always proper Umlaute and Sonderzeichen (ä, ö, ü, ß, Ä, Ö, Ü), never ASCI
 
 Use them when they do work the local language cannot, cut them when an everyday word means the
 same: "agentic engineering" stays, "implementieren" -> "umsetzen", "utilize" -> "use".
+
+That test reads on what the reader says, not on what the dictionary offers. An English term the
+reader's own industry speaks stays English though German has a word for it: `Bottleneck` over
+`Engpass`, `Backlog` over `Rückstand`. Translating one reads as a machine wrote the sentence.
 
 One exception: German prose in this field writes `AI`, not `KI`, in every compound (`AI-Adoption`,
 `AI-gestützte Entwicklung`). Our documents travel in sets, and a single `KI` puts the set at odds

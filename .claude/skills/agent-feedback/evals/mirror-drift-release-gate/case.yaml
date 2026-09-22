@@ -1,5 +1,0 @@
-schema_version: "1.1"
-name: mirror-drift-release-gate
-description: A correction to a skill that is mirrored from a hub into three checkouts, one of which carries drift the hub lacks and one of which is a declared fork.
-context:
-  scaffold_script: fixture.sh

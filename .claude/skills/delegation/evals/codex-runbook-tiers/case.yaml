@@ -1,5 +1,0 @@
-schema_version: "1.1"
-name: codex-runbook-tiers
-description: A runbook of codex exec commands for six pieces of work in a repository whose .codex/config.toml sets gpt-6-astra at low; each piece needs its own model and effort (everyday coding low, hard bug and final review high, the eval run on luna high, no none or minimal anywhere), the luna override on the command line rather than in the config, and the client mail handed to claude -p rather than authored by Codex.
-context:
-  scaffold_script: fixture.sh

@@ -1,5 +1,0 @@
-schema_version: "1.1"
-name: daily-buckets-local-time
-description: A daily report buckets epoch timestamps through jq's strftime, which renders UTC, so the late-evening events of the Berlin ops team land on the previous day; the fix must bucket in Europe/Berlin and regenerate the report.
-context:
-  scaffold_script: fixture.sh

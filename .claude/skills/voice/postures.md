@@ -235,3 +235,8 @@ it together, whatever the age of the relationship. Offer the decision, not the c
 das zusammen abstimmen"* over *"lass uns telefonieren"*, which reduces a shared call to logistics.
 Where the message is his to send, that offer goes in it. Where the point needs him in the room,
 hand it to him as a call item instead of drafting it for him to strike.
+
+A message back into a live conversation carries what is new. Whatever the other side told us, their
+dates, their plans, the people they named, is what the offer stands on, never what the message
+reports back to them. Where their own fact costs them something, say sorry for our part in it and
+put the offer next to it.

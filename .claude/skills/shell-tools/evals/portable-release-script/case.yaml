@@ -1,5 +1,0 @@
-schema_version: "1.1"
-name: portable-release-script
-description: Write a release script that must run on the Ubuntu CI runner and on the release engineer's Mac (in-place edits, dates, checksums), plus the runbook of commands she runs on the Mac.
-context:
-  scaffold_script: fixture.sh

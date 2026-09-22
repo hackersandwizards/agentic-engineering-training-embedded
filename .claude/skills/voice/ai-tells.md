@@ -98,7 +98,8 @@ Banned in all forms:
 | Topic-pivot | "at its core", "when it comes to" | name the topic directly |
 | Contrast | "on the other hand", "that said", "at the same time" | "but" or a period |
 | Hedge | "it's worth noting", "needless to say", "moving forward" | if it's worth noting, note it |
-| DE | "letzten Endes", "im Grunde", "im Kern", "in der Tat", "nichtsdestotrotz" | dieselbe Regel |
+| Frame | "It should be noted that", "It is important to mention that", "One could argue that", "Furthermore", "Moreover", "In conclusion" | cut the frame, lead with the claim |
+| DE | "letzten Endes", "im Grunde", "im Kern", "in der Tat", "nichtsdestotrotz", "Es ist festzustellen, dass", "Es ist wichtig zu betonen, dass", "Man kann sagen, dass", "In diesem Zusammenhang" | dieselbe Regel |
 
 ## 4. Copula and verb dodging
 

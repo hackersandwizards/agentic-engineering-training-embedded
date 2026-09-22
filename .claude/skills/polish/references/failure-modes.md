@@ -36,9 +36,8 @@ reader, and a rule's history is not part of the rule.
   where one default with the person read off the session would do.
 
 What stays is what the model gets wrong without the line: a measured number, a verbatim phrasing,
-a silent failure, a file convention. Where the skill carries an eval suite, run it before and after
-the cut; a grader that turns red names the one line to restore. Where it carries none, list the
-skill's traps first and re-read each cut against that list.
+a silent failure, a file convention. List the skill's traps first and re-read each cut against
+that list.
 
 Cutting is a check deletion when the sentence carried the only "stop and ask" on a path.
 

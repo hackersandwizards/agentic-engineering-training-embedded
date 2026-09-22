@@ -38,11 +38,11 @@ Fan out one subagent per directory batch, told to read the Comments section of `
 
 Fan out one subagent per module or top-level directory to review it for minimalism, design, performance and security, with the path of `references/failure-modes.md` in its prompt to read in full. Reviewers report and do not edit.
 
-Review the instruction artifacts as their own module: `.claude/` rules, agents, and skills, plus `CLAUDE.md`. Look for a pointer to a path that no longer exists, a cap or boundary that contradicts an always-on rule, one rule stated twice inside a single skill or among the artifacts that are not skills, and any skill pointing outside its own directory at another skill, rule, agent or memory file instead of stating the thing itself.
+Review the instruction artifacts as their own module: `.claude/` rules, agents, and skills, plus `CLAUDE.md`. Look for a pointer to a path that no longer exists, a cap or boundary that contradicts an always-on rule, one rule stated twice inside a single skill or among the artifacts that are not skills, and any skill pointing outside its own directory at another skill, rule, agent or memory file by link or by name.
 
 Verify each finding yourself before fixing it. Skip findings that would add speculative structure.
 
-**A fix to a mirrored file goes into the hub copy, never the mirror.** The sync swaps the whole directory, so a fix applied to the mirror is gone at the next run and no check catches it. The sync script lists what is mirrored: edit and commit in the hub, then run it, and read its output rather than its exit status.
+**A fix to a mirrored file goes into the hub copy, never the mirror.** The sync swaps the whole directory, so a fix applied to the mirror is gone at the next run and no check catches it. The sync script lists what is mirrored: edit and commit in the hub, then run it, and read its output rather than its exit status. The sync first commits every dirty hub path and fans it out, so read the hub's `git status --porcelain` before running it. A dirty path this run did not write defers the sync: copy the files this run committed from hub `HEAD` into this repository's mirror and report the other repositories as pending.
 
 New failure modes learned during a run belong in `references/failure-modes.md`, not in this file.
 

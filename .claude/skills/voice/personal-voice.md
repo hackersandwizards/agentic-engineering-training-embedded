@@ -110,6 +110,23 @@ pitch.
 Vulnerability only with a reframe: *"Allein könnten wir uns den Stand nicht leisten"* -> *"Aber
 genau deshalb haben wir das Gruppenformat entwickelt"*.
 
+## An invitation states facts, it never argues relevance
+
+Measured across his event mails (techcamp 2026, DevLand 2026, code.talks and DLS 2025 and 2026, the
+autumn 2026 Slack post): **he never writes why an event matters to the recipient.** He gives where
+he is, what his role there is, and what the format is, then leaves the judgement to them.
+
+> "Ich kuratiere dort den GenAI-Track und bin beide Tage vor Ort. Zwei Tage, acht Themenbereiche,
+> und sehr entspannt."
+> "Wir sind wieder mit einem Stand da und ich habe am ersten Tag eine Session."
+> "Where you'll find me:" followed by the list and nothing else.
+
+A sentence explaining that the topic is central, that these are the questions the reader is already
+working on, or that the speakers will be honest, is the part that reads as generated. It was
+rejected three times in one sitting on 2026-09-20 ("das ist einfach nur irgendwelches räudiges
+AI-Gesloppe"), while every surrounding line he had written himself passed untouched. The fix is
+deletion, not rewording: put the facts in the list and let the topic be one flat clause.
+
 ## Analogies and concreteness
 
 An analogy carries most conceptual points. Measured frequency: factory (251), pipeline (59), yogurt

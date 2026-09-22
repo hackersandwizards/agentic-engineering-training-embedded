@@ -1,5 +1,0 @@
-schema_version: "1.1"
-name: delete-reports-feature
-description: Remove the reports feature from a small package; the test file named for it also covers shop/money.py, whose cases must be ported before the file goes.
-context:
-  scaffold_script: fixture.sh
