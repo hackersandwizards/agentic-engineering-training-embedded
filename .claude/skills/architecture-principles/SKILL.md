@@ -1,25 +1,17 @@
 ---
 name: architecture-principles
 description: >-
-  The h&w standard for what "good" looks like in client systems. Load when reviewing architecture
-  or code structure, making a technical recommendation, choosing between designs, writing a
-  proposal or training content that takes a technical position, or diagnosing why an engineering
-  organization is slow. Use for "review this architecture", "is this architecture any good",
-  "architecture review", "what is wrong with this design", "architecture red flags",
-  "how should we structure this", "microservices or monolith", "build or buy",
-  "should we build this ourselves", "why is this team slow", "why are we shipping so slowly".
-  Skip for routine implementation inside an existing codebase, where the surrounding code is the
-  standard.
+  h&w's standard for client systems, to review architecture or code ("red flags"), choose a
+  design ("microservices or monolith", "build or buy"), argue a technical position in a proposal
+  or training, or diagnose "why is this team slow", never for routine work in an existing codebase.
 ---
 
 # Architecture Principles for Client Systems
 
-What "good" looks like in the systems h&w helps clients build.
-
 ## Core Philosophy
 
 - Architecture exists to split work between teams so they can ship independently. If it doesn't serve coordination, it's ornamental.
-- Principles over rules in complex environments. You cannot write a rule for every situation. Teach judgment instead.
+- Principles over rules in complex environments: teach judgment.
 - Code changeability matters more than code correctness. "It is more important for code to be changeable than that it work."
 - The Three Ways: Fast Flow, Fast Feedback, Continuous Learning
 - Five Ideals: Locality/Simplicity, Focus/Flow/Joy, Improvement of Daily Work, Psychological Safety, Customer Focus
@@ -27,24 +19,24 @@ What "good" looks like in the systems h&w helps clients build.
 ## Engineering Values
 
 1. **Tech follows Business**: business value drives all technical decisions. A running system with minimal functions is more valuable than discussing concepts.
-2. **Move fast, fail fast**: short build-measure-learn cycles, Conway's Law, MTTR over MTBF. Uncertain requirements become clearer when teams build and deploy.
+2. **Move fast, fail fast**: short build-measure-learn cycles, Conway's Law, MTTR over MTBF.
 3. **Low technical barriers**: standardization, open standards, knowledge exchange across teams.
-4. **Coverage of non-functional aspects**: security, performance, resilience, quality pyramid. React with urgency when problems are detected.
+4. **Coverage of non-functional aspects**: security, performance, resilience, quality pyramid.
 5. **Full ownership and clear responsibility**: you build it, you run it. Everything in production must be owned.
-6. **Retained expertise in core technologies**: AI accelerates engineering, it does not transfer architecture ownership or domain accountability. Keep the team able to explain, debug, and evolve its core systems without the agent. Delegate implementation, never understanding.
+6. **Retained expertise in core technologies**: AI accelerates engineering, it does not transfer architecture ownership or domain accountability. Delegate implementation, never understanding.
 
 ## Architecture Principles
 
 - **Bounded Contexts and Vertical Systems**: DDD-aligned. Own data, business logic, and UI per context. Communication via domain events.
 - **Non-Blocking Communication**: events over synchronous calls. Design for eventual consistency.
 - **Small and Simple**: microservices sized to team capacity, not nano-services. Every new service is tech debt until proven otherwise.
-- **Evolutionary Architecture**: defer accidental complexity. Sacrificial architecture is a valid pattern. Don't be afraid to throw away and rewrite.
+- **Evolutionary Architecture**: defer accidental complexity. Sacrificial architecture is a valid pattern.
 - **Cloud Native**: 12-factor apps, infrastructure as code, immutable deployments.
 - **Scale Horizontally**: stateless services, shared-nothing, scale via instances not bigger machines.
 - **Continuous Delivery and Deployment**: fully automated pipelines, trunk-based development, deploy on every green build.
 - **Sensible Defaults**: technology radar, minimize variation. Freedom within constraints.
-- **Use Low-Tech Coupling**: DNS, HTTP, JSON, event streaming. Prefer boring technology that everyone understands.
-- **Make Decisions in Public**: RFCs, ADRs, architecture decision records. Document the why, not just the what.
+- **Use Low-Tech Coupling**: DNS, HTTP, JSON, event streaming.
+- **Make Decisions in Public**: RFCs and ADRs that record the why.
 - **Security First**: TLS everywhere, threat modeling, security by default, shift left.
 
 ## Design red flags (Ousterhout)
@@ -72,8 +64,7 @@ Opportunity, Migration.
 
 ## Techniques > Principles > Practices
 
-The three-column decision framework, for training content and proposals needing the full
-vocabulary.
+For training content and proposals that need the full vocabulary.
 
 **Techniques** (how we approach work): Iteration, Feedback, Incrementalism, Experimentation,
 Empiricism

@@ -9,9 +9,6 @@ where nothing names a signer, stop and ask. Anchor a draft on the signer's own r
 that person where you can reach it, opener and sign-off included. What leads and the person section
 hold where that mail cannot be reached.
 
-Situational moves (length, openings, closings, directness, the phrasings per situation) live in
-`postures.md`. This file is what holds regardless of posture.
-
 ## What leads
 
 - Opener: `Moin <Vorname>,`. Two recipients: `Moin ihr beiden,` or `Moin {Name}, moin {Name},`.
@@ -77,9 +74,8 @@ engineering practices."*
   claim), `gucken` / `guck mal` (the verb for investigate).
 - Konjunktiv (würde, wäre, könnte, hätte) for soft asks toward clients and externals only: *"Am 4.
   März wäre ich gern remote dabei."* Internally the bare indicative: *"Wir machen nicht X, weil
-  ..."*, bare *"kannst du ..."*. Never soften your own commitment: *"Anbei als PDF."* The
-  Konjunktiv and the option carry the accommodation, so a clause restating that the choice is
-  theirs (*"ganz wie es dir lieber ist"*) is filler.
+  ..."*, bare *"kannst du ..."*. Never soften your own commitment: *"Anbei als PDF."* A clause
+  restating that the choice is theirs (*"ganz wie es dir lieber ist"*) is filler.
 
 ## Emoji and ASCII
 
@@ -123,10 +119,8 @@ he is, what his role there is, and what the format is, then leaves the judgement
 > "Where you'll find me:" followed by the list and nothing else.
 
 A sentence explaining that the topic is central, that these are the questions the reader is already
-working on, or that the speakers will be honest, is the part that reads as generated. It was
-rejected three times in one sitting on 2026-09-20 ("das ist einfach nur irgendwelches räudiges
-AI-Gesloppe"), while every surrounding line he had written himself passed untouched. The fix is
-deletion, not rewording: put the facts in the list and let the topic be one flat clause.
+working on, or that the speakers will be honest, is the part that reads as generated, in his words
+"das ist einfach nur irgendwelches räudiges AI-Gesloppe". The fix is deletion, not rewording: put the facts in the list and let the topic be one flat clause.
 
 ## Analogies and concreteness
 

@@ -1,7 +1,10 @@
 ---
 name: voice
 description: >-
-  MUST be loaded before drafting, writing, composing, editing, or rewriting any human-readable prose that represents h&w or the user: emails, replies, Slack messages, WhatsApp and other personal messages, LinkedIn posts, proposals, quotes, talks, abstracts, speaker outreach, client comms, blog posts, articles, headlines, captions, slide decks, README copy, announcements, summaries, documentation prose, FAQs, surveys, notes for review. Skip only for code, code comments, command output, raw data, internal commit messages, log lines, and machine-readable config.
+  The voice of h&w and its founders, before drafting or editing any human-readable prose that represents
+  them, from mail, chat, social posts and proposals down to headlines, captions, slides, README and
+  documentation prose, FAQs, surveys, summaries and notes for review, never for code, comments, command
+  output, data, commit messages, logs or config.
 allowed-tools: Read, Glob, Grep, Bash
 ---
 

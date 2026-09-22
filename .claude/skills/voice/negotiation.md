@@ -14,8 +14,7 @@ Verkaufsrhetorik immer.
 2. Anchor respect. When they set numbers first, don't grind below. Pick within their menu and
    justify via fit, never cost: *"ist uns gerade lieber"* sounds cheap.
 3. Calibrated questions. "Wie" / "Was" beats "Würdest du" / "Wäre es okay".
-4. Power of no. Decouple bundled asks so they can decline parts; bundled into one yes/no, both feel
-   bigger.
+4. Power of no. Decouple bundled asks so they can decline parts.
 5. Radical honesty about secondary motives. Name your second-order goals (visibility, marketing,
    network) yourself: *"Hand aufs Herz: A steht für uns klar im Vordergrund, deshalb auch X. Aber B
    ist ehrlicherweise auch Teil von dem, was wir uns davon versprechen. Das wollte ich lieber offen
@@ -44,14 +43,12 @@ In this order, one plain sentence each:
 2. Hold: *"Den Preis können wir nicht weiter runter."*
 3. Offer scope: *"Was wir aber machen können: Scope reduzieren auf Y."*
 
-When you do concede, bound it: what it covers and from when (*"für die nächsten Beauftragungen"*),
-or they apply it backwards to work already delivered.
+When you do concede, bound it: what it covers and from when (*"für die nächsten Beauftragungen"*).
 
 ### Calibrated closing question
 
 *"Wie würdest du das aufsetzen wollen?"* / *"Was wäre für dich der nächste Schritt?"* Closing a
 concession you just granted inverts this: ask *"Passt das für dich?"* and get the terms accepted.
-An open question there reopens what you just settled.
 
 ### Power-of-no door
 
@@ -104,8 +101,7 @@ out. *"Falls passend: könntest du uns kurz vorstellen? Wenn nicht, kein Stress.
 ## Anti-patterns
 
 - Lead with the ask. Order: substance -> tier choice -> reciprocity -> honesty -> ask.
-- Hinge the offer on your own argument (*deswegen*, *therefore*): help reads as a claim on access.
-  Connect to their benefit instead (*"Genau da würde ich dir gern helfen"*).
+- Hinge the offer on your own argument (*deswegen*, *therefore*). Connect to their benefit instead (*"Genau da würde ich dir gern helfen"*).
 - Hedge the content of the ask (*"vielleicht wäre es möglich, dass"*): Konjunktiv belongs on
   delivery (*"wäre es okay"*), never on substance.
 - Counter-anchor below their floor: if their lowest tier works, take it as-is.
@@ -114,7 +110,5 @@ out. *"Falls passend: könntest du uns kurz vorstellen? Wenn nicht, kein Stress.
 - Retreat from their ask straight to your own floor: put a rung in between. Two attempts before the
   fallback read as effort, one reads as managing them toward a date or a number.
 
-Openings, closings, how direct to be, and the warmth register are `postures.md` and
-`personal-voice.md`'s call: this file supplies the move, they supply the wording. A tactic that
-lands as an ultimatum, a deadline, or a comparison scored at the counterparty's expense arrived in
-the wrong register, however sound the move underneath it.
+A tactic that lands as an ultimatum, a deadline, or a comparison scored at the counterparty's expense
+arrived in the wrong register.

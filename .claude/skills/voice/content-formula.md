@@ -18,8 +18,7 @@ pieces, podcast scripts. Not for short Slack messages, replies, status updates.
 4. Practical Insight. The thing the reader can do Monday, concrete and tied to the story. *"In the
    first two weeks, don't measure throughput. Measure how much the team has encoded into CLAUDE.md
    and shared agents."*
-5. Human Impact. The translate-up to engineering culture, team health, programming joy; the beat
-   that separates h&w content from vendor content. *"By sprint 6, the conversation in standup
+5. Human Impact. The translate-up to engineering culture, team health, programming joy. *"By sprint 6, the conversation in standup
    changes. Less 'why is this broken'. More 'what should we build next'."*
 6. Call to Adventure. Forward motion, not summary: on LinkedIn a closing statement the reader can
    act on, a question only where it is a real one; a clear next step for blog and long-form; a
@@ -35,5 +34,4 @@ When citing external research (whitepaper, study, survey), never lead with the s
 3. Cite figures in the body with no source name inline, just the numbers.
 4. One `(Source: Name, date)` line after the close.
 
-Anti-pattern: "[Source] just put a number on why." Leads with the source name and hands the
-credibility to them.
+Anti-pattern: "[Source] just put a number on why."

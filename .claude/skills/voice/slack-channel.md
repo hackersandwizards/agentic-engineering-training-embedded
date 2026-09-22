@@ -26,13 +26,12 @@ The MCP Slack tool accepts standard markdown, not Slack's own mrkdwn syntax, and
 | Headers | not supported in messages | `##`, `###` | Use `**bold**` for section labels |
 | Nested lists | not supported | | Renders flat regardless of indent |
 
-The Unicode bullet (`•`) is banned in customer-facing prose everywhere else; Slack is the carve-out,
-because the API requires it.
+The Unicode bullet (`•`) is banned in customer-facing prose everywhere except Slack.
 
 ## Conventions
 
 - The trainer channels (`#trainer` and every regional trainer channel) are written in English,
   whatever language the surrounding conversation used.
 - `_italic_` for action items in a DM to a close peer.
-- Thread reply: no greeting, no closing. The thread is the context.
+- Thread reply: no greeting, no closing.
 - Hard ceiling 5,000 characters (Slack API).

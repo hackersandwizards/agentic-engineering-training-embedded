@@ -1,10 +1,9 @@
 ---
 name: engineering
 description: >-
-  How to approach building and changing software: research before writing, plan, TDD, the
-  work/right/fast progression, documentation hierarchy, fail-fast validation, and what to do when
-  stuck. Use before implementing a feature, refactoring, fixing a bug, reviewing a change, or
-  planning non-trivial repository work. Skip for content edits, prose, and structured business records.
+  How to build and change software here (docs over code, when to ask, what never to simplify, comments,
+  silent-failure gates), before implementing a feature, refactoring, fixing a bug, reviewing a change or
+  planning non-trivial repository work, never for content edits, prose or business records.
 ---
 
 # Engineering

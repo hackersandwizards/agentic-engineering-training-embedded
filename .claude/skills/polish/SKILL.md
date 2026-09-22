@@ -1,15 +1,11 @@
 ---
 name: polish
 description: >-
-  Full-repo quality pass. Sweeps every source file for comment hygiene and
-  minimalism, reviews quality, performance, and security, runs /simplify and a
-  second review over the resulting diff, then commits and pushes. Run when
-  the user asks to polish, clean up, or quality-pass the repo.
+  Full-repo quality pass (comment sweep, quality, performance and security review, /simplify, a second
+  review, commit and push), when the user asks to polish, clean up or quality-pass the repo.
 ---
 
 # Polish
-
-Run the six phases in order. Stop only where a phase says so.
 
 An argument narrows what each phase covers, never which phases run. Report what the scope excluded.
 
@@ -30,7 +26,7 @@ Run the repo's own checks once and record the result: this baseline separates a 
 
 ## 2. Comment sweep
 
-List source files with `git ls-files`, skip vendored and generated paths, and subtract the exclusion set before batching: the batch agents edit directly and never see phase 1.
+Subtract the exclusion set from the source files before batching: the batch agents edit directly and never see phase 1.
 
 Fan out one subagent per directory batch, told to read the Comments section of `references/failure-modes.md` and to change comments only. Spot-check one file per batch.
 
@@ -42,11 +38,7 @@ Fan out one subagent per module or top-level directory to review it for minimali
 
 Review the instruction artifacts as their own module: `.claude/` rules, agents, and skills, plus `CLAUDE.md`. Look for a pointer to a path that no longer exists, a cap or boundary that contradicts an always-on rule, one rule stated twice inside a single skill or among the artifacts that are not skills, and any skill pointing outside its own directory at another skill, rule, agent or memory file by link or by name.
 
-Verify each finding yourself before fixing it. Skip findings that would add speculative structure.
-
-**A fix to a mirrored file goes into the hub copy, never the mirror.** The sync swaps the whole directory, so a fix applied to the mirror is gone at the next run and no check catches it. The sync script lists what is mirrored: edit and commit in the hub, then run it, and read its output rather than its exit status. The sync first commits every dirty hub path and fans it out, so read the hub's `git status --porcelain` before running it. A dirty path this run did not write defers the sync: copy the files this run committed from hub `HEAD` into this repository's mirror and report the other repositories as pending.
-
-New failure modes learned during a run belong in `references/failure-modes.md`, not in this file.
+A fix to a file the sync script lists as mirrored goes into the hub copy: the sync swaps the whole directory, and no check reports the lost fix. Edit and commit in the hub, then run the sync, and read its output rather than its exit status. The sync first commits every dirty hub path and fans it out, so read the hub's `git status --porcelain` before running it. A dirty path this run did not write defers the sync: copy the files this run committed from hub `HEAD` into this repository's mirror and report the other repositories as pending.
 
 ## 4. Gates
 
@@ -58,16 +50,12 @@ One pass of each. Name any finding you dismissed, and why, in the final summary.
 
 ## 5. Verify
 
-Run the repo's own checks. Prefer the one-shot over the watcher: `test` is often `vitest`, which never exits.
-
-Run the gate on its own line and read `$?`. "A gate that ran but was never read" in `references/failure-modes.md` names this phase's two traps.
+Run the repo's own checks, the gate on its own line, and read `$?`. "A gate that ran but was never read" in `references/failure-modes.md` names this phase's traps.
 
 A failing check blocks the commit. Fix it if the sweep caused it; report it and stop if it predates the sweep. A failure traced to a file in the exclusion set is another session's half-finished edit: wait for the gate to clear, and report it and stop if it does not. Never edit that file, and never bypass the hook, to get past it.
 
 ## 6. Commit and push
 
-Re-run `git status` and drop any file that became dirty since phase 1 without an edit of yours. Name the remaining files this run edited as the `git commit` pathspec.
-
-Commit each coherent batch once it passes the gate.
+Re-run `git status` and drop any file that became dirty since phase 1 without an edit of yours, and commit each batch that passes the gate.
 
 Push to the branch you started on. If the push fails, report the error and stop.

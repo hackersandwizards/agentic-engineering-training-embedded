@@ -1,9 +1,8 @@
 ---
 name: delegation
 description: >-
-  Which model tier and effort to run Codex at, how Codex hands authored copy to Claude to
-  write, and the one thing Claude starts Codex for. Authored copy is Claude's in both
-  directions.
+  Which model tier and effort to run Codex at, how Codex hands authored copy to Claude, and the one
+  thing Claude starts Codex for, when running or configuring Codex or when either side needs copy written.
 ---
 
 # Delegation
@@ -31,12 +30,8 @@ repository pins its own model and effort for the work it holds. Read the value t
 
 ## Human writing -> Claude
 
-Codex hands Claude every piece of authored copy the voice rules cover. This does not apply to an
-agent's own conversation with the user:
-replies, questions, status updates, explanations, recommendations, and technical answers. Each
-agent writes those itself.
-
-Gather and verify the facts, then
+Codex hands Claude every piece of authored copy the voice rules cover. An agent's own conversation
+with the user (replies, questions, status, explanations, technical answers) it writes itself.
 
 ```bash
 claude -p "Write the <mail/message>. Facts: sender+signature, recipients, language, purpose, must/must-not facts, new mail or reply. For mails: subject line AND body. Output only the text."

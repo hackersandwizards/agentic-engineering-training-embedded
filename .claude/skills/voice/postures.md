@@ -8,9 +8,6 @@ Pick it from what the recipient does next, never from the volume of work behind 
 a decision was made, whoever has to use the result gets a status update. The decision record goes
 only to whoever made the decision.
 
-Authored prose (LinkedIn, articles, proposals, slides) has no posture. Use the scaffold overlays in
-`SKILL.md` instead.
-
 | Posture | Fires when | Typical length |
 |---------|-----------|----------------|
 | 1 Quick reply | something needs only acknowledging | 1-3 words |
@@ -41,8 +38,8 @@ short sentence carrying the reason. `Ne.` `Nein.` `Nope.` `Nö.` `Keine Chance.`
 a no.
 
 Written addition: confirmation first. A message that adds a cost, a condition or a number the other
-side did not expect is not a refusal. Name what already works, then add. Opening on the gap (`Da
-müssen wir noch mal gucken`) turns an agreement into a problem before the reader reaches the number.
+side did not expect is not a refusal. Name what already works, then add, never opening on the gap (`Da
+müssen wir noch mal gucken`).
 A number the other side did not budget for names the agreement it came from in the sentence before
 it (*"Wir hatten ja verabredet, dass X aus dem Kontingent läuft."*) and why it is that size in the
 sentence after it. Both facts sit in our own records; read them before sending the number bare.
@@ -89,8 +86,7 @@ Ask forms. The signature is `Schickst du ...?`, plain present indicative as a qu
 you'd like I can ...`, an offer that delegates by handing the other side the choice. The `, ok?`
 tag (24) states what he will do, then checks in one word.
 
-`bitte` appears 22 times in 5,509 messages. Politeness rides on the modal particles
-(`personal-voice.md`). Never add `bitte` to make an ask polite.
+`bitte` appears 22 times in 5,509 messages. Never add `bitte` to make an ask polite.
 
 Framing, not instructing:
 
@@ -228,11 +224,11 @@ flow, drifted scope, a missed handoff), never write *"wir haben intern festgeste
 phrasing that signals process trouble. Open with thanks or a positive framing of whatever the
 client did, ask the practical clarification, skip the why. When the client caused the issue, naming
 it is fine. This holds for feedback asks: ask open and stop, rather than naming the shortfall you
-suspect. Naming it tells the client what to be unhappy about.
+suspect.
 
 Anything that constrains the other side or contradicts what they want closes by offering to settle
 it together, whatever the age of the relationship. Offer the decision, not the channel: *"lass uns
-das zusammen abstimmen"* over *"lass uns telefonieren"*, which reduces a shared call to logistics.
+das zusammen abstimmen"* over *"lass uns telefonieren"*.
 Where the message is his to send, that offer goes in it. Where the point needs him in the room,
 hand it to him as a call item instead of drafting it for him to strike.
 

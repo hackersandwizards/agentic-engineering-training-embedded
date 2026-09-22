@@ -1,9 +1,9 @@
 ---
 name: shell-tools
 description: >-
-  Preferred CLI tools on this machine and the GNU/BSD portability rule. Use before running
-  shell commands for file search, text search, HTTP, JSON, git hosting, JavaScript, Python,
-  or system inspection, and when writing scripts that must run on macOS and Linux.
+  Preferred CLI tools on this machine and the GNU/BSD portability rule, before shell commands for file
+  or text search, HTTP, JSON, git hosting, JavaScript, Python or system inspection, and for scripts
+  that must run on macOS and Linux.
 ---
 
 # Shell tools
@@ -12,7 +12,6 @@ Prefer these over their classic equivalents.
 
 **Browser and frontend:**
 - For rendered-page, frontend, or signed-in UI checks, try in order until one works: in-app Browser, Chrome DevTools MCP, repository automation (e.g. Playwright). Before skipping Chrome DevTools, search deferred tools (`ToolSearch` or equivalent) and check the repository for automation.
-- Never judge visuals, responsiveness, or animation from text alone.
 
 **GNU vs BSD:** unprefixed CLI tools are BSD on macOS, GNU on Linux. Write scripts to run on both (POSIX, no flavor-specific flags). GNU builds are `g*` (`gsed`, `gdate`, `gtimeout`).
 
@@ -35,8 +34,7 @@ Prefer these over their classic equivalents.
 - `scrapling` to scrape web pages to markdown (`scrapling extract get <url> out.md`)
 
 **Git and code-host:**
-- `gh` for GitHub (issues, PRs, CI runs)
-- `glab` for GitLab (issues, MRs, CI pipelines)
+- `gh` for GitHub, `glab` for GitLab
 - `lazygit` for git TUI, `git-filter-repo` for history rewrites
 - Global git aliases from `~/.gitconfig` that add workflow behavior:
   - `git all <args...>` -> run `git <args...>` in every repository under the current tree
@@ -45,7 +43,6 @@ Prefer these over their classic equivalents.
 **System and shell:**
 - `btop` over `htop`, `watch` for repeated commands
 - `just` as command runner, `parallel` for fan-out
-- `shellcheck` for shell-script linting
 - `cdxe` to start Codex exec. It is aliased to `codex exec --yolo`: no approvals, no sandbox.
 
 **JavaScript/TypeScript:**

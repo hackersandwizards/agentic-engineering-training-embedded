@@ -148,8 +148,7 @@ written as our reading. Raise the record gap once and take the answer as the dec
 ## Voice exemplars: verbatim only
 
 Every "voice anchor" or "real exemplar" line in any voice rule is an exact quote from a confirmed
-real source. Where none exists, leave a gap-note; a fabricated exemplar poisons every draft that
-calibrates against it.
+real source. Where none exists, leave a gap-note.
 
 ## Banned words
 
@@ -199,7 +198,7 @@ conversation" -> "Wie gestern besprochen".
 
 ## No decorative punctuation
 
-Screen readers can't read decorative Unicode. Customer-facing text (LinkedIn posts, emails, website
+Customer-facing text (LinkedIn posts, emails, website
 copy, proposals) is plain ASCII punctuation only, and a dash is not punctuation in it.
 
 | Banned | Use instead |
@@ -209,10 +208,10 @@ copy, proposals) is plain ASCII punctuation only, and a dash is not punctuation 
 | ellipsis (`…`) | three periods (`...`) |
 | arrows (`→` `←`) | `->`, `<-`, or words ("then", "to") |
 | bullets (`•` `·`) in prose | ASCII hyphen-space (`- `), and only for enumerated concrete items |
-| math letters (Unicode 𝗯𝗼𝗹𝗱 / 𝑖𝑡𝑎𝑙𝑖𝑐) | normal text. Screen readers spell these letter by letter |
+| math letters (Unicode 𝗯𝗼𝗹𝗱 / 𝑖𝑡𝑎𝑙𝑖𝑐) | normal text |
 
-Carve-outs: pictograph emojis (📅 ✅ 🚀) are accessible but absent from the user's real writing, so
-skip them in customer-facing copy. German Umlaute (`ä ö ü ß`) are language characters. ASCII
+Carve-outs: pictograph emojis (📅 ✅ 🚀) are absent from the user's real writing, so skip them in
+customer-facing copy. German Umlaute (`ä ö ü ß`) are language characters. ASCII
 emoticons (`:)` `;)` `xD`) where a real Slack message would land them.
 
 ## Sender identity

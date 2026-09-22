@@ -1,12 +1,9 @@
 ---
 name: agent-feedback
 description: >-
-  Turn a correction into a lasting improvement of the agentic system: skills, rules, agent
-  definitions, and agent memory. Use when authoring, reviewing, trimming, splitting, or rightsizing
-  one of those artifacts, and after a user corrects, refines, or externally edits agent-generated
-  work, or answers a question the system should have resolved itself, to decide which artifact
-  should change and update it without encoding the specific case. Not about feedback on human
-  colleagues, trainers, or clients.
+  Improve the skill, rule, agent definition or memory that owns a behaviour, when authoring, reviewing,
+  trimming or splitting one, or after a user corrects, refines or externally edits agent work or answers
+  what the system should have resolved, never for feedback on people.
 ---
 
 # Agent Feedback
@@ -16,8 +13,7 @@ draft is not approval to act on it.
 
 ## After a correction
 
-Complete the requested correction first. Then change an artifact only where, with the information
-the initial run had, a general change would have produced the corrected result.
+Change an artifact only where, with the information the initial run had, a general change would have produced the corrected result.
 
 Output blamed on an existing rule is measured against that rule's stated threshold. Output that
 passes means the rule is missing, not violated: author the missing one instead of enforcing the
@@ -43,15 +39,14 @@ owns an agent file, the edit is theirs: report the gap instead.
 
 Edit the canonical artifact, never a generated mirror, plugin cache or customer-specific copy. Add
 only a new reusable invariant. Never add the concrete customer, work product, wording, answer, or
-outcome. Validate the artifact and the affected workflow with the repository's checks. Forward-test
-only when it cannot mutate live systems or require new approval.
+outcome. Forward-test only when it cannot
+mutate live systems or require new approval.
 
 ## Write for a literal reader
 
 - Cut the history that produced the rule: version changes, vendor incidents, prior bugs, stability
   caveats, and verification counts. Keep the failure mode only where it makes the rule enforceable.
-- An artifact may state a rule or a measurement. It may not state a status, because a status goes
-  false while the file sits untouched and no gate reads it.
+- An artifact may state a rule or a measurement. It may not state a status.
 - A terminal phrase stops everything rather than the half it was scoped to. Name the half it
   governs, or a run parks its finding in whatever escape hatch sits beside it.
 
@@ -59,8 +54,7 @@ only when it cannot mutate live systems or require new approval.
 
 - A section-scoped rule already misread once earns a file of its own. Check what the first gate in
   a body does to each occasion the description names: the mode that gate locks out is the cut.
-- An invariant goes in the file where it fires, never in the router, because a run routed to the
-  job file never reads the router. A caller stating a caveat about another file's behaviour that
+- An invariant goes in the file where it fires, never in the router. A caller stating a caveat about another file's behaviour that
   the other file does not state itself means the owner is wrong, not the caller.
 - Finish a split by having an agent with no context walk one whole job through the new files,
   given the skill directory rather than one file: a walker confined to one file reports as missing
@@ -76,8 +70,7 @@ only when it cannot mutate live systems or require new approval.
 ## Adding or cutting a line
 
 A line obliging an agent to report a value is incomplete until it names the field the consumer
-joins on. Open the consuming artifact and carry its key back into the line: a grep for a fact
-stated twice never finds a fact that arrives with no key.
+joins on. Open the consuming artifact and carry its key back into the line.
 
 A gate deciding whether to produce an artifact answers two questions separately: what makes this
 possible, and what makes it wanted. Every suppressing condition ships with its trace, naming the
@@ -96,10 +89,8 @@ a reference and stays.
 
 The sync script's own `GLOBAL_RULES` and `GLOBAL_SKILLS` arrays say which files are mirrors, and
 `FORKS` names the repo-and-skill pairs the hub does not own. Check the file you are about to edit
-against all three, per file rather than once per task, and edit the hub copy: a mirrored file
-edited in its repo is destroyed by the next sync, which swaps the whole directory rather than
-merging it, so a repo-local file added inside a mirrored skill directory goes too, and no check
-catches either.
+against all three, per file rather than once per task, and edit the hub copy. The next sync replaces a mirrored directory whole, so a repo-local file
+inside a mirrored skill directory goes too, and no check reports either loss.
 
 Before syncing, diff every mirror against the hub, not only the one you touched. Where a mirror
 that is not a declared fork carries edits the hub lacks, copy it to the hub first, or the sync

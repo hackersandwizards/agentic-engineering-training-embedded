@@ -1,7 +1,6 @@
 # Prose style: bilingual (DE/EN)
 
-Sentence mechanics for any prose a human will read. Short sentences, strong verbs, concrete nouns,
-no filler. The DE/EN deltas are vocabulary, not principle.
+Sentence mechanics for any prose a human will read.
 
 ## Sentence shape
 
@@ -20,7 +19,6 @@ treffen" -> "entscheiden", "make a decision" -> "decide".
 
 ## Active voice as default
 
-Passive hides the actor, and in a consultancy that names sources for everything the actor matters.
 "Es wird eine Entscheidung getroffen" -> "Das Team entscheidet." Keep passive only when the actor is
 irrelevant or the object is the point ("The contract was signed yesterday").
 
@@ -35,7 +33,7 @@ deutlich" -> "Wir senken die Latenz von 800 auf 200 ms". Banned modifiers withou
 When a partner, a subcontractor, and an end client all appear in one message, `wir` / `uns` / `we`
 reads as any sender-side combination. Write the company name for each party and keep `wir` only
 where the recipient is inside it. Sweep the finished draft pronoun by pronoun, and use the shorthand
-the counterparty already uses in the thread. The ambiguity sits where the money is.
+the counterparty already uses in the thread.
 
 - "Daraus machen wir einen Festpreis" -> "Daraus macht h&w einen Festpreis"
 - Joint, so it stays: "Den Überschuss teilen wir."
@@ -74,8 +72,7 @@ governs the language and states nothing, that silence is not this section's to f
 
 Without a governing record: a thread already in one language stays in it, and a mixed thread
 matches what the recipient used last. No prior history: DACH region, German names or a `.de`
-domain mean German, an international name means English. If still uncertain, write English: a
-German reader handling an English mail is the smaller failure.
+domain mean German, an international name means English. If still uncertain, write English.
 
 ## German orthography
 
@@ -89,11 +86,10 @@ same: "agentic engineering" stays, "implementieren" -> "umsetzen", "utilize" -> 
 
 That test reads on what the reader says, not on what the dictionary offers. An English term the
 reader's own industry speaks stays English though German has a word for it: `Bottleneck` over
-`Engpass`, `Backlog` over `Rückstand`. Translating one reads as a machine wrote the sentence.
+`Engpass`, `Backlog` over `Rückstand`.
 
 One exception: German prose in this field writes `AI`, not `KI`, in every compound (`AI-Adoption`,
-`AI-gestützte Entwicklung`). Our documents travel in sets, and a single `KI` puts the set at odds
-with itself.
+`AI-gestützte Entwicklung`).
 
 ## When the rule fights the meaning
 

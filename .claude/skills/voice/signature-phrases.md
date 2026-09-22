@@ -15,8 +15,6 @@ Five sentences that are pure user voice:
 4. *"Vermisse euch etwas :)"*
 5. *"Wird sich zeigen. Nur schon mal als Info."*
 
-A draft with zero lines like these sounds like a consultant trained on his domain.
-
 LinkedIn DM and post anchors, split at 2021/2022 because the register moved. Copy-pasted outreach
 templates count once in every number below, and a phrasing that lives only in a template is not an
 anchor. DM numbers read 2017-21 / 2022-24.
@@ -90,8 +88,7 @@ gws gmail users messages get --params '{"userId":"me","id":"ID","format":"full"}
 
 Drop the `to:` term for the register rather than the relationship, and add a language term where
 the draft is English. Read the new text above the quote header, not the quoted thread.
-`-label:os/drafted` excludes the mail an agent drafted for him; without it the calibration measures
-the fleet's own output.
+`-label:os/drafted` excludes the mail an agent drafted for him.
 
 ## Positioning and identity
 

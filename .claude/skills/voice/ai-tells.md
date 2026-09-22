@@ -7,8 +7,6 @@ or surface variation.
 
 ## 1. Structural patterns
 
-These shape sentences, not word choice, so they survive paraphrasing.
-
 ### Contrastive reframe ("not just X, it's Y")
 
 | Banned | Use instead |
@@ -103,8 +101,6 @@ Banned in all forms:
 
 ## 4. Copula and verb dodging
 
-LLMs avoid plain "is" and "has".
-
 | Banned | Use instead |
 |--------|-------------|
 | "X serves as a Y" / "X stands as a Y" / "X represents a Y" / "X marks a Y" | "X is a Y" |
@@ -123,9 +119,7 @@ Measured, not guessed. `github.com/louisabraham/load-bearing` groups 461,121 Git
 descriptions into ten clusters by vocabulary alone, and its author reads one of them as Claude. The
 classes below are that cluster's own.
 
-A ratio is not a ban. Most of these are ordinary English and sometimes the right word. What marks
-the text is density: the cluster reaches for a stance adverb, an absolute, and a verdict verb inside
-one paragraph, and a person writing to a deadline does not. Across our own published LinkedIn posts:
+A ratio is not a ban: what marks the text is density. Across our own published LinkedIn posts:
 `nobody` 91, `carries` 84, `deliberately` 72, `nothing` 52, `honestly` 23.
 
 The bar: at most two of these words in one piece, and never two of the same class in one
@@ -144,7 +138,7 @@ client mail about software is a bug, a `remedy` is a fix); coined compounds (`lo
 `nobody` 25x, `nowhere` 20x, `nothing` 19x, `alone` 14x, `whoever` 13x, `forever` 13x, `somebody`
 11x, `neither` 10x, `whichever` 10x.
 
-Name the party instead. The absolute is a rhetorical move; the name is information.
+Name the party instead.
 
 - "Nobody owns the pipeline" -> "The pipeline has no owner" or name the team that should.
 - "There is nowhere else for it to be" -> cut the sentence, the point was made.
