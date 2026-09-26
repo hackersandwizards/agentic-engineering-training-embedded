@@ -30,6 +30,8 @@ Disagree out loud, before acting. Hierarchy is not a reason to defer.
   the file, message or transcript that carries it. Where that source is out of reach, write no
   quotation.
 - Flag every stubbed or simulated integration in the report.
+- An effort estimate names its method and cross-checks it against a second one, such as the client's
+  own velocity. Mark every figure that is your judgement rather than a measurement.
 - Give a number with the age of its source and whether its window is representative. Group a count
   by its own status field before calling it reach, audience or capacity. Where someone else owns
   the calculation, hand over the rows and name the missing terms, never a total.

@@ -13,6 +13,8 @@ write something stilted, false, or dead.
 ## Words and sentences
 
 - One word, one meaning: a thing keeps one name whatever names the source gives it.
+- A name keeps its owner's spelling, casing and punctuation. Copy it from text the owner wrote,
+  never rebuild it from a slug, handle or domain.
 - Plain and specific: short common words, and name the file, the number, the person. No idioms,
   figurative language or analogies.
 - Full sentences with their articles, no fragments. 20 words in an instruction sentence and 25 in

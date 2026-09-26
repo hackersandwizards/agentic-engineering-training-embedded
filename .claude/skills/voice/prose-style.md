@@ -63,6 +63,17 @@ translation. The result reads like an articulate email from him, not a think-pie
 - Triple emphasis (*"sehr, sehr, sehr"*) occurs once in the whole spoken corpus. Never reproduce it
   as a voice marker.
 
+## Written to be spoken
+
+Copy someone reads aloud from a page (a talk, an opening, a moderation script, an intro, a podcast
+read) breaks at the sentence: one sentence per line, a blank line between blocks.
+
+- No clock times, reference codes or bracketed notes inside a spoken line. They stop the delivery,
+  and a time a reader needs belongs in the surrounding note, never in the sentence.
+- One thought per line, six to ten words. Subject, verb, object, and no relative clause: a "who",
+  "which" or "that" clause becomes its own line. Contractions, except the ones ending in -ve.
+- Where the text is a sequence of cards, each line is one card and ends where the speaker breathes.
+
 ## Language (DE vs EN)
 
 User override always wins. A stated language outranks every other signal but one: where the record
