@@ -15,7 +15,9 @@ prompts) and in any document. Say the least that fully does the job, then stop.
 
 **Rules:**
 
-- Every changed line traces to the request, except cleanup: remove dead code, orphans and no-ops wherever you find them. Code may be driven only by documentation or an instruction artifact, so grep those first.
+- Every changed line traces to the request, except cleanup: remove dead code, orphans and no-ops
+  wherever you find them, never another session's uncommitted work. Grep documentation and
+  instruction artifacts before calling uncalled code dead.
 - No interface, factory or config for a single case, and no scaffolding for later.
 - Change what exists by removal first, then replacement, then addition. Where a removal drops a
   rule you still want, replace it.

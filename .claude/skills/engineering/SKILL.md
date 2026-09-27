@@ -22,6 +22,7 @@ handling that prevents data loss, security measures, or accessibility basics.
   left no trace of the skip. Find the window between the corruption and the repair, then check the
   repaired records against their untouched siblings.
 - Write no comment except for a fact neither the code nor a doc file states, such as an ordering constraint, an external quirk or the bug a guard exists for. Keep directive comments.
-- Function names are unique per repository, except where a framework or a test file forces a repeat. TypeScript sets `erasableSyntaxOnly`.
+- Module-scope function names are unique per repository, except a framework-dictated name or a
+  test-local helper.
 - Removing a collection, a skill or an agent also deletes the tests that named it. Port every
   deleted case whose subject still exists: no gate goes red when coverage disappears.

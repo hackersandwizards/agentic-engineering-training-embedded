@@ -43,7 +43,7 @@ Tell each batch that zero changes is an acceptable result. Before deleting a com
 
 Fan out one subagent per module or top-level directory to review it for minimalism, design, performance and security, with the path of `references/failure-modes.md` in its prompt to read in full. Reviewers report and do not edit.
 
-Review the instruction artifacts as their own module: `.claude/` rules, agents, and skills, plus `CLAUDE.md`. Look for a pointer to a path that no longer exists, a cap or boundary that contradicts an always-on rule, one rule stated twice inside a single skill or among the artifacts that are not skills, a line a capable model follows unasked or whose case never arises, and any skill pointing outside its own directory at another skill, rule, agent or memory file by link or by name.
+Review the instruction artifacts as their own module: `.claude/` rules, agents, and skills, plus `CLAUDE.md`. Look for a pointer to a path that no longer exists, a cap or boundary that contradicts an always-on rule, one rule stated twice inside a single skill or among the artifacts that are not skills, and any skill pointing outside its own directory at another skill, rule, agent or memory file by link or by name.
 
 Review agent memory the same way, plus index lines without a file and files without an index line. Move an instruction into the artifact that owns it. Edit only your own memory and hand every other owner a prune list: file, lines, new home.
 
