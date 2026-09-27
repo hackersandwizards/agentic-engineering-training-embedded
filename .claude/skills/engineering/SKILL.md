@@ -22,10 +22,10 @@ handling that prevents data loss, security measures, or accessibility basics.
 - Repairing a record that read as absent does not re-run the jobs that skipped it, and those jobs
   left no trace of the skip. Find the window between the corruption and the repair, then check the
   repaired records against their untouched siblings.
-- Comment deletion is the default. Write one only for a fact the code cannot state: an ordering
-  constraint, an external limit or quirk, a security rationale, the bug a guard exists for, or a
-  cross-file contract nothing else records. Keep directive comments (shellcheck, eslint, noqa,
-  pragma, shebang).
+- Comment deletion is the default. Write one only for a fact the code cannot state and no
+  documentation file already records: an ordering constraint, an external limit or quirk, a
+  security rationale, the bug a guard exists for, or a cross-file contract nothing else records.
+  Keep directive comments (shellcheck, eslint, noqa, pragma, shebang).
 - Give every module-scope function a name no other one in the repository carries, so a grep for
   its definition finds one site. A name the framework dictates, such as a route handler, is exempt.
   TypeScript sets `erasableSyntaxOnly`: no enum, namespace or parameter property.

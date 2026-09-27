@@ -7,8 +7,8 @@ description: >-
 
 # Polish
 
-Polish finds defects by reading code and instruction artifacts as written, and needs no run. Memory
-files are outside it.
+Polish finds defects by reading code, instruction artifacts and memory files as written, and needs
+no run.
 
 An argument narrows what each phase covers, never which phases run. Report what the scope excluded.
 
@@ -33,13 +33,15 @@ Subtract the exclusion set from the source files before batching: the batch agen
 
 Fan out one subagent per directory batch, told to read the Comments section of `references/failure-modes.md` and to change comments only. Spot-check one file per batch.
 
-The corpus is curated (comment density 1.4%), so tell each batch that zero changes is an acceptable result. Before deleting a comment on a magic number, grep the file for the other numbers doing a similar job: where a sibling uses a different value, the comment is the only statement that the divergence is deliberate, so keep it.
+Tell each batch that zero changes is an acceptable result. Before deleting a comment on a magic number, grep the file for the other numbers doing a similar job: where a sibling uses a different value, the comment is the only statement that the divergence is deliberate, so keep it.
 
 ## 3. Quality, performance, security review
 
 Fan out one subagent per module or top-level directory to review it for minimalism, design, performance and security, with the path of `references/failure-modes.md` in its prompt to read in full. Reviewers report and do not edit.
 
 Review the instruction artifacts as their own module: `.claude/` rules, agents, and skills, plus `CLAUDE.md`. Look for a pointer to a path that no longer exists, a cap or boundary that contradicts an always-on rule, one rule stated twice inside a single skill or among the artifacts that are not skills, a no-op line a capable model follows without being told, an irrelevant line whose case never arises, and any skill pointing outside its own directory at another skill, rule, agent or memory file by link or by name.
+
+Review the agents' memory files as their own module. Look for a pointer to a path that no longer exists, a line that restates a skill, rule or agent file, an index line in `MEMORY.md` without its file and a file without an index line, a no-op line, and a line that is an instruction and belongs in an artifact. Write such an instruction into the artifact that owns it. Edit only the memory of the agent running polish, and hand every other owner a prune list: the memory file, the exact lines, and the artifact that now carries them.
 
 A fix to a file the sync script lists as mirrored goes into the hub copy: the sync swaps the whole directory, and no check reports the lost fix. Edit and commit in the hub, then run the sync, and read its output rather than its exit status. The sync first commits every dirty hub path and fans it out, so read the hub's `git status --porcelain` before running it. A dirty path this run did not write defers the sync: copy the files this run committed from hub `HEAD` into this repository's mirror and report the other repositories as pending.
 
@@ -49,7 +51,7 @@ Run the /simplify skill on the accumulated diff. Apply its fixes.
 
 Then run phase 3 again over the accumulated diff rather than the tree. `/code-review` refuses model invocation, so what runs is that procedure, never the command.
 
-One pass of each. Name any finding you dismissed, and why, in the final summary.
+One pass of each. Name any finding you dismissed, and why, in the final summary, and print the prune lists there.
 
 ## 5. Verify
 

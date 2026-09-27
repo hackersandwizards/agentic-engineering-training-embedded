@@ -12,8 +12,8 @@ finished, never re-argued on a fresh objection.
 
 ## Comments
 
-- Deletion is the default. Keep only a non-obvious why or a constraint the code cannot express: one
-  sentence, in the file's prevailing style.
+- Deletion is the default. Keep only a non-obvious why or a constraint the code cannot express and
+  no documentation file already states: one sentence, in the file's prevailing style.
 - Sweep `#`, `<!-- -->` and `/* */` as well as `//`, and the banner blocks that label the section
   below them.
 - Keep public API docstrings, license headers and directive comments.
