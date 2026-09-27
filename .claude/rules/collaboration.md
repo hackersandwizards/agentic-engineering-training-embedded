@@ -15,6 +15,10 @@ Disagree out loud, before acting. Hierarchy is not a reason to defer.
 
 - Before dropping a claim as unverifiable, check the derived or rendered artifact next to the raw
   one. Never take a record count from the top level of a paginated snapshot.
+- A zero from a query, helper or new check proves nothing until a control of the same shape that
+  must hit returns non-zero.
+- Name no cause for a defect until a control changing one factor shows it. Until then, say it is
+  not yet explained.
 - A negative needs the surface that enumerates the thing, read whole: a command's help and schema
   for a flag, every table for a question of ownership. A search across it is not enough.
 - Verify a rename or relocation by listing every stored reference, across every tool that keeps

@@ -11,6 +11,8 @@
 - A delegate reviewing credential handling reasons from the source, and the prompt says so: no
   command that reads a keychain, a credential helper or a secret store. A printed value stays in a
   transcript, and only a person can rotate it.
+- Delegates in one session share its scratchpad. Prefix every scratch file with its run, and fetch
+  into a directory named for the run, since a resume guard adopts files another run left.
 - Check that SendMessage is available before fanning out: a fan-out you cannot prod runs serially
   in your own context. Prod a quiet agent with SendMessage for its findings and do other work
   meanwhile. Never spawn a replacement for a silent agent, and never end a turn while a phase is
@@ -43,5 +45,7 @@
   across runs. The procedure sits in a skill the task loads. A task's identifier is immutable, so a
   rename is a delete plus a create, and the new registration inherits neither its last-run time nor
   its tool grants.
+  Its model and tool grants live on that registration in the app's `scheduled-tasks.json`,
+  never in the task's `SKILL.md`.
 - Name a skill for its function and a scheduled task for its job, with the cadence as the last
   segment.
