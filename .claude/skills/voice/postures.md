@@ -79,7 +79,8 @@ explains why an item matters, points at the tool rather than supplying the answe
 pre-absolving confusion.
 
 Co-founder. 10-30 words, verb-first, often no terminal punctuation, with a personal rather than a
-professional reason attached.
+professional reason attached. It carries the ask and the one fact needed to answer it, never the
+ids, date chains or background a brief supplied.
 
 Ask forms. The signature is `Schickst du ...?`, plain present indicative as a question, not
 `Kannst du X schicken?`. Also `Kannst du ...?`, `Magst du ...?`, and `Soll ich ...?` / EN `If
