@@ -22,9 +22,11 @@ prompts) and in any document. Say the least that fully does the job, then stop.
 - Fewest files possible. The shortest working diff wins.
 - One owner per fact or rule: state it once, in the file that owns it, and point there. This stops
   at a skill's edge: a skill's files point only at that skill's own files and at the repository data
-  and scripts it acts on, never at another skill, rule, agent or memory file. A skill whose subject
-  is the inventory of those artifacts may name them in the rows it catalogs, and no other skill
-  cites such a row ID. Redundancy between skills is the price of that independence.
+  and scripts it acts on, never at another skill, rule, agent or memory file. It may name the
+  reference skill that owns a channel it calls, to load before the first call, since that skill
+  carries the channel's tool grants and limits. A skill whose subject is the inventory of those
+  artifacts may name them in the rows it catalogs, and no other skill cites such a row ID.
+  Redundancy between skills is the price of that independence.
 - A list whose gaps read as answers keeps a row that restates its owner where the missing row would
   say "nothing is needed here". Where it would send the reader elsewhere, the row goes.
 - Cut a line a capable model follows without it, one whose case never arises or would announce
