@@ -46,7 +46,8 @@
   task is identical: a count that seems to differ by weekday becomes one number in the skill. A
   task's identifier is immutable, so a rename is a delete plus a create, and the new registration
   inherits neither its last-run time nor its tool grants.
-  Its model and tool grants live on that registration in the app's `scheduled-tasks.json`,
-  never in the task's `SKILL.md`.
+  Its model and permission mode live on that registration in the app's `scheduled-tasks.json`,
+  its tool grants in the app, never in the task's `SKILL.md`. Change them in the app's edit form:
+  the app rewrites that file from its own store and has dropped a permission mode edited there.
 - Name a skill for its function and a scheduled task for its job, with the cadence as the last
   segment.
