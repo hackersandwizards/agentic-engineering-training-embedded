@@ -42,9 +42,10 @@
   your run, so say what it will do in the world when you ask for the trigger.
 - A scheduled task carries only what is true because it runs on a schedule: the cadence, the
   colleague it delegates to, the standing approval and its limit, and the ledger that dedupes
-  across runs. The procedure sits in a skill the task loads. A task's identifier is immutable, so a
-  rename is a delete plus a create, and the new registration inherits neither its last-run time nor
-  its tool grants.
+  across runs. The procedure sits in a skill the task loads, counts included, so every run of a
+  task is identical: a count that seems to differ by weekday becomes one number in the skill. A
+  task's identifier is immutable, so a rename is a delete plus a create, and the new registration
+  inherits neither its last-run time nor its tool grants.
   Its model and tool grants live on that registration in the app's `scheduled-tasks.json`,
   never in the task's `SKILL.md`.
 - Name a skill for its function and a scheduled task for its job, with the cadence as the last
