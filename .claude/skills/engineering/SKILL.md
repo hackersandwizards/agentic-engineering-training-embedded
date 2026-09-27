@@ -27,7 +27,8 @@ handling that prevents data loss, security measures, or accessibility basics.
   security rationale, the bug a guard exists for, or a cross-file contract nothing else records.
   Keep directive comments (shellcheck, eslint, noqa, pragma, shebang).
 - Give every module-scope function a name no other one in the repository carries, so a grep for
-  its definition finds one site. A name the framework dictates, such as a route handler, is exempt.
+  its definition finds one site. Repeat a name only where nothing else works, such as a name a
+  framework dictates or a helper local to a test file.
   TypeScript sets `erasableSyntaxOnly`: no enum, namespace or parameter property.
 - Removing a collection, a skill or an agent also deletes the tests that named it. Port every
   deleted case whose subject still exists: no gate goes red when coverage disappears.
