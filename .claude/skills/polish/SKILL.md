@@ -7,6 +7,9 @@ description: >-
 
 # Polish
 
+Polish finds defects by reading code and instruction artifacts as written, and needs no run. Memory
+files are outside it.
+
 An argument narrows what each phase covers, never which phases run. Report what the scope excluded.
 
 The argument also scopes where you hunt for defects, never which proven defects you may correct.
@@ -36,7 +39,7 @@ The corpus is curated (comment density 1.4%), so tell each batch that zero chang
 
 Fan out one subagent per module or top-level directory to review it for minimalism, design, performance and security, with the path of `references/failure-modes.md` in its prompt to read in full. Reviewers report and do not edit.
 
-Review the instruction artifacts as their own module: `.claude/` rules, agents, and skills, plus `CLAUDE.md`. Look for a pointer to a path that no longer exists, a cap or boundary that contradicts an always-on rule, one rule stated twice inside a single skill or among the artifacts that are not skills, and any skill pointing outside its own directory at another skill, rule, agent or memory file by link or by name.
+Review the instruction artifacts as their own module: `.claude/` rules, agents, and skills, plus `CLAUDE.md`. Look for a pointer to a path that no longer exists, a cap or boundary that contradicts an always-on rule, one rule stated twice inside a single skill or among the artifacts that are not skills, a no-op line a capable model follows without being told, an irrelevant line whose case never arises, and any skill pointing outside its own directory at another skill, rule, agent or memory file by link or by name.
 
 A fix to a file the sync script lists as mirrored goes into the hub copy: the sync swaps the whole directory, and no check reports the lost fix. Edit and commit in the hub, then run the sync, and read its output rather than its exit status. The sync first commits every dirty hub path and fans it out, so read the hub's `git status --porcelain` before running it. A dirty path this run did not write defers the sync: copy the files this run committed from hub `HEAD` into this repository's mirror and report the other repositories as pending.
 
