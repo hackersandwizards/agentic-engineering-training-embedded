@@ -15,10 +15,7 @@ prompts) and in any document. Say the least that fully does the job, then stop.
 
 **Rules:**
 
-- Every changed line traces to the request. Cleanup is the one exception: remove dead code, orphans
-  and no-ops wherever you find them, pre-existing and outside the request's scope included. Code no
-  other code calls can still be driven by documentation or an instruction artifact, so grep those
-  before calling it dead. Another session's uncommitted work stays untouched, as `git.md` says.
+- Every changed line traces to the request, except cleanup: remove dead code, orphans and no-ops wherever you find them. Code may be driven only by documentation or an instruction artifact, so grep those first.
 - No interface, factory or config for a single case, and no scaffolding for later.
 - Change what exists by removal first, then replacement, then addition. Where a removal drops a
   rule you still want, replace it.
