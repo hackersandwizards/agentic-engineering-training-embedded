@@ -4,6 +4,9 @@ Other sessions share this working tree and its index.
 
 - Name the paths on `git commit` itself, `--amend` included. Never `git add -A`, `git add .` or a
   bare `git commit`: a commit without a pathspec takes whatever another session staged.
+- Commit a path holding `[` or `*` with `:(literal)<path>`, never `git --literal-pathspecs`, which
+  exports `GIT_LITERAL_PATHSPECS=1` into the hook, so every pathspec the hook passes to git turns
+  literal.
 - `git add` each new file by name, and both paths of a `git mv`, before committing. A pathspec
   skips untracked files, and naming only a rename's destination leaves the file at both paths. The
   local gate still passes, because it reads the working tree rather than the commit.
