@@ -7,8 +7,7 @@ description: >-
 
 # Polish
 
-Polish finds defects by reading code, instruction artifacts and memory files as written, and needs
-no run.
+Polish finds defects by reading code, instruction artifacts and memory files as written.
 
 An argument narrows what each phase covers, never which phases run. Report what the scope excluded.
 
