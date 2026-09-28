@@ -9,7 +9,6 @@ import ts from "typescript";
 // Arguments: the names the repository's framework dictates.
 const frameworkNames = new Set(process.argv.slice(2));
 
-// An .astro file holds TypeScript in its frontmatter and its <script> blocks.
 function scriptSource(file: string): string {
   const text = readFileSync(file, "utf8");
   if (!file.endsWith(".astro")) return text;
