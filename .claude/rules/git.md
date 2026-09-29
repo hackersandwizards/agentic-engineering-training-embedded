@@ -24,6 +24,9 @@ Other sessions share this working tree and its index.
   your run is open.
 - Commit and push each finished batch without being asked: one coherent unit whose checks pass.
   Stay on the current branch unless the user asks for another.
+- Before editing a record, `git fetch` and `git merge --ff-only origin/main`. A fast-forward needs
+  no signature and refuses to touch a file with uncommitted changes. Where it refuses, read the
+  record with `git show origin/main:<path>` before editing it.
 - On a rejected push, `git pull --rebase` refuses over unstaged files. A plain `git pull` is safe
   where `git diff --name-only HEAD origin/main` and `git diff --name-only` share no path. Where they
   overlap, leave the commit local and report it. Never stash another session's work. "Untracked

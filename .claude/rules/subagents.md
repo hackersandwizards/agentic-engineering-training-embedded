@@ -17,6 +17,8 @@
   in your own context. Prod a quiet agent with SendMessage for its findings and do other work
   meanwhile. Never spawn a replacement for a silent agent, and never end a turn while a phase is
   still owed its report. Where an agent is gone for good, do that phase yourself.
+- A delegate's own delegates report to the top-level session, never to the delegate that spawned
+  them. The top session relays each such report to its spawner with SendMessage when it arrives.
 - Wait for a background command with `Monitor` and an `until` loop, or start it with
   `run_in_background` and wait on its exit. A foreground `sleep` chained to a check is blocked.
 - Stop a finished delegate's task before you stop the process it left running. Stopping the process
