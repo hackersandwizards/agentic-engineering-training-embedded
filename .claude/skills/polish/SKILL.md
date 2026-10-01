@@ -45,6 +45,8 @@ Fan out one subagent per module or top-level directory to review it for minimali
 
 Review the instruction artifacts as their own module: `.claude/` rules, agents, and skills, plus `CLAUDE.md`. Look for a pointer to a path that no longer exists, a cap or boundary that contradicts an always-on rule, one rule stated twice inside a single skill or among the artifacts that are not skills, and any skill pointing outside its own directory at another skill, rule, agent or memory file by link or by name.
 
+Run the `claude-api` skill's `prompt-audit` over the same artifacts, scoped as this run is. Its high and medium findings join this phase's and get fixed like any other. A conflict it leaves as a flag goes into the final report as a decision for the user.
+
 Review agent memory the same way, plus index lines without a file and files without an index line. Move an instruction into the artifact that owns it. Edit only your own memory and hand every other owner a prune list: file, lines, new home.
 
 A fix to a file the sync script lists as mirrored goes into the hub copy: the sync swaps the whole directory, and no check reports the lost fix. Edit and commit in the hub, then run the sync, and read its output rather than its exit status. The sync first commits every dirty hub path and fans it out, so read the hub's `git status --porcelain` before running it. A dirty path this run did not write defers the sync: copy the files this run committed from hub `HEAD` into this repository's mirror and report the other repositories as pending.
@@ -53,7 +55,7 @@ A fix to a file the sync script lists as mirrored goes into the hub copy: the sy
 
 Run the /simplify skill on the accumulated diff. Apply its fixes.
 
-Then run phase 3 again over the accumulated diff rather than the tree. `/code-review` refuses model invocation, so what runs is that procedure, never the command.
+Then run phase 3 again over the accumulated diff rather than the tree.
 
 One pass of each. Name any finding you dismissed, and why, in the final summary, and print the prune lists there.
 
