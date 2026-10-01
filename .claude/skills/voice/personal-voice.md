@@ -38,8 +38,7 @@ hold where that mail cannot be reached.
 Natural, warm, casual: a longer Slack message to a peer in the industry, never a marketing essay.
 Unguarded, never *"Sehr geehrte Damen und Herren"*. Every interaction teaches (*"I don't have all
 the answers, but here's what I've learned."*), every conversation is a relationship. Bold in the
-right context: *"SPAs sind legacy"*, *"The problem isn't the AI assistant, it's the lack of context
-engineering practices."*
+right context: *"SPAs sind legacy"*, *"Microservices verhindern Geschwindigkeit"*.
 
 ## The hard numbers
 

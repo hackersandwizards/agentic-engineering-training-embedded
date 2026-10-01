@@ -1,4 +1,4 @@
-# Signature phrases: the user's real vocabulary
+# Signature phrases: Benedikt's real vocabulary
 
 The calibration anchors are measured from real sent mail and from his LinkedIn export; the email
 exemplars are read from the mailbox live. The slogan catalogue below is not: his meeting and mail

@@ -2,7 +2,7 @@
 
 Defects a competent review misses by default.
 
-Report at most 5 to 8 findings, merged by root cause. Each one names **the check that proves the fix
+Merge findings by root cause. Each one names **the check that proves the fix
 worked**, and **the most plausible innocent explanation** (local convention, a constraint you cannot
 see, work in progress). If the innocent reading holds, drop the finding.
 

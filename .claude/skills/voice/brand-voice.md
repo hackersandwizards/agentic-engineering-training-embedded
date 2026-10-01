@@ -40,7 +40,7 @@ language. They've seen every consulting deck; surprise them with specifics they 
 ## Core positioning: the verbatim set
 
 Primary headline: "Your whole company unstoppable, in flow with agentic engineering." (the claim,
-its results named in the copy under it). Flow is the emotional result, where "thrive" stood before.
+its results named in the copy under it). Flow is the emotional result.
 The result under the claim is the speed the teams gain reaching the customers, and it is stated as
 an outcome, lead time from request to production and the cost of a shipped change, never as output
 such as pull request counts or tool use.
@@ -210,8 +210,8 @@ copy, proposals) is plain ASCII punctuation only, and a dash is not punctuation 
 | bullets (`•` `·`) in prose | ASCII hyphen-space (`- `), and only for enumerated concrete items |
 | math letters (Unicode 𝗯𝗼𝗹𝗱 / 𝑖𝑡𝑎𝑙𝑖𝑐) | normal text |
 
-Carve-outs: pictograph emojis (📅 ✅ 🚀) are absent from the user's real writing, so skip them in
-customer-facing copy. German Umlaute (`ä ö ü ß`) are language characters. ASCII
+Carve-outs: pictograph emojis (📅 ✅ 🚀) stay out of customer-facing copy, since ASCII smileys
+outnumber emoji in Benedikt's writing (`personal-voice.md`, Emoji and ASCII). German Umlaute (`ä ö ü ß`) are language characters. ASCII
 emoticons (`:)` `;)` `xD`) where a real Slack message would land them.
 
 ## Sender identity

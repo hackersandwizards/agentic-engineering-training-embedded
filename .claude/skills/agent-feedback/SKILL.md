@@ -44,8 +44,8 @@ mutate live systems or require new approval.
 
 ## Write for a literal reader
 
-- Cut the history that produced the rule: version changes, vendor incidents, prior bugs, stability
-  caveats, and verification counts. Keep the failure mode only where it makes the rule enforceable.
+- Cut the history that produced the rule: version changes, vendor incidents, and the date it was
+  decided. Keep a measured number, a verbatim phrasing, and the observed failure mode.
 - An artifact may state a rule or a measurement. It may not state a status.
 - A terminal phrase stops everything rather than the half it was scoped to. Name the half it
   governs, or a run parks its finding in whatever escape hatch sits beside it.

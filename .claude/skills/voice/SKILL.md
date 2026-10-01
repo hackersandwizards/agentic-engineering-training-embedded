@@ -47,5 +47,5 @@ A cold pitch, a proposal opener or speaker outreach takes its shape from `postur
 
 | File | Purpose |
 |------|---------|
-| `signature-phrases.md` | The user's measured calibration anchors, how to pull real email exemplars from his mailbox, and his spoken slogan catalogue. Use when ghostwriting from a transcript or anchoring a draft that needs more voice depth than `personal-voice.md` gives |
+| `signature-phrases.md` | Benedikt's measured calibration anchors, how to pull real email exemplars from his mailbox, and his spoken slogan catalogue. Use when ghostwriting from a transcript or anchoring a draft that needs more voice depth than `personal-voice.md` gives |
 | `brand-vocabulary.md` | Verbatim offerings and value props, written positioning vocabulary, the competitive frame, approved performance language. Use when positioning in proposals or sales decks, or citing numbers |

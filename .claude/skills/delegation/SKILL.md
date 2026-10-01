@@ -20,11 +20,11 @@ repository pins its own model and effort for the work it holds. Read the value t
 - Astra accepts `low`, `medium`, `high`, `xhigh`, `max`, `ultra`. It has no `none`.
 - `codex exec --model` overrides the config per invocation. Heavier one-off work goes there, not
   into the repository's pin.
-- On codex-cli 0.147.0 `--full-auto` does not exist: the workspace-write auto-review is
+- `--full-auto` does not exist: the workspace-write auto-review is
   `--approve-for-me`. `codex exec` with an open pipe on stdin waits for EOF before starting, so pass
   `< /dev/null` where stdin might be open.
-- `startup_timeout_sec` defaults to 10s, and `.codex/config.toml` sets 60 only on the servers that
-  timed out.
+- `startup_timeout_sec` defaults to 10s, and `.codex/config.toml` sets 60 on the slow-starting
+  servers.
 - A skill's `agents/openai.yaml` is ungated: bump its `short_description` by hand in the commit that
   adds a mode.
 
@@ -45,6 +45,6 @@ re-casing, no polish. Any text change goes through another `claude -p` call.
 ## Claude -> Codex
 
 Claude starts Codex only for a capability Claude does not have, and never to author text. Image
-generation is that capability today.
+generation is that capability.
 
 Verify what a run did with `git log`, never from its own summary.
