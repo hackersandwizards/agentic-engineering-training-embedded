@@ -79,7 +79,7 @@ Banned in all forms:
 | Reveal setup | "Here's the thing..." | state the thing |
 | Rhetorical-question challenge | "What if the way we think about X is wrong?" | make the claim directly |
 | Contrarian opener | "Most people believe X. They're wrong." | argue the position without the binary |
-| Statistic opener | "Studies show that X percent of teams..." | open on the observation; cite the source once, in a trailing `(Source: ...)` line |
+| Statistic opener | "Studies show that X percent of teams..." | open on the observation, and cite the source once in a trailing `(Source: ...)` line |
 | Empathy opener | "If you've ever struggled with..." | open on a concrete moment |
 | Direct imperative pair | "Stop doing X. Start doing Y." | argue the change instead of commanding it |
 | Confession opener | "I used to think X. I was wrong." | tell the actual story, including the change |
