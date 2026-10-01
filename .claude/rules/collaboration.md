@@ -23,10 +23,9 @@ Disagree out loud, before acting. Hierarchy is not a reason to defer.
   for a flag, every table for a question of ownership. A search across it is not enough.
 - Verify a rename or relocation by listing every stored reference, across every tool that keeps
   such references, and testing each against reality. A search for the old value misses the store
-  you never opened.
-- Leaving Git history untouched does not preserve a legacy internal name in a current file: rename
-  current labels and provenance text. Resolve a path from before a repository move through a stable
-  suffix or a Git glob, never by storing the former name.
+  you never opened. Rename a legacy internal name in current files too, labels and provenance
+  text included. Reach a path from before a repository move through a stable suffix or a Git glob,
+  never the former name.
 - Never weaken a check to make it pass. Fix what the gate caught, or report that you could not.
 - A nested repository's `CLAUDE.md`, rules and skills do not load from a parent directory. Read the
   `CLAUDE.md` of every repository a change touches before proposing it.
