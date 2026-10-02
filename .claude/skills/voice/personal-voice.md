@@ -4,10 +4,9 @@ How h&w's people write under their own name: one shared profile for every signer
 the default for everyone, and `## Mail Stefan signs` is the one person section that departs from
 it.
 
-Who signs follows from the sending account: its owner, in the first person. Where no sending
-account applies, ask. Anchor a draft on the signer's own recent sent mail to that person where you
-can reach it, opener and sign-off included. What leads and the person section hold where that mail
-cannot be reached.
+Who signs follows from the sending account: its owner, in the first person. Anchor a draft on the
+signer's own recent sent mail to that person where you can reach it, opener and sign-off included.
+What leads and the person section hold where that mail cannot be reached.
 
 ## What leads
 

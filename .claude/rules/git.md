@@ -26,13 +26,14 @@ Other sessions share this working tree and its index.
   Stay on the current branch unless the user asks for another.
 - Before any work in a repository, commit, `git fetch`, `git merge origin/<default branch>`, and
   push, never `git pull`. A read-only run only fetches and reads `origin/<default branch>` with
-  `git show`. Where `pgrep -x claude`, which skips your own session, finds no process whose
-  `lsof -a -d cwd -p <pid>` is this repository, commit every change while the gate passes.
-  Otherwise commit only your own, never stash, and ask the person in plain words only where another
-  session's file blocks the merge. In a conflict keep both sides' additions, the later change
-  winning where they contradict. A rejected push repeats the update. Where the merge fails, read
-  each record you act on from `origin/<default branch>` with `git show`. Where the fetch fails, act
-  on nothing outside the repository, such as mail, Qonto or the calendar, and say why.
+  `git show`. Where `pgrep -x claude`, which skips your own session, finds no process whose working
+  directory, read with `lsof -a -d cwd -p <pid>`, lies inside this repository, commit every change
+  while the gate passes. Otherwise commit only your own, never stash, and ask the person in plain
+  words only where another session's file blocks the merge. In a conflict keep both sides'
+  additions, the later change winning where they contradict. A rejected push repeats the update.
+  Where the merge fails, read each record you act on from `origin/<default branch>` with `git show`.
+  Where the fetch fails, act on nothing outside the repository, such as mail, Qonto or the calendar,
+  and say why.
 - `.git/index.lock` is another session committing. The pre-commit hook holds it for over a minute:
   wait and retry, and if it outlives a couple of minutes, name the owning process and report it.
   Never delete it.
