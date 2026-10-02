@@ -15,7 +15,7 @@ Other sessions share this working tree and its index.
   (`Foo` -> `foo-case` -> `foo`) and read `git ls-tree HEAD -- <dir>` afterwards.
 - Name files, not the directory holding them. A file can still hold another session's uncommitted
   lines beside yours: read each path's own diff, commit the clean paths now, and leave a shared file
-  until its other author has committed.
+  while its other author's session is open.
 - Before `--amend`, verify that `HEAD` is still your commit. Repair a wrong fold index-free with
   `git commit-tree` plus `git update-ref` and the expected old value, never `reset` or `rebase`.
   Abandon the repair if it races.
@@ -24,13 +24,15 @@ Other sessions share this working tree and its index.
   your run is open.
 - Commit and push each finished batch without being asked: one coherent unit whose checks pass.
   Stay on the current branch unless the user asks for another.
-- Before any work in a repository, a read included, commit your own work, `git fetch`, `git merge`
-  the default branch, and push. Never `git pull`, which rebases here. In a conflict keep what both
-  sides added, and where they contradict, the later change wins. Ask the person only when you
-  cannot finish the merge, in plain words without git terms: where another session's uncommitted
-  file blocks it, ask whether that change is finished, commit it on a yes, and never stash it.
-  Where the update fails, act on nothing outside the repository, such as mail, Qonto or the
-  calendar, and say why.
+- Before any work in a repository, commit, `git fetch`, `git merge origin/<default branch>`, and
+  push, never `git pull`. A read-only run only fetches and reads `origin/<default branch>` with
+  `git show`. Where `pgrep -x claude`, which skips your own session, finds no process whose
+  `lsof -a -d cwd -p <pid>` is this repository, commit every change while the gate passes.
+  Otherwise commit only your own, never stash, and ask the person in plain words only where another
+  session's file blocks the merge. In a conflict keep both sides' additions, the later change
+  winning where they contradict. A rejected push repeats the update. Where the merge fails, read
+  each record you act on from `origin/<default branch>` with `git show`. Where the fetch fails, act
+  on nothing outside the repository, such as mail, Qonto or the calendar, and say why.
 - `.git/index.lock` is another session committing. The pre-commit hook holds it for over a minute:
   wait and retry, and if it outlives a couple of minutes, name the owning process and report it.
   Never delete it.

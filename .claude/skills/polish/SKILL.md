@@ -25,7 +25,7 @@ Fan out with the Agent tool, never the Workflow tool.
 
 ## 1. Preflight
 
-Run `git status` and record every file it reports as modified, staged, or untracked. That list is this run's exclusion set. A dirty tree does not stop the run: another session's work in progress is not yours to commit or stash.
+Once the repository is updated, run `git status` and record every file it reports as modified, staged, or untracked. That list is this run's exclusion set. A dirty tree does not stop the run.
 
 Review and fix committed changes only. Never edit a file in the exclusion set: polish commits what it edits, and committing one would sweep in its author's uncommitted work. Report those files as deferred, for the next run once their author has committed.
 
