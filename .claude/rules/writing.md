@@ -26,6 +26,8 @@ write something stilted, false, or dead.
   "ultimately", "that said") and copula dodges ("serves as", "stands as"). Name the party and give
   the verb back to whoever acts, never to "the rule" or "the row". Epistemic markers ("I think")
   stay.
+- The user reads German and English, not French. A French term or quote in a question or a report
+  to the user carries its German meaning beside it.
 - Name the objection instead of a soft-challenge verb ("push back on", "poke at", "nachhaken").
 - No praise or agreement without a reason, and no motivational close.
 

@@ -11,8 +11,8 @@ or surface variation.
 
 | Banned | Use instead |
 |--------|-------------|
-| "It's not just X, it's Y" / "It's not X, it's Y" | name Y directly |
-| "We don't just X, we Y" | "We Y" |
+| "It's not just X, it's Y" / "It's not X, it's Y" / "X is more than a Z, it's Y" | name Y directly |
+| "We don't just X, we Y" / "rather than simply X, we Y" | "We Y" |
 | "Not a trend, an epidemic" / "Not a tool, a partner" | the concrete claim without the contrast frame |
 | "X isn't evolving, it's accelerating" (any pivot punctuation) | same rule, banned in all forms |
 | DE: "Nicht nur X, sondern Y" / "Das ist kein X, das ist ein Y" | nenn Y direkt |
@@ -50,6 +50,11 @@ these contradict each other." "This is wrong because..."
 
 Swapping synonyms for the same referent ("Yankilevsky... the non-conformist artist... their
 creative output..."). Repeat the noun. Plain repetition reads as confident.
+
+### Mannered prose
+
+Metaphor or flourish where a direct statement fits ("sits at the heart of", "the backbone of",
+"opens the door to"): write the direct statement.
 
 ### Generic temporal or landscape opener
 
@@ -91,13 +96,14 @@ Banned in all forms:
 
 | Category | Banned | Use instead |
 |----------|--------|-------------|
-| Summary | "at the end of the day", "in a nutshell", "ultimately" | drop the bridge |
+| Summary and outlook | "at the end of the day", "in a nutshell", "ultimately", "looking ahead", "what comes next" | drop the bridge |
+| Importance flag | "this matters", "why this matters", "what matters most", "just as important", "adds another layer" | state the consequence itself |
 | Restatement | "in other words", "the reality is", "to be clear" | the first version was wrong, rewrite it |
 | Topic-pivot | "at its core", "when it comes to" | name the topic directly |
 | Contrast | "on the other hand", "that said", "at the same time" | "but" or a period |
 | Hedge | "it's worth noting", "needless to say", "moving forward" | if it's worth noting, note it |
 | Frame | "It should be noted that", "It is important to mention that", "One could argue that", "Furthermore", "Moreover", "In conclusion" | cut the frame, lead with the claim |
-| DE | "letzten Endes", "im Grunde", "im Kern", "in der Tat", "nichtsdestotrotz", "Es ist festzustellen, dass", "Es ist wichtig zu betonen, dass", "Man kann sagen, dass", "In diesem Zusammenhang" | dieselbe Regel |
+| DE | "letzten Endes", "im Grunde", "im Kern", "in der Tat", "nichtsdestotrotz", "Es ist festzustellen, dass", "Es ist wichtig zu betonen, dass", "Man kann sagen, dass", "In diesem Zusammenhang", "Warum das wichtig ist" | dieselbe Regel |
 
 ## 4. Copula and verb dodging
 
@@ -117,7 +123,8 @@ parallel.
 
 Measured, not guessed. `github.com/louisabraham/load-bearing` groups 461,121 GitHub pull-request
 descriptions into ten clusters by vocabulary alone, and its author reads one of them as Claude. The
-classes below are that cluster's own.
+classes below are that cluster's own, except the last two, which come from Graphite's study of Claude
+Opus 5.5 articles against pre-ChatGPT human ones (graphite.io/five-percent/research/ai-tells-opus-5-5-update).
 
 A ratio is not a ban: what marks the text is density. Across our own published LinkedIn posts:
 `nobody` 91, `carries` 84, `deliberately` 72, `nothing` 52, `honestly` 23.
@@ -131,7 +138,9 @@ nouns (`refusal`, `premise`, `defect`, `precedent`, `remedy`, `verdict`, `caveat
 client mail about software is a bug, a `remedy` is a fix); coined compounds (`load-bearing`,
 `chokepoint`, `backstop`, `tripwire`, `lever`, `seam`) and the hyphenated `re-` verb
 (`re-verified`, `re-derived`: "checked again"). DE: "entscheidend" or "trägt das Argument", never
-"load-bearing".
+"load-bearing". Evaluative adjectives rate without describing: `dependable` 23x the human rate,
+`steady` 11x, `thoughtful` 9x, `meaningful` 8x. Superlatives: `the most powerful` 7x, `perhaps the
+most` 8x.
 
 ### 6b. Absolutes
 

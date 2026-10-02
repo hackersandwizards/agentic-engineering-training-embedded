@@ -10,7 +10,7 @@ pieces, podcast scripts. Not for short Slack messages, replies, status updates.
    mythic framing; research that backs the experience belongs mid-post as validation, never in the
    hook. On LinkedIn the hook is the first line on its own, under 100 characters. *"Sprint 1 with
    AI agents looks worse than the sprint before. Most teams quit there."*
-2. Personal Story / Experience. Named people, real moments, public numbers with their source. The story
+2. Personal Story / Experience. Named people, real moments, public numbers, sourced in the closing `(Source: ...)` line. The story
    is the credential; skip "in our 20 years..." preamble. *"Sprint 1-2 are exhausting. Sprint 3-4
    you break even. Sprint 5-6 you're faster."*
 3. Deeper Question. The reframe, where peer language replaces vendor language. *"The dip is the
