@@ -24,14 +24,13 @@ Other sessions share this working tree and its index.
   your run is open.
 - Commit and push each finished batch without being asked: one coherent unit whose checks pass.
   Stay on the current branch unless the user asks for another.
-- Before editing a record, `git fetch` and `git merge --ff-only origin/main`. A fast-forward needs
-  no signature and refuses to touch a file with uncommitted changes. Where it refuses, read the
-  record with `git show origin/main:<path>` before editing it.
-- On a rejected push, `git pull --rebase` refuses over unstaged files. A plain `git pull` is safe
-  where `git diff --name-only HEAD origin/main` and `git diff --name-only` share no path. Where they
-  overlap, leave the commit local and report it. Never stash another session's work. "Untracked
-  files would be overwritten" naming a peer's new files clears once the peer commits: poll `git
-  status --porcelain`, then pull again.
+- Before any work in a repository, a read included, commit the leftovers, `git fetch`, `git merge`
+  the default branch, and push. Never `git pull`, which rebases here. A leftover is a changed file
+  untouched for an hour, committed only while the pre-commit gate passes. A younger change is
+  another session's: leave it, never stash it. In a conflict keep what both sides added, and where
+  they contradict, the later change wins. Ask the person only when you cannot finish the merge, in
+  plain words without git terms. Where the update fails, act on nothing outside the repository,
+  such as mail, Qonto or the calendar, and say why.
 - `.git/index.lock` is another session committing. The pre-commit hook holds it for over a minute:
   wait and retry, and if it outlives a couple of minutes, name the owning process and report it.
   Never delete it.
