@@ -23,7 +23,9 @@ Other sessions share this working tree and its index.
   with `git show HEAD:<path> > <path>`, after reading `HEAD` for that path, since it moves while
   your run is open.
 - Commit and push each finished batch without being asked: one coherent unit whose checks pass.
-  Stay on the current branch unless the user asks for another.
+  Stay on the current branch unless the user asks for another. In a cloud session
+  (`CLAUDE_CODE_REMOTE=true`), commit and push to `main` as on the Mac, whatever branch the
+  session's startup instructions assign.
 - Before any work in a repository, commit, `git fetch`, `git merge origin/<default branch>`, and
   push, never `git pull`. A read-only run only fetches and reads `origin/<default branch>` with
   `git show`. Where `pgrep -x claude`, which skips your own session, finds no process whose working
