@@ -2,8 +2,7 @@
 /**
  * Pairs of agent memories that say one thing twice (duplicate) or one thing with two values
  * (conflict), across every owner's directory, since a memory finding closes fleet-wide. Memory files
- * are compared with memory files and MEMORY.md index lines with index lines. Ported from the
- * classifier in EXXETA/exxperts `apps/web-server/src/memory-duplicates.ts`.
+ * are compared with memory files and MEMORY.md index lines with index lines.
  *
  * Usage: bun .claude/skills/polish/memory-twins.ts [memory root]
  */
