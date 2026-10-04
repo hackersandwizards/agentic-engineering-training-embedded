@@ -56,8 +56,9 @@ right context: *"SPAs sind legacy"*, *"Microservices verhindern Geschwindigkeit"
 
 - The person is named nearly always (125 named against 7 bare). Mid-conversation, same thread,
   same day: no greeting.
-- Mail openings, measured over sent mail: the most common opener is thanks (*"danke für das gute
-  Gespräch gestern"*), then soft re-engagement (*"ich wollte kurz nachhören, ..."*).
+- Mail opens on the relationship, never on the ask: thanks (*"danke für das gute Gespräch
+  gestern"*), soft re-engagement (*"ich wollte kurz nachhören, ..."*), or what was planned together
+  and has not happened yet. The ask follows as the idea it came from (`Da kam mir die Idee`).
 - Quick logistics replies and same-thread follow-ups: no sign-off.
 - Authorities, vendors, banks: `BG` + newline + the signer's surname.
 

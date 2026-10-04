@@ -47,7 +47,7 @@ Review the instruction artifacts as their own module: `.claude/` rules, agents, 
 
 Run the `claude-api` skill's `prompt-audit` over the same artifacts, scoped as this run is. Its high and medium findings join this phase's and get fixed like any other. A conflict it leaves as a flag goes into the final report as a decision for the user.
 
-Review agent memory the same way, plus index lines without a file and files without an index line. Move an instruction into the artifact that owns it. Edit only your own memory. Brief every other owner's agent with its prune list (file, lines, new home) through the Agent tool, one delegate per owner: a list only printed in the summary reaches nobody on an unattended run.
+Review agent memory the same way, plus index lines without a file, files without an index line, and the pairs `bun ${CLAUDE_SKILL_DIR}/memory-twins.ts` lists as duplicate or conflict. Move an instruction into the artifact that owns it. Edit only your own memory. Brief every other owner's agent with its prune list (file, lines, new home) through the Agent tool, one delegate per owner: a list only printed in the summary reaches nobody on an unattended run.
 
 A fix to a file the sync script lists as mirrored goes into the hub copy: the sync swaps the whole directory, and no check reports the lost fix. Edit and commit in the hub, then run the sync, and read its output rather than its exit status. The sync first commits every dirty hub path and fans it out, so read the hub's `git status --porcelain` before running it. A dirty path this run did not write defers the sync: copy the files this run committed from hub `HEAD` into this repository's mirror and report the other repositories as pending.
 
