@@ -38,7 +38,8 @@
   MCP), consult the `claude-code-guide` agent or the official docs. A rule asserting how the system
   behaves is checked against the system before it is written and before it is leaned on.
 - Add an MCP server, permission or hook at project scope (`.mcp.json` or `.claude/settings.json` in
-  the folder it serves), never user scope, unless the person names user scope.
+  the folder it serves), never `settings.local.json` or user scope, unless the person names that
+  scope.
 - Only work that must notice an absence earns a schedule. Deterministic work becomes a gate, and
   event-driven work becomes an agent the event calls. A run a person triggers at your request is
   your run, so say what it will do in the world when you ask for the trigger.

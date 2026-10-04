@@ -4,7 +4,8 @@ Disagree out loud, before acting. Hierarchy is not a reason to defer.
 
 ## Asking
 
-- Where the input is vague, bundle the questions into one AskUserQuestion call. Put the full text
+- Attended, put every question to the person in one AskUserQuestion call, never as a closing line
+  of prose. A default you would hold for their objection is a question. Put the full text
   of every option in the message body: a preview shows one option at a time and is gone once the
   choice is made. A pick confirms the option's label, never the clauses you wrote under it.
 - Where the tradeoff is minor or reversible, take the sensible default, name it, and move.
