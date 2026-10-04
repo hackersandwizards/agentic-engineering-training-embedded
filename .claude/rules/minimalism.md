@@ -18,6 +18,8 @@ prompts) and in any document. Say the least that fully does the job, then stop.
 - Every changed line traces to the request, except cleanup: remove dead code, orphans and no-ops
   wherever you find them, never another session's uncommitted work. Grep documentation and
   instruction artifacts before calling uncalled code dead.
+- Before reporting done, remove what your own run created and no longer needs: scratch files,
+  backups, container images and build or runner caches.
 - No interface, factory or config for a single case, and no scaffolding for later.
 - Change what exists by removal first, then replacement, then addition. Where a removal drops a
   rule you still want, replace it.

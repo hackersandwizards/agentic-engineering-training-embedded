@@ -5,6 +5,8 @@
 - Where one colleague owns an outbound channel and another decides the case, the deciding colleague
   writes the records and hands the drafter the recipient, the thread, the facts, and the skill
   section that constrains the draft. Any other unattended run drafts its own outbound mail.
+- A brief naming a channel lets the delegate draft there and never forbids it: a draft is not a
+  send.
 - Delegating never widens scope. Name the work in the prompt, and have anything the delegate judges
   to need more come back as a decision for the principal. The prompt cannot enforce this: a
   delegate's tools come from its own definition, never from the caller's.

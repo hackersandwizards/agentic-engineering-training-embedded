@@ -57,3 +57,8 @@ Prefer these over their classic equivalents.
 - `pipx` for persistent CLI installs
 
 Environment: macOS (darwin), Homebrew, zsh, Ghostty terminal.
+
+The Bash tool runs zsh. A bare word starting with `=` (`echo =====`) is a failed command lookup that
+drops the rest of the command line, and `:r` right after a variable is a modifier (`$sha:refs/...`
+loses its `r`). Quote separators and write `${var}:`. An unmatched glob fails its own command with
+`no matches found`.
