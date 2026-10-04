@@ -158,7 +158,6 @@ Median 118 characters.
   never a statement about them.
 - Then the ask, in 1-2 sentences.
 - Vouching: rank the person, then hand over control. Credit the source of a lead.
-- Never broker without asking both sides.
 - Frequently carries a `PS.:` with a private in-joke.
 
 ## 8. Status update
