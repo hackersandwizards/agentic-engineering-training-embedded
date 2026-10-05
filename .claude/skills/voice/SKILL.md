@@ -1,10 +1,11 @@
 ---
 name: voice
 description: >-
-  The voice of h&w and its founders, before drafting or editing any human-readable prose that represents
-  them, from mail, chat, social posts and proposals down to headlines, captions, slides, README and
-  documentation prose, FAQs, surveys, summaries and notes for review, never for code, comments, command
-  output, data, commit messages, logs or config.
+  The voice of h&w and the people it writes for, before drafting or editing any prose a human reads:
+  replies in the conversation, mail, chat, social posts, proposals, records and documents, headlines,
+  captions, slides, README and documentation prose, FAQs, surveys, summaries and notes for review.
+  Never for messages between agents, agent memory, instruction artifacts, scratch files, code,
+  comments, command output, data, commit messages, logs or config.
 allowed-tools: Read, Glob, Grep, Bash
 ---
 
