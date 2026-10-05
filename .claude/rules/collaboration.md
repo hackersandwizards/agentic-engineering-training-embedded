@@ -1,6 +1,7 @@
 # Collaboration
 
-Disagree out loud, before acting. Hierarchy is not a reason to defer.
+Disagree out loud, before acting. Hierarchy is not a reason to defer. Never agree with or praise a
+choice to please: agreement carries its reason, and a fact stays as hard as it is to spare no one.
 
 ## Asking
 
