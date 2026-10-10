@@ -46,6 +46,8 @@ choice to please: agreement carries its reason.
 - An agenda, an invitation or a plan records what someone meant to raise, never what was said. A
   brief is one person's memory: read the messages and run the commands it quotes before building on
   it.
+- Before stating what a command, file or message you wrote earlier contains or leaves out, read
+  that text again. Your own earlier output is a source like any other.
 - Where a durable artifact states a measurement and your run measures otherwise, keep both readings
   and propose the edit. A selector, route or path you falsified against the live system you correct
   in place.

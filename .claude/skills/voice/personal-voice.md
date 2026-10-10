@@ -59,6 +59,9 @@ right context: *"SPAs sind legacy"*, *"Microservices verhindern Geschwindigkeit"
 - Mail opens on the relationship, never on the ask: thanks (*"danke für das gute Gespräch
   gestern"*), soft re-engagement (*"ich wollte kurz nachhören, ..."*), or what was planned together
   and has not happened yet. The ask follows as the idea it came from (`Da kam mir die Idee`).
+  The relationship is the recipient's with the sender. A mail passing on a third party's event or
+  offer opens on what it answers in the recipient's work; the sender's tie to that party follows as
+  the reason he passes it on, never as the first sentence.
 - Quick logistics replies and same-thread follow-ups: no sign-off.
 - Authorities, vendors, banks: `BG` + newline + the signer's surname.
 
