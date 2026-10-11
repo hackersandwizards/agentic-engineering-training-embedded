@@ -49,10 +49,6 @@ mutate live systems or require new approval.
 - An artifact may state a rule or a measurement. It may not state a status.
 - A terminal phrase stops everything rather than the half it was scoped to. Name the half it
   governs, or a run parks its finding in whatever escape hatch sits beside it.
-- End every step on a condition the agent can check, worded to demand the full work ("every
-  modified record accounted for"): a vague bound ends the step early.
-- State the target behaviour. Keep a prohibition only as a hard guardrail, and name the target
-  beside it.
 - Where one meaning is spelled out at several sites, name it with one existing word and repeat the
   word, never the description.
 
