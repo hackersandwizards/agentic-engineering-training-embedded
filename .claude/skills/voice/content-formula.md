@@ -27,6 +27,9 @@ pieces, podcast scripts. Not for short Slack messages, replies, status updates.
 In an article, the thesis and the rule the reader should take away sit in the first quarter: most
 readers leave at 50 to 60% of the page (Chartbeat, 2013).
 
+A worked example that runs through an article sits in labelled, visibly bounded passages, and every
+general statement stays outside them.
+
 A headline names the problem, not the win: in news headlines each negative word raised the
 click-through rate by 2.3% (Robertson et al., Nature Human Behaviour, 2023).
 
