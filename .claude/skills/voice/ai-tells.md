@@ -115,9 +115,9 @@ Banned in all forms:
 
 ## 5. Formatting tics
 
-Sentence case in headings. Bold sparingly, never as a substitute for a heading. No "**Term:**
-description" repeated as a list; full sentences, or a real two-column table where the items are
-parallel.
+Sentence case in headings. Bold sparingly: the lead sentence of each paragraph in a run of parallel
+paragraphs, or the field names of a quoted record. Never bold in place of a heading, and no
+"**Term:** description" list where the items are points of the argument.
 
 ## 6. Signature vocabulary
 
