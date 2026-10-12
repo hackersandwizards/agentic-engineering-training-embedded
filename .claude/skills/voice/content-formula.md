@@ -45,4 +45,6 @@ When citing external research (whitepaper, study, survey), never lead with the s
 
 A piece that ends in a sources list names the source in the sentence carrying the figure instead.
 
+State what a study measured, then mark the conclusion you draw from it as yours.
+
 Anti-pattern: "[Source] just put a number on why."
