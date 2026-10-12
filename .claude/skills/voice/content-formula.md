@@ -27,6 +27,12 @@ pieces, podcast scripts. Not for short Slack messages, replies, status updates.
 In an article, the thesis and the rule the reader should take away sit in the first quarter: most
 readers leave at 50 to 60% of the page (Chartbeat, 2013).
 
+A headline names the problem, not the win: in news headlines each negative word raised the
+click-through rate by 2.3% (Robertson et al., Nature Human Behaviour, 2023).
+
+A long piece is published on the blog and teased with a native text post: the LinkedIn Article
+format reached a median of 596 against 921 for text posts (AuthoredUp, 2026, 372,000 posts).
+
 ## Pattern: research-backed posts
 
 When citing external research (whitepaper, study, survey), never lead with the source name.
