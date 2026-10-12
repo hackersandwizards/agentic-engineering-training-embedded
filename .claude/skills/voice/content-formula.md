@@ -24,6 +24,9 @@ pieces, podcast scripts. Not for short Slack messages, replies, status updates.
    act on, a question only where it is a real one; a clear next step for blog and long-form; a
    Monday-morning first move for a talk.
 
+In an article, the thesis and the rule the reader should take away sit in the first quarter: most
+readers leave at 50 to 60% of the page (Chartbeat, 2013).
+
 ## Pattern: research-backed posts
 
 When citing external research (whitepaper, study, survey), never lead with the source name.
@@ -33,5 +36,7 @@ When citing external research (whitepaper, study, survey), never lead with the s
 2. Bring in the data as validation mid-post: "That turns out to be a measurable pattern."
 3. Cite figures in the body with no source name inline, just the numbers.
 4. One `(Source: Name, date)` line after the close.
+
+A piece that ends in a sources list names the source in the sentence carrying the figure instead.
 
 Anti-pattern: "[Source] just put a number on why."
