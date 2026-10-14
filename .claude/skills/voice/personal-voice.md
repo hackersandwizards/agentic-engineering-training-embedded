@@ -147,6 +147,8 @@ teams achieve disproportionate gains."* When in doubt, name a person.
 Connective sentence openers: `Und`, `Aber`, `Daher`, `Ansonsten`, `So`. Bare `Genau.` / `Stark.` /
 `Nein.` as standalone openers is welcome. One-word reactions live in `postures.md` posture 1.
 
+The signer's own intention takes `möchte`, never `will`: `Ich möchte verstehen, wie ...`.
+
 English: `Yes, let's do it that way.` / `Does that work for you?` / `If anything here doesn't work
 for you, just let me know.`
 
