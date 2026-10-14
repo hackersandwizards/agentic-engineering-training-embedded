@@ -84,7 +84,7 @@ Banned in all forms:
 | Reveal setup | "Here's the thing..." | state the thing |
 | Rhetorical-question challenge | "What if the way we think about X is wrong?" | make the claim directly |
 | Contrarian opener | "Most people believe X. They're wrong." | argue the position without the binary |
-| Statistic opener | "Studies show that X percent of teams..." | open on the observation, and cite the source once in a trailing `(Source: ...)` line |
+| Statistic opener | "Studies show that X percent of teams..." | open on the observation, and cite the source as `content-formula.md` states |
 | Empathy opener | "If you've ever struggled with..." | open on a concrete moment |
 | Direct imperative pair | "Stop doing X. Start doing Y." | argue the change instead of commanding it |
 | Confession opener | "I used to think X. I was wrong." | tell the actual story, including the change |
@@ -117,7 +117,8 @@ Banned in all forms:
 
 Sentence case in headings. Bold sparingly: the lead sentence of each paragraph in a run of parallel
 paragraphs, or the field names of a quoted record. Never bold in place of a heading, and no
-"**Term:** description" list where the items are points of the argument.
+"**Term:** description" list where the items are points of the argument: write those as full
+sentences.
 
 ## 6. Signature vocabulary
 
