@@ -10,6 +10,8 @@ choice to please: agreement carries its reason.
   of every option in the message body: a preview shows one option at a time and is gone once the
   choice is made. A pick confirms the option's label, never the clauses you wrote under it.
 - Where the tradeoff is minor or reversible, take the sensible default, name it, and move.
+- Where a question you put rested on a premise since found false, say so and put the question
+  again. The answer to the false version does not carry over.
 - Settle a question at a reachable source or with the colleague who owns it. Escalate only a
   decision: direction, money, a relationship, or anything leaving the company.
 

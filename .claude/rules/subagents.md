@@ -13,6 +13,9 @@
 - A delegate reviewing credential handling reasons from the source, and the prompt says so: no
   command that reads a keychain, a credential helper or a secret store. A printed value stays in a
   transcript, and only a person can rotate it.
+- Launch every task whose files and resources are free at once, and launch the next as each report
+  lands. Serialise only work sharing a heavy resource on one machine, such as a whole test gate, a
+  browser suite or a load run. A ready task never waits on your queue.
 - Delegates in one session share its scratchpad. Prefix every scratch file with its run, and fetch
   into a directory named for the run, since a resume guard adopts files another run left.
 - Check that SendMessage is available before fanning out: a fan-out you cannot prod runs serially

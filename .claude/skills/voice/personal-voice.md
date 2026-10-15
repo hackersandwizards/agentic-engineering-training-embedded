@@ -23,7 +23,7 @@ What leads and the person section hold where that mail cannot be reached.
 - Address: `du` throughout. Zero `Sie` in 5,509 messages.
 - Length: three to five short sentences.
 - Bullets: none, unless listing groups or dates.
-- The odd typo and the odd comma splice stay standing.
+- The signer's typed mail carries the odd typo and comma splice. A draft never imitates one.
 
 ## Mail Stefan signs
 
@@ -89,7 +89,7 @@ right context: *"SPAs sind legacy"*, *"Microservices verhindern Geschwindigkeit"
 
 ## No formality ladder, no urgency
 
-- There is no client register: same `du`, same greeting, same `xD`, same typos, same admissions of
+- There is no client register: same `du`, same greeting, same `xD`, same admissions of
   overload to clients as to a co-founder. What shifts is slightly longer, more warmth, more
   questions, and an ask goes Konjunktiv instead of imperative.
 - *"This is too much for me"* goes to clients too, as an apology with a substitute offered.

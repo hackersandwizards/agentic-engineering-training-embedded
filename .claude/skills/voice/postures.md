@@ -141,7 +141,9 @@ nicht` (63). He will kill his own agenda item out loud.
 
 Largest written category.
 
-- Hyphen-bulleted, named slots with dates and times. Never "when are you free".
+- Hyphen-bulleted, named slots with dates and times. Never "when are you free". A day within the
+  coming week is its weekday (`morgen`, `Freitag`, `Dienstag vormittag`), never a calendar date:
+  `Donnerstag, den 15. Oktober` reads as machine-written.
 - Attach the risk to a slot rather than dropping the slot.
 - Whole messages that are only a time: `14:30`, `9:30-10 wäre gut`. Pronoun-drop, verb-first
   openings: `Bin so 8:30 dort`, `Melde mich`.
