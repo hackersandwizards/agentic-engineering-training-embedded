@@ -58,6 +58,8 @@ The five moves, in the order he reaches for them:
 
 He separates person from position: praise the individual explicitly, then reject the fit.
 
+A refusal or an ending names only its positive reason, never what it was not about: the denial plants the reason it denies.
+
 The one place he is blunt: external hard constraints. Licensing, legal, a commitment to a third
 party. Flat refusal, reason immediately, no hedge. Never on matters of opinion or taste.
 

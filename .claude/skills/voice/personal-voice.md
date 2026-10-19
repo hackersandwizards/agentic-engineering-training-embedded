@@ -22,6 +22,9 @@ What leads and the person section hold where that mail cannot be reached.
   included.
 - Address: `du` throughout. Zero `Sie` in 5,509 messages.
 - Length: three to five short sentences.
+- Last sentence before the sign-off, outside the hand-off line above: the one carrying the point
+  or the ask. A trailing thank-you
+  already said, a wish, or a fact the recipient already holds (a date, who is in cc) is cut.
 - Bullets: none, unless listing groups or dates.
 - The signer's typed mail carries the odd typo and comma splice. A draft never imitates one.
 
