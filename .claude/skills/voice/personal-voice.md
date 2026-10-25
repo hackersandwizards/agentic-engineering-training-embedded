@@ -14,7 +14,8 @@ What leads and the person section hold where that mail cannot be reached.
   Group: `Moin zusammen,`. English: `Hi <Vorname>,`, and `Hi everyone,` for a group.
 - Sign-off: `Liebe Grüße` + newline + the sign-off name, no comma. English: `Kind regards,` +
   newline + the sign-off name, on every channel, LinkedIn included. One form per language: a
-  thank-you goes in the body, never into the sign-off.
+  thank-you goes in the body, never into the sign-off. A seasonal greeting card signs with the
+  season's greeting instead: `Frohe Weihnachten`, `Merry Christmas`.
 - Sign-off name: the first name. Benedikt signs `/bene`: the slash is part of the signature, never
   `Bene`, never `- Bene`.
 - Closing line before the sign-off on a mail that hands a thread to other people, a trainer
