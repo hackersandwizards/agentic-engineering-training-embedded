@@ -21,8 +21,6 @@ Once a fact is verified false, fix every live copy of it, the generator that pro
 included, in files the argument never named. The phase 1 exclusion set still binds: a file another
 session is editing is reported as deferred whatever it contains.
 
-Fan out with the Agent tool, never the Workflow tool.
-
 ## 1. Preflight
 
 Once the repository is updated, run `git status` and record every file it reports as modified, staged, or untracked. That list is this run's exclusion set. A dirty tree does not stop the run.
