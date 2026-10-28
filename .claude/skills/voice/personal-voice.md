@@ -14,7 +14,7 @@ What leads and the person section hold where that mail cannot be reached.
   Group: `Moin zusammen,`. English: `Hi <Vorname>,`, and `Hi everyone,` for a group.
 - Sign-off: `Liebe Grüße` + newline + the sign-off name, no comma. English: `Kind regards,` +
   newline + the sign-off name, on every channel, LinkedIn included. One form per language: a
-  thank-you goes in the body, never into the sign-off. A seasonal greeting card signs with the
+  thank-you goes in the body, since one in the sign-off (`Danke und LG`) reads as an order. A seasonal greeting card signs with the
   season's greeting instead: `Frohe Weihnachten`, `Merry Christmas`.
 - Sign-off name: the first name. Benedikt signs `/bene`: the slash is part of the signature, never
   `Bene`, never `- Bene`.
@@ -60,12 +60,14 @@ right context: *"SPAs sind legacy"*, *"Microservices verhindern Geschwindigkeit"
 
 - The person is named nearly always (125 named against 7 bare). Mid-conversation, same thread,
   same day: no greeting.
-- Mail opens on the relationship, never on the ask: thanks (*"danke für das gute Gespräch
-  gestern"*), soft re-engagement (*"ich wollte kurz nachhören, ..."*), or what was planned together
-  and has not happened yet. The ask follows as the idea it came from (`Da kam mir die Idee`).
-  The relationship is the recipient's with the sender. A mail passing on a third party's event or
-  offer opens on what it answers in the recipient's work; the sender's tie to that party follows as
-  the reason he passes it on, never as the first sentence.
+- Where the sender and the recipient share a recent moment, mail opens on it: thanks (*"danke für
+  das gute Gespräch gestern"*), soft re-engagement (*"ich wollte kurz nachhören, ..."*), or what was
+  planned together and has not happened yet. The ask follows as the idea it came from (`Da kam mir
+  die Idee`). Where they share none, mail opens on the point. A personal sentence written only to
+  fill the opening, a compliment or a pleasantry that would fit any recipient, reads as forced: cut
+  it. A mail passing on a third party's event or offer opens on what it answers in the recipient's
+  work; the sender's tie to that party follows as the reason he passes it on, never as the first
+  sentence.
 - Quick logistics replies and same-thread follow-ups: no sign-off.
 - Authorities, vendors, banks: `BG` + newline + the signer's surname.
 
@@ -113,7 +115,7 @@ pitch.
 Vulnerability only with a reframe: *"Allein könnten wir uns den Stand nicht leisten"* -> *"Aber
 genau deshalb haben wir das Gruppenformat entwickelt"*.
 
-## An invitation states facts, it never argues relevance
+## An invitation states facts and leaves the judgement to the recipient
 
 Measured across his event mails (techcamp 2026, DevLand 2026, code.talks and DLS 2025 and 2026, the
 autumn 2026 Slack post): **he never writes why an event matters to the recipient.** He gives where
@@ -124,16 +126,20 @@ he is, what his role there is, and what the format is, then leaves the judgement
 > "Wir sind wieder mit einem Stand da und ich habe am ersten Tag eine Session."
 > "Where you'll find me:" followed by the list and nothing else.
 
-A sentence explaining that the topic is central, that these are the questions the reader is already
-working on, or that the speakers will be honest, is the part that reads as generated, in his words
-"das ist einfach nur irgendwelches räudiges AI-Gesloppe". The fix is deletion, not rewording: put the facts in the list and let the topic be one flat clause.
+To someone who knows him, those facts are the whole invitation. To someone who does not, one reason
+may stand, as flat as the facts: a fact tied to the recipient's own work, such as the track matching
+what they spoke on, or who else is in the lineup. A sentence explaining that the topic is central,
+that these are the questions the reader is already working on, or that the speakers will be honest,
+argues instead of stating, and is the part that reads as generated, in his words "das ist einfach
+nur irgendwelches räudiges AI-Gesloppe". Delete it rather than reword it: put the facts in the list
+and let the topic be one flat clause.
 
-## Analogies and concreteness
+## Concreteness, no analogies
 
-An analogy carries most conceptual points. Measured frequency: factory (251), pipeline (59), yogurt
-(9), "Agile twenty years ago". *"It's like a yogurt factory, you put something in, something comes
-out."* Real numbers, real moments: *"[team member] saved an hour on this PR"* beats *"engineering
-teams achieve disproportionate gains."* When in doubt, name a person.
+No analogy and no metaphor in writing, conceptual points included: name the thing itself. His speech
+reaches for them (factory 251, pipeline 59, yogurt 9, "Agile twenty years ago"), and a draft does
+not carry that over. Real numbers, real moments: *"[team member] saved an hour on this PR"* beats
+*"engineering teams achieve disproportionate gains."* When in doubt, name a person.
 
 ## German markers
 

@@ -45,10 +45,13 @@ The result under the claim is the speed the teams gain reaching the customers, a
 an outcome, lead time from request to production and the cost of a shipped change, never as output
 such as pull request counts or tool use.
 
-Every text leaving the company tells the message in one order: the buyer's problem in the words
-buyers use for it, the idea that answers it, the claim, the result for the client, the way there,
-and the training or product last. A problem stated in our vocabulary instead of theirs, or a text
-that opens on the product, has the order wrong.
+A pitch to a reader who does not yet know what h&w offers (website copy, a post, a deck, a cold
+pitch, a proposal's opening) names the buyer's problem in the words buyers use for it before the
+training or product: the problem, the idea that answers it, the claim and the result for the
+client, then the way there and the product. A problem stated in our vocabulary instead of theirs,
+or such a pitch opening on the product, loses that reader. The further along the awareness stages
+below the reader sits, the less setup comes first: a reader who asked for the offer, a reply in a
+running thread and a logistics mail open on the answer.
 
 The vision and the whole offer speak of product development and enablement. A concrete text says
 engineering teams, training and mentoring, never "product teams".
