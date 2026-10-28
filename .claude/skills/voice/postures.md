@@ -133,9 +133,6 @@ Comprehension is checked inline, never explicitly. 720 inline assent tags (`ne?`
 against 7 explicit checks (*"macht das Sinn?"*, *"any questions?"*). In writing this becomes a
 short confirming clause at the end of a claim, not a rhetorical question.
 
-Anthropomorphic mapping is the core move for a non-technical listener: the machine explained as a
-person doing the same job badly. He then refines his own analogy live, pre-empting the misread.
-
 Epistemic honesty stays on in front of clients. `I don't know` (50), `I'm not sure` (38), `ich weiß
 nicht` (63). He will kill his own agenda item out loud.
 
@@ -206,7 +203,7 @@ everything else the message keeps whichever posture above it is otherwise in.
 ### Cold ask to a peer
 
 It opens on their work where a verified piece of it bears on the ask, `your <specific thing> <what it
-does>.`, then one sentence on what it did on our side; otherwise on the thing he is doing. He greets,
+does>.`, then one sentence on what it did on our side. He greets,
 honours, then says what he wants. A draft opening with `I` or with the offer is the most common miss.
 
 Then: the thing he is doing, in one or two plain sentences. The ask, tied to why them. The interest

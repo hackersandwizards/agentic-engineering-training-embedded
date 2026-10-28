@@ -7,8 +7,8 @@ panel intros, *"Stell dich mal kurz vor"* moments. Skip when the host introduced
 - N, Name: *"[FIRST-NAME] from hackers&wizards"*. Role only if it adds immediate value.
   *"[FIRST-NAME] from hackers&wizards. I get engineering teams in flow with agentic
   engineering, so the speed they gain reaches their customers."*
-- S, Same: an instant mental picture. *"Think of me as a translator between developers and AI."* /
-  *"I'm like a driving instructor, but for AI coding."*
+- S, Same: the category everyone already understands, said plainly. *"We do consulting and training
+  in agentic engineering."*
 - F, Fame: one number plus one success story, result not title, under the numbers rule in
   `brand-voice.md`. *"I helped scale [client] from 200M to 1.2B in revenue."* / *"30+ teams
   ignited, 500+ developers in our community, 40+ practitioners in our network."*

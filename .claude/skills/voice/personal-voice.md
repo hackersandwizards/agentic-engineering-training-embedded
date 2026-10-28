@@ -137,8 +137,9 @@ and let the topic be one flat clause.
 ## Concreteness, no invented analogies
 
 A draft never invents an analogy or a metaphor, conceptual points included: it names the thing
-itself. h&w's handwritten ones in this skill stand as written. His speech counts: factory 251,
-pipeline 59, yogurt 9, "Agile twenty years ago". *"[team member] saved an hour on this PR"* beats
+itself. h&w's handwritten ones in this skill stand as written. His speech reaches for them
+(factory 251, pipeline 59, yogurt 9, "Agile twenty years ago"), and a draft does not carry those
+over. *"[team member] saved an hour on this PR"* beats
 *"engineering teams achieve disproportionate gains."* When in doubt, name a person.
 
 ## German markers
