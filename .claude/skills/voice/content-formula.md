@@ -5,7 +5,7 @@ pieces, podcast scripts. Not for short Slack messages, replies, status updates.
 
 ## The beats
 
-1. Hook / Challenge. Open with the friction, not the solution: a small observation (preferred), a
+1. Hook / Challenge. Where readers lack the answer, open with the friction: a small observation (preferred), a
    specific moment, or a quick framing of something common but unnamed. No stat-shaped boasts, no
    mythic framing; research that backs the experience belongs mid-post as validation, never in the
    hook. On LinkedIn the hook is the first line on its own, under 100 characters. *"Sprint 1 with
@@ -38,7 +38,7 @@ format reached a median of 596 against 921 for text posts (AuthoredUp, 2026, 372
 
 ## Pattern: research-backed posts
 
-When citing external research (whitepaper, study, survey), never lead with the source name.
+When citing external research, the source name leads only where the source itself is the news.
 
 1. Open with h&w's lived experience: what we observe in practice, before any data. "We've seen it
    enough times that we can predict it before the team can."

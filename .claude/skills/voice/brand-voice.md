@@ -23,7 +23,7 @@ Experience-based claims backed by real client examples; sustainability language 
 "sustainable", "over time", "preserving"); capability building ("internal capability", "knowledge
 transfer", "independent improvement"); learning orientation.
 
-The five recurring themes, one of which anchors every post, talk and proposal:
+The five recurring themes, one of which anchors every post, talk and proposal arguing h&w's case:
 
 1. Agentic Engineering Practices: from coding agents everywhere to a company that releases faster
    with them. Vibe Coding is fine for prototypes, not for lasting software.
@@ -56,7 +56,7 @@ running thread and a logistics mail open on the answer.
 The vision and the whole offer speak of product development and enablement. A concrete text says
 engineering teams, training and mentoring, never "product teams".
 
-Why us is two kinds of experience, always named together: more than 20 years building large
+A text arguing why us names two kinds of experience together: more than 20 years building large
 software systems, and work with agents since the first tools at the end of 2022, alpha access to
 Claude Code, production software built with agents since mid-2025. A large consultancy has the
 first without the second, and a newcomer the second without the first.

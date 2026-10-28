@@ -22,10 +22,10 @@ What leads and the person section hold where that mail cannot be reached.
   introduction above all: `Bei Fragen meldet ihr euch gerne jederzeit bei mir!`, verbatim, `gerne`
   included.
 - Address: `du` throughout. Zero `Sie` in 5,509 messages.
-- Length: three to five short sentences.
-- Last sentence before the sign-off, outside the hand-off line above: the one carrying the point
-  or the ask. A trailing thank-you
-  already said, a wish, or a fact the recipient already holds (a date, who is in cc) is cut.
+- Length: three to five short sentences, one for one fact; past about 125 words, a call instead.
+- Last sentence before the sign-off, outside the hand-off line above: the point or the ask, which a
+  longer mail or a dated ask also states first. A trailing thank-you already said, a wish, or a fact
+  the recipient already holds (a date, who is in cc) is cut.
 - Bullets: none, unless listing groups or dates.
 - The signer's typed mail carries the odd typo and comma splice. A draft never imitates one.
 
@@ -66,8 +66,8 @@ right context: *"SPAs sind legacy"*, *"Microservices verhindern Geschwindigkeit"
   die Idee`). Where they share none, mail opens on the point. A personal sentence written only to
   fill the opening, a compliment or a pleasantry that would fit any recipient, reads as forced: cut
   it. A mail passing on a third party's event or offer opens on what it answers in the recipient's
-  work; the sender's tie to that party follows as the reason he passes it on, never as the first
-  sentence.
+  work; the sender's tie to that party follows as the reason he passes it on, unless a person the
+  recipient knows sent him to them.
 - Quick logistics replies and same-thread follow-ups: no sign-off.
 - Authorities, vendors, banks: `BG` + newline + the signer's surname.
 
@@ -109,8 +109,8 @@ right context: *"SPAs sind legacy"*, *"Microservices verhindern Geschwindigkeit"
 ## Vulnerability and invitation
 
 Persuasion is warm invitation, never demand: *"Fordernd ist nicht meine Art."* Narrative first: in
-a mail, bullets follow What leads; elsewhere, bullets only for concrete deliverables, never for the
-pitch.
+a mail, bullets follow What leads. On a page the reader scans, bullets carry the concrete items
+(deliverables, dates, numbers), and the argument joining them stays in sentences.
 
 Vulnerability only with a reframe: *"Allein könnten wir uns den Stand nicht leisten"* -> *"Aber
 genau deshalb haben wir das Gruppenformat entwickelt"*.
@@ -134,11 +134,11 @@ argues instead of stating, and is the part that reads as generated, in his words
 nur irgendwelches räudiges AI-Gesloppe". Delete it rather than reword it: put the facts in the list
 and let the topic be one flat clause.
 
-## Concreteness, no analogies
+## Concreteness, no invented analogies
 
-No analogy and no metaphor in writing, conceptual points included: name the thing itself. His speech
-reaches for them (factory 251, pipeline 59, yogurt 9, "Agile twenty years ago"), and a draft does
-not carry that over. Real numbers, real moments: *"[team member] saved an hour on this PR"* beats
+A draft never invents an analogy or a metaphor, conceptual points included: it names the thing
+itself. h&w's handwritten ones in this skill stand as written. His speech counts: factory 251,
+pipeline 59, yogurt 9, "Agile twenty years ago". *"[team member] saved an hour on this PR"* beats
 *"engineering teams achieve disproportionate gains."* When in doubt, name a person.
 
 ## German markers

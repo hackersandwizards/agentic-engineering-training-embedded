@@ -12,9 +12,9 @@ panel intros, *"Stell dich mal kurz vor"* moments. Skip when the host introduced
 - F, Fame: one number plus one success story, result not title, under the numbers rule in
   `brand-voice.md`. *"I helped scale [client] from 200M to 1.2B in revenue."* / *"30+ teams
   ignited, 500+ developers in our community, 40+ practitioners in our network."*
-- A, Aim: their benefit, never your goal. *"I'm curious why some teams fly with AI while others
-  crash."* / *"I help teams skip the AI mistakes I've seen a hundred times."* Never *"I want to
-  grow my consultancy"*.
+- A, Aim: what you work on now (Priestley: the next 90 days), told as their benefit. *"I'm curious
+  why some teams fly with AI while others crash."* / *"I help teams skip the AI mistakes I've seen a
+  hundred times."* Never *"I want to grow my consultancy"*.
 - G, Game: a next step they can picture themselves taking. *"I'm asking three questions: Where are
   you now? Where do you want to be? What's blocking the path?"* / *"Coffee chat about your biggest
   technical headache?"*

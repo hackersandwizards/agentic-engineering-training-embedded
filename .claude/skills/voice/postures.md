@@ -38,8 +38,8 @@ short sentence carrying the reason. `Ne.` `Nein.` `Nope.` `Nö.` `Keine Chance.`
 a no.
 
 Written addition: confirmation first. A message that adds a cost, a condition or a number the other
-side did not expect is not a refusal. Name what already works, then add, never opening on the gap (`Da
-müssen wir noch mal gucken`).
+side did not expect is not a refusal. Name what already works, then add. Open on the gap (`Da
+müssen wir noch mal gucken`) only where the addition changes their decision.
 A number the other side did not budget for names the agreement it came from in the sentence before
 it (*"Wir hatten ja verabredet, dass X aus dem Kontingent läuft."*) and why it is that size in the
 sentence after it. Both facts sit in our own records; read them before sending the number bare.
@@ -70,11 +70,11 @@ Anger signal: the absence of a smiley. The wording stays level and the warmth de
 Three registers, never conflated.
 
 Trainer or partner. The opener from `personal-voice.md`, then: frame the work as THEIR opportunity,
-not our need. A personalisation hook taken from what passed between the two of them directly, never
-from an internal record about the person. 2-3 sentences of plain engagement facts, no adjectives
-about the client. The shape of the work in one line. Consent before calendar: `Hättest du Lust?`
-comes before `Wie sieht es zeitlich bei dir aus?`, with named date options. The ask lands last,
-after any caveat. No deadline, no urgency, no reply scaffolding.
+not our need. A personalisation hook only from what passed between the two of them directly, never
+from an internal record, and none where nothing did. 2-3 sentences of plain engagement facts, no
+adjectives about the client. The shape of the work in one line. Consent before calendar: `Hättest du
+Lust?` comes before `Wie sieht es zeitlich bei dir aus?`, with named date options. The ask lands
+last, after any caveat. No deadline, no urgency, no reply scaffolding.
 
 Ops or assistant. Numbered and imperative. Grants judgement up front, names the stop condition,
 explains why an item matters, points at the tool rather than supplying the answer, and closes by
@@ -158,8 +158,8 @@ Largest written category.
 Median 118 characters.
 
 - Open on the shared experience, not on the business.
-- The warmth clause is always an interrogative about them (`wie geht es dir?`, `alles im Lot?`),
-  never a statement about them.
+- The warmth clause is a question about them (`wie geht es dir?`, `alles im Lot?`), never a
+  statement about them. Where they told him something, the question follows up on it.
 - Then the ask, in 1-2 sentences.
 - Vouching: rank the person, then hand over control. Credit the source of a lead.
 - Frequently carries a `PS.:` with a private in-joke.
@@ -199,15 +199,15 @@ everything else the message keeps whichever posture above it is otherwise in.
 ## Pitch and positioning
 
 - First contact closes on an interest question and nothing else: no named slots, no booking link,
-  no request to hold time. Named slots (posture 6) belong in the reply, once they have engaged.
+  no request to hold time. Named slots (posture 6) belong once they have engaged or asked to meet.
 - An unavailability window is a plain fact carrying a de-escalation (`no rush at all`), never an
   apology and never a request.
 
 ### Cold ask to a peer
 
-It opens on their work, never on him and never on h&w: `your <specific thing> <what it does>.` Then
-one sentence on what it did on our side. He greets, honours, and only then says what he wants. A
-draft that opens with `I` or with the offer is the most common way to get this wrong.
+It opens on their work where a verified piece of it bears on the ask, `your <specific thing> <what it
+does>.`, then one sentence on what it did on our side; otherwise on the thing he is doing. He greets,
+honours, then says what he wants. A draft opening with `I` or with the offer is the most common miss.
 
 Then: the thing he is doing, in one or two plain sentences. The ask, tied to why them. The interest
 question. `Would that be interesting to you?` is his measured close. In German, `Hättest du Lust

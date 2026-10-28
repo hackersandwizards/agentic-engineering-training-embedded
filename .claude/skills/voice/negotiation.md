@@ -100,7 +100,7 @@ out. *"Falls passend: könntest du uns kurz vorstellen? Wenn nicht, kein Stress.
 
 ## Anti-patterns
 
-- Lead with the ask. Order: substance -> tier choice -> reciprocity -> honesty -> ask.
+- Lead with an ask they did not request. Order: substance -> tier choice -> reciprocity -> honesty -> ask.
 - Hinge the offer on your own argument (*deswegen*, *therefore*). Connect to their benefit instead (*"Genau da würde ich dir gern helfen"*).
 - Hedge the content of the ask (*"vielleicht wäre es möglich, dass"*): Konjunktiv belongs on
   delivery (*"wäre es okay"*), never on substance.
