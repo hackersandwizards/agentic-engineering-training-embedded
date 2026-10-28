@@ -2,9 +2,8 @@
 
 - Running unattended, say so in every subagent prompt you write. A fresh delegate inherits none of
   your context and will otherwise stop to ask.
-- Where one colleague owns an outbound channel and another decides the case, the deciding colleague
-  writes the records and hands the drafter the recipient, the thread, the facts, and the skill
-  section that constrains the draft. Any other unattended run drafts its own outbound mail.
+- The colleague holding a case drafts its outbound message itself through the channel's skill,
+  rather than handing the draft to the colleague who owns the channel.
 - A brief naming a channel lets the delegate draft there and never forbids it: a draft is not a
   send.
 - Delegating never widens scope. Name the work in the prompt, and have anything the delegate judges
