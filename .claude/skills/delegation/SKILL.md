@@ -15,10 +15,9 @@ repository pins its own model and effort for the work it holds. Read the value t
 | Pick | For |
 |------|-----|
 | the repository's pin | everyday work |
-| astra high | planning, hard bugs, architecture, final review |
+| gpt-6.1-sol high | planning, hard bugs, architecture, final review |
 
-- Astra accepts `low`, `medium`, `high`, `xhigh`, `max`, `ultra`. It has no `none`.
-- Where `astra` answers `model_not_found`, run the repository's pin at `high`.
+- Sol accepts `low`, `medium`, `high`, `xhigh`, `max`, `ultra`. It has no `none`.
 - `codex exec --model` overrides the config per invocation. Heavier one-off work goes there, not
   into the repository's pin.
 - `--full-auto` does not exist: the workspace-write auto-review is
