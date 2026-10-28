@@ -16,7 +16,7 @@
   result: independent parallel paths, a blind review, or work whose context would bloat this one.
   Launch every such task whose files and resources are free at once, and launch the next as each
   report lands. Serialise only work sharing a heavy resource on one machine, such as a whole test
-  gate, a browser suite or a load run. A ready task never waits on your queue. Fan out as parallel
+  gate, a browser suite or a load run. Fan out as parallel
   Agent calls, never through the Workflow tool.
 - Delegates in one session share its scratchpad. Prefix every scratch file with its run, and fetch
   into a directory named for the run, since a resume guard adopts files another run left.
@@ -61,12 +61,12 @@
   Its model and permission mode live on that registration in the app's `scheduled-tasks.json`,
   its tool grants in the app, never in the task's `SKILL.md`. Change them in the app's edit form:
   the app rewrites that file from its own store and has dropped a permission mode edited there.
-- A scheduled run reading a time window starts at the earlier of its default and the start its last
-  complete run recorded as a `Scheduled-Run: <task id> <UTC start>` trailer, read with
-  `git log --author="$(git config user.email)" --format='%(trailers:key=Scheduled-Run,valueonly)'`,
-  never the app's last-run time, which it stamps on dispatches that never started. It adds the
-  trailer to its last commit once every read bounded by the window completed, and reports how far
-  back it reached. A task whose work belongs to its own day or slot says in one line that it does
+- A scheduled run reading a time window starts at the earlier of its default and the start in the
+  newest `Scheduled-Run: <task id> <UTC start>` trailer
+  (`git log --author="$(git config user.email)" --format='%(trailers:key=Scheduled-Run,valueonly)'`),
+  never at the app's last-run time, which also stamps dispatches that never started. Once every
+  windowed read completes, it adds that trailer to its last commit and reports how far back it
+  reached. A task whose work belongs to its own day or slot says in one line that it does
   not catch up.
 - Name a skill for its function and a scheduled task for its job, with the cadence as the last
   segment.

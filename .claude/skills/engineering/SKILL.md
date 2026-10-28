@@ -8,9 +8,10 @@ description: >-
 
 # Engineering
 
-Architecture docs (CLAUDE.md, rules) outrank existing code where the two disagree. Given a clear
-bug report, fix it without asking, unless the requirement contradicts itself, names a missing
-artifact, or has two defensible readings. Fix a bug test-first: a failing test that reproduces it, then the fix. Never simplify away input validation at a trust boundary, error
+Architecture docs (CLAUDE.md, rules) outrank existing code where the two disagree. Given a bug
+report, fix it on its best reading without asking, and name any other defensible reading with the
+fix. Ask first only where no fix can start: the requirement contradicts itself or names a missing
+artifact. Fix a bug test-first: a failing test that reproduces it, then the fix. Never simplify away input validation at a trust boundary, error
 handling that prevents data loss, security measures, or accessibility basics.
 
 - Cleanup, review and quality passes scan the whole working tree, not only the files this
