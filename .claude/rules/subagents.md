@@ -61,5 +61,12 @@
   Its model and permission mode live on that registration in the app's `scheduled-tasks.json`,
   its tool grants in the app, never in the task's `SKILL.md`. Change them in the app's edit form:
   the app rewrites that file from its own store and has dropped a permission mode edited there.
+- A scheduled run reading a time window starts at the earlier of its default and the start its last
+  complete run recorded as a `Scheduled-Run: <task id> <UTC start>` trailer, read with
+  `git log --author="$(git config user.email)" --format='%(trailers:key=Scheduled-Run,valueonly)'`,
+  never the app's last-run time, which it stamps on dispatches that never started. It adds the
+  trailer to its last commit once every read bounded by the window completed, and reports how far
+  back it reached. A task whose work belongs to its own day or slot says in one line that it does
+  not catch up.
 - Name a skill for its function and a scheduled task for its job, with the cadence as the last
   segment.

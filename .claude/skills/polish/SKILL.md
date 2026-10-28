@@ -11,10 +11,10 @@ Polish finds defects by reading code, instruction artifacts and memory files as 
 
 An argument narrows what each phase covers, never which phases run. Report what the scope excluded.
 
-The argument `recent` scopes the run to everything committed in the last two days:
-`BASE=$(git log --until="2 days ago" -1 --format=%H)`, then `$BASE..HEAD`. The window counts back
-from the run's start, so a late run needs no catch-up. Where `BASE` is `HEAD`, say in one line
-that nothing was committed in the window and stop.
+The argument `recent` scopes the run to everything committed since the earlier of two days back
+and the start the newest `Scheduled-Run:` trailer of the scheduled task running it records:
+`BASE=$(git log --until="<that start>" -1 --format=%H)`, then `$BASE..HEAD`. Where `BASE` is
+`HEAD`, say in one line that nothing was committed in the window and stop.
 
 The argument also scopes where you hunt for defects, never which proven defects you may correct.
 Once a fact is verified false, fix every live copy of it, the generator that produced them
@@ -43,7 +43,7 @@ Fan out one subagent per module or top-level directory to review it for minimali
 
 Review the instruction artifacts as their own module: `.claude/` rules, agents, and skills, plus `CLAUDE.md`. Look for a pointer to a path that no longer exists, a cap or boundary that contradicts an always-on rule, one rule stated twice inside a single skill or among the artifacts that are not skills, and any skill pointing outside its own directory at another skill, rule, agent or memory file by link or by name.
 
-Run the `claude-api` skill's `prompt-audit` over the same artifacts, scoped as this run is. Its high and medium findings join this phase's and get fixed like any other. A conflict it leaves as a flag goes into the final report as a decision for the user.
+Call the prompt audit yourself, never through a reviewer's prompt: `Skill` with `skill: "claude-api"` and `args: "prompt-audit <path> <path> ..."`, naming the instruction artifacts in this run's scope. Without paths it audits the whole working directory. Its high and medium findings join this phase's and get fixed like any other. A conflict it leaves as a flag goes into the final report as a decision for the user.
 
 Review agent memory the same way, plus index lines without a file, files without an index line, and the pairs `bun ${CLAUDE_SKILL_DIR}/memory-twins.ts` lists as duplicate or conflict. Move an instruction into the artifact that owns it. Edit only your own memory. Brief every other owner's agent with its prune list (file, lines, new home) through the Agent tool, one delegate per owner: a list only printed in the summary reaches nobody on an unattended run.
 
