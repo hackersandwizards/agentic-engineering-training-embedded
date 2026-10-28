@@ -28,7 +28,7 @@ Layers 1-3 are positive: write from them. Layer 4 is a filter: check the draft a
 
 | Layer | File | Owns |
 |-------|------|------|
-| 1 Brand | `brand-voice.md` | h&w as a company: positioning terms, KPIs, banned words, numbers, banned Unicode, client naming, sender identity |
+| 1 Brand | `brand-voice.md` | h&w as a company: positioning terms, measures and figures, banned words, numbers, banned Unicode, client naming, sender identity |
 | 2 Personal voice | `personal-voice.md` | The one shared voice of everyone who writes under their own name: greeting and sign-off, the measured numbers, hedges and particles, emoji, anti-patterns |
 | 3 Prose | `prose-style.md` | Sentence mechanics (DE/EN), language choice, German orthography |
 | 4 AI-tells filter | `ai-tells.md` | Structures, openers, transitions, copula dodges and the measured signature vocabulary that mark prose as LLM output. The vocabulary check is a density bar, not a word ban |

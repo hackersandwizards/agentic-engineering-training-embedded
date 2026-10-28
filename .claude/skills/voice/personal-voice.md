@@ -174,7 +174,7 @@ for you, just let me know.`
   this?"* (filler)
 - Generic advice without personal stake. Bad: *"Teams should focus on quality over quantity."*
   Good: *"The teams I've seen ship best are the ones who decided to ship less. [client] did that,
-  and PR throughput went up the next month."*
+  and their reviews stopped piling up."*
 - Condescension toward the reader: *"without realizing"*, *"preaching"*, *"Spoiler:"*, *"Surprise,
   that's not how this works."* Own the observation (*"Most teams I see are doing this."*) and
   replace pejorative verbs (*preaching, screaming, warning about for years*) with neutral ones

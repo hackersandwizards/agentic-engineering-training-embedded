@@ -58,7 +58,6 @@ material, such as a legal clause lifted from their template.
 
 Each cites metric, target, and source:
 
-- "PR lead times dropped 20%, with over 70% AI-assisted PRs" ([client] pilot)
 - "~90% of developers already use AI" (DORA 2025)
 
 ## About-section voice

@@ -72,20 +72,38 @@ component), "Modern Software Engineering", "Prompt Engineering", "Pragmatic Prog
 Programming". "Vibe Coding" is the anti-pattern Agentic Engineering replaces: always the problem,
 never the solution.
 
-## The four core client-engagement KPIs
+## Measures and figures
 
-Reference them when discussing measurability; they replace any vague "we improve productivity".
+Until a reworked h&w KPI set replaces this section, copy states no figure as evidence of what h&w
+achieves: no number from our own engagements or operations, and no activity count (pull requests,
+merges, commits, diffs, lines of code, tokens, AI-tool usage, share of AI-assisted work) as proof of
+progress, ours or a third party's. The reason: these counts measure output, and which figures
+support a sound claim about our effect is not established. A third-party research finding that is
+not an activity count may be quoted with its source, fetched in the session, and never as h&w's
+result.
 
-1. PR Throughput: merged PRs per week/team. Measured via Git Analytics (history retroactively
-   available).
-2. AI Utilization: % of PRs/tasks with AI support. Measured via Claude Code co-author tags, or a
-   PR-template checkbox.
-3. Change Confidence: developer self-reported confidence in changes, 1-5 scale. Monthly survey,
-   baseline at engagement start.
-4. Change Failure Rate: % failed builds/deployments on test stage. Measured via CI/CD.
+Where the reader needs a measure (a proposal, an assessment, a CTO asking how to tell whether it
+works), name what the client should measure, at team or service level, against a baseline taken at
+the start, with no target number:
 
-Default phrasing when no specific metric applies: *"measurable through PR throughput, AI
-utilization, change confidence, and failure rates."*
+- Delivery outcome: lead time from request to production, deployment frequency, change failure
+  rate, recovery time and rework, read as one set so speed is held against stability (DORA).
+- Developer experience, surveyed over time: confidence in changes, cognitive load, where time is
+  lost. No single metric captures productivity, so system data is paired with what developers
+  report (SPACE, DX Core 4).
+- The client's own business outcome, agreed per engagement with its data source.
+
+The reasoning to give when the reader asks why:
+
+- A count that becomes a target stops measuring (Goodhart), and agents make output cheap: DORA's
+  2025 report finds AI adoption raising throughput while lowering delivery stability.
+- A throughput figure is read only against an opposing measure, never set as a target or reward,
+  and never used to compare teams or rate individuals (DX Core 4, DORA).
+- Usage and pull request counts stay observability of adoption and cost, never the result.
+
+Default phrasing: *"measurable in your lead time to production, your change failure rate and how
+confident your engineers are in their changes, against a baseline we take together at the
+start."*
 
 ## Developer well-being language
 
@@ -106,7 +124,7 @@ a known contact does not need this.
 3. Solution-aware: position the category, context engineering vs prompt engineering vs vibe
    coding, before pitching h&w.
 4. Product-aware: differentiate with proof: client names where a public URL shows h&w and that
-   client together, metrics, testimonials, an FAQ for the evaluator's objections.
+   client together, sourced research findings, testimonials, an FAQ for the evaluator's objections.
 5. Most aware: scarcity ("3 Q4 spots remaining"), a clear next step, a time-bounded offer.
 
 On the website every page serves one stage: the homepage stage 1, the methodology page stages 2-3,
