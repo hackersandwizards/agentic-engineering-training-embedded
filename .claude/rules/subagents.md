@@ -61,12 +61,13 @@
   Its model and permission mode live on that registration in the app's `scheduled-tasks.json`,
   its tool grants in the app, never in the task's `SKILL.md`. Change them in the app's edit form:
   the app rewrites that file from its own store and has dropped a permission mode edited there.
-- A scheduled run reading a time window starts at the earlier of its default and the start in the
-  newest `Scheduled-Run: <task id> <UTC start>` trailer
-  (`git log --author="$(git config user.email)" --format='%(trailers:key=Scheduled-Run,valueonly)'`),
-  never at the app's last-run time, which also stamps dispatches that never started. Once every
-  windowed read completes, it adds that trailer to its last commit and reports how far back it
-  reached. A task whose work belongs to its own day or slot says in one line that it does
-  not catch up.
+- A scheduled run reading a time window starts at the earlier of its default and the start
+  `bun ~/.claude/scripts/schedule/last-run.ts <task id>` prints, never at the app's last-run time,
+  which also stamps dispatches that never started. The script reads the app's per-run records,
+  `claude-code-sessions/*/*/local_*.json`, and prints the newest `createdAt` whose record has that
+  `scheduledTaskId`, `completedTurns` above 0 and a non-null `postTurnSummary.status_category`,
+  skipping the record whose `cliSessionId` is the current session. Where it exits non-zero, the run
+  takes its default and says so. The run reports how far back it reached. A task whose work belongs
+  to its own day or slot says in one line that it does not catch up.
 - Name a skill for its function and a scheduled task for its job, with the cadence as the last
   segment.

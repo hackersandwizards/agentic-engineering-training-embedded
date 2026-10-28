@@ -12,7 +12,8 @@ Polish finds defects by reading code, instruction artifacts and memory files as 
 An argument narrows what each phase covers, never which phases run. Report what the scope excluded.
 
 The argument `recent` scopes the run to everything committed since the earlier of two days back
-and the start the newest `Scheduled-Run:` trailer of the scheduled task running it records:
+and the start `bun ~/.claude/scripts/schedule/last-run.ts <task id>` prints for the scheduled task
+running it:
 `BASE=$(git log --until="<that start>" -1 --format=%H)`, then `$BASE..HEAD`. Where `BASE` is
 `HEAD`, say in one line that nothing was committed in the window and stop.
 
