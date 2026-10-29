@@ -17,5 +17,19 @@
   "env": {
     "CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH": "2",
     "CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR": "1"
+  },
+  "claudeMdExcludes": [
+    "/Users/*/.claude/rules/**",
+    "/home/*/.claude/rules/**"
+  ],
+  "skillOverrides": {
+    "agent-feedback": "off",
+    "architecture-principles": "off",
+    "claude-accounts": "off",
+    "delegation": "off",
+    "engineering": "off",
+    "polish": "off",
+    "shell-tools": "off",
+    "voice": "off"
   }
 }
